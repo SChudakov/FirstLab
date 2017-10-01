@@ -18,11 +18,12 @@ import java.util.List;
  */
 public class GUIManager {
 
+    private static final double GOLDEN_RATIO = 0.618034;
 
     private JFrame frame = new JFrame("File Manager");
 
-    private JPanel leftFileManagerPanel = new JPanel();
-    private JPanel rightFileManagerPanel = new JPanel();
+    private JPanel leftPanel = new JPanel();
+    private JPanel rightPanel = new JPanel();
 
     private JMenuBar menuBar = new JMenuBar();
     private JMenu programMenu = new JMenu("Program");
@@ -46,8 +47,8 @@ public class GUIManager {
     private DefaultMutableTreeNode rightJTreeTop = new DefaultMutableTreeNode("files");
     private JTree leftJTree = new JTree(leftJTreeTop);
     private JTree rightJTree = new JTree(rightJTreeTop);
-    private JTextArea leftJTextArea = new JTextArea(30, 24);
-    private JTextArea rightJTextArea = new JTextArea(30, 24);
+    private JTextArea leftJTextArea = new JTextArea();
+    private JTextArea rightJTextArea = new JTextArea();
     private JScrollPane leftFilesAreaScrollPane = new JScrollPane(leftJTree);
     private JScrollPane rightFilesAreaScrollPane = new JScrollPane(rightJTree);
     private JScrollPane leftTextAreaScrollPane = new JScrollPane(leftJTextArea);
@@ -79,15 +80,17 @@ public class GUIManager {
 
     private void setupFrame() {
 
+
         int screenHeight = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
         int screenWidth = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-        GridBagLayout
-        this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.frame.setLocationByPlatform(true);
+        this.frame.setLayout(new GridBagLayout());
         this.frame.setSize(screenWidth * 8 / 10, screenHeight * 8 / 10);
 
-        this.frame.getContentPane().add(BorderLayout.WEST, this.leftFileManagerPanel);
-        this.frame.getContentPane().add(BorderLayout.EAST, this.rightFileManagerPanel);
+        this.frame.add(this.leftPanel, new GBC(0, 0, 1, 2, 0.5, 0.5, GridBagConstraints.BOTH));
+        this.frame.add(this.rightPanel, new GBC(1, 0, 1, 2, 0.5, 0.5, GridBagConstraints.BOTH));
     }
 
     private void setupMenuBar() {
@@ -117,16 +120,19 @@ public class GUIManager {
 
     private void setupPanels() {
 
-        this.leftFileManagerPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Ліва"));
-        this.leftFileManagerPanel.setLayout(new GridLayout());
-        this.leftFileManagerPanel.add(this.leftFilesAreaScrollPane);
-        this.leftFileManagerPanel.add(this.leftTextAreaScrollPane);
+        GridBagLayout leftPanelLayout = new GridBagLayout();
+        GridBagLayout rightPanelLayout = new GridBagLayout();
+
+        this.leftPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Ліва"));
+        this.leftPanel.setLayout(leftPanelLayout);
+        this.leftPanel.add(this.leftFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
+        this.leftPanel.add(this.leftTextAreaScrollPane, new GBC(1, 0, 1, 2, GOLDEN_RATIO, GOLDEN_RATIO, GridBagConstraints.BOTH));
 
 
-        this.rightFileManagerPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Права"));
-        this.rightFileManagerPanel.setLayout(new GridLayout());
-        this.rightFileManagerPanel.add(this.rightFilesAreaScrollPane);
-        this.rightFileManagerPanel.add(this.rightTextAreaScrollPane);
+        this.rightPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Права"));
+        this.rightPanel.setLayout(rightPanelLayout);
+        this.rightPanel.add(this.rightFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
+        this.rightPanel.add(this.rightTextAreaScrollPane, new GBC(1, 0, 1, 2, GOLDEN_RATIO, GOLDEN_RATIO, GridBagConstraints.BOTH));
 
 
     }
