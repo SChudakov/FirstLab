@@ -11,9 +11,9 @@ import java.util.regex.Pattern;
  * Created by Semen Chudakov on 09.09.2017.
  */
 public class HTMLParser {
-
-    private static final String REGULAR_EXPRESSION_FOR_PARSING_TEXT = "href=\"[A-Za-z0-9 _/#$.?=:&;]+\"|href=[A-Za-z0-9 _/#$.?=:&;]+[\\x00-\\x7F]";
-    private static final String REGULAR_EXPRESSION_FOR_PARSING_REFERENCE = "\"[A-Za-z0-9 _/.?=:&;]+\"|=[A-Za-z0-9 _/.?=:&;]+[\\x00-\\x7F]";
+    //"[A-Za-z0-9 _/.?=:&;]+"|=[A-Za-z0-9 _/.?=:&;]+[\x00-\x7F]
+    private static final String REGULAR_EXPRESSION_FOR_PARSING_TEXT = "href=\\\"[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\\\"|href=\\'[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\\'|href=[A-Za-z0-9 _/#$.?=:&;]+[\\\\x00-\\\\x7F]";
+    private static final String REGULAR_EXPRESSION_FOR_PARSING_REFERENCE = "\"[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\"|='[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+'|=[A-Za-z0-9 _/#$.?=:&;]+[\\\\x00-\\\\x7F]";
 
     public static List<String> parseFile(String path) {
 
@@ -47,7 +47,7 @@ public class HTMLParser {
         while (matcher.find()) {
 
             String processedReference = processPath(matcher.group());
-            System.out.println("processed string: " + processedReference);
+            System.out.println(processedReference);
 
             if (isHTMLFileReference(processedReference)) {
                 references.add(processedReference);
@@ -70,16 +70,12 @@ public class HTMLParser {
     }
 
     public static boolean isHTMLFileReference(String path) {
-//        String substring = reference.substring(reference.length() - 5, reference.length());
-//        System.out.println(substring);
-//        return substring.equals(".html") && containsDiskSpecification(reference);
-        //TODO: find a way to put \ to regular expression
-        return true;
+        String substring = path.substring(path.length() - 5, path.length());
+        return substring.equals(".html") && containsDiskSpecification(path);
     }
 
-    public static boolean containsDiskSpecification(String reference) {
+    private static boolean containsDiskSpecification(String reference) {
         String substring = reference.substring(0, 3);
-        System.out.println(substring);
         return substring.equals("C:\\") || substring.equals("D:\\")
                 || substring.equals("c:\\") || substring.equals("d:\\");
     }

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="After adding GridBagConstraints">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GBC.java" />
+    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/junit-4.12-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileOpener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/HTMLFileOpener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/TXTFileOpener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/FileRenamer.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" />
@@ -15,8 +19,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder$SelectionListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder$SelectionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/HTMLParser.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/HTMLParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/PathFormer.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/PathFormer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/downloaded_site.txt" afterPath="$PROJECT_DIR$/downloaded_site.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileOpener.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/FileOpener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLFileOpener.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/HTMLFileOpener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/TXTFileOpener.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/FileRenamer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,15 +50,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="60" column="48" lean-forward="false" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+            <state relative-caret-position="102">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <element signature="e#1100#1115#0" expanded="false" />
                 <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-                <element signature="e#2228#2262#0" expanded="false" />
+                <element signature="e#1931#1965#0" expanded="false" />
                 <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
                 <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-                <element signature="e#3228#3305#0" expanded="false" />
+                <element signature="e#2931#3008#0" expanded="false" />
                 <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
                 <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
                 <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
@@ -51,13 +69,16 @@
       <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="86" column="59" lean-forward="false" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+            <state relative-caret-position="326">
+              <caret line="128" column="105" lean-forward="false" selection-start-line="128" selection-start-column="105" selection-end-line="128" selection-end-column="105" />
               <folding>
                 <element signature="docComment;class#GUIManager#0" expanded="false" />
                 <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
+                <element signature="method#setupFrame#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#setupMenuBar#0;class#GUIManager#0" expanded="false" />
+                <element signature="e#5201#5317#0" expanded="false" />
                 <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
+                <element signature="e#6402#6518#0" expanded="false" />
                 <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
@@ -73,7 +94,7 @@
                 <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="e#13397#13460#0" expanded="false" />
+                <element signature="e#13804#13867#0" expanded="false" />
                 <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#isHTMLFilePath#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
@@ -88,58 +109,6 @@
                 <element signature="method#actionPerformed#0;class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GBC.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GBC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-              <folding>
-                <element signature="docComment;class#GBC#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileCloser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-              <folding>
-                <element signature="docComment;class#FileCloser#0" expanded="false" />
-                <element signature="method#closeFile#0;class#FileCloser#0" expanded="false" />
-                <element signature="method#hasChanges#0;class#FileCloser#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLFileOpener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/HTMLFileOpener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="34" lean-forward="true" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-              <folding>
-                <element signature="docComment;class#HTMLFileOpener#0" expanded="false" />
-                <element signature="method#openFile#0;class#HTMLFileOpener#0" expanded="false" />
-                <element signature="e#745#803#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TXTFileOpener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/TXTFileOpener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-              <folding>
-                <element signature="method#validatePath#0;class#TXTFileOpener#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -196,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/TextInputer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/UserTextInput.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/MessageRenderer.java" />
-        <option value="$PROJECT_DIR$/downloaded_site.txt" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/GUIManager.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/HTMLParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/TXTFileOpener.java" />
@@ -207,19 +175,22 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileReanamer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileRenamer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileOpener.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
         <option value="$PROJECT_DIR$/first.html" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/MessageRenderer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/JTextAreaCleaner.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/operations/FileMergerTest.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/TXTFileOpener.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLFileOpener.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GBC.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java" />
+        <option value="$PROJECT_DIR$/downloaded_site.txt" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
       </list>
     </option>
@@ -244,6 +215,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,43 +242,27 @@
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="operations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last.edited.regexp" value="href=/w/index.php?title=Regular_expression&amp;amp;oldid=798406284&gt;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/hamcrest-all-1.3.jar!/" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sschudakov.operations" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace.java\FirstLab\src\com\sschudakov\operations" />
       <recent name="D:\Workspace.java\FirstLab\src\com\sschudakov\fghjk" />
     </key>
   </component>
@@ -325,7 +282,7 @@
     <configuration name="FileMergerTest.resultingFileExistsTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.operations.*" />
+          <option name="PATTERN" value="com.sschudakov.operations.file_openers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -408,6 +365,14 @@
       <option name="presentableId" value="Default" />
       <updated>1504946902812</updated>
     </task>
+    <task id="LOCAL-00001" summary="After adding GridBagConstraints">
+      <created>1506867613042</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506867613042</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -445,18 +410,18 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45699832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.005059022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18529862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -485,15 +450,15 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45699832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.018549748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18529862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -605,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SiteDownloader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -651,28 +609,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22831">
           <caret line="1384" column="19" lean-forward="false" selection-start-line="1384" selection-start-column="19" selection-end-line="1384" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/FileRenamer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="22" column="61" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/tree/DefaultMutableTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="87" column="32" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -704,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/downloaded_site.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3995">
-          <caret line="0" column="40357" lean-forward="false" selection-start-line="0" selection-start-column="40353" selection-end-line="0" selection-end-column="40357" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/JTextAreaCleaner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -722,13 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10761">
           <caret line="686" column="22" lean-forward="false" selection-start-line="686" selection-start-column="22" selection-end-line="686" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -764,447 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#UNIX_LINES#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#CASE_INSENSITIVE#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#COMMENTS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#MULTILINE#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#LITERAL#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#DOTALL#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#UNICODE_CASE#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#CANON_EQ#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#UNICODE_CHARACTER_CLASS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#serialVersionUID#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#pattern#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#flags#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#compiled#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#normalizedPattern#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#matchRoot#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#buffer#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#namedGroups#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#groupNodes#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#temp#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#capturingGroupCount#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#localCount#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#cursor#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#patternLength#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;field#hasSupplementary#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#compile#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#compile#1;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#pattern#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#matcher#0;class#Pattern#0" expanded="false" />
-            <element signature="method#matcher#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#flags#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#matches#0;class#Pattern#0" expanded="false" />
-            <element signature="method#matches#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#split#0;class#Pattern#0" expanded="false" />
-            <element signature="method#split#0;class#Pattern#0" expanded="false" />
-            <element signature="e#55498#55557#0" expanded="false" />
-            <element signature="docComment;method#split#1;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#quote#0;class#Pattern#0" expanded="false" />
-            <element signature="method#quote#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#readObject#0;class#Pattern#0" expanded="false" />
-            <element signature="method#readObject#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#Pattern#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Pattern#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#normalize#0;class#Pattern#0" expanded="false" />
-            <element signature="method#normalize#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#normalizeCharClass#0;class#Pattern#0" expanded="false" />
-            <element signature="method#normalizeCharClass#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#produceEquivalentAlternation#0;class#Pattern#0" expanded="false" />
-            <element signature="method#produceEquivalentAlternation#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#producePermutations#0;class#Pattern#0" expanded="false" />
-            <element signature="method#producePermutations#0;class#Pattern#0" expanded="false" />
-            <element signature="e#67274#67328#0" expanded="false" />
-            <element signature="docComment;method#composeOneStep#0;class#Pattern#0" expanded="false" />
-            <element signature="method#composeOneStep#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#RemoveQEQuoting#0;class#Pattern#0" expanded="false" />
-            <element signature="method#RemoveQEQuoting#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#compile#2;class#Pattern#0" expanded="false" />
-            <element signature="method#compile#2;class#Pattern#0" expanded="false" />
-            <element signature="e#71862#71906#0" expanded="false" />
-            <element signature="method#namedGroups#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#printObjectTree#0;class#Pattern#0" expanded="false" />
-            <element signature="method#printObjectTree#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#TreeInfo#0;class#Pattern#0" expanded="false" />
-            <element signature="class#TreeInfo#0;class#Pattern#0" expanded="false" />
-            <element signature="method#reset#0;class#TreeInfo#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#has#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#accept#0;class#Pattern#0" expanded="false" />
-            <element signature="method#accept#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#mark#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#peek#0;class#Pattern#0" expanded="false" />
-            <element signature="method#peek#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#read#0;class#Pattern#0" expanded="false" />
-            <element signature="method#read#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#readEscaped#0;class#Pattern#0" expanded="false" />
-            <element signature="method#readEscaped#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#next#0;class#Pattern#0" expanded="false" />
-            <element signature="method#next#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#nextEscaped#0;class#Pattern#0" expanded="false" />
-            <element signature="method#nextEscaped#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#peekPastWhitespace#0;class#Pattern#0" expanded="false" />
-            <element signature="method#peekPastWhitespace#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#parsePastWhitespace#0;class#Pattern#0" expanded="false" />
-            <element signature="method#parsePastWhitespace#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#parsePastLine#0;class#Pattern#0" expanded="false" />
-            <element signature="method#parsePastLine#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#peekPastLine#0;class#Pattern#0" expanded="false" />
-            <element signature="method#peekPastLine#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#isLineSeparator#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isLineSeparator#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#skip#0;class#Pattern#0" expanded="false" />
-            <element signature="method#skip#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#unread#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#error#0;class#Pattern#0" expanded="false" />
-            <element signature="method#error#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#findSupplementary#0;class#Pattern#0" expanded="false" />
-            <element signature="method#findSupplementary#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#isSupplementary#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isSupplementary#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#expr#0;class#Pattern#0" expanded="false" />
-            <element signature="method#expr#0;class#Pattern#0" expanded="false" />
-            <element signature="e#81825#81873#0" expanded="false" />
-            <element signature="e#82435#82490#0" expanded="false" />
-            <element signature="method#sequence#0;class#Pattern#0" expanded="false" />
-            <element signature="e#83206#83247#0" expanded="false" />
-            <element signature="method#atom#0;class#Pattern#0" expanded="false" />
-            <element signature="method#append#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#ref#0;class#Pattern#0" expanded="false" />
-            <element signature="method#ref#0;class#Pattern#0" expanded="false" />
-            <element signature="e#89929#89977#0" expanded="false" />
-            <element signature="docComment;method#escape#0;class#Pattern#0" expanded="false" />
-            <element signature="method#escape#0;class#Pattern#0" expanded="false" />
-            <element signature="e#95318#95378#0" expanded="false" />
-            <element signature="docComment;method#clazz#0;class#Pattern#0" expanded="false" />
-            <element signature="method#clazz#0;class#Pattern#0" expanded="false" />
-            <element signature="method#bitsOrSingle#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#range#0;class#Pattern#0" expanded="false" />
-            <element signature="method#range#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#family#0;class#Pattern#0" expanded="false" />
-            <element signature="method#family#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#unicodeScriptPropertyFor#0;class#Pattern#0" expanded="false" />
-            <element signature="method#unicodeScriptPropertyFor#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#unicodeBlockPropertyFor#0;class#Pattern#0" expanded="false" />
-            <element signature="method#unicodeBlockPropertyFor#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#charPropertyNodeFor#0;class#Pattern#0" expanded="false" />
-            <element signature="method#charPropertyNodeFor#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#groupname#0;class#Pattern#0" expanded="false" />
-            <element signature="method#groupname#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#group0#0;class#Pattern#0" expanded="false" />
-            <element signature="method#group0#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#createGroup#0;class#Pattern#0" expanded="false" />
-            <element signature="method#createGroup#0;class#Pattern#0" expanded="false" />
-            <element signature="method#addFlag#0;class#Pattern#0" expanded="false" />
-            <element signature="method#subFlag#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#closure#0;class#Pattern#0" expanded="false" />
-            <element signature="method#closure#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#c#0;class#Pattern#0" expanded="false" />
-            <element signature="method#c#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#o#0;class#Pattern#0" expanded="false" />
-            <element signature="method#o#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#x#0;class#Pattern#0" expanded="false" />
-            <element signature="method#x#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#cursor#0;class#Pattern#0" expanded="false" />
-            <element signature="method#uxxxx#0;class#Pattern#0" expanded="false" />
-            <element signature="method#u#0;class#Pattern#0" expanded="false" />
-            <element signature="e#123511#123513#0" expanded="false" />
-            <element signature="method#countChars#0;class#Pattern#0" expanded="false" />
-            <element signature="method#countCodePoints#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BitClass#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BitClass#0;class#Pattern#0" expanded="false" />
-            <element signature="method#BitClass#0;class#BitClass#0;class#Pattern#0" expanded="false" />
-            <element signature="method#BitClass#1;class#BitClass#0;class#Pattern#0" expanded="false" />
-            <element signature="method#add#0;class#BitClass#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#newSingle#0;class#Pattern#0" expanded="false" />
-            <element signature="method#newSingle#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#newSlice#0;class#Pattern#0" expanded="false" />
-            <element signature="method#newSlice#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Node#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Node#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#match#0;class#Node#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Node#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#study#0;class#Node#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Node#0;class#Pattern#0" expanded="false" />
-            <element signature="class#LastNode#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#match#0;class#LastNode#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#LastNode#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Start#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Start#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Start#0;class#Start#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Start#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Start#0;class#Pattern#0" expanded="false" />
-            <element signature="class#StartS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#StartS#0;class#Pattern#0" expanded="false" />
-            <element signature="e#132053#132107#0" expanded="false" />
-            <element signature="docComment;class#Begin#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Begin#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Begin#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#End#0;class#Pattern#0" expanded="false" />
-            <element signature="class#End#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#End#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Caret#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Caret#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Caret#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#UnixCaret#0;class#Pattern#0" expanded="false" />
-            <element signature="class#UnixCaret#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#UnixCaret#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#LastMatch#0;class#Pattern#0" expanded="false" />
-            <element signature="class#LastMatch#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#LastMatch#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Dollar#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Dollar#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Dollar#0;class#Pattern#0" expanded="false" />
-            <element signature="e#137362#137420#0" expanded="false" />
-            <element signature="e#138555#138613#0" expanded="false" />
-            <element signature="method#study#0;class#Dollar#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#UnixDollar#0;class#Pattern#0" expanded="false" />
-            <element signature="class#UnixDollar#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#UnixDollar#0;class#Pattern#0" expanded="false" />
-            <element signature="e#139465#139507#0" expanded="false" />
-            <element signature="e#139690#139739#0" expanded="false" />
-            <element signature="e#139976#140027#0" expanded="false" />
-            <element signature="e#140133#140191#0" expanded="false" />
-            <element signature="method#study#0;class#UnixDollar#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#LineEnding#0;class#Pattern#0" expanded="false" />
-            <element signature="class#LineEnding#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#LineEnding#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#LineEnding#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#CharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="class#CharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="method#complement#0;class#CharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#CharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#CharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BmpCharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BmpCharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#BmpCharProperty#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SingleS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SingleS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#SingleS#0;class#SingleS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Single#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Single#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Single#0;class#Single#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SingleI#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SingleI#0;class#Pattern#0" expanded="false" />
-            <element signature="method#SingleI#0;class#SingleI#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SingleU#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SingleU#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isSatisfiedBy#0;class#SingleU#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Block#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Block#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Script#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Script#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Category#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Category#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Category#0;class#Category#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Utype#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Utype#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Utype#0;class#Utype#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Ctype#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Ctype#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Ctype#0;class#Ctype#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#VertWS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#VertWS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isSatisfiedBy#0;class#VertWS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#HorizWS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#HorizWS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isSatisfiedBy#0;class#HorizWS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SliceNode#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SliceNode#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#SliceNode#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Slice#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Slice#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Slice#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SliceI#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SliceI#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#SliceI#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SliceU#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SliceU#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#SliceU#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SliceS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SliceS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#SliceS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SliceIS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SliceIS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#SliceIS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#SliceUS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#SliceUS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#rangeFor#0;class#Pattern#0" expanded="false" />
-            <element signature="method#rangeFor#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#caseInsensitiveRangeFor#0;class#Pattern#0" expanded="false" />
-            <element signature="method#caseInsensitiveRangeFor#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#All#0;class#Pattern#0" expanded="false" />
-            <element signature="class#All#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Dot#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Dot#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isSatisfiedBy#0;class#Dot#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#UnixDot#0;class#Pattern#0" expanded="false" />
-            <element signature="class#UnixDot#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Ques#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Ques#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Ques#0;class#Ques#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Ques#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Ques#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Curly#0;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match0#0;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="e#156677#156736#0" expanded="false" />
-            <element signature="method#match1#0;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match2#0;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Curly#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#GroupCurly#0;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="e#161727#161783#0" expanded="false" />
-            <element signature="method#match0#0;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match1#0;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match2#0;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#GroupCurly#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BranchConn#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BranchConn#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Branch#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Branch#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Branch#0;class#Branch#0;class#Pattern#0" expanded="false" />
-            <element signature="method#add#0;class#Branch#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Branch#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Branch#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#GroupHead#0;class#Pattern#0" expanded="false" />
-            <element signature="class#GroupHead#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#GroupHead#0;class#Pattern#0" expanded="false" />
-            <element signature="method#matchRef#0;class#GroupHead#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#GroupRef#0;class#Pattern#0" expanded="false" />
-            <element signature="class#GroupRef#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#GroupRef#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#GroupRef#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#GroupTail#0;class#Pattern#0" expanded="false" />
-            <element signature="class#GroupTail#0;class#Pattern#0" expanded="false" />
-            <element signature="method#GroupTail#0;class#GroupTail#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#GroupTail#0;class#Pattern#0" expanded="false" />
-            <element signature="e#172738#172771#0" expanded="false" />
-            <element signature="e#173378#173438#0" expanded="false" />
-            <element signature="docComment;class#Prolog#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Prolog#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Loop#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Loop#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Loop#0;class#Loop#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Loop#0;class#Pattern#0" expanded="false" />
-            <element signature="e#174891#174939#0" expanded="false" />
-            <element signature="e#175178#175218#0" expanded="false" />
-            <element signature="e#175391#175438#0" expanded="false" />
-            <element signature="e#175534#175580#0" expanded="false" />
-            <element signature="e#175819#175859#0" expanded="false" />
-            <element signature="method#matchInit#0;class#Loop#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Loop#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#LazyLoop#0;class#Pattern#0" expanded="false" />
-            <element signature="class#LazyLoop#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#LazyLoop#0;class#Pattern#0" expanded="false" />
-            <element signature="e#177820#177860#0" expanded="false" />
-            <element signature="e#178335#178375#0" expanded="false" />
-            <element signature="method#matchInit#0;class#LazyLoop#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#LazyLoop#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="method#BackRef#0;class#BackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#BackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="e#180276#180337#0" expanded="false" />
-            <element signature="method#study#0;class#BackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="class#CIBackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="method#CIBackRef#0;class#CIBackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#CIBackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="e#181549#181610#0" expanded="false" />
-            <element signature="method#study#0;class#CIBackRef#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#First#0;class#Pattern#0" expanded="false" />
-            <element signature="class#First#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#First#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#First#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Conditional#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Conditional#0;class#Conditional#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Conditional#0;class#Pattern#0" expanded="false" />
-            <element signature="method#study#0;class#Conditional#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Pos#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Pos#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Pos#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Neg#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Neg#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Neg#0;class#Pattern#0" expanded="false" />
-            <element signature="e#186568#186619#0" expanded="false" />
-            <element signature="docComment;field#lookbehindEnd#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Behind#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Behind#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Behind#0;class#Behind#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Behind#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BehindS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BehindS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#BehindS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#NotBehind#0;class#Pattern#0" expanded="false" />
-            <element signature="class#NotBehind#0;class#Pattern#0" expanded="false" />
-            <element signature="method#NotBehind#0;class#NotBehind#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#NotBehind#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#NotBehindS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#NotBehindS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#NotBehindS#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#union#0;class#Pattern#0" expanded="false" />
-            <element signature="method#union#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#intersection#0;class#Pattern#0" expanded="false" />
-            <element signature="method#intersection#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#setDifference#0;class#Pattern#0" expanded="false" />
-            <element signature="method#setDifference#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#Bound#0;class#Pattern#0" expanded="false" />
-            <element signature="class#Bound#0;class#Pattern#0" expanded="false" />
-            <element signature="method#Bound#0;class#Bound#0;class#Pattern#0" expanded="false" />
-            <element signature="method#isWord#0;class#Bound#0;class#Pattern#0" expanded="false" />
-            <element signature="method#check#0;class#Bound#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#Bound#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#hasBaseCharacter#0;class#Pattern#0" expanded="false" />
-            <element signature="method#hasBaseCharacter#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#optimize#0;class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="method#optimize#0;class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="e#198852#198899#0" expanded="false" />
-            <element signature="e#199262#199309#0" expanded="false" />
-            <element signature="e#199531#199568#0" expanded="false" />
-            <element signature="e#200047#200086#0" expanded="false" />
-            <element signature="e#200247#200288#0" expanded="false" />
-            <element signature="method#BnM#0;class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="e#201514#201564#0" expanded="false" />
-            <element signature="e#202233#202296#0" expanded="false" />
-            <element signature="method#study#0;class#BnM#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;class#BnMS#0;class#Pattern#0" expanded="false" />
-            <element signature="class#BnMS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#BnMS#0;class#BnMS#0;class#Pattern#0" expanded="false" />
-            <element signature="method#match#0;class#BnMS#0;class#Pattern#0" expanded="false" />
-            <element signature="e#203789#203839#0" expanded="false" />
-            <element signature="e#204652#204731#0" expanded="false" />
-            <element signature="docComment;field#accept#0;class#Pattern#0" expanded="false" />
-            <element signature="class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="method#charPropertyFor#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="class#CharPropertyFactory#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="method#defCategory#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="method#defRange#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="method#defCtype#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="class#CloneableProperty#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="method#clone#0;class#CloneableProperty#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="method#defClone#0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="initializer##0;class#CharPropertyNames#0;class#Pattern#0" expanded="false" />
-            <element signature="e#206830#206879#0" expanded="false" />
-            <element signature="e#211454#211511#0" expanded="false" />
-            <element signature="docComment;method#asPredicate#0;class#Pattern#0" expanded="false" />
-            <element signature="docComment;method#splitAsStream#0;class#Pattern#0" expanded="false" />
-            <element signature="method#splitAsStream#0;class#Pattern#0" expanded="false" />
-            <element signature="class#217545:219900" expanded="false" />
-            <element signature="method#next#0;class#217545:219900" expanded="false" />
-            <element signature="method#hasNext#0;class#217545:219900" expanded="false" />
-            <element signature="e#218762#218798#0" expanded="false" />
-            <element signature="e#219169#219213#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1226,9 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,71 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding>
-            <element signature="docComment;class#FileSaver#0" expanded="false" />
-            <element signature="method#saveFile#0;class#FileSaver#0" expanded="false" />
-            <element signature="method#saveFile#1;class#FileSaver#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/HTMLFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="true" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#HTMLFileOpener#0" expanded="false" />
-            <element signature="method#openFile#0;class#HTMLFileOpener#0" expanded="false" />
-            <element signature="e#745#803#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/TXTFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding>
-            <element signature="method#validatePath#0;class#TXTFileOpener#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="60" column="48" lean-forward="false" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
-          <folding>
-            <element signature="e#1100#1115#0" expanded="false" />
-            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-            <element signature="e#2228#2262#0" expanded="false" />
-            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
-            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-            <element signature="e#3228#3305#0" expanded="false" />
-            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
-            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
-            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;class#FileCloser#0" expanded="false" />
-            <element signature="method#closeFile#0;class#FileCloser#0" expanded="false" />
-            <element signature="method#hasChanges#0;class#FileCloser#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1308,92 +728,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5763">
           <caret line="363" column="13" lean-forward="false" selection-start-line="363" selection-start-column="13" selection-end-line="363" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;field#MAXGRIDSIZE#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#MINSIZE#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#PREFERREDSIZE#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#comptable#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#defaultConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#layoutInfo#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#columnWidths#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#rowHeights#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#columnWeights#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#rowWeights#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;field#componentAdjusting#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#GridBagLayout#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#GridBagLayout#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#setConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#setConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#getConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#lookupConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#lookupConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#removeConstraints#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getLayoutOrigin#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#getLayoutOrigin#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getLayoutDimensions#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#getLayoutDimensions#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getLayoutWeights#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#getLayoutWeights#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#location#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#location#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#addLayoutComponent#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#addLayoutComponent#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#addLayoutComponent#1;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#addLayoutComponent#1;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#removeLayoutComponent#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#preferredLayoutSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#preferredLayoutSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#minimumLayoutSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#minimumLayoutSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#maximumLayoutSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getLayoutAlignmentX#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getLayoutAlignmentY#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#invalidateLayout#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#invalidateLayout#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#layoutContainer#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getLayoutInfo#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#getLayoutInfo#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#preInitMaximumArraySizes#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="e#36715#36791#0" expanded="false" />
-            <element signature="e#37325#37395#0" expanded="false" />
-            <element signature="docComment;method#GetLayoutInfo#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#GetLayoutInfo#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="e#38886#38966#0" expanded="false" />
-            <element signature="e#51564#51607#0" expanded="false" />
-            <element signature="e#52527#52570#0" expanded="false" />
-            <element signature="docComment;method#calculateBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#calculateBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="e#65677#65723#0" expanded="false" />
-            <element signature="docComment;method#adjustForGravity#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#adjustForGravity#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#AdjustForGravity#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#AdjustForGravity#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#alignOnBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#alignOnBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="e#73495#73519#0" expanded="false" />
-            <element signature="e#74099#74147#0" expanded="false" />
-            <element signature="e#74332#74386#0" expanded="false" />
-            <element signature="e#74994#75049#0" expanded="false" />
-            <element signature="e#75500#75550#0" expanded="false" />
-            <element signature="e#75870#75917#0" expanded="false" />
-            <element signature="e#76189#76238#0" expanded="false" />
-            <element signature="e#76678#76718#0" expanded="false" />
-            <element signature="e#77867#77910#0" expanded="false" />
-            <element signature="docComment;method#alignAboveBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#alignAboveBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="e#80574#80626#0" expanded="false" />
-            <element signature="docComment;method#alignBelowBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#alignBelowBaseline#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#centerVertically#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#getMinSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#GetMinSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#GetMinSize#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#arrangeGrid#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="docComment;method#ArrangeGrid#0;class#GridBagLayout#0" expanded="false" />
-            <element signature="method#ArrangeGrid#0;class#GridBagLayout#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/HTMLFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/FileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1401,21 +756,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/downloaded_site.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="0" column="6407" lean-forward="false" selection-start-line="0" selection-start-column="6407" selection-end-line="0" selection-end-column="6407" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
           <folding>
-            <element signature="docComment;class#GBC#0" expanded="false" />
+            <element signature="docComment;class#PathFormer#0" expanded="false" />
+            <element signature="method#formPath#0;class#PathFormer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/tree/DefaultMutableTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14654">
+          <caret line="913" column="20" lean-forward="false" selection-start-line="913" selection-start-column="20" selection-end-line="913" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding>
+            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
+            <element signature="e#1931#1965#0" expanded="false" />
+            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
+            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
+            <element signature="e#2931#3008#0" expanded="false" />
+            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
+            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
+            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="86" column="59" lean-forward="false" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+        <state relative-caret-position="326">
+          <caret line="128" column="105" lean-forward="false" selection-start-line="128" selection-start-column="105" selection-end-line="128" selection-end-column="105" />
           <folding>
             <element signature="docComment;class#GUIManager#0" expanded="false" />
             <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
+            <element signature="method#setupFrame#0;class#GUIManager#0" expanded="false" />
             <element signature="method#setupMenuBar#0;class#GUIManager#0" expanded="false" />
+            <element signature="e#5201#5317#0" expanded="false" />
             <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
+            <element signature="e#6402#6518#0" expanded="false" />
             <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
             <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
             <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
@@ -1431,7 +858,7 @@
             <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="e#13397#13460#0" expanded="false" />
+            <element signature="e#13804#13867#0" expanded="false" />
             <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#isHTMLFilePath#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />

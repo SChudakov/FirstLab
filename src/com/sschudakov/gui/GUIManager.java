@@ -1,6 +1,9 @@
 package com.sschudakov.gui;
 
 import com.sschudakov.operations.*;
+import com.sschudakov.operations.file_openers.FileOpener;
+import com.sschudakov.operations.file_openers.HTMLFileOpener;
+import com.sschudakov.operations.file_openers.TXTFileOpener;
 import com.sschudakov.utils.*;
 
 import javax.swing.*;
@@ -22,8 +25,8 @@ public class GUIManager {
 
     private JFrame frame = new JFrame("File Manager");
 
-    private JPanel leftPanel = new JPanel();
-    private JPanel rightPanel = new JPanel();
+    private JPanel panel = new JPanel();
+//    private JPanel rightPanel = new JPanel();
 
     private JMenuBar menuBar = new JMenuBar();
     private JMenu programMenu = new JMenu("Program");
@@ -48,11 +51,11 @@ public class GUIManager {
     private JTree leftJTree = new JTree(leftJTreeTop);
     private JTree rightJTree = new JTree(rightJTreeTop);
     private JTextArea leftJTextArea = new JTextArea();
-    private JTextArea rightJTextArea = new JTextArea();
+//    private JTextArea rightJTextArea = new JTextArea();
     private JScrollPane leftFilesAreaScrollPane = new JScrollPane(leftJTree);
     private JScrollPane rightFilesAreaScrollPane = new JScrollPane(rightJTree);
     private JScrollPane leftTextAreaScrollPane = new JScrollPane(leftJTextArea);
-    private JScrollPane rightTextAreaScrollPane = new JScrollPane(rightJTextArea);
+//    private JScrollPane rightTextAreaScrollPane = new JScrollPane(rightJTextArea);
 
     private JFileChooser jFileChooser = new JFileChooser();
 
@@ -89,8 +92,8 @@ public class GUIManager {
         this.frame.setLayout(new GridBagLayout());
         this.frame.setSize(screenWidth * 8 / 10, screenHeight * 8 / 10);
 
-        this.frame.add(this.leftPanel, new GBC(0, 0, 1, 2, 0.5, 0.5, GridBagConstraints.BOTH));
-        this.frame.add(this.rightPanel, new GBC(1, 0, 1, 2, 0.5, 0.5, GridBagConstraints.BOTH));
+        this.frame.add(this.panel, new GBC(0, 0, 1, 2, 1, 1, GridBagConstraints.BOTH));
+//        this.frame.add(this.rightPanel, new GBC(1, 0, 1, 2, 0.5, 0.5, GridBagConstraints.BOTH));
     }
 
     private void setupMenuBar() {
@@ -121,18 +124,20 @@ public class GUIManager {
     private void setupPanels() {
 
         GridBagLayout leftPanelLayout = new GridBagLayout();
-        GridBagLayout rightPanelLayout = new GridBagLayout();
+//        GridBagLayout rightPanelLayout = new GridBagLayout();
 
-        this.leftPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Ліва"));
-        this.leftPanel.setLayout(leftPanelLayout);
-        this.leftPanel.add(this.leftFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
-        this.leftPanel.add(this.leftTextAreaScrollPane, new GBC(1, 0, 1, 2, GOLDEN_RATIO, GOLDEN_RATIO, GridBagConstraints.BOTH));
+        this.panel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Panel"));
+        this.panel.setLayout(leftPanelLayout);
+        this.panel.add(this.leftFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
+        this.panel.add(this.leftTextAreaScrollPane, new GBC(1, 0, 1, 2, GOLDEN_RATIO, GOLDEN_RATIO, GridBagConstraints.BOTH));
+
+        this.panel.add(this.rightFilesAreaScrollPane, new GBC(2,0,1,2, 1 - GOLDEN_RATIO,1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
 
 
-        this.rightPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Права"));
-        this.rightPanel.setLayout(rightPanelLayout);
-        this.rightPanel.add(this.rightFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
-        this.rightPanel.add(this.rightTextAreaScrollPane, new GBC(1, 0, 1, 2, GOLDEN_RATIO, GOLDEN_RATIO, GridBagConstraints.BOTH));
+//        this.rightPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Права"));
+//        this.rightPanel.setLayout(rightPanelLayout);
+//        this.rightPanel.add(this.rightFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
+//        this.rightPanel.add(this.rightTextAreaScrollPane, new GBC(1, 0, 1, 2, GOLDEN_RATIO, GOLDEN_RATIO, GridBagConstraints.BOTH));
 
 
     }
@@ -145,8 +150,8 @@ public class GUIManager {
         this.rightFilesAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.leftTextAreaScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         this.leftTextAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        this.rightTextAreaScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-        this.rightTextAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+//        this.rightTextAreaScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+//        this.rightTextAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     }
 
     private void setupJTrees() {
@@ -189,17 +194,20 @@ public class GUIManager {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            if (perspective.equals(Perspective.FileRedactor)) {
-                DefaultMutableTreeNode leftSelectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
-                if (leftSelectedNode == null) {
-                    MessageRenderer.renderMessage(frame, "No one file has been selected");
-                    return;
+            if (fileCloser.closeFile()) {
+                if (perspective.equals(Perspective.FileRedactor)) {
+                    DefaultMutableTreeNode leftSelectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+
+                    if (leftSelectedNode == null) {
+                        MessageRenderer.renderMessage(frame, "No one file has been selected");
+                        return;
+                    }
+
+                    renderFilesList(leftJTextArea, leftSelectedNode);
+                } else {
+                    MessageRenderer.renderMessage(frame, "You cannot see files in File Manager perspective");
                 }
-
-                renderFilesList(leftJTextArea, leftSelectedNode);
-            } else {
-                MessageRenderer.renderMessage(frame, "You cannot see files in File Manager perspective");
             }
         }
 

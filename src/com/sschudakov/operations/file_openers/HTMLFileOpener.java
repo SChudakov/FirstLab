@@ -1,11 +1,10 @@
-package com.sschudakov.operations;
+package com.sschudakov.operations.file_openers;
 
 import com.sschudakov.utils.ExceptionRenderer;
 import com.sschudakov.utils.JTextAreaCleaner;
 
 import javax.swing.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**

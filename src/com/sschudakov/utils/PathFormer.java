@@ -8,6 +8,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 public class PathFormer {
 
     public static String formPath(DefaultMutableTreeNode node){
+
         StringBuilder path = new StringBuilder("");
 
         DefaultMutableTreeNode currentNode = node;
@@ -16,9 +17,11 @@ public class PathFormer {
 
         currentNode = (DefaultMutableTreeNode) currentNode.getParent();
 
-        while (!currentNode.getUserObject().equals("files")) {
-            path.insert(0, currentNode.getUserObject() + "\\");
-            currentNode = (DefaultMutableTreeNode) currentNode.getParent();
+        if (currentNode != null) {
+            while (!currentNode.getUserObject().equals("files")) {
+                path.insert(0, currentNode.getUserObject() + "\\");
+                currentNode = (DefaultMutableTreeNode) currentNode.getParent();
+            }
         }
 
         return path.toString();

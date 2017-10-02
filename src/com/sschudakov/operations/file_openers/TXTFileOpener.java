@@ -1,13 +1,10 @@
-package com.sschudakov.operations;
+package com.sschudakov.operations.file_openers;
 
 import com.sschudakov.utils.ExceptionRenderer;
 import com.sschudakov.utils.JTextAreaCleaner;
 
 import javax.swing.*;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -31,20 +28,6 @@ public class TXTFileOpener implements FileOpener{
 
         JTextAreaCleaner.cleanJTextArea(area);
 
-//        try (BufferedReader reader = new BufferedReader(
-//                new InputStreamReader(new FileInputStream(pathFile), StandardCharsets.UTF_8))) {
-//
-//            String line;
-//
-//            while((line = reader.readLine()) != null){
-//                area.append(line + END_OF_LINE);
-//            }
-//
-//        }catch (FileNotFoundException e) {
-//            ExceptionRenderer.renderException(area.getRootPane(), e);
-//        } catch (IOException e) {
-//            ExceptionRenderer.renderException(area.getRootPane(), e);
-//        }
 
         try {
             this.scanner = new Scanner(pathFile);

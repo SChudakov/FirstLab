@@ -49,6 +49,8 @@ public class FileCloser {
                 JTextAreaCleaner.cleanJTextArea(area);
                 this.openedFile = null;
             }
+        }else {
+            JTextAreaCleaner.cleanJTextArea(area);
         }
         return true;
     }

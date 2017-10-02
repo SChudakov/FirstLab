@@ -1,4 +1,4 @@
-package com.sschudakov.operations;
+package com.sschudakov.operations.file_openers;
 
 import javax.swing.*;
 

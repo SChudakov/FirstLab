@@ -25,36 +25,21 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
+
         GUIManager manager = new GUIManager();
         manager.buildGUI();
 
+//        SiteDownloader.downloadHTMLText("https://uk.wikipedia.org/wiki/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B5_%D1%81%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5", "D:\\Workspace.java\\FirstLab\\downloaded_site.txt");
 
-
-
-//        try {
-//            System.out.println(new Scanner(new File("D:\\Workspace.java\\FirstLab\\first.html")).useDelimiter("\\Z").next());
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-
-//        JFrame frame = new JFrame();
-//        int result = JOptionPane.showConfirmDialog(frame, "Text");
-//        frame.setVisible(true);
-//
-//        System.out.println(result);
-
-
-//        SiteDownloader.downloadHTMLText("https://mail.google.com/mail/u/0/?tab=wm#inbox/15eb41ef2564c8d5?projector=1",
-//                "D:\\Workspace.java\\FirstLab\\downloaded_site.txt");
-
-
-//        testHTMLParser();
-
-//        System.out.println(HTMLParser.isHTMLFileReference("D:\\wiki/Text_editor.html"));
-
-//        String regularExpression = "href=\"[A-Za-z0-9 _/#$.?=:&;]+\"|href=[A-Za-z0-9 _/#$.c?=:&;]+[\\x00-\\x7F]";
-//        String test = "t\" title=\"Edit this page\" href=\"D:w/index.php?title=Regular_expression&amp;action=edit.html\"/><link rel=\"apple-tou";
+//        String regularExpression = "href=\\\"[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\\\"|href=\\'[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\\'|href=[A-Za-z0-9 _/#$.?=:&;]+[\\\\x00-\\\\x7F]";
+//        String test = "t\" title=\"Edit this page\" href=\"D:\\/index.php?title=Regular_expression&amp;action=edit.html\"/><link rel=\"apple-tou";
 //        checkRegularExpression(test, regularExpression);
+
+//        String reference = "D:\\index.php?title=Regular_expression&amp;action=edit.html";
+//
+//        System.out.println(HTMLParser.isHTMLFileReference(reference));
 
     }
 

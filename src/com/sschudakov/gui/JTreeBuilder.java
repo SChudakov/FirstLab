@@ -8,6 +8,7 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 import java.io.File;
+import java.util.NoSuchElementException;
 
 /**
  * Created by Semen Chudakov on 15.09.2017.
@@ -24,10 +25,32 @@ public class JTreeBuilder {
     }
 
     public void setupTree() {
-        this.top.add(new DefaultMutableTreeNode("C:"));
-        this.top.add(new DefaultMutableTreeNode("D:"));
+
+        DefaultMutableTreeNode cNode = new DefaultMutableTreeNode("C:\\");
+        DefaultMutableTreeNode dNode = new DefaultMutableTreeNode("D:\\");
+        addFiles(cNode);
+        addFiles(dNode);
+
+        this.top.add(cNode);
+        this.top.add(dNode);
         this.tree.expandPath(new TreePath(this.tree.getModel().getRoot()));
         this.tree.setRootVisible(false);
+    }
+
+    private void addFiles(DefaultMutableTreeNode node) {
+
+        String path = PathFormer.formPath(node);
+        File pathFile = new File(path);
+
+        if (pathFile.isDirectory()) {
+            File[] files = pathFile.listFiles();
+
+            if (files != null) {
+                for (File file : files) {
+                    node.add(new DefaultMutableTreeNode(file.getName()));
+                }
+            }
+        }
     }
 
     class SelectionListener implements TreeSelectionListener {
@@ -37,25 +60,21 @@ public class JTreeBuilder {
 
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 
-            File nodeFile;
-
-            if (node.getUserObject().equals("D:")) {
-                nodeFile = new File("D:\\");
-            } else {
-                nodeFile = new File(PathFormer.formPath(node));
-            }
+            File nodeFile = new File(PathFormer.formPath(node));
 
             if (nodeFile.isDirectory()) {
 
-                File[] listFiles = nodeFile.listFiles();
+                try {
+                    DefaultMutableTreeNode child = (DefaultMutableTreeNode) node.getFirstChild();
 
-                if (listFiles != null) {
-                    for (File file : listFiles) {
-                        node.add(new DefaultMutableTreeNode(file.getName()));
+                    while (child != null) {
+                        addFiles(child);
+                        child = (DefaultMutableTreeNode) node.getChildAfter(child);
                     }
+                } catch (NoSuchElementException e1) {
+                    e1.printStackTrace();
                 }
             }
         }
-
     }
 }
