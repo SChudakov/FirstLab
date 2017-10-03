@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileDeleter.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/downloaded_site.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/first.html" afterPath="" />
+    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="Before fixing bugs">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/FileOpener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/File.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/HTMLFile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/TXTFile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/ToUpperCaseFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/FileOpener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
@@ -19,16 +25,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/operations/FileMergerTest.class" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/operations/FileMergerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileSaver.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileSaver.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/first.txt" afterPath="$PROJECT_DIR$/first.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.txt" afterPath="$PROJECT_DIR$/result.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/operations/FileMergerTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/operations/FileMergerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/HTMLFileOpener.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/HTMLFileOpener.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,17 +43,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="9" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="9" />
               <folding>
                 <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-                <element signature="e#1822#1856#0" expanded="false" />
+                <element signature="e#1314#1348#0" expanded="false" />
                 <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
                 <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-                <element signature="e#2822#2899#0" expanded="false" />
+                <element signature="e#2314#2391#0" expanded="false" />
                 <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
                 <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
                 <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
@@ -59,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="395" column="65" lean-forward="false" selection-start-line="395" selection-start-column="65" selection-end-line="395" selection-end-column="65" />
+            <state relative-caret-position="442">
+              <caret line="479" column="52" lean-forward="false" selection-start-line="479" selection-start-column="52" selection-end-line="479" selection-end-column="52" />
               <folding>
                 <element signature="docComment;class#GUIManager#0" expanded="false" />
                 <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#setupFrame#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#setupMenuBar#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#setupPanels#0;class#GUIManager#0" expanded="false" />
-                <element signature="e#5446#5562#0" expanded="false" />
+                <element signature="e#5418#5534#0" expanded="false" />
                 <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
-                <element signature="e#6647#6763#0" expanded="false" />
+                <element signature="e#6619#6735#0" expanded="false" />
                 <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
@@ -88,14 +91,14 @@
                 <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="e#14423#14486#0" expanded="false" />
+                <element signature="e#14306#14369#0" expanded="false" />
+                <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#isHTMLFilePath#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#isTXTFilePath#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
+                <element signature="e#16425#16426#0" expanded="true" />
+                <element signature="e#16471#16472#0" expanded="true" />
                 <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#SaveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#CreateListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validatePath#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#DeleteListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#DeleteListener#0;class#GUIManager#0" expanded="false" />
@@ -111,45 +114,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileOpener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/FileOpener.java">
+      <file leaf-file-name="FileOpenerProducer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLFileOpener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/HTMLFileOpener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TXTFileOpener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileCloser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="20" column="121" lean-forward="false" selection-start-line="20" selection-start-column="121" selection-end-line="20" selection-end-column="121" />
               <folding>
-                <element signature="docComment;class#FileCloser#0" expanded="false" />
-                <element signature="method#closeFile#0;class#FileCloser#0" expanded="false" />
-                <element signature="method#hasChanges#0;class#FileCloser#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,90 +129,22 @@
       <file leaf-file-name="FileSaver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="25" column="106" lean-forward="false" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultHighlighter.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/text/DefaultHighlighter.java">
+      <file leaf-file-name="FileCloser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="181">
+              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
               <folding>
-                <element signature="docComment;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#DefaultHighlighter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#paint#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#paint#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#install#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#install#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#deinstall#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#addHighlight#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#addHighlight#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#removeHighlight#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#removeHighlight#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#removeAllHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#removeAllHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#changeHighlight#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#changeHighlight#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="e#7719#7781#0" expanded="false" />
-                <element signature="docComment;method#getHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#getHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#paintLayeredHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#paintLayeredHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#safeDamageRange#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#safeDamageRange#1;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#safeDamageRange#1;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#setDrawsLayeredHighlights#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;field#DefaultPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#DefaultHighlightPainter#0;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#getColor#0;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#paint#0;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#paint#0;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#paintLayer#0;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#paintLayer#0;class#DefaultHighlightPainter#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="e#16874#16936#0" expanded="false" />
-                <element signature="class#HighlightInfo#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;class#LayeredHighlightInfo#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="class#LayeredHighlightInfo#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#union#0;class#LayeredHighlightInfo#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#paintLayeredHighlights#0;class#LayeredHighlightInfo#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#paintLayeredHighlights#0;class#LayeredHighlightInfo#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="e#19209#19268#0" expanded="false" />
-                <element signature="docComment;class#SafeDamager#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="class#SafeDamager#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="docComment;method#run#0;class#SafeDamager#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#run#0;class#SafeDamager#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="e#20378#20424#0" expanded="false" />
-                <element signature="docComment;method#damageRange#0;class#SafeDamager#0;class#DefaultHighlighter#0" expanded="false" />
-                <element signature="method#damageRange#0;class#SafeDamager#0;class#DefaultHighlighter#0" expanded="false" />
+                <element signature="docComment;class#FileCloser#0" expanded="false" />
+                <element signature="method#hasChanges#0;class#FileCloser#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="84" lean-forward="false" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileMerger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -251,9 +154,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Singleton" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -280,18 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/FileManager.java" />
-        <option value="$PROJECT_DIR$/../Life/src/com/sschudakov/life/GUIManager.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/sdfgh.form" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/sdfgh.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/EsceptionRenderer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/PathFormer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/UnselectedFileException.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/SiteDownloader.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/Perspective.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/ExceptionRenderer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/JTreeBuilder.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/FileOpener.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/FileSaver.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/FileMerger.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/Substring.java" />
@@ -313,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/MessageRenderer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/JTextAreaCleaner.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/TXTFileOpener.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLFileOpener.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GBC.java" />
@@ -324,12 +214,26 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/operations/FileMergerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FilesCreator.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileDeleter.java" />
         <option value="$PROJECT_DIR$/../Tasks/src/com/sschudakov/task1/FileManager.java" />
+        <option value="$PROJECT_DIR$/downloaded_site.txt" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/ToUpperCaseFormatter.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/pattern/files/HTMLFile.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/pattern/file_openers/FileOpener.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/pattern/files/TXTFile.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/pattern/files/File.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/pattern/file_openers/HTMLFileOpener.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/pattern/file_openers/TXTFileOpener.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/File.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/TXTFile.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/HTMLFile.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FactoryProducer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
-        <option value="$PROJECT_DIR$/downloaded_site.txt" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
       </list>
     </option>
   </component>
@@ -377,6 +281,13 @@
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,14 +296,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="operations" type="462c0819:PsiDirectoryNode" />
-              <item name="file_openers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
@@ -623,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506938344355</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Before fixing bugs">
+      <created>1507042688442</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507042688442</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -669,20 +579,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.023608768" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19448699" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -693,9 +606,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45699832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -732,11 +643,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="After adding GridBagConstraints" />
     <MESSAGE value="After removing right JTextArea" />
-    <option name="LAST_COMMIT_MESSAGE" value="After removing right JTextArea" />
+    <MESSAGE value="Before fixing bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before fixing bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -745,49 +657,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="134" column="29" lean-forward="false" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="147" column="31" lean-forward="true" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="91" column="13" lean-forward="false" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/asda.java" />
-    <entry file="file://$PROJECT_DIR$/../Tasks/src/com/sschudakov/task3/HttpMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Tasks/src/com/sschudakov/task3/LogAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="147" lean-forward="false" selection-start-line="21" selection-start-column="147" selection-end-line="21" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Tasks/src/com/sschudakov/task3/LogToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/event/KeyListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -935,6 +804,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <element signature="docComment;class#HTMLParser#0" expanded="false" />
+            <element signature="method#isHTMLFileReference#0;class#HTMLParser#0" expanded="false" />
+            <element signature="method#containsDiskSpecification#0;class#HTMLParser#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -953,6 +827,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14654">
           <caret line="913" column="20" lean-forward="false" selection-start-line="913" selection-start-column="20" selection-end-line="913" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -960,6 +835,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding>
+            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -974,6 +857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="1005" column="19" lean-forward="false" selection-start-line="1005" selection-start-column="19" selection-end-line="1005" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -981,6 +865,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="docComment;class#FileDeleter#0" expanded="false" />
+            <element signature="method#deleteFile#0;class#FileDeleter#0" expanded="false" />
+            <element signature="method#validatePath#0;class#FileDeleter#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,23 +958,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-            <element signature="e#1822#1856#0" expanded="false" />
-            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
-            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-            <element signature="e#2822#2899#0" expanded="false" />
-            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
-            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
-            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,64 +970,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/downloaded_site.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/ToUpperCaseFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="76" lean-forward="false" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/HTMLFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="docComment;class#HTMLFile#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/TXTFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#232#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#FileExtensionDeterminer#0" expanded="false" />
+            <element signature="method#isHTNLFile#0;class#FileExtensionDeterminer#0" expanded="false" />
+            <element signature="method#isTXTFile#0;class#FileExtensionDeterminer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="44" column="81" lean-forward="false" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
+          <folding>
+            <element signature="docComment;class#TXTFileOpener#0" expanded="false" />
+            <element signature="method#openFile#0;class#TXTFileOpener#0" expanded="false" />
+            <element signature="method#validateFile#0;class#TXTFileOpener#0" expanded="false" />
+            <marker date="1507047899660" expanded="false" signature="702:764" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/HTMLFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding>
+            <element signature="docComment;class#HTMLFileOpener#0" expanded="false" />
+            <element signature="method#HTMLFileOpener#0;class#HTMLFileOpener#0" expanded="false" />
+            <element signature="method#validateFile#0;class#HTMLFileOpener#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/FileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="121" lean-forward="false" selection-start-line="20" selection-start-column="121" selection-end-line="20" selection-end-column="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="323">
+          <caret line="25" column="106" lean-forward="false" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="181">
+          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
           <folding>
             <element signature="docComment;class#FileCloser#0" expanded="false" />
-            <element signature="method#closeFile#0;class#FileCloser#0" expanded="false" />
             <element signature="method#hasChanges#0;class#FileCloser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/downloaded_site.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/FileOpener.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/HTMLFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="189">
+          <caret line="835" column="20" lean-forward="false" selection-start-line="835" selection-start-column="11" selection-end-line="835" selection-end-column="20" />
+          <folding>
+            <element signature="e#29578#29579#0" expanded="true" />
+            <element signature="e#29610#29611#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="395" column="65" lean-forward="false" selection-start-line="395" selection-start-column="65" selection-end-line="395" selection-end-column="65" />
+        <state relative-caret-position="442">
+          <caret line="479" column="52" lean-forward="false" selection-start-line="479" selection-start-column="52" selection-end-line="479" selection-end-column="52" />
           <folding>
             <element signature="docComment;class#GUIManager#0" expanded="false" />
             <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
             <element signature="method#setupFrame#0;class#GUIManager#0" expanded="false" />
             <element signature="method#setupMenuBar#0;class#GUIManager#0" expanded="false" />
             <element signature="method#setupPanels#0;class#GUIManager#0" expanded="false" />
-            <element signature="e#5446#5562#0" expanded="false" />
+            <element signature="e#5418#5534#0" expanded="false" />
             <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
-            <element signature="e#6647#6763#0" expanded="false" />
+            <element signature="e#6619#6735#0" expanded="false" />
             <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
             <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
             <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
@@ -1170,14 +1122,14 @@
             <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="e#14423#14486#0" expanded="false" />
+            <element signature="e#14306#14369#0" expanded="false" />
+            <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#isHTMLFilePath#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#isTXTFilePath#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
+            <element signature="e#16425#16426#0" expanded="true" />
+            <element signature="e#16471#16472#0" expanded="true" />
             <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#SaveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#CreateListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validatePath#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#DeleteListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#DeleteListener#0;class#GUIManager#0" expanded="false" />
@@ -1188,6 +1140,23 @@
             <element signature="method#actionPerformed#0;class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
+            <element signature="e#1314#1348#0" expanded="false" />
+            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
+            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
+            <element signature="e#2314#2391#0" expanded="false" />
+            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
+            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
+            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>

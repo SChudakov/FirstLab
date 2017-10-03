@@ -1,20 +1,23 @@
 package com.sschudakov.gui;
 
+import com.sschudakov.abstract_factory.factory_producer.FileOpenerProducer;
 import com.sschudakov.operations.*;
-import com.sschudakov.operations.file_openers.FileOpener;
-import com.sschudakov.operations.file_openers.HTMLFileOpener;
-import com.sschudakov.operations.file_openers.TXTFileOpener;
+import com.sschudakov.abstract_factory.factories.FileOpener;
+import com.sschudakov.abstract_factory.factories.HTMLFileOpener;
+import com.sschudakov.abstract_factory.factories.TXTFileOpener;
 import com.sschudakov.utils.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import javax.swing.text.Highlighter;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -27,7 +30,6 @@ public class GUIManager {
     private JFrame frame = new JFrame("File Manager");
 
     private JPanel panel = new JPanel();
-//    private JPanel rightPanel = new JPanel();
 
     private JMenuBar menuBar = new JMenuBar();
     private JMenu programMenu = new JMenu("Program");
@@ -53,18 +55,16 @@ public class GUIManager {
     private DefaultMutableTreeNode rightJTreeTop = new DefaultMutableTreeNode("files");
     private JTree leftJTree = new JTree(leftJTreeTop);
     private JTree rightJTree = new JTree(rightJTreeTop);
-    private JTextArea leftJTextArea = new JTextArea();
-//    private JTextArea rightJTextArea = new JTextArea();
+    private JTextArea mainJTextArea = new JTextArea();
     private JScrollPane leftFilesAreaScrollPane = new JScrollPane(leftJTree);
     private JScrollPane rightFilesAreaScrollPane = new JScrollPane(rightJTree);
-    private JScrollPane leftTextAreaScrollPane = new JScrollPane(leftJTextArea);
-//    private JScrollPane rightTextAreaScrollPane = new JScrollPane(rightJTextArea);
+    private JScrollPane leftTextAreaScrollPane = new JScrollPane(mainJTextArea);
 
     private JFileChooser jFileChooser = new JFileChooser();
 
     private Perspective perspective = Perspective.FileManager;
 
-    private FileCloser fileCloser = new FileCloser(this.leftJTextArea);
+    private FileCloser fileCloser = new FileCloser(this.mainJTextArea);
 
 
     public void buildGUI() {
@@ -204,14 +204,14 @@ public class GUIManager {
 
             if (fileCloser.closeFile()) {
                 if (perspective.equals(Perspective.FileRedactor)) {
-                    DefaultMutableTreeNode leftSelectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+                    DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
-                    if (leftSelectedNode == null) {
+                    if (selectedNode != null) {
+                        renderFilesList(mainJTextArea, selectedNode);
+                    } else {
                         MessageRenderer.renderMessage(frame, "No one file has been selected");
-                        return;
                     }
 
-                    renderFilesList(leftJTextArea, leftSelectedNode);
                 } else {
                     MessageRenderer.renderMessage(frame, "You cannot see files in File Manager perspective");
                 }
@@ -223,13 +223,20 @@ public class GUIManager {
             String path = PathFormer.formPath(node);
 
             validatePath(path);
+
             List<String> listOfFiles = HTMLParser.parseFile(path);
+
             renderFilesList(area, listOfFiles);
         }
 
         private void renderFilesList(JTextArea area, List<String> list) {
-            for (String line : list) {
-                area.append(line + NEW_LINE_SYMBOL);
+
+            if (list.size() != 0) {
+                for (String line : list) {
+                    area.append(line + NEW_LINE_SYMBOL);
+                }
+            } else {
+                MessageRenderer.renderMessage(frame, "File contains no hypertext references to other html files");
             }
         }
 
@@ -244,14 +251,11 @@ public class GUIManager {
                 throw new IllegalArgumentException("path " + path + " points to a directory");
             }
 
-            if (!isHTMLFile(pathFile.getName())) {
-                throw new IllegalArgumentException("file along the path " + " is not a HTML file");
+            if (!FileExtensionDeterminer.isHTNLFile(pathFile.getName())) {
+                throw new IllegalArgumentException("file along the path " + path + " is not a HTML file");
             }
         }
 
-        private boolean isHTMLFile(String fileName) {
-            return true;
-        }
 
     }
 
@@ -265,38 +269,32 @@ public class GUIManager {
                 DefaultMutableTreeNode leftSelectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
                 DefaultMutableTreeNode rightSelectedNode = (DefaultMutableTreeNode) rightJTree.getLastSelectedPathComponent();
 
-                if (leftSelectedNode == null || rightSelectedNode == null) {
+                if (leftSelectedNode != null && rightSelectedNode != null) {
+
+                    String first = PathFormer.formPath(leftSelectedNode);
+                    String second = PathFormer.formPath(rightSelectedNode);
+
+                    try {
+
+                        validateSelectedFile(first);
+                        validateSelectedFile(second);
+
+                        jFileChooser.showSaveDialog(frame);
+
+                        String result = jFileChooser.getSelectedFile().getPath();
+
+                        validateResultingFile(result);
+
+                        FileMerger.mergeFiles(first, second, result);
+
+
+                    } catch (Exception e1) {
+                        ExceptionRenderer.renderException(frame, e1);
+                    }
+
+                } else {
                     MessageRenderer.renderMessage(frame, "One of the files for merging has not been selected");
-                    return;
                 }
-
-
-                String first = PathFormer.formPath(leftSelectedNode);
-                String second = PathFormer.formPath(rightSelectedNode);
-
-                try {
-                    validateSelectedFile(first);
-                    validateSelectedFile(second);
-                } catch (Exception e1) {
-                    ExceptionRenderer.renderException(frame, e1);
-                }
-
-                jFileChooser.showSaveDialog(frame);
-
-                String result = jFileChooser.getSelectedFile().getPath();
-
-                try {
-                    validateResultingFile(result);
-                } catch (Exception e1) {
-                    ExceptionRenderer.renderException(frame, e1);
-                }
-
-                try {
-                    FileMerger.mergeFiles(first, second, result);
-                } catch (Exception e1) {
-                    ExceptionRenderer.renderException(frame, e1);
-                }
-
             } else {
                 MessageRenderer.renderMessage(frame, "You cannot merge files in File Redactor perspective");
             }
@@ -328,9 +326,11 @@ public class GUIManager {
         public void actionPerformed(ActionEvent e) {
 
             if (perspective.equals(Perspective.FileRedactor)) {
-                leftJTextArea.setText(
-                        leftJTextArea.getText().replace(
-                                leftJTextArea.getSelectedText(), leftJTextArea.getSelectedText().toUpperCase()));
+                try {
+                    ToUpperCaseFormatter.selectedTextToUpperCase(mainJTextArea);
+                } catch (Exception e1) {
+                    ExceptionRenderer.renderException(frame, e1);
+                }
             } else {
                 MessageRenderer.renderMessage(frame, "You cannot format text in File Manager perspective");
             }
@@ -345,12 +345,12 @@ public class GUIManager {
                 MessageRenderer.renderMessage(frame, "You cannot find matches in text in File Manager perspective");
             } else {
 
-                leftJTextArea.setSelectedTextColor(Color.BLUE);
+                mainJTextArea.setSelectedTextColor(Color.BLUE);
 
                 String inputPattern = UserTextInput.inputUserText(frame, "Type in a pattern");
 
                 if (inputPattern != null) {
-                    List<Substring> foundSubstrings = SubstringsFinder.findSubstrings(leftJTextArea.getText(), inputPattern);
+                    List<Substring> foundSubstrings = SubstringsFinder.findSubstrings(mainJTextArea.getText(), inputPattern);
 
                     if (foundSubstrings.size() == 0) {
                         MessageRenderer.renderMessage(frame, "No matches have been found");
@@ -359,9 +359,9 @@ public class GUIManager {
 
                     for (Substring substring : foundSubstrings) {
     //                    System.out.println(substring.toString());
-    //                    leftJTextArea.select(substring.getBegin(), substring.getEnd());
-                        leftJTextArea.setCaretPosition(substring.getBegin());
-                        leftJTextArea.moveCaretPosition(substring.getEnd());
+    //                    mainJTextArea.select(substring.getBegin(), substring.getEnd());
+                        mainJTextArea.setCaretPosition(substring.getBegin());
+                        mainJTextArea.moveCaretPosition(substring.getEnd());
 
                     }
                 }
@@ -383,24 +383,23 @@ public class GUIManager {
 
                     if (selectedNode != null) {
 
-                        FileOpener opener;
+                        try {
+                            String path = PathFormer.formPath(selectedNode);
 
-                        String path = PathFormer.formPath(selectedNode);
+                            FileOpener opener = FileOpenerProducer.produceFactory(path);
 
-                        if (isHTMLFilePath(path)) {
-                            opener = new HTMLFileOpener();
-                            opener.openFile(path, leftJTextArea);
+                            opener.openFile(mainJTextArea);
+
+                            fileCloser.setOpenedFile(new File(path));
+                        } catch (FileNotFoundException e1) {
+                            e1.printStackTrace();
                         }
-                        if (isTXTFilePath(path)) {
-                            opener = new TXTFileOpener();
-                            opener.openFile(path, leftJTextArea);
-                        }
-
-                        fileCloser.setOpenedFile(new File(path));
 
                     } else {
                         MessageRenderer.renderMessage(frame, "No one file has been selected");
                     }
+                }else {
+                    MessageRenderer.renderMessage(frame, "No one file jas been selected");
                 }
             }
         }
@@ -436,11 +435,15 @@ public class GUIManager {
 
                     File selectedFile = jFileChooser.getSelectedFile();
 
-                    try {
-                        FileSaver.saveFile(leftJTextArea, selectedFile);
-                    } catch (Exception e1) {
-                        ExceptionRenderer.renderException(frame, e1);
+                    if (selectedFile != null) {
+                        try {
+                            FileSaver.saveFile(mainJTextArea, selectedFile);
+                        } catch (Exception e1) {
+                            ExceptionRenderer.renderException(frame, e1);
+                        }
                     }
+                }else {
+                    MessageRenderer.renderMessage(frame, "No one file is opened");
                 }
             }
         }
@@ -472,7 +475,9 @@ public class GUIManager {
 
                            selectedNode.add(new DefaultMutableTreeNode(name));
 
-                           //TODO: add corresponding node to view
+                           DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
+
+                           model.reload(selectedNode);
                        }
 
                    } catch (Exception e1) {

@@ -6,6 +6,7 @@ import com.sschudakov.utils.OptionConfirmer;
 import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -28,7 +29,7 @@ public class FileCloser {
         this.area = area;
     }
 
-    public boolean closeFile() {
+    public boolean closeFile(){
         if (openedFile != null) {
 
             if (hasChanges(this.openedFile, area)) {

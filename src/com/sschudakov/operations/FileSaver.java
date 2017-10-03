@@ -23,7 +23,7 @@ public class FileSaver {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(file))){
             writer.write(area.getText());
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File failed to be saved correctly because of: " + e.getMessage());
         }
     }
 }

@@ -7,6 +7,7 @@ import com.sschudakov.utils.SiteDownloader;
 import com.sschudakov.utils.SubstringsFinder;
 
 
+import javax.swing.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,16 +25,11 @@ public class Main {
 
         GUIManager manager = new GUIManager();
         manager.buildGUI();
-
-//        SiteDownloader.downloadHTMLText("https://uk.wikipedia.org/wiki/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B5_%D1%81%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5", "D:\\Workspace.java\\FirstLab\\downloaded_site.txt");
-
-//        String regularExpression = "href=\\\"[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\\\"|href=\\'[A-Za-z0-9 \\\\_\\-/#$.?=:&;]+\\'|href=[A-Za-z0-9 _/#$.?=:&;]+[\\\\x00-\\\\x7F]";
-//        String test = "t\" title=\"Edit this page\" href=\"D:\\/index.php?title=Regular_expression&amp;action=edit.html\"/><link rel=\"apple-tou";
-//        checkRegularExpression(test, regularExpression);
-
-//        String reference = "D:\\index.php?title=Regular_expression&amp;action=edit.html";
-//
-//        System.out.println(HTMLParser.isHTMLFileReference(reference));
+//        JFrame frame = new JFrame();
+//        frame.setVisible(true);
+//        JFileChooser fileChooser = new JFileChooser();
+//        fileChooser.showSaveDialog(frame);
+//        System.out.println(fileChooser.getSelectedFile());
 
     }
 
