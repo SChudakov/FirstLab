@@ -13,9 +13,13 @@ import java.util.Scanner;
  */
 public class FileCloser {
 
+
     private File openedFile;
     private JTextArea area;
 
+    public File getOpenedFile() {
+        return openedFile;
+    }
     public void setOpenedFile(File openedFile) {
         this.openedFile = openedFile;
     }

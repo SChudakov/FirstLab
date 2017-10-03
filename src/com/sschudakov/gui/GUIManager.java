@@ -8,6 +8,7 @@ import com.sschudakov.utils.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
+import javax.swing.text.Highlighter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
@@ -37,10 +38,12 @@ public class GUIManager {
     private JMenuItem showFilesItem = new JMenuItem("show references");
     private JMenuItem mergeItem = new JMenuItem("merge");
     private JMenuItem toUpperCaseItem = new JMenuItem("to uppercase");
-    private JMenuItem findMatcherInText = new JMenuItem("find matches in text");
+    private JMenuItem findMatchesInText = new JMenuItem("find matches in text");
     private JMenuItem openItem = new JMenuItem("open");
     private JMenuItem closeItem = new JMenuItem("close");
     private JMenuItem saveItem = new JMenuItem("save");
+    private JMenuItem createItem = new JMenuItem("create");
+    private JMenuItem deleteItem = new JMenuItem("delete");
     private JMenuItem renameItem = new JMenuItem("rename");
     private JMenuItem fileManagerPerspectiveItem = new JMenuItem("FileManager");
     private JMenuItem fileRedactorPerspectiveItem = new JMenuItem("FileRedactor");
@@ -99,14 +102,16 @@ public class GUIManager {
     private void setupMenuBar() {
 
         this.fileMenu.add(this.openItem);
-        this.fileMenu.add(this.saveItem);
         this.fileMenu.add(this.closeItem);
+        this.fileMenu.add(this.saveItem);
+        this.fileMenu.add(this.createItem);
+        this.fileMenu.add(this.deleteItem);
         this.fileMenu.add(this.renameItem);
 
         this.operationsMenu.add(this.showFilesItem);
         this.operationsMenu.add(this.mergeItem);
         this.operationsMenu.add(this.toUpperCaseItem);
-        this.operationsMenu.add(this.findMatcherInText);
+        this.operationsMenu.add(this.findMatchesInText);
 
 
         this.perspectiveMenu.add(this.fileManagerPerspectiveItem);
@@ -175,11 +180,13 @@ public class GUIManager {
         this.showFilesItem.addActionListener(new ShowFilesListener());
         this.mergeItem.addActionListener(new MergeListener());
         this.toUpperCaseItem.addActionListener(new ToUpperCaseListener());
-        this.findMatcherInText.addActionListener(new FindMatchesInTextListener());
+        this.findMatchesInText.addActionListener(new FindMatchesInTextListener());
 
         this.openItem.addActionListener(new OpenFileListener());
         this.closeItem.addActionListener(new CloseListener());
         this.saveItem.addActionListener(new SaveListener());
+        this.createItem.addActionListener(new CreateListener());
+        this.deleteItem.addActionListener(new DeleteListener());
         this.renameItem.addActionListener(new RenameListener());
 
         this.fileManagerPerspectiveItem.addActionListener(new FileManagerPerspectiveListener());
@@ -284,17 +291,23 @@ public class GUIManager {
                     ExceptionRenderer.renderException(frame, e1);
                 }
 
-                FileMerger.mergeFiles(first, second, result);
+                try {
+                    FileMerger.mergeFiles(first, second, result);
+                } catch (Exception e1) {
+                    ExceptionRenderer.renderException(frame, e1);
+                }
+
             } else {
                 MessageRenderer.renderMessage(frame, "You cannot merge files in File Redactor perspective");
             }
         }
 
-        private void validateSelectedFile(String first) {
-            File firstFile = new File(first);
+        private void validateSelectedFile(String selectedFile) {
+
+            File firstFile = new File(selectedFile);
 
             if (!firstFile.exists() || !firstFile.isFile()) {
-                throw new IllegalArgumentException("There is no file along the given path:  " + first);
+                throw new IllegalArgumentException("There is no file along the given path:  " + selectedFile);
             }
 
         }
@@ -304,7 +317,7 @@ public class GUIManager {
             File resultFile = new File(result);
 
             if (resultFile.exists()) {
-                throw new IllegalArgumentException("Selected files cannot be merged to already elected file: " + result);
+                throw new IllegalArgumentException("Selected files cannot be merged to already selected file: " + result);
             }
         }
     }
@@ -336,18 +349,21 @@ public class GUIManager {
 
                 String inputPattern = UserTextInput.inputUserText(frame, "Type in a pattern");
 
-                List<Substring> foundSubstrings = SubstringsFinder.findSubstrings(leftJTextArea.getText(), inputPattern);
+                if (inputPattern != null) {
+                    List<Substring> foundSubstrings = SubstringsFinder.findSubstrings(leftJTextArea.getText(), inputPattern);
 
-                if (foundSubstrings.size() == 0) {
-                    MessageRenderer.renderMessage(frame, "No matches have been found");
-                }
+                    if (foundSubstrings.size() == 0) {
+                        MessageRenderer.renderMessage(frame, "No matches have been found");
+                    }
 
-                for (Substring substring : foundSubstrings) {
-//                    System.out.println(substring.toString());
-//                    leftJTextArea.select(substring.getBegin(), substring.getEnd());
-                    leftJTextArea.setCaretPosition(substring.getBegin());
-                    leftJTextArea.moveCaretPosition(substring.getEnd());
 
+                    for (Substring substring : foundSubstrings) {
+    //                    System.out.println(substring.toString());
+    //                    leftJTextArea.select(substring.getBegin(), substring.getEnd());
+                        leftJTextArea.setCaretPosition(substring.getBegin());
+                        leftJTextArea.moveCaretPosition(substring.getEnd());
+
+                    }
                 }
             }
         }
@@ -410,18 +426,92 @@ public class GUIManager {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+
             if (perspective.equals(Perspective.FileManager)) {
                 MessageRenderer.renderMessage(frame, "You cannot save files in File Manager perspective");
             } else {
+                if (fileCloser.getOpenedFile() != null) {
 
-                jFileChooser.showSaveDialog(frame);
-                File selectedFile = jFileChooser.getSelectedFile();
+                    jFileChooser.showSaveDialog(frame);
 
-                try {
-                    FileSaver.saveFile(leftJTextArea, selectedFile);
-                } catch (Exception e1) {
-                    ExceptionRenderer.renderException(frame, e1);
+                    File selectedFile = jFileChooser.getSelectedFile();
+
+                    try {
+                        FileSaver.saveFile(leftJTextArea, selectedFile);
+                    } catch (Exception e1) {
+                        ExceptionRenderer.renderException(frame, e1);
+                    }
                 }
+            }
+        }
+
+    }
+
+    class CreateListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            if (perspective.equals(Perspective.FileManager)) {
+                MessageRenderer.renderMessage(frame, "You cannot create files in File Manager perspective");
+            } else {
+               DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+
+               if(selectedNode != null){
+                   String path = PathFormer.formPath(selectedNode);
+
+                   try {
+                       validatePath(path);
+
+                       String name = UserTextInput.inputUserText(frame, "Input name for the file");
+
+
+                       if (name != null) {
+
+                           FileCreator.createFile(path + "\\" + name);
+
+                           selectedNode.add(new DefaultMutableTreeNode(name));
+
+                           //TODO: add corresponding node to view
+                       }
+
+                   } catch (Exception e1) {
+                       ExceptionRenderer.renderException(frame, e1);
+                   }
+               }
+            }
+        }
+
+        private void validatePath(String path){
+
+            File pathFile = new File(path);
+            if(!pathFile.isDirectory()){
+                throw new IllegalArgumentException("There is no directory along the path: " + path);
+            }
+        }
+    }
+
+    class DeleteListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            if (perspective.equals(Perspective.FileManager)) {
+                MessageRenderer.renderMessage(frame, "You cannot delete files in File Manager perspective");
+            } else {
+               DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+
+               if(selectedNode != null){
+                   String path = PathFormer.formPath(selectedNode);
+                   try {
+
+                       FileDeleter.deleteFile(path);
+                       //TODO: remove corresponding node from tree view
+
+                   } catch (Exception e1) {
+                       ExceptionRenderer.renderException(frame, e1);
+                   }
+               }
             }
         }
 
@@ -431,6 +521,7 @@ public class GUIManager {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+
             if (perspective.equals(Perspective.FileRedactor)) {
                 DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
@@ -448,11 +539,13 @@ public class GUIManager {
 
                     String newName = UserTextInput.inputUserText(frame, "Enter new name for the file");
 
-                    try {
-                        FileRenamer.renameFile(path, newName);
-                        selectedNode.setUserObject(newName);
-                    } catch (Exception e1) {
-                        ExceptionRenderer.renderException(frame, e1);
+                    if (newName != null) {
+                        try {
+                            FileRenamer.renameFile(path, newName);
+                            selectedNode.setUserObject(newName);
+                        } catch (Exception e1) {
+                            ExceptionRenderer.renderException(frame, e1);
+                        }
                     }
 
                 }

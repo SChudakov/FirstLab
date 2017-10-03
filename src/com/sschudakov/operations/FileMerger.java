@@ -10,6 +10,7 @@ public class FileMerger {
     private static final int BUFFER_SIZE = 64 * 1024;
 
     public static void mergeFiles(String first, String second, String result) {
+        validateParamethers(first, second, result);
 
         File firstFile = new File(first);
         File secondFile = new File(second);
@@ -17,7 +18,6 @@ public class FileMerger {
 
         mergeFiles(firstFile, secondFile, resultFile);
     }
-
 
     private static void mergeFiles(File fromFile, File toFile, File resultFile) {
 
@@ -55,6 +55,26 @@ public class FileMerger {
         }
     }
 
+    private static void validateParamethers(String first, String second, String result) {
+
+        File firstFile = new File(first);
+        File secondFile = new File(second);
+        File resultFile = new File(result);
+
+        if (!firstFile.exists() || !firstFile.isFile()) {
+            throw new IllegalArgumentException("There is no file along the given path:  " + first);
+        }
+        if (!secondFile.exists() || !secondFile.isFile()) {
+            throw new IllegalArgumentException("There is no file along the given path:  " + second);
+        }
+
+//        if (resultFile.exists()) {
+//            throw new IllegalArgumentException("Selected files cannot be merged to already existing file: " + result);
+//        }
+
+    }
+
+
     private static void close(FileInputStream inputStream) throws IOException {
         if (inputStream != null) {
             inputStream.close();
@@ -62,7 +82,6 @@ public class FileMerger {
     }
 
     private static void close(FileOutputStream outputStream) throws IOException {
-
         if (outputStream != null) {
             outputStream.flush();
             outputStream.close();
