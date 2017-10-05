@@ -6,18 +6,20 @@ import java.io.File;
  * Created by Semen Chudakov on 02.10.2017.
  */
 public class FileDeleter {
-    public static void deleteFile(String path){
-        validatePath(path);
-        File pathFile = new File(path);
-        pathFile.delete();
-    }
+    public static void delete(String path){
 
-    private static void validatePath(String path){
+        File file = new File(path);
 
-        File pathFile = new File(path);
+        if (file.isFile()) {
+            file.delete();
+        }
 
-        if(!pathFile.isFile()){
-            throw new IllegalArgumentException("There is no file along the path: " + path);
+        if (file.isDirectory()) {
+            File[] files = file.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                delete(files[i].getPath());
+            }
+            file.delete();
         }
     }
 }

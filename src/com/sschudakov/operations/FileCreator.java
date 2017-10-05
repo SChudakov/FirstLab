@@ -13,7 +13,7 @@ public class FileCreator {
         if(!pathFile.exists()){
             pathFile.createNewFile();
         }else {
-            throw new IllegalArgumentException("Such file already exists: " + path);
+            throw new IllegalArgumentException("Such file or folder already exists: " + path);
         }
     }
 
