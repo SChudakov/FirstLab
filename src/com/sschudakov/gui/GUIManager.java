@@ -61,6 +61,10 @@ public class GUIManager {
     private DefaultMutableTreeNode rightJTreeTop = new DefaultMutableTreeNode("files");
     private JTree leftJTree = new JTree(leftJTreeTop);
     private JTree rightJTree = new JTree(rightJTreeTop);
+    private JTreeBuilder leftJTreeBuilder = new JTreeBuilder(this.leftJTree, this.leftJTreeTop);
+    private JTreeBuilder rightJTreeBuilder = new JTreeBuilder(this.rightJTree, this.rightJTreeTop);
+
+
     private JTextArea mainJTextArea = new JTextArea();
     private JScrollPane leftFilesAreaScrollPane = new JScrollPane(leftJTree);
     private JScrollPane rightFilesAreaScrollPane = new JScrollPane(rightJTree);
@@ -175,10 +179,6 @@ public class GUIManager {
     }
 
     private void setupJTrees() {
-
-        JTreeBuilder leftJTreeBuilder = new JTreeBuilder(this.leftJTree, this.leftJTreeTop);
-        JTreeBuilder rightJTreeBuilder = new JTreeBuilder(this.rightJTree, this.rightJTreeTop);
-
         this.leftJTree.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
         this.rightJTree.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
 
@@ -187,8 +187,6 @@ public class GUIManager {
 
         leftJTreeBuilder.setupTree();
         rightJTreeBuilder.setupTree();
-
-
     }
 
     private void addListeners() {
@@ -463,17 +461,11 @@ public class GUIManager {
             } else {
                 if (fileCloser.getOpenedFile() != null) {
 
-                    jFileChooser.showSaveDialog(frame);
-
-                    File selectedFile = jFileChooser.getSelectedFile();
-
-                    if (selectedFile != null) {
-                        try {
-                            FileSaver.saveFile(mainJTextArea, selectedFile);
+                    try {
+                        FileSaver.saveFile(mainJTextArea, fileCloser.getOpenedFile());
                         } catch (Exception e1) {
                             ExceptionRenderer.renderException(frame, e1);
                         }
-                    }
                 }else {
                     MessageRenderer.renderMessage(frame, "No one file is opened");
                 }
@@ -493,6 +485,7 @@ public class GUIManager {
                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
                if(selectedNode != null){
+
                    String path = PathFormer.formPath(selectedNode);
 
                    try {
@@ -503,12 +496,12 @@ public class GUIManager {
                        if (name != null) {
 
                            FileCreator.createFile(path + "\\" + name);
-
-                           selectedNode.add(new DefaultMutableTreeNode(name));
-
-                           DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
-
-                           model.reload(selectedNode);
+                           leftJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
+//                           selectedNode.add(new DefaultMutableTreeNode(name));
+//
+//                           DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
+//
+//                           model.reload(selectedNode);
                        }
 
                    } catch (Exception e1) {
@@ -545,9 +538,9 @@ public class GUIManager {
 
                         if (newName != null) {
                             FileRenamer.renameFile(path, newName);
+
                             selectedNode.setUserObject(newName);
-                            DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
-                            model.reload(selectedNode);
+                            leftJTreeBuilder.reload(selectedNode);
                         }
 
                     } catch (Exception e1) {
@@ -584,13 +577,13 @@ public class GUIManager {
 
                             FolderCreator.createFolder(path + "\\" + name);
 
-                            selectedNode.add(new DefaultMutableTreeNode(name));
+                            leftJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
 
-                            DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
+//                            selectedNode.add(new DefaultMutableTreeNode(name));
 
-                            model.reload(selectedNode);
+//                            DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
+//                            model.reload(selectedNode);
 
-                            //TODO: change the way directory is displayed so that it isn`t displayed tha same way as a file
                         }
 
                     } catch (Exception e1) {
@@ -633,8 +626,9 @@ public class GUIManager {
 
                         if (confirmed == 0) {
                             FileDeleter.delete(path);
-                            DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
-                            model.removeNodeFromParent(selectedNode);
+
+                            leftJTreeBuilder.removeNodeFromParent(selectedNode);
+                            rightJTreeBuilder.reload();
                         }
 
                         if (confirmed == 1 || confirmed == 2 || confirmed == -1) {
@@ -655,13 +649,70 @@ public class GUIManager {
         @Override
         public void actionPerformed(ActionEvent e) {
 
+            if (perspective.equals(Perspective.FileManager)) {
+
+                DefaultMutableTreeNode leftSelectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+                DefaultMutableTreeNode rightSelectedNode = (DefaultMutableTreeNode) rightJTree.getLastSelectedPathComponent();
+
+                if (leftSelectedNode != null && rightSelectedNode != null) {
+
+                    String from = PathFormer.formPath(leftSelectedNode);
+                    String to = PathFormer.formPath(rightSelectedNode);
+
+                    try {
+                        FileCopy.copy(from, to);
+                        rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
+                    } catch (Exception e1) {
+                        ExceptionRenderer.renderException(frame, e1);
+                    }
+
+                } else {
+                    if (leftSelectedNode == null) {
+                        MessageRenderer.renderMessage(frame, "You haven`t selected file to be copied");
+                    }
+                    if (rightSelectedNode == null) {
+                        MessageRenderer.renderMessage(frame, "You haven`t selected folder where file should be copied");
+                    }
+                }
+            } else {
+                MessageRenderer.renderMessage(frame, "You cannot copy files in File Redactor perspective");
+            }
         }
     }
 
     class MoveListener implements ActionListener {
+
         @Override
         public void actionPerformed(ActionEvent e) {
+            if (perspective.equals(Perspective.FileManager)) {
 
+                DefaultMutableTreeNode leftSelectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+                DefaultMutableTreeNode rightSelectedNode = (DefaultMutableTreeNode) rightJTree.getLastSelectedPathComponent();
+
+                if (leftSelectedNode != null && rightSelectedNode != null) {
+
+                    String from = PathFormer.formPath(leftSelectedNode);
+                    String to = PathFormer.formPath(rightSelectedNode);
+
+                    try {
+                        FileMove.move(from, to);
+                        leftJTreeBuilder.removeNodeFromParent(leftSelectedNode);
+                        rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
+                    } catch (Exception e1) {
+                        ExceptionRenderer.renderException(frame, e1);
+                    }
+
+                } else {
+                    if (leftSelectedNode == null) {
+                        MessageRenderer.renderMessage(frame, "You haven`t selected file to be moved");
+                    }
+                    if (rightSelectedNode == null) {
+                        MessageRenderer.renderMessage(frame, "You haven`t selected folder where file should be moved");
+                    }
+                }
+            } else {
+                MessageRenderer.renderMessage(frame, "You cannot move files in File Redactor perspective");
+            }
         }
     }
 

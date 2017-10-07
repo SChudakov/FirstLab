@@ -3,11 +3,13 @@ package com.sschudakov;
 import com.sschudakov.gui.GUIManager;
 import com.sschudakov.operations.FileMerger;
 import com.sschudakov.operations.HTMLParser;
+import com.sschudakov.utils.PathFormer;
 import com.sschudakov.utils.SiteDownloader;
 import com.sschudakov.utils.SubstringsFinder;
 
 
 import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,6 +27,20 @@ public class Main {
 
         GUIManager manager = new GUIManager();
         manager.buildGUI();
+
+//        DefaultMutableTreeNode parent  = new DefaultMutableTreeNode("files");
+//        DefaultMutableTreeNode son1 = new DefaultMutableTreeNode("son1");
+//        DefaultMutableTreeNode son2 = new DefaultMutableTreeNode("son2");
+//        DefaultMutableTreeNode son3 = new DefaultMutableTreeNode("son3");
+//        parent.add(son1);
+//        son1.add(son2);
+//        son2.add(son3);
+
+
+
+
+
+
 //        JFrame frame = new JFrame();
 //        frame.setVisible(true);
 //        JFileChooser fileChooser = new JFileChooser();

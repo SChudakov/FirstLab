@@ -18,7 +18,7 @@ public class PathFormer {
         currentNode = (DefaultMutableTreeNode) currentNode.getParent();
 
         if (currentNode != null) {
-            while (!currentNode.getUserObject().equals("files")) {
+            while (!"files".equals(currentNode.getUserObject())) {
                 path.insert(0, currentNode.getUserObject() + "\\");
                 currentNode = (DefaultMutableTreeNode) currentNode.getParent();
             }
