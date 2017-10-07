@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="After fixing bugs 4.10.2017">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java" />
+    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
@@ -20,13 +18,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/PathFormer.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/PathFormer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.txt" afterPath="$PROJECT_DIR$/result.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/second.html" afterPath="$PROJECT_DIR$/second.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -541,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507196120525</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Before rewriting move and copy">
+      <created>1507402764846</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1507402764846</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -654,7 +652,8 @@
     <MESSAGE value="Before fixing bugs" />
     <MESSAGE value="After fixing bugs 3.10.2017" />
     <MESSAGE value="After fixing bugs 4.10.2017" />
-    <option name="LAST_COMMIT_MESSAGE" value="After fixing bugs 4.10.2017" />
+    <MESSAGE value="Before rewriting move and copy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before rewriting move and copy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
