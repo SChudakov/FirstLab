@@ -38,8 +38,8 @@ public class JTreeBuilder {
 
         this.model.setAsksAllowsChildren(true);
 
-        DefaultMutableTreeNode cNode = new ComparableDefaultMutableTreeNode("C:\\");
-        DefaultMutableTreeNode dNode = new ComparableDefaultMutableTreeNode("D:\\");
+        DefaultMutableTreeNode cNode = new DefaultMutableTreeNode("C:\\");
+        DefaultMutableTreeNode dNode = new DefaultMutableTreeNode("D:\\");
 
         addFiles(cNode);
         addFiles(dNode);
@@ -194,7 +194,7 @@ public class JTreeBuilder {
             if (files != null) {
                 for (File file : files) {
                     if (!hasChild(node, file.getName())) {
-                        DefaultMutableTreeNode child = new ComparableDefaultMutableTreeNode(file.getName());
+                        DefaultMutableTreeNode child = new DefaultMutableTreeNode(file.getName());
                         setAllowsChildren(node, child);
                         node.add(child);
                     }

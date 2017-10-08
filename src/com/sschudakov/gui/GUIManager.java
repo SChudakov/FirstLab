@@ -57,8 +57,8 @@ public class GUIManager {
     private JMenuItem fileRedactorPerspectiveItem = new JMenuItem("FileRedactor");
 
 
-    private DefaultMutableTreeNode leftJTreeRoot = new ComparableDefaultMutableTreeNode("files");
-    private DefaultMutableTreeNode rightJTreeRoot = new ComparableDefaultMutableTreeNode("files");
+    private DefaultMutableTreeNode leftJTreeRoot = new DefaultMutableTreeNode("files");
+    private DefaultMutableTreeNode rightJTreeRoot = new DefaultMutableTreeNode("files");
     private JTree leftJTree = new JTree(leftJTreeRoot);
     private JTree rightJTree = new JTree(rightJTreeRoot);
     private JTreeBuilder leftJTreeBuilder = new JTreeBuilder(this.leftJTree, this.leftJTreeRoot);
@@ -687,14 +687,14 @@ public class GUIManager {
 
                     try {
                         FileMove.move(from, to);
-                        leftJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
-                        rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
-                        String leftSelectedNodePath = PathFormer.formPath(leftSelectedNode);
-                        leftJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
-                        rightJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
-
-                        leftJTreeBuilder.reload(rightSelectedNode);
-                        rightJTreeBuilder.reload(rightSelectedNode);
+//                        leftJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
+//                        rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
+//                        String leftSelectedNodePath = PathFormer.formPath(leftSelectedNode);
+//                        leftJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
+//                        rightJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
+//
+//                        leftJTreeBuilder.reload(rightSelectedNode);
+//                        rightJTreeBuilder.reload(rightSelectedNode);
 
                     } catch (Exception e1) {
                         ExceptionRenderer.renderException(frame, e1);

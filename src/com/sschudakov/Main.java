@@ -1,22 +1,12 @@
 package com.sschudakov;
 
-import com.sschudakov.gui.ComparableDefaultMutableTreeNode;
 import com.sschudakov.gui.GUIManager;
-import com.sschudakov.gui.JTreeBuilder;
 import com.sschudakov.operations.FileMerger;
 import com.sschudakov.operations.HTMLParser;
-import com.sschudakov.utils.NodeFormer;
-import com.sschudakov.utils.PathFormer;
 import com.sschudakov.utils.SiteDownloader;
 import com.sschudakov.utils.SubstringsFinder;
 
 
-import javax.swing.*;
-import javax.swing.tree.DefaultMutableTreeNode;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

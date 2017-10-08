@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="Before rewriting move and copy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/ComparableDefaultMutableTreeNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/NodeFormer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/operations/FileCopyTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/first.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/second.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/second.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MergeListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MergeListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder$SelectionListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder$SelectionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" />
+    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/ComparableDefaultMutableTreeNode.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/PathFormer.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/PathFormer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,14 +22,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="1020">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
                 <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-                <element signature="e#2842#2876#0" expanded="false" />
+                <element signature="e#2484#2518#0" expanded="false" />
                 <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
                 <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-                <element signature="e#3842#3919#0" expanded="false" />
+                <element signature="e#3484#3561#0" expanded="false" />
                 <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
                 <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
                 <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
@@ -57,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="696" column="68" lean-forward="false" selection-start-line="696" selection-start-column="68" selection-end-line="696" selection-end-column="68" />
+            <state relative-caret-position="232">
+              <caret line="60" column="56" lean-forward="false" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
               <folding>
                 <element signature="docComment;class#GUIManager#0" expanded="false" />
                 <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
@@ -78,8 +59,6 @@
                 <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="e#17268#17269#0" expanded="true" />
-                <element signature="e#17314#17315#0" expanded="true" />
                 <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#CreateListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#RenameListener#0;class#GUIManager#0" expanded="false" />
@@ -95,15 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JTreeBuilder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JTreeBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="145" column="73" lean-forward="false" selection-start-line="145" selection-start-column="73" selection-end-line="145" selection-end-column="73" />
+            <state relative-caret-position="215">
+              <caret line="196" column="59" lean-forward="false" selection-start-line="196" selection-start-column="59" selection-end-line="196" selection-end-column="59" />
               <folding>
                 <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
-                <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#reload#1;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#addNode#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#addNode#1;class#JTreeBuilder#0" expanded="false" />
@@ -112,7 +90,6 @@
                 <element signature="method#changeName#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#findNode#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#findNode#1;class#JTreeBuilder#0" expanded="false" />
-                <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#isFileNode#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#isDirectoryNode#0;class#JTreeBuilder#0" expanded="false" />
                 <element signature="method#setAllowsChildren#0;class#JTreeBuilder#0" expanded="false" />
@@ -127,7 +104,7 @@
       <file leaf-file-name="PathFormer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="442">
               <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
               <folding />
             </state>
@@ -233,8 +210,8 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/NodeFormer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
       </list>
     </option>
   </component>
@@ -258,7 +235,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,6 +258,13 @@
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -295,9 +278,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -549,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507402777932</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)">
+      <created>1507487367459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507487367459</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -599,30 +590,30 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2344932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2344932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -663,7 +654,9 @@
     <MESSAGE value="After fixing bugs 3.10.2017" />
     <MESSAGE value="After fixing bugs 4.10.2017" />
     <MESSAGE value="Before rewriting move and copy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before rewriting move and copy" />
+    <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;7. remove NullPointeException while removing files&#10;13. fix Abstrat Fzctory #2&#10;15. fix desplaying files after move: (the way for the file to be reloaded is changed thile operation)" />
+    <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -873,15 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="50" column="9" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="docComment;class#MutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#MutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#remove#0;class#MutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#remove#1;class#MutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#setUserObject#0;class#MutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#removeFromParent#0;class#MutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#setParent#0;class#MutableTreeNode#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1113,18 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="187" column="9" lean-forward="false" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/ComparableDefaultMutableTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,7 +1208,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="442">
           <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
           <folding />
         </state>
@@ -1244,14 +1216,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state relative-caret-position="1020">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-            <element signature="e#2842#2876#0" expanded="false" />
+            <element signature="e#2484#2518#0" expanded="false" />
             <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
             <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-            <element signature="e#3842#3919#0" expanded="false" />
+            <element signature="e#3484#3561#0" expanded="false" />
             <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
             <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
             <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
@@ -1259,37 +1231,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="145" column="73" lean-forward="false" selection-start-line="145" selection-start-column="73" selection-end-line="145" selection-end-column="73" />
-          <folding>
-            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#reload#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addNode#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#insertNodeInto#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#removeNodeFromParent#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#changeName#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#findNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#findNode#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#isFileNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#isDirectoryNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#setAllowsChildren#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#hasChild#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="696" column="68" lean-forward="false" selection-start-line="696" selection-start-column="68" selection-end-line="696" selection-end-column="68" />
+        <state relative-caret-position="232">
+          <caret line="60" column="56" lean-forward="false" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
           <folding>
             <element signature="docComment;class#GUIManager#0" expanded="false" />
             <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
@@ -1306,8 +1251,6 @@
             <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="e#17268#17269#0" expanded="true" />
-            <element signature="e#17314#17315#0" expanded="true" />
             <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#CreateListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#RenameListener#0;class#GUIManager#0" expanded="false" />
@@ -1318,6 +1261,39 @@
             <element signature="method#actionPerformed#0;class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/ComparableDefaultMutableTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="196" column="59" lean-forward="false" selection-start-line="196" selection-start-column="59" selection-end-line="196" selection-end-column="59" />
+          <folding>
+            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#reload#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addNode#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#insertNodeInto#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#removeNodeFromParent#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#changeName#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#findNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#findNode#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#isFileNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#isDirectoryNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#setAllowsChildren#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#hasChild#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
           </folding>
         </state>
       </provider>
