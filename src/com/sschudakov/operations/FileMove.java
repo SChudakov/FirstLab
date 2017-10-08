@@ -7,7 +7,7 @@ import java.io.IOException;
  * Created by Semen Chudakov on 05.10.2017.
  */
 public class FileMove {
-    public static boolean move(String from, String to) {
+    public static boolean move(String from, String to) throws IOException {
 
         verifyParameters(from, to);
 
@@ -58,16 +58,16 @@ public class FileMove {
         File toFile = new File(to);
 
         if (!fromFile.exists()) {
-            throw new IllegalArgumentException("Exception while verifying parameters: there is no file or directory along the given path from:  " + from);
+            throw new IllegalArgumentException("There is no file or directory along the given path from:  " + from);
         }
 
         if (toFile.exists()) {
             if (!toFile.isDirectory()) {
-                throw new IllegalArgumentException("Exception while verifying parameters: a path to: " + to + " points not to a directory");
+                throw new IllegalArgumentException("Path to: " + to + " points not to a directory");
             }
         } else {
             if (!toFile.mkdir()) {
-                throw new IllegalArgumentException("Exception while verifying parameters: a directory along the path to: " + to + " does not exist and failed to be created");
+                throw new IllegalArgumentException("Directory along the path to: " + to + " does not exist and failed to be created");
             }
         }
     }

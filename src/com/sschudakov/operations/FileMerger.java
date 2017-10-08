@@ -10,7 +10,7 @@ public class FileMerger {
     private static final int BUFFER_SIZE = 64 * 1024;
 
     public static void mergeFiles(String first, String second, String result) {
-        validateParamethers(first, second, result);
+        validateParameters(first, second, result);
 
         File firstFile = new File(first);
         File secondFile = new File(second);
@@ -55,7 +55,7 @@ public class FileMerger {
         }
     }
 
-    private static void validateParamethers(String first, String second, String result) {
+    private static void validateParameters(String first, String second, String result) {
 
         File firstFile = new File(first);
         File secondFile = new File(second);

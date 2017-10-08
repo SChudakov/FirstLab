@@ -1,5 +1,6 @@
 package com.sschudakov.gui;
 
+import com.sschudakov.utils.NodeFormer;
 import com.sschudakov.utils.PathFormer;
 
 import javax.swing.*;
@@ -9,6 +10,9 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 /**
@@ -17,16 +21,16 @@ import java.util.NoSuchElementException;
 public class JTreeBuilder {
 
     private JTree tree;
-    private DefaultMutableTreeNode top;
+    private DefaultMutableTreeNode root;
     private DefaultTreeModel model;
 
     private ImageIcon fileIcon = new ImageIcon("D:\\Workspace.java\\FirstLab\\icons\\file_icon.png");
     private ImageIcon directoryIcon = new ImageIcon("D:\\Workspace.java\\FirstLab\\icons\\directory_icon.ico");
 
 
-    public JTreeBuilder(JTree tree, DefaultMutableTreeNode top) {
+    public JTreeBuilder(JTree tree, DefaultMutableTreeNode root) {
         this.tree = tree;
-        this.top = top;
+        this.root = root;
         this.model = (DefaultTreeModel) this.tree.getModel();
     }
 
@@ -34,34 +38,149 @@ public class JTreeBuilder {
 
         this.model.setAsksAllowsChildren(true);
 
-        DefaultMutableTreeNode cNode = new DefaultMutableTreeNode("C:\\");
-        DefaultMutableTreeNode dNode = new DefaultMutableTreeNode("D:\\");
+        DefaultMutableTreeNode cNode = new ComparableDefaultMutableTreeNode("C:\\");
+        DefaultMutableTreeNode dNode = new ComparableDefaultMutableTreeNode("D:\\");
 
         addFiles(cNode);
         addFiles(dNode);
 
-        this.top.add(cNode);
-        this.top.add(dNode);
+        this.root.add(cNode);
+        this.root.add(dNode);
         this.tree.expandPath(new TreePath(this.tree.getModel().getRoot()));
         this.tree.setRootVisible(false);
     }
+
 
     public void reload() {
         this.model.reload();
     }
 
     public void reload(DefaultMutableTreeNode node) {
-        this.model.reload(node);
+        DefaultMutableTreeNode nodeInThisTree = findNode(node);
+        if (nodeInThisTree != null) {
+            this.model.reload(node);
+        }
+    }
+
+    public void addNode(String userObject) {
+        Path nodePath = Paths.get(userObject);
+        if (nodePath.getNameCount() >= 2) {
+            Path parentPath = nodePath.getName(nodePath.getNameCount() - 2);
+            DefaultMutableTreeNode parentInThisTree = findNode(new DefaultMutableTreeNode(parentPath.toString()));
+            if (parentInThisTree != null) {
+                System.out.println("found node: " + parentInThisTree.getUserObject());
+                DefaultMutableTreeNode son = new DefaultMutableTreeNode(nodePath.getName(nodePath.getNameCount() - 1).toString());
+                setAllowsChildren(parentInThisTree, son);
+                if (!hasChild(parentInThisTree, (String) son.getUserObject())) {
+                    this.model.insertNodeInto(son, parentInThisTree, 0);
+                }
+            } else {
+                System.out.println("parent in this tree is null");
+            }
+        } else {
+            System.out.println("node count  < 2");
+        }
+    }
+
+    public void addNode(DefaultMutableTreeNode node) {
+        Path nodePath = Paths.get((String) node.getUserObject());
+        if (nodePath.getNameCount() >= 2) {
+            Path parentPath = nodePath.getName(nodePath.getNameCount() - 2);
+            DefaultMutableTreeNode parentInThisTree = findNode(new DefaultMutableTreeNode(parentPath.toString()));
+            if (parentInThisTree != null) {
+                System.out.println("found node: " + parentInThisTree.getUserObject());
+                if (!hasChild(parentInThisTree, (String) node.getUserObject())) {
+                    this.model.insertNodeInto(node, parentInThisTree, 0);
+                }
+            } else {
+                System.out.println("parent in this tree is null");
+            }
+        } else {
+            System.out.println("node count  < 2");
+        }
     }
 
     public void insertNodeInto(DefaultMutableTreeNode parent, DefaultMutableTreeNode son) {
         setAllowsChildren(parent, son);
-        this.model.insertNodeInto(son, parent, 0);
+        DefaultMutableTreeNode parentInThisTree = findNode(parent);
+        if (parentInThisTree != null) {
+            System.out.println("found node: " + parentInThisTree.getUserObject());
+            if (!hasChild(parentInThisTree, (String) son.getUserObject())) {
+                System.out.println("has no");
+                this.model.insertNodeInto(son, parentInThisTree, 0);
+            } else {
+                System.out.println("has already");
+            }
+        } else {
+            System.out.println("parent in this tree is null");
+        }
+    }
+
+    public void removeNodeFromParent(String path){
+        removeNodeFromParent(NodeFormer.formNode(path));
     }
 
     public void removeNodeFromParent(DefaultMutableTreeNode node) {
-        this.model.removeNodeFromParent(node);
+
+        DefaultMutableTreeNode nodeIntThisTree = findNode(node);
+
+        if (nodeIntThisTree != null) {
+            System.out.println("found node: " + nodeIntThisTree.getUserObject().toString());
+            this.model.removeNodeFromParent(nodeIntThisTree);
+        } else {
+            System.out.println("node in this tree is null");
+        }
     }
+
+    public void changeName(DefaultMutableTreeNode node, String newName) {
+        DefaultMutableTreeNode nodeInThisTree = findNode(node);
+        if (nodeInThisTree != null) {
+            System.out.println("found node: " + nodeInThisTree.getUserObject().toString());
+            this.model.valueForPathChanged(new TreePath(nodeInThisTree), newName);
+        } else {
+            System.out.println("node in this tree is null");
+        }
+    }
+
+
+    public  DefaultMutableTreeNode findNode(DefaultMutableTreeNode node) {
+
+        ArrayList<DefaultMutableTreeNode> nodePathParts = new ArrayList<>();
+
+        DefaultMutableTreeNode currentNodePathPart = node;
+
+        while (!currentNodePathPart.getUserObject().equals("files")) {
+            nodePathParts.add(0, currentNodePathPart);
+            currentNodePathPart = (DefaultMutableTreeNode) currentNodePathPart.getParent();
+        }
+        System.out.println(nodePathParts.toString());
+
+        DefaultMutableTreeNode iterator = this.root;
+
+        for (DefaultMutableTreeNode nodePathPart : nodePathParts) {
+            System.out.println(iterator);
+            iterator = findNode(iterator, (String) nodePathPart.getUserObject());
+            if (iterator == null) {
+                return null;
+            }
+        }
+
+        return iterator;
+    }
+
+    private DefaultMutableTreeNode findNode(DefaultMutableTreeNode parent, String userObject) {
+        int childCount = parent.getChildCount();
+
+        for(int i = 0; i < childCount; i++){
+            DefaultMutableTreeNode child = (DefaultMutableTreeNode) parent.getChildAt(i);
+            if(child.getUserObject().equals(userObject)){
+                return child;
+            }
+        }
+
+        return null;
+    }
+
 
 
     private void addFiles(DefaultMutableTreeNode node) {
@@ -75,7 +194,7 @@ public class JTreeBuilder {
             if (files != null) {
                 for (File file : files) {
                     if (!hasChild(node, file.getName())) {
-                        DefaultMutableTreeNode child = new DefaultMutableTreeNode(file.getName());
+                        DefaultMutableTreeNode child = new ComparableDefaultMutableTreeNode(file.getName());
                         setAllowsChildren(node, child);
                         node.add(child);
                     }
@@ -126,21 +245,21 @@ public class JTreeBuilder {
         @Override
         public void valueChanged(TreeSelectionEvent e) {
 
-            DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 
             try {
-                String path = PathFormer.formPath(node);
+                String path = PathFormer.formPath(selectedNode);
 
                 File nodeFile = new File(path);
 
                 if (nodeFile.isDirectory()) {
 
                     try {
-                        DefaultMutableTreeNode child = (DefaultMutableTreeNode) node.getFirstChild();
 
-                        while (child != null) {
-                            addFiles(child);
-                            child = (DefaultMutableTreeNode) node.getChildAfter(child);
+                        int childCount = selectedNode.getChildCount();
+
+                        for (int j = 0; j < childCount; j++) {
+                            addFiles((DefaultMutableTreeNode) selectedNode.getChildAt(j));
                         }
 
                     } catch (NoSuchElementException e1) {

@@ -57,12 +57,12 @@ public class GUIManager {
     private JMenuItem fileRedactorPerspectiveItem = new JMenuItem("FileRedactor");
 
 
-    private DefaultMutableTreeNode leftJTreeTop = new DefaultMutableTreeNode("files");
-    private DefaultMutableTreeNode rightJTreeTop = new DefaultMutableTreeNode("files");
-    private JTree leftJTree = new JTree(leftJTreeTop);
-    private JTree rightJTree = new JTree(rightJTreeTop);
-    private JTreeBuilder leftJTreeBuilder = new JTreeBuilder(this.leftJTree, this.leftJTreeTop);
-    private JTreeBuilder rightJTreeBuilder = new JTreeBuilder(this.rightJTree, this.rightJTreeTop);
+    private DefaultMutableTreeNode leftJTreeRoot = new ComparableDefaultMutableTreeNode("files");
+    private DefaultMutableTreeNode rightJTreeRoot = new ComparableDefaultMutableTreeNode("files");
+    private JTree leftJTree = new JTree(leftJTreeRoot);
+    private JTree rightJTree = new JTree(rightJTreeRoot);
+    private JTreeBuilder leftJTreeBuilder = new JTreeBuilder(this.leftJTree, this.leftJTreeRoot);
+    private JTreeBuilder rightJTreeBuilder = new JTreeBuilder(this.rightJTree, this.rightJTreeRoot);
 
 
     private JTextArea mainJTextArea = new JTextArea();
@@ -157,7 +157,6 @@ public class GUIManager {
 
         this.panel.add(this.rightFilesAreaScrollPane, new GBC(2,0,1,2, 1 - GOLDEN_RATIO,1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
 
-
 //        this.rightPanel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Права"));
 //        this.rightPanel.setLayout(rightPanelLayout);
 //        this.rightPanel.add(this.rightFilesAreaScrollPane, new GBC(0, 0, 1, 2, 1 - GOLDEN_RATIO, 1 - GOLDEN_RATIO, GridBagConstraints.BOTH));
@@ -174,8 +173,6 @@ public class GUIManager {
         this.rightFilesAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.leftTextAreaScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         this.leftTextAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-//        this.rightTextAreaScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-//        this.rightTextAreaScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     }
 
     private void setupJTrees() {
@@ -317,8 +314,11 @@ public class GUIManager {
 
                         FileMerger.mergeFiles(first, second, result);
 
+                        leftJTreeBuilder.addNode(result);
+                        rightJTreeBuilder.addNode(result);
 
                     } catch (Exception e1) {
+                        e1.printStackTrace();
                         ExceptionRenderer.renderException(frame, e1);
                     }
 
@@ -345,7 +345,7 @@ public class GUIManager {
             File resultFile = new File(result);
 
             if (resultFile.exists()) {
-                throw new IllegalArgumentException("Selected files cannot be merged to already selected file: " + result);
+                throw new IllegalArgumentException("Selected files cannot be merged to already existing file: " + result);
             }
         }
     }
@@ -388,8 +388,8 @@ public class GUIManager {
 
 
                     for (Substring substring : foundSubstrings) {
-    //                    System.out.println(substring.toString());
-    //                    mainJTextArea.select(substring.getBegin(), substring.getEnd());
+                        //                    System.out.println(substring.toString());
+                        //                    mainJTextArea.select(substring.getBegin(), substring.getEnd());
                         mainJTextArea.setCaretPosition(substring.getBegin());
                         mainJTextArea.moveCaretPosition(substring.getEnd());
 
@@ -463,9 +463,9 @@ public class GUIManager {
 
                     try {
                         FileSaver.saveFile(mainJTextArea, fileCloser.getOpenedFile());
-                        } catch (Exception e1) {
-                            ExceptionRenderer.renderException(frame, e1);
-                        }
+                    } catch (Exception e1) {
+                        ExceptionRenderer.renderException(frame, e1);
+                    }
                 }else {
                     MessageRenderer.renderMessage(frame, "No one file is opened");
                 }
@@ -482,32 +482,27 @@ public class GUIManager {
             if (perspective.equals(Perspective.FileManager)) {
                 MessageRenderer.renderMessage(frame, "You cannot create files in File Manager perspective");
             } else {
-               DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
+                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
-               if(selectedNode != null){
+                if (selectedNode != null) {
 
-                   String path = PathFormer.formPath(selectedNode);
+                    String path = PathFormer.formPath(selectedNode);
 
-                   try {
-                       validatePath(path);
+                    try {
+                        validatePath(path);
 
-                       String name = UserTextInput.inputUserText(frame, "Input name for the file");
+                        String name = UserTextInput.inputUserText(frame, "Input name for the file");
 
-                       if (name != null) {
+                        if (name != null) {
+                            FileCreator.createFile(path + "\\" + name);
+                            leftJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
+                            rightJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
+                        }
 
-                           FileCreator.createFile(path + "\\" + name);
-                           leftJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
-//                           selectedNode.add(new DefaultMutableTreeNode(name));
-//
-//                           DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
-//
-//                           model.reload(selectedNode);
-                       }
-
-                   } catch (Exception e1) {
-                       ExceptionRenderer.renderException(frame, e1);
-                   }
-               }
+                    } catch (Exception e1) {
+                        ExceptionRenderer.renderException(frame, e1);
+                    }
+                }
             }
         }
 
@@ -538,9 +533,8 @@ public class GUIManager {
 
                         if (newName != null) {
                             FileRenamer.renameFile(path, newName);
-
-                            selectedNode.setUserObject(newName);
-                            leftJTreeBuilder.reload(selectedNode);
+                            leftJTreeBuilder.changeName(selectedNode, newName);
+                            rightJTreeBuilder.changeName(selectedNode, newName);
                         }
 
                     } catch (Exception e1) {
@@ -578,12 +572,7 @@ public class GUIManager {
                             FolderCreator.createFolder(path + "\\" + name);
 
                             leftJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
-
-//                            selectedNode.add(new DefaultMutableTreeNode(name));
-
-//                            DefaultTreeModel model = (DefaultTreeModel) leftJTree.getModel();
-//                            model.reload(selectedNode);
-
+                            rightJTreeBuilder.insertNodeInto(selectedNode, new DefaultMutableTreeNode(name));
                         }
 
                     } catch (Exception e1) {
@@ -626,9 +615,9 @@ public class GUIManager {
 
                         if (confirmed == 0) {
                             FileDeleter.delete(path);
-
-                            leftJTreeBuilder.removeNodeFromParent(selectedNode);
-                            rightJTreeBuilder.reload();
+                            String selectedNodePath = PathFormer.formPath(selectedNode);
+                            leftJTreeBuilder.removeNodeFromParent(selectedNodePath);
+                            rightJTreeBuilder.removeNodeFromParent(selectedNodePath);
                         }
 
                         if (confirmed == 1 || confirmed == 2 || confirmed == -1) {
@@ -637,8 +626,7 @@ public class GUIManager {
 
                     } catch (Exception e1) {
                         e1.printStackTrace();
-                        //TODO: remove NullPointerException
-//                       ExceptionRenderer.renderException(frame, e1);
+                        ExceptionRenderer.renderException(frame, e1);
                     }
                 }
             }
@@ -661,7 +649,10 @@ public class GUIManager {
 
                     try {
                         FileCopy.copy(from, to);
+                        leftJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
+                        leftJTreeBuilder.reload(rightSelectedNode);
                         rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
+                        rightJTreeBuilder.reload(rightSelectedNode);
                     } catch (Exception e1) {
                         ExceptionRenderer.renderException(frame, e1);
                     }
@@ -696,8 +687,15 @@ public class GUIManager {
 
                     try {
                         FileMove.move(from, to);
-                        leftJTreeBuilder.removeNodeFromParent(leftSelectedNode);
+                        leftJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
                         rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
+                        String leftSelectedNodePath = PathFormer.formPath(leftSelectedNode);
+                        leftJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
+                        rightJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
+
+                        leftJTreeBuilder.reload(rightSelectedNode);
+                        rightJTreeBuilder.reload(rightSelectedNode);
+
                     } catch (Exception e1) {
                         ExceptionRenderer.renderException(frame, e1);
                     }

@@ -1,8 +1,7 @@
 package com.sschudakov.operations;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.*;
 
 /**
  * Created by Semen Chudakov on 05.10.2017.
@@ -11,12 +10,22 @@ public class FileCopy {
 
     private static final int BUFFER_SIZE = 64 * 1024;
 
-    public static boolean copy(String from, String to) {
+    public static boolean copy(String from, String to) throws IOException {
 
         verifyParameters(from, to);
 
         File fromFile = new File(from);
         File toFile = new File(to);
+
+//        if (fromFile.isDirectory()) {
+//            Files.copy(Paths.get(from), Paths.get(to));
+//            for (File file : fromFile.listFiles()) {
+//                Files.copy(Paths.get(file.getPath()), Paths.get(toFile.getPath() + "\\" + file.getName()),
+//                        StandardCopyOption.REPLACE_EXISTING);
+//            }
+//        } else {
+//            Files.copy(Paths.get(from), Paths.get(to), StandardCopyOption.REPLACE_EXISTING);
+//        }
 
         if (fromFile.isDirectory()) {
 
@@ -34,7 +43,7 @@ public class FileCopy {
 
             for (int i = 0; i < files.length; i++) {
                 if (!copy(files[i].getPath(), to + "\\" + fromFile.getName())) {
-                    delete(toFile.getPath() + "\\" + fromFile.getName());
+                    FileDeleter.delete(toFile.getPath() + "\\" + fromFile.getName());
                     return false;
                 }
             }
@@ -94,25 +103,16 @@ public class FileCopy {
             }
         } else {
             if (!toFile.mkdir()) {
-                throw new IllegalArgumentException("Exception while verifying parameters: a directory along the path to: " + to + " does not exist and failed to be created");
+                throw new IllegalArgumentException("Directory along the path to: " + to + " does not exist and failed to be created");
             }
         }
-    }
 
-    public static void delete(String path) {
+        Path toPath = Paths.get(to);
 
-        File file = new File(path);
-
-        if (file.isFile()) {
-            file.delete();
-        }
-
-        if (file.isDirectory()) {
-            File[] files = file.listFiles();
-            for (int i = 0; i < files.length; i++) {
-                delete(files[i].getPath());
+        for (Path path : toPath) {
+            if(path.toString().equals(fromFile.getName())){
+                throw new IllegalArgumentException("A directory cannot be copied to its subdirectory");
             }
-            file.delete();
         }
     }
 
@@ -129,6 +129,4 @@ public class FileCopy {
             outputStream.close();
         }
     }
-
-
 }

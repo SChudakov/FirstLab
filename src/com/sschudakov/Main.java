@@ -1,8 +1,11 @@
 package com.sschudakov;
 
+import com.sschudakov.gui.ComparableDefaultMutableTreeNode;
 import com.sschudakov.gui.GUIManager;
+import com.sschudakov.gui.JTreeBuilder;
 import com.sschudakov.operations.FileMerger;
 import com.sschudakov.operations.HTMLParser;
+import com.sschudakov.utils.NodeFormer;
 import com.sschudakov.utils.PathFormer;
 import com.sschudakov.utils.SiteDownloader;
 import com.sschudakov.utils.SubstringsFinder;
@@ -10,6 +13,10 @@ import com.sschudakov.utils.SubstringsFinder;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,29 +31,36 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         GUIManager manager = new GUIManager();
         manager.buildGUI();
+//        Path test = Paths.get("D:\\Workspace.java\\FirstLab\\first.txt");
+//        System.out.println(test.getName(test.getNameCount() - 2));
 
-//        DefaultMutableTreeNode parent  = new DefaultMutableTreeNode("files");
-//        DefaultMutableTreeNode son1 = new DefaultMutableTreeNode("son1");
-//        DefaultMutableTreeNode son2 = new DefaultMutableTreeNode("son2");
-//        DefaultMutableTreeNode son3 = new DefaultMutableTreeNode("son3");
-//        parent.add(son1);
-//        son1.add(son2);
-//        son2.add(son3);
-
-
-
-
-
-
-//        JFrame frame = new JFrame();
-//        frame.setVisible(true);
-//        JFileChooser fileChooser = new JFileChooser();
-//        fileChooser.showSaveDialog(frame);
-//        System.out.println(fileChooser.getSelectedFile());
-
+//        DefaultMutableTreeNode files = new DefaultMutableTreeNode("files");
+//        DefaultMutableTreeNode node1 = new DefaultMutableTreeNode("node1");
+//        DefaultMutableTreeNode node2 = new DefaultMutableTreeNode("node2");
+//        DefaultMutableTreeNode node3 = new DefaultMutableTreeNode("node3");
+//        DefaultMutableTreeNode node4 = new DefaultMutableTreeNode("node4");
+//        DefaultMutableTreeNode node5 = new DefaultMutableTreeNode("node5");
+//        files.add(node1);
+//        node1.add(node2);
+//        node2.add(node3);
+//        node1.add(node4);
+//        node1.add(node4);
+//        node4.add(node5);
+//
+//        JTreeBuilder.findNode(node5);
+//        DefaultMutableTreeNode node = NodeFormer.formNode("D:\\Workspace.java\\FirstLab\\test_operations");
+//        ArrayList<DefaultMutableTreeNode> nodePathParts = new ArrayList<>();
+//
+//        DefaultMutableTreeNode currentNodePathPart = node;
+//
+//        while (!currentNodePathPart.getUserObject().equals("files")) {
+//            nodePathParts.add(0, currentNodePathPart);
+//            currentNodePathPart = (DefaultMutableTreeNode) currentNodePathPart.getParent();
+//        }
+//        System.out.println(nodePathParts.toString());
+//        System.out.println(PathFormer.formPath(node));
     }
 
     private static void testScannerFileReading(){

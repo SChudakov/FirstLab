@@ -7,7 +7,12 @@ import javax.swing.tree.DefaultMutableTreeNode;
  */
 public class PathFormer {
 
-    public static String formPath(DefaultMutableTreeNode node){
+    public static String formPath(DefaultMutableTreeNode node) {
+
+        if(node.getUserObject().equals("C:\\") || node.getUserObject().equals("D:\\")){
+            return (String) node.getUserObject();
+        }
+
 
         StringBuilder path = new StringBuilder("");
 
@@ -19,7 +24,11 @@ public class PathFormer {
 
         if (currentNode != null) {
             while (!"files".equals(currentNode.getUserObject())) {
-                path.insert(0, currentNode.getUserObject() + "\\");
+                if(currentNode.getUserObject().equals("C:\\") || currentNode.getUserObject().equals("D:\\")) {
+                    path.insert(0, currentNode.getUserObject());
+                }else {
+                    path.insert(0, currentNode.getUserObject() + "\\");
+                }
                 currentNode = (DefaultMutableTreeNode) currentNode.getParent();
             }
         }
