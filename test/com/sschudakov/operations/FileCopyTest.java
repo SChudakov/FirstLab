@@ -13,12 +13,11 @@ public class FileCopyTest {
     public void copyFromDirToDirTest(){
 
         String from = "D:\\Workspace.java\\FirstLab\\test_copy\\from";
-        String to = "D:\\Workspace.java\\FirstLab\\test_copy\\NEW DIR";
+        String to = "D:\\Workspace.java\\FirstLab\\test_copy\\to";
         try {
             FileCopy.copy(from, to);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new AssertionError("Copy was not successful");
         }
     }
 

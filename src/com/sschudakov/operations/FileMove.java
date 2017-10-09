@@ -2,6 +2,8 @@ package com.sschudakov.operations;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Created by Semen Chudakov on 05.10.2017.
@@ -13,7 +15,7 @@ public class FileMove {
 
 
         File fromFile = new File(from);
-        File toFile = new File(to);
+//        File toFile = new File(to);
 
         if (fromFile.isDirectory()) {
 
@@ -21,20 +23,20 @@ public class FileMove {
 
             if (!newDirectory.exists()) {
                 if (!newDirectory.mkdir()) {
-                    System.out.println("directory " + to + "\\" + fromFile.getName() + " failed to be created");
-                    return false;
+                    throw new RuntimeException("directory " + to + "\\" + fromFile.getName() + " failed to be created");
+//                    return false;
                 }
             }
 
-            boolean allSubfilesAreCopiedSuccessfully = true;
+            boolean allFilesAreCopiedSuccessfully = true;
 
             for (File file : fromFile.listFiles()) {
                 if (!FileCopy.copy(file.getPath(), to + "\\" + fromFile.getName())) {
-                    allSubfilesAreCopiedSuccessfully = false;
+                    allFilesAreCopiedSuccessfully = false;
                 }
             }
 
-            if (allSubfilesAreCopiedSuccessfully) {
+            if (allFilesAreCopiedSuccessfully) {
                 FileDeleter.delete(from);
             }
         }
@@ -44,8 +46,8 @@ public class FileMove {
                 FileDeleter.delete(from);
                 return true;
             } else {
-                System.out.println("file " + from + " failed to be moved to the directory + " + to);
-                return false;
+                throw new RuntimeException("file " + from + " failed to be moved to the directory + " + to);
+//                return false;
             }
         }
 
@@ -66,8 +68,25 @@ public class FileMove {
                 throw new IllegalArgumentException("Path to: " + to + " points not to a directory");
             }
         } else {
-            if (!toFile.mkdir()) {
-                throw new IllegalArgumentException("Directory along the path to: " + to + " does not exist and failed to be created");
+//            if (!toFile.mkdir()) {
+//                throw new IllegalArgumentException("Directory along the path to: " + to + " does not exist and failed to be created");
+//            }
+            throw new IllegalArgumentException("There is no destinations folder along the give path: " + to);
+        }
+
+        if (fromFile.isDirectory()) {
+            Path fromPath = Paths.get(from);
+            Path toPath = Paths.get(to);
+
+            if (toPath.startsWith(fromPath)) {
+                throw new IllegalArgumentException("A directory cannot be moved to its subdirectory");
+            }
+        }
+
+        for (File file : toFile.listFiles()) {
+            if(file.getName().equals(fromFile.getName())){
+                throw new IllegalArgumentException("file or folder with name: " + fromFile.getName()
+                        + " already exists in folder " + to);
             }
         }
     }

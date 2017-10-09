@@ -4,7 +4,7 @@ import com.sschudakov.gui.GUIManager;
 import com.sschudakov.operations.FileMerger;
 import com.sschudakov.operations.HTMLParser;
 import com.sschudakov.utils.SiteDownloader;
-import com.sschudakov.utils.SubstringsFinder;
+import com.sschudakov.utils.SimilarWordsFinder;
 
 
 import java.util.regex.Matcher;
@@ -82,7 +82,7 @@ public class Main {
 
         System.out.println("test 1");
 
-        System.out.println(SubstringsFinder.findSubstrings("summer holidays", "hol").toString());
+        System.out.println(SimilarWordsFinder.findSimilarWords("summer holidays", "hol").toString());
 
     }
 

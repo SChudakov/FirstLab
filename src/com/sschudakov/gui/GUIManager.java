@@ -31,7 +31,7 @@ public class GUIManager {
     private JMenu programMenu = new JMenu("Program");
     private JMenu fileMenu = new JMenu("File");
     private JMenu folderMenu = new JMenu("Folder");
-    private JMenu fileAndFolderManu = new JMenu("File&Folder");
+    private JMenu fileAndFolderMenu = new JMenu("File&Folder");
     private JMenu perspectiveMenu = new JMenu("Perspective");
     private JMenu operationsMenu = new JMenu("Operations");
     private JMenu helpMenu = new JMenu("Help");
@@ -53,9 +53,11 @@ public class GUIManager {
     private JMenuItem copyItem = new JMenuItem("copy");
     private JMenuItem moveItem = new JMenuItem("move");
 
+    private JMenuItem showAuthorInformationItem = new JMenuItem("show author information");
+    private JMenuItem showInstructionsItem = new JMenuItem("show instructions");
+
     private JMenuItem fileManagerPerspectiveItem = new JMenuItem("FileManager");
     private JMenuItem fileRedactorPerspectiveItem = new JMenuItem("FileRedactor");
-
 
     private DefaultMutableTreeNode leftJTreeRoot = new DefaultMutableTreeNode("files");
     private DefaultMutableTreeNode rightJTreeRoot = new DefaultMutableTreeNode("files");
@@ -117,18 +119,21 @@ public class GUIManager {
         this.fileMenu.add(this.closeItem);
         this.fileMenu.add(this.saveItem);
         this.fileMenu.add(this.createItem);
-        this.fileMenu.add(this.renameItem);
 
         this.folderMenu.add(this.createFolderItem);
 
-        this.fileAndFolderManu.add(this.deleteItem);
-        this.fileAndFolderManu.add(this.copyItem);
-        this.fileAndFolderManu.add(this.moveItem);
+        this.fileAndFolderMenu.add(this.deleteItem);
+        this.fileAndFolderMenu.add(this.copyItem);
+        this.fileAndFolderMenu.add(this.moveItem);
+        this.fileAndFolderMenu.add(this.renameItem);
 
         this.operationsMenu.add(this.showFilesItem);
         this.operationsMenu.add(this.mergeItem);
         this.operationsMenu.add(this.toUpperCaseItem);
         this.operationsMenu.add(this.findMatchesInText);
+
+        this.helpMenu.add(this.showAuthorInformationItem);
+        this.helpMenu.add(this.showInstructionsItem);
 
         this.perspectiveMenu.add(this.fileManagerPerspectiveItem);
         this.perspectiveMenu.add(this.fileRedactorPerspectiveItem);
@@ -137,7 +142,7 @@ public class GUIManager {
         this.menuBar.add(this.programMenu);
         this.menuBar.add(this.fileMenu);
         this.menuBar.add(this.folderMenu);
-        this.menuBar.add(this.fileAndFolderManu);
+        this.menuBar.add(this.fileAndFolderMenu);
         this.menuBar.add(this.operationsMenu);
         this.menuBar.add(this.helpMenu);
         this.menuBar.add(this.perspectiveMenu);
@@ -196,13 +201,35 @@ public class GUIManager {
         this.closeItem.addActionListener(new CloseListener());
         this.saveItem.addActionListener(new SaveListener());
         this.createItem.addActionListener(new CreateListener());
-        this.renameItem.addActionListener(new RenameListener());
+
 
         this.createFolderItem.addActionListener(new CreateFolderListener());
 
         this.deleteItem.addActionListener(new DeleteListener());
+        this.renameItem.addActionListener(new RenameListener());
         this.copyItem.addActionListener(new CopyListener());
         this.moveItem.addActionListener(new MoveListener());
+
+        this.showAuthorInformationItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MessageRenderer.renderMessage(frame,"This program is created by Semen Chudakov from group K-24 ");
+            }
+        });
+        this.showInstructionsItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MessageRenderer.renderMessage(frame, "Welcome to File Manager!\n" +
+                        "1) The app has to perspective respectively to operations with file you can perform:\n" +
+                        "In File Redactor you can: create, delete, rename file and do with their content whatever is possible\n" +
+                        "In File Manager perspective you can: merge, copy and move files\n" +
+                        "2) File option on the Menu Bar contains operations you can do with files\n" +
+                        "Folder option on the Menu Bar contains operations you can do with folders\n" +
+                        "File&Folder option on the Menu Bar contains operations you can do with both files and folders\n" +
+                        "Operations option on the Menu Bar contains operations that were my personal assignment\n" +
+                        "In Perspective option on the Menu Bar you can switch perspective you wanna use");
+            }
+        });
 
         this.fileManagerPerspectiveItem.addActionListener(new FileManagerPerspectiveListener());
         this.fileRedactorPerspectiveItem.addActionListener(new FileRedactorPerspectiveListener());
@@ -371,30 +398,28 @@ public class GUIManager {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (perspective.equals(Perspective.FileManager)) {
-                MessageRenderer.renderMessage(frame, "You cannot find matches in text in File Manager perspective");
-            } else {
-
-                mainJTextArea.setSelectedTextColor(Color.BLUE);
+            if (perspective.equals(Perspective.FileRedactor)) {
 
                 String inputPattern = UserTextInput.inputUserText(frame, "Type in a pattern");
 
                 if (inputPattern != null) {
-                    List<Substring> foundSubstrings = SubstringsFinder.findSubstrings(mainJTextArea.getText(), inputPattern);
+                    List<String> foundWords = SimilarWordsFinder.findSimilarWords(mainJTextArea.getText(), inputPattern);
 
-                    if (foundSubstrings.size() == 0) {
-                        MessageRenderer.renderMessage(frame, "No matches have been found");
+                    if (foundWords.size() == 0) {
+                        MessageRenderer.renderMessage(frame, "There is no matches in text");
                     }
 
+                    if (foundWords.size() == 1) {
+                        MessageRenderer.renderMessage(frame, "The most similar word: " + foundWords.get(0));
+                    }
 
-                    for (Substring substring : foundSubstrings) {
-                        //                    System.out.println(substring.toString());
-                        //                    mainJTextArea.select(substring.getBegin(), substring.getEnd());
-                        mainJTextArea.setCaretPosition(substring.getBegin());
-                        mainJTextArea.moveCaretPosition(substring.getEnd());
-
+                    if (foundWords.size() > 1) {
+                        MessageRenderer.renderMessage(frame, "There are several similar words in text: "
+                                + foundWords.toString());
                     }
                 }
+            } else {
+                MessageRenderer.renderMessage(frame, "You cannot find matches in text in File Manager perspective");
             }
         }
 
@@ -409,6 +434,7 @@ public class GUIManager {
                 MessageRenderer.renderMessage(frame, "You cannot open files in File Manager perspective");
             } else {
                 if (fileCloser.closeFile()) {
+
                     DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
                     if (selectedNode != null) {
@@ -432,14 +458,6 @@ public class GUIManager {
                     MessageRenderer.renderMessage(frame, "No one file jas been selected");
                 }
             }
-        }
-
-        private boolean isHTMLFilePath(String path) {
-            return path.substring(path.length() - 5, path.length()).equals(".html");
-        }
-
-        private boolean isTXTFilePath(String path) {
-            return path.substring(path.length() - 4, path.length()).equals(".txt");
         }
     }
 
@@ -685,16 +703,20 @@ public class GUIManager {
                     String from = PathFormer.formPath(leftSelectedNode);
                     String to = PathFormer.formPath(rightSelectedNode);
 
+                    DefaultMutableTreeNode leftParent = (DefaultMutableTreeNode) leftSelectedNode.getParent();
+                    DefaultMutableTreeNode rightParent = (DefaultMutableTreeNode) rightSelectedNode.getParent();
+
                     try {
                         FileMove.move(from, to);
-//                        leftJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
-//                        rightJTreeBuilder.insertNodeInto(rightSelectedNode,leftSelectedNode);
-//                        String leftSelectedNodePath = PathFormer.formPath(leftSelectedNode);
-//                        leftJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
-//                        rightJTreeBuilder.removeNodeFromParent(leftSelectedNodePath);
-//
-//                        leftJTreeBuilder.reload(rightSelectedNode);
-//                        rightJTreeBuilder.reload(rightSelectedNode);
+                        leftJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
+                        leftJTreeBuilder.reload(rightSelectedNode);
+                        rightJTreeBuilder.insertNodeInto(rightSelectedNode, leftSelectedNode);
+                        rightJTreeBuilder.reload(rightSelectedNode);
+
+                        leftJTreeBuilder.removeNodeFromParent(from);
+                        leftJTreeBuilder.reload(leftParent);
+                        rightJTreeBuilder.removeNodeFromParent(from);
+//                        rightJTreeBuilder.reload(rightParent);
 
                     } catch (Exception e1) {
                         ExceptionRenderer.renderException(frame, e1);
@@ -713,8 +735,6 @@ public class GUIManager {
             }
         }
     }
-
-
 
 
     class FileManagerPerspectiveListener implements ActionListener {

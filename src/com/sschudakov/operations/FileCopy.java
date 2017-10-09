@@ -102,16 +102,26 @@ public class FileCopy {
                 throw new IllegalArgumentException("Path to: " + to + " points not to a directory");
             }
         } else {
-            if (!toFile.mkdir()) {
-                throw new IllegalArgumentException("Directory along the path to: " + to + " does not exist and failed to be created");
+//            if (!toFile.mkdir()) {
+//                throw new IllegalArgumentException("Directory along the path to: " + to + " does not exist and failed to be created");
+//            }
+            throw new IllegalArgumentException("There is no destinations folder along the give path: " + to);
+        }
+
+        if (fromFile.isDirectory()) {
+            Path fromPath = Paths.get(from);
+            Path toPath = Paths.get(to);
+
+
+            if (toPath.startsWith(fromPath)) {
+                throw new IllegalArgumentException("A directory cannot be copied to its subdirectory");
             }
         }
 
-        Path toPath = Paths.get(to);
-
-        for (Path path : toPath) {
-            if(path.toString().equals(fromFile.getName())){
-                throw new IllegalArgumentException("A directory cannot be copied to its subdirectory");
+        for (File file : toFile.listFiles()) {
+            if(file.getName().equals(fromFile.getName())){
+                throw new IllegalArgumentException("file or folder with name: " + fromFile.getName()
+                        + " already exists in folder " + to);
             }
         }
     }
