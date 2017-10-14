@@ -404,7 +404,10 @@ public class GUIManager {
 
                 String inputPattern = UserTextInput.inputUserText(frame, "Type in a pattern");
 
+
                 if (inputPattern != null) {
+                    System.out.println("pattern; " + inputPattern + " " + inputPattern.length());
+
                     List<String> foundWords = SimilarWordsFinder.findSimilarWords(mainJTextArea.getText(), inputPattern);
 
                     System.out.println("found words: " + foundWords.toString());

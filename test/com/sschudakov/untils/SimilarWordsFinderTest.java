@@ -24,7 +24,7 @@ public class SimilarWordsFinderTest {
         }
 
         String line = scanner.useDelimiter("\\Z").next();
-        String pattern = "onl";
+        String pattern = "The";
 
         List result = SimilarWordsFinder.findSimilarWords(line, pattern);
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" />
@@ -10,19 +11,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$OpenFileListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$OpenFileListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$SaveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$SaveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
     </list>
@@ -39,8 +31,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="24" column="9" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
                 <element signature="e#1056#1090#0" expanded="false" />
@@ -55,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="339" column="42" lean-forward="false" selection-start-line="339" selection-start-column="42" selection-end-line="339" selection-end-column="42" />
+            <state relative-caret-position="219">
+              <caret line="408" column="97" lean-forward="false" selection-start-line="408" selection-start-column="97" selection-end-line="408" selection-end-column="97" />
               <folding>
                 <element signature="docComment;class#GUIManager#0" expanded="false" />
                 <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
@@ -80,14 +72,11 @@
                 <element signature="method#renderFilesList#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#renderFilesList#1;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validatePath#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
+                <element signature="class#MergeListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validateSelectedFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validateResultingFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#SaveListener#0;class#GUIManager#0" expanded="false" />
@@ -110,6 +99,46 @@
                 <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TXTFileOpener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarWordsFinder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimilarWordsFinderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gutenberg.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_operations/gutenberg.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24582">
+              <caret line="1446" column="0" lean-forward="true" selection-start-line="1446" selection-start-column="0" selection-end-line="1446" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -196,13 +225,13 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" />
         <option value="$PROJECT_DIR$/test_operations/test_create_2.txt" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
-        <option value="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
       </list>
     </option>
   </component>
@@ -237,89 +266,6 @@
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
-              <item name="factory_producer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="operations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="operations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="untils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
@@ -606,33 +552,40 @@
       <option name="project" value="LOCAL" />
       <updated>1507577392418</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="everything except for the finding similar words in test">
+      <created>1507969701846</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1507969701846</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimilarWordsFinderTest - 2017.10.10 at 12h 23m 57s.xml">
-      <configuration name="SimilarWordsFinderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.10 at 12h 52m 27s.xml">
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 37m 20s.xml">
       <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 30m 53s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 38m 23s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 31m 12s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 38m 36s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 32m 24s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 38m 57s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 32m 43s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 39m 11s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 32m 51s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 39m 28s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 33m 22s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 40m 42s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 43m 31s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 33m 37s.xml">
       <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
@@ -652,7 +605,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -667,7 +619,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2322239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -724,7 +676,8 @@
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="final commit_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="final commit_1" />
+    <MESSAGE value="everything except for the finding similar words in test" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything except for the finding similar words in test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,13 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/TXTFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -985,27 +931,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_operations/second.html" />
     <entry file="file://$PROJECT_DIR$/test_operations/test_create_2.txt" />
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_operations/gutenberg.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/FileOpener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1017,13 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1110,10 +1028,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/TXTFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_operations/gutenberg.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24582">
+          <caret line="1446" column="0" lean-forward="true" selection-start-line="1446" selection-start-column="0" selection-end-line="1446" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
             <element signature="e#1056#1090#0" expanded="false" />
@@ -1129,8 +1079,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="339" column="42" lean-forward="false" selection-start-line="339" selection-start-column="42" selection-end-line="339" selection-end-column="42" />
+        <state relative-caret-position="219">
+          <caret line="408" column="97" lean-forward="false" selection-start-line="408" selection-start-column="97" selection-end-line="408" selection-end-column="97" />
           <folding>
             <element signature="docComment;class#GUIManager#0" expanded="false" />
             <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
@@ -1151,14 +1101,11 @@
             <element signature="method#renderFilesList#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#renderFilesList#1;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validatePath#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
+            <element signature="class#MergeListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validateSelectedFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validateResultingFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#FindMatchesInTextListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#OpenFileListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#SaveListener#0;class#GUIManager#0" expanded="false" />
@@ -1181,6 +1128,14 @@
             <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

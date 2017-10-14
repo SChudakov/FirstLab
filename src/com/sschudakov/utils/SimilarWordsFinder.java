@@ -13,6 +13,7 @@ public class SimilarWordsFinder {
 
     public static List<String> findSimilarWords(String line, String pattern) {
 
+        substringLength = 1;
 
         LinkedList<String> result = new LinkedList<>();
 
@@ -20,9 +21,6 @@ public class SimilarWordsFinder {
 
         for (int i = 0; i < words.length; i++) {
             words[i] = words[i].replaceAll("[^\\w]", "");
-        }
-        for (String word : words) {
-            System.out.println(word);
         }
 
         int currentSubstringLength;
@@ -35,7 +33,6 @@ public class SimilarWordsFinder {
             if (currentSubstringLength > substringLength) {
                 result.clear();
                 result.add(words[i]);
-                System.out.println("word: " + words[i]);
                 substringLength = currentSubstringLength;
             }
         }
