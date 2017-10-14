@@ -62,11 +62,11 @@ public class JTreeBuilder {
         }
     }
 
-    public void addNode(String userObject) {
-        Path nodePath = Paths.get(userObject);
+    public void addNode(String node) {
+        Path nodePath = Paths.get(node);
         if (nodePath.getNameCount() >= 2) {
-            Path parentPath = nodePath.getName(nodePath.getNameCount() - 2);
-            DefaultMutableTreeNode parentInThisTree = findNode(new DefaultMutableTreeNode(parentPath.toString()));
+            Path parentPath = nodePath.getParent();
+            DefaultMutableTreeNode parentInThisTree = findNode(NodeFormer.formNode(parentPath.toString()));
             if (parentInThisTree != null) {
                 System.out.println("found node: " + parentInThisTree.getUserObject());
                 DefaultMutableTreeNode son = new DefaultMutableTreeNode(nodePath.getName(nodePath.getNameCount() - 1).toString());

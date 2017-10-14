@@ -9,19 +9,23 @@ import java.util.List;
  */
 public class SimilarWordsFinder {
 
-    private static int substringLength = 0;
+    private static int substringLength = 1;
 
     public static List<String> findSimilarWords(String line, String pattern) {
+
+
+        LinkedList<String> result = new LinkedList<>();
 
         String[] words = line.split("\\s+");
 
         for (int i = 0; i < words.length; i++) {
             words[i] = words[i].replaceAll("[^\\w]", "");
         }
+        for (String word : words) {
+            System.out.println(word);
+        }
 
-        LinkedList<String> result = new LinkedList<>();
-
-        int currentSubstringLength = 0;
+        int currentSubstringLength;
 
         for (int i = 0; i < words.length; i++) {
             currentSubstringLength = matchingSubstringLength(words[i], pattern);
@@ -29,15 +33,16 @@ public class SimilarWordsFinder {
                 result.add(words[i]);
             }
             if (currentSubstringLength > substringLength) {
-                substringLength = currentSubstringLength;
                 result.clear();
                 result.add(words[i]);
+                System.out.println("word: " + words[i]);
+                substringLength = currentSubstringLength;
             }
         }
         return result;
     }
 
-    private static int matchingSubstringLength(String word, String patter) {
+    public static int matchingSubstringLength(String word, String patter) {
         int result = 0;
 
         int i = 0;
@@ -52,15 +57,4 @@ public class SimilarWordsFinder {
 
         return result;
     }
-
-    private static String formWord(String line, int from) {
-
-        int resultLength = 0;
-        while (line.charAt(from + resultLength) != ' ' && line.charAt(from + resultLength) != '\r'
-                && line.charAt(from + resultLength) != '\n') {
-            resultLength++;
-        }
-        return line.substring(from, from + resultLength);
-    }
-
 }

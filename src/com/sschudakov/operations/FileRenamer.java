@@ -16,7 +16,8 @@ public class FileRenamer {
         boolean successfully = pathFile.renameTo(newNameFile);
 
         if (!successfully) {
-            throw new RuntimeException("File failed to be renamed: make sure new name for the file is unique for this folder");
+            throw new RuntimeException("File failed to be renamed: make sure new name for the file is unique for this folder\n" +
+                    " and there is no unacceptable characters, such as / \\ : * ? \" < > |");
         }
     }
 

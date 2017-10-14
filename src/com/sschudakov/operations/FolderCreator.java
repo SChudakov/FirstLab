@@ -14,7 +14,6 @@ public class FolderCreator {
         if(!folder.exists()){
             folder.mkdir();
         }else {
-
             throw new IllegalArgumentException("Such file or folder already exists: " + path);
         }
     }

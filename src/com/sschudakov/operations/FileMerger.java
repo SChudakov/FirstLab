@@ -1,5 +1,7 @@
 package com.sschudakov.operations;
 
+import com.sschudakov.utils.FileExtensionDeterminer;
+
 import java.io.*;
 
 /**
@@ -19,7 +21,7 @@ public class FileMerger {
         mergeFiles(firstFile, secondFile, resultFile);
     }
 
-    private static void mergeFiles(File fromFile, File toFile, File resultFile) {
+    private static void mergeFiles(File firstFile, File secondFile, File resultFile) {
 
         FileInputStream firstFileInput = null;
         FileInputStream secondFileInput = null;
@@ -27,11 +29,15 @@ public class FileMerger {
 
         try {
 
-            firstFileInput = new FileInputStream(fromFile);
-            secondFileInput = new FileInputStream(toFile);
+            firstFileInput = new FileInputStream(firstFile);
+            secondFileInput = new FileInputStream(secondFile);
             resultFileOutput = new FileOutputStream(resultFile);
 
             mergeFiles(firstFileInput, resultFileOutput);
+            if (FileExtensionDeterminer.isHTNLFile(firstFile.getPath()) || FileExtensionDeterminer.isTXTFile(secondFile.getPath())
+                    && FileExtensionDeterminer.isHTNLFile(secondFile.getPath()) || FileExtensionDeterminer.isTXTFile(secondFile.getPath())) {
+                resultFileOutput.write(new byte[]{'\n'});
+            }
             mergeFiles(secondFileInput, resultFileOutput);
 
             close(firstFileInput);
@@ -73,7 +79,6 @@ public class FileMerger {
 //        }
 
     }
-
 
     private static void close(FileInputStream inputStream) throws IOException {
         if (inputStream != null) {

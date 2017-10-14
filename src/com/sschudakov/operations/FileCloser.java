@@ -15,8 +15,12 @@ import java.util.Scanner;
 public class FileCloser {
 
 
+
     private File openedFile;
     private JTextArea area;
+
+
+
 
     public File getOpenedFile() {
         return openedFile;
@@ -31,9 +35,9 @@ public class FileCloser {
 
     public boolean closeFile(){
         if (openedFile != null) {
-
+            System.out.println("has opened");
             if (hasChanges(this.openedFile, area)) {
-
+                System.out.println("has changes");
                 int confirmed = OptionConfirmer.confirmOption(this.area.getParent(), "Do you wat to save changes?");
 
                 if(confirmed == 0){
@@ -51,10 +55,12 @@ public class FileCloser {
                     return false;
                 }
             }else{
+                System.out.println("has no changes");
                 JTextAreaCleaner.cleanJTextArea(area);
                 this.openedFile = null;
             }
         }else {
+            System.out.println("has no opened");
             JTextAreaCleaner.cleanJTextArea(area);
         }
         return true;
@@ -74,5 +80,9 @@ public class FileCloser {
         System.out.println("area content");
         System.out.println(area.getText());
         return !fileContent.equals(area.getText());
+    }
+
+    public boolean hasOpenedFile() {
+        return this.openedFile != null;
     }
 }

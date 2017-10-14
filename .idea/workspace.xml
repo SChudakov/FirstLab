@@ -2,27 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/operations/FileMoveTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/SubstringsFinder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/SubstringsFinder.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FindMatchesInTextListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FindMatchesInTextListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MergeListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MergeListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$OpenFileListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$OpenFileListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$SaveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$SaveListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ShowFilesListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/JTreeBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCloser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/operations/FileCopyTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/operations/FileCopyTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,14 +39,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
                 <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-                <element signature="e#2486#2520#0" expanded="false" />
+                <element signature="e#1056#1090#0" expanded="false" />
                 <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
                 <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-                <element signature="e#3490#3567#0" expanded="false" />
+                <element signature="e#2060#2137#0" expanded="false" />
                 <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
                 <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
                 <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
@@ -56,8 +58,8 @@
       <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="229" column="103" lean-forward="false" selection-start-line="229" selection-start-column="103" selection-end-line="229" selection-end-column="103" />
+            <state relative-caret-position="378">
+              <caret line="339" column="42" lean-forward="false" selection-start-line="339" selection-start-column="42" selection-end-line="339" selection-end-column="42" />
               <folding>
                 <element signature="docComment;class#GUIManager#0" expanded="false" />
                 <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
@@ -67,14 +69,17 @@
                 <element signature="e#6232#6348#0" expanded="false" />
                 <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
+                <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
+                <element signature="class#8925:9161" expanded="false" />
+                <element signature="method#actionPerformed#0;class#8925:9161" expanded="false" />
+                <element signature="class#9220:10319" expanded="false" />
+                <element signature="method#actionPerformed#0;class#9220:10319" expanded="false" />
                 <element signature="method#setupPerspective#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#renderFilesList#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#renderFilesList#1;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validatePath#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#MergeListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validateSelectedFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#validateResultingFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
@@ -104,29 +109,6 @@
                 <element signature="method#actionPerformed#0;class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimilarWordsFinder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimilarWordsFinderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#SimilarWordsFinderTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -170,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileReanamer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileRenamer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileOpener.java" />
         <option value="$PROJECT_DIR$/first.html" />
@@ -198,28 +179,29 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/HTMLFile.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FactoryProducer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileSaver.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileDeleter.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/TreeNodeChildDelete.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCreator.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" />
         <option value="$PROJECT_DIR$/../Tasks/src/com/sschudakov/task1/FileManager.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/ComparableDefaultMutableTreeNode.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/NodeFormer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/PathFormer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/operations/FileMoveTest.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/operations/FileCopyTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/SubstringsFinder.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/untils/SubstringFinderTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java" />
+        <option value="$PROJECT_DIR$/test_operations/test_create_2.txt" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
       </list>
     </option>
@@ -267,6 +249,44 @@
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+              <item name="factory_producer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,28 +317,23 @@
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test_copy" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="untils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test_copy" type="462c0819:PsiDirectoryNode" />
-              <item name="from" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="test_copy" type="462c0819:PsiDirectoryNode" />
-              <item name="to" type="462c0819:PsiDirectoryNode" />
+              <item name="test_operations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,56 +391,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="FileMoveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sschudakov.operations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FirstLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.operations" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.operations.FileMoveTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="FileMoveTest.copyFromDirToDirTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sschudakov.operations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FirstLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.operations" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.operations.FileMoveTest" />
-      <option name="METHOD_NAME" value="copyFromDirToDirTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -445,7 +410,7 @@
       <module name="FirstLab" />
       <envs />
     </configuration>
-    <configuration name="SimilarWordsFinderTest.test_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimilarWordsFinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sschudakov.untils.*" />
@@ -457,7 +422,57 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.sschudakov.untils" />
       <option name="MAIN_CLASS_NAME" value="com.sschudakov.untils.SimilarWordsFinderTest" />
-      <option name="METHOD_NAME" value="test_1" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="SimilarWordsFinderTest.findSimilarWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.untils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FirstLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.untils" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.untils.SimilarWordsFinderTest" />
+      <option name="METHOD_NAME" value="findSimilarWords" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.untils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FirstLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.untils" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.untils.SimilarWordsFinderTest" />
+      <option name="METHOD_NAME" value="matchingSubstringLengthTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -488,17 +503,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.FileCopyTest.copyFromDirToDirTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FileMoveTest.copyFromDirToDirTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FileMoveTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.test_1" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.findSimilarWords" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.matchingSubstringLengthTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.test_1" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FileCopyTest.copyFromDirToDirTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FileMoveTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FileMoveTest.copyFromDirToDirTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.findSimilarWords" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.matchingSubstringLengthTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FileCopyTest.copyFromDirToDirTest" />
       </list>
     </recent_temporary>
   </component>
@@ -584,39 +599,46 @@
       <option name="project" value="LOCAL" />
       <updated>1507488578390</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="final commit_1">
+      <created>1507577392418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1507577392418</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 21h 44m 59s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest - 2017.10.10 at 12h 23m 57s.xml">
+      <configuration name="SimilarWordsFinderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 21h 45m 12s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.10 at 12h 52m 27s.xml">
+      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 21h 45m 22s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 30m 53s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 02m 43s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 31m 12s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 03m 04s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 32m 24s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 03m 46s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 32m 43s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 03m 53s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 32m 51s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 04m 10s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 33m 22s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 04m 21s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 33m 37s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_test_1 - 2017.10.09 at 22h 10m 20s.xml">
-      <configuration name="SimilarWordsFinderTest.test_1" configurationId="JUnit" />
+    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 36m 05s.xml">
+      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -645,8 +667,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16641453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -658,6 +679,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -701,11 +723,12 @@
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;7. remove NullPointeException while removing files&#10;13. fix Abstrat Fzctory #2&#10;15. fix desplaying files after move: (the way for the file to be reloaded is changed thile operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
+    <MESSAGE value="final commit_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit_1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -714,27 +737,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/Test.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/GridBagLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5763">
@@ -767,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="1005" column="19" lean-forward="false" selection-start-line="1005" selection-start-column="19" selection-end-line="1005" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="81" lean-forward="false" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -839,17 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="124" lean-forward="false" selection-start-line="18" selection-start-column="124" selection-end-line="18" selection-end-column="124" />
-          <folding>
-            <element signature="docComment;class#FileRenamer#0" expanded="false" />
-            <element signature="method#changeName#0;class#FileRenamer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCopyer.java" />
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCreator.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -862,13 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="141" column="5" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -890,136 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="205" column="28" lean-forward="false" selection-start-line="205" selection-start-column="28" selection-end-line="205" selection-end-column="28" />
-          <folding>
-            <element signature="docComment;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;field#EMPTY_ENUMERATION#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;field#parent#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;field#children#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;field#userObject#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;field#allowsChildren#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#DefaultMutableTreeNode#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#DefaultMutableTreeNode#1;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#DefaultMutableTreeNode#2;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#DefaultMutableTreeNode#2;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#5028#5030#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#insert#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#remove#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#setParent#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getParent#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getChildAt#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getChildAt#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getChildCount#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getChildCount#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getIndex#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getIndex#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#children#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#children#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#setAllowsChildren#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#setAllowsChildren#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getAllowsChildren#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#setUserObject#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getUserObject#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#11983#11985#0" expanded="false" />
-            <element signature="docComment;method#removeFromParent#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#removeFromParent#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#remove#1;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#remove#1;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#removeAllChildren#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#removeAllChildren#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#add#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#add#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#14105#14107#0" expanded="false" />
-            <element signature="docComment;method#isNodeAncestor#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#isNodeAncestor#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#isNodeDescendant#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#isNodeDescendant#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getSharedAncestor#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getSharedAncestor#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#17289#17356#0" expanded="false" />
-            <element signature="docComment;method#isNodeRelated#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#isNodeRelated#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getDepth#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getDepth#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getLevel#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getLevel#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getPath#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getPathToRoot#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getPathToRoot#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getUserObjectPath#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getUserObjectPath#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getRoot#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getRoot#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#isRoot#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getNextNode#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getNextNode#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getPreviousNode#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getPreviousNode#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#preorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#postorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#breadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#depthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#pathFromAncestorEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#pathFromAncestorEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#28869#28871#0" expanded="false" />
-            <element signature="docComment;method#isNodeChild#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#isNodeChild#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getFirstChild#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getFirstChild#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getLastChild#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getLastChild#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getChildAfter#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getChildAfter#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getChildBefore#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getChildBefore#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#32771#32773#0" expanded="false" />
-            <element signature="docComment;method#isNodeSibling#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#isNodeSibling#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getSiblingCount#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getSiblingCount#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getNextSibling#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getNextSibling#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getPreviousSibling#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getPreviousSibling#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#36092#36094#0" expanded="false" />
-            <element signature="docComment;method#isLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getFirstLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getFirstLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getLastLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getLastLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getNextLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getNextLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getPreviousLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getPreviousLeaf#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#getLeafCount#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#getLeafCount#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="e#41131#41133#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#toString#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="docComment;method#clone#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#clone#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#writeObject#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#readObject#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="class#PreorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#PreorderEnumeration#0;class#PreorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#nextElement#0;class#PreorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="class#PostorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#PostorderEnumeration#0;class#PostorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#nextElement#0;class#PostorderEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#BreadthFirstEnumeration#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#hasMoreElements#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#nextElement#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="class#Queue#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="class#QNode#0;class#Queue#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#QNode#0;class#QNode#0;class#Queue#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#enqueue#0;class#Queue#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#dequeue#0;class#Queue#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#firstObject#0;class#Queue#0;class#BreadthFirstEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="class#PathBetweenNodesEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#PathBetweenNodesEnumeration#0;class#PathBetweenNodesEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-            <element signature="method#nextElement#0;class#PathBetweenNodesEnumeration#0;class#DefaultMutableTreeNode#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,13 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/FileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1048,9 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="docComment;class#FileExtensionDeterminer#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1072,7 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,79 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="233" column="16" lean-forward="false" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
-          <folding>
-            <element signature="docComment;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;field#listenerList#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;field#asksAllowsChildren#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#DefaultTreeModel#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#DefaultTreeModel#1;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#DefaultTreeModel#1;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#setAsksAllowsChildren#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#asksAllowsChildren#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#setRoot#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#setRoot#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getRoot#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getIndexOfChild#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#getIndexOfChild#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getChild#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getChildCount#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#isLeaf#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#isLeaf#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#valueForPathChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#nodeChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#nodeChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#reload#1;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#nodesWereRemoved#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#nodesWereRemoved#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#nodesChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#nodesChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#nodeStructureChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#nodeStructureChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getPathToRoot#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getPathToRoot#1;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="e#13555#13616#0" expanded="false" />
-            <element signature="e#14353#14355#0" expanded="false" />
-            <element signature="docComment;method#addTreeModelListener#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#removeTreeModelListener#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#getTreeModelListeners#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="docComment;method#fireTreeNodesChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#fireTreeNodesChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="e#16435#16484#0" expanded="false" />
-            <element signature="docComment;method#fireTreeNodesInserted#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#fireTreeNodesInserted#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="e#17796#17845#0" expanded="false" />
-            <element signature="docComment;method#fireTreeNodesRemoved#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#fireTreeNodesRemoved#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="e#19169#19218#0" expanded="false" />
-            <element signature="docComment;method#fireTreeStructureChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#fireTreeStructureChanged#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="e#20623#20672#0" expanded="false" />
-            <element signature="docComment;method#fireTreeStructureChanged#1;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#fireTreeStructureChanged#1;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="e#21851#21900#0" expanded="false" />
-            <element signature="docComment;method#getListeners#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#getListeners#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#writeObject#0;class#DefaultTreeModel#0" expanded="false" />
-            <element signature="method#readObject#0;class#DefaultTreeModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="57" column="87" lean-forward="false" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
-          <folding>
-            <element signature="docComment;class#FileMerger#0" expanded="false" />
-            <element signature="method#mergeFiles#0;class#FileMerger#0" expanded="false" />
-            <element signature="method#mergeFiles#1;class#FileMerger#0" expanded="false" />
-            <element signature="method#mergeFiles#2;class#FileMerger#0" expanded="false" />
-            <element signature="method#validateParameters#0;class#FileMerger#0" expanded="false" />
-            <element signature="e#2119#2155#0" expanded="false" />
-            <element signature="method#close#0;class#FileMerger#0" expanded="false" />
-            <element signature="method#close#1;class#FileMerger#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,9 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="docComment;class#NodeFormer#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,31 +929,151 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding>
-            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-            <element signature="e#2486#2520#0" expanded="false" />
-            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
-            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-            <element signature="e#3490#3567#0" expanded="false" />
-            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
-            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
-            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/ComparableDefaultMutableTreeNode.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/operations/FileMoveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_copy/to/from" />
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/operations/FileCopyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="123" column="28" lean-forward="false" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileRenamer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="90" lean-forward="false" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FolderCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_operations/second.html" />
+    <entry file="file://$PROJECT_DIR$/test_operations/test_create_2.txt" />
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_operations/gutenberg.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/FileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+          <folding>
+            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#reload#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addNode#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#insertNodeInto#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#removeNodeFromParent#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#changeName#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#findNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#findNode#1;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#isFileNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#isDirectoryNode#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#setAllowsChildren#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#hasChild#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#FileMerger#0" expanded="false" />
+            <element signature="method#mergeFiles#0;class#FileMerger#0" expanded="false" />
+            <element signature="method#mergeFiles#1;class#FileMerger#0" expanded="false" />
+            <element signature="method#mergeFiles#2;class#FileMerger#0" expanded="false" />
+            <element signature="method#validateParameters#0;class#FileMerger#0" expanded="false" />
+            <element signature="e#2528#2564#0" expanded="false" />
+            <element signature="method#close#0;class#FileMerger#0" expanded="false" />
+            <element signature="method#close#1;class#FileMerger#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/file/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
+        <state relative-caret-position="136">
           <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
           <folding>
             <element signature="docComment;class#Path#0" expanded="false" />
@@ -1231,124 +1110,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/operations/FileMoveTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        <state relative-caret-position="289">
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_copy/to/from">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/operations/FileCopyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="88" column="28" lean-forward="false" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
-          <folding>
-            <element signature="docComment;class#FileMove#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCopy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="123" column="28" lean-forward="false" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
-          <folding>
-            <element signature="docComment;class#FileCopy#0" expanded="false" />
-            <element signature="method#copy#0;class#FileCopy#0" expanded="false" />
-            <element signature="e#402#441#0" expanded="false" />
-            <element signature="method#copyFile#0;class#FileCopy#0" expanded="false" />
-            <element signature="method#copyFile#1;class#FileCopy#0" expanded="false" />
-            <element signature="method#close#0;class#FileCopy#0" expanded="false" />
-            <element signature="method#close#1;class#FileCopy#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="185" column="55" lean-forward="false" selection-start-line="185" selection-start-column="55" selection-end-line="185" selection-end-column="55" />
-          <folding>
-            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#reload#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addNode#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#insertNodeInto#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#removeNodeFromParent#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#changeName#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#findNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#findNode#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#isFileNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#isDirectoryNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#setAllowsChildren#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#hasChild#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factory_producer/FileOpenerProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#SimilarWordsFinderTest#0" expanded="false" />
+            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
+            <element signature="e#1056#1090#0" expanded="false" />
+            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
+            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
+            <element signature="e#2060#2137#0" expanded="false" />
+            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
+            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
+            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="229" column="103" lean-forward="false" selection-start-line="229" selection-start-column="103" selection-end-line="229" selection-end-column="103" />
+        <state relative-caret-position="378">
+          <caret line="339" column="42" lean-forward="false" selection-start-line="339" selection-start-column="42" selection-end-line="339" selection-end-column="42" />
           <folding>
             <element signature="docComment;class#GUIManager#0" expanded="false" />
             <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
@@ -1358,14 +1140,17 @@
             <element signature="e#6232#6348#0" expanded="false" />
             <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
             <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
+            <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
+            <element signature="class#8925:9161" expanded="false" />
+            <element signature="method#actionPerformed#0;class#8925:9161" expanded="false" />
+            <element signature="class#9220:10319" expanded="false" />
+            <element signature="method#actionPerformed#0;class#9220:10319" expanded="false" />
             <element signature="method#setupPerspective#0;class#GUIManager#0" expanded="false" />
             <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#renderFilesList#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#renderFilesList#1;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validatePath#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#MergeListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validateSelectedFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
             <element signature="method#validateResultingFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
             <element signature="class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />

@@ -337,12 +337,14 @@ public class GUIManager {
 
                         String result = jFileChooser.getSelectedFile().getPath();
 
-                        validateResultingFile(result);
+                        if (result != null) {
+                            validateResultingFile(result);
 
-                        FileMerger.mergeFiles(first, second, result);
+                            FileMerger.mergeFiles(first, second, result);
 
-                        leftJTreeBuilder.addNode(result);
-                        rightJTreeBuilder.addNode(result);
+                            leftJTreeBuilder.addNode(result);
+                            rightJTreeBuilder.addNode(result);
+                        }
 
                     } catch (Exception e1) {
                         e1.printStackTrace();
@@ -405,6 +407,8 @@ public class GUIManager {
                 if (inputPattern != null) {
                     List<String> foundWords = SimilarWordsFinder.findSimilarWords(mainJTextArea.getText(), inputPattern);
 
+                    System.out.println("found words: " + foundWords.toString());
+
                     if (foundWords.size() == 0) {
                         MessageRenderer.renderMessage(frame, "There is no matches in text");
                     }
@@ -441,13 +445,21 @@ public class GUIManager {
 
                         try {
                             String path = PathFormer.formPath(selectedNode);
+                            File pathFile = new File(path);
+                            System.out.println("path: " + path);
 
                             FileOpener opener = FileOpenerProducer.produceFactory(path);
 
-                            opener.openFile(mainJTextArea);
+                            try {
+                                opener.openFile(mainJTextArea);
+                            } catch (Exception e1) {
+                                e1.printStackTrace();
+                            }
 
-                            fileCloser.setOpenedFile(new File(path));
-                        } catch (FileNotFoundException e1) {
+                            fileCloser.setOpenedFile(pathFile);
+                            System.out.println("set opened file:" + pathFile.getPath());
+                            System.out.println("closer has opened file: " + fileCloser.hasOpenedFile());
+                        } catch (Exception e1) {
                             e1.printStackTrace();
                         }
 
@@ -477,7 +489,7 @@ public class GUIManager {
             if (perspective.equals(Perspective.FileManager)) {
                 MessageRenderer.renderMessage(frame, "You cannot save files in File Manager perspective");
             } else {
-                if (fileCloser.getOpenedFile() != null) {
+                if (fileCloser.hasOpenedFile()) {
 
                     try {
                         FileSaver.saveFile(mainJTextArea, fileCloser.getOpenedFile());
@@ -551,8 +563,8 @@ public class GUIManager {
 
                         if (newName != null) {
                             FileRenamer.renameFile(path, newName);
-                            leftJTreeBuilder.changeName(selectedNode, newName);
-                            rightJTreeBuilder.changeName(selectedNode, newName);
+                            leftJTreeBuilder.changeName(NodeFormer.formNode(path), newName);
+                            rightJTreeBuilder.changeName(NodeFormer.formNode(path), newName);
                         }
 
                     } catch (Exception e1) {
