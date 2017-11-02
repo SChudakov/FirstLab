@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CloseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileManagerPerspectiveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FileRedactorPerspectiveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FindMatchesInTextListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$FindMatchesInTextListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MergeListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MergeListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$OpenFileListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$OpenFileListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$RenameListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$SaveListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$SaveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$ToUpperCaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMerger.class" />
+    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="Start if second lab. LexicalAnalyze">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/Class.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Expression.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Node.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Token.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/TokenType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/expression_parsing/ExpressionTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/expression_parsing/LexicalAnalyzerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,117 +26,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Expression.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Expression.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#Expression#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyntaxAnalyzer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-83">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;class#SyntaxAnalyzer#0" expanded="false" />
+                <element signature="method#factor#0;class#SyntaxAnalyzer#0" expanded="false" />
+                <element signature="method#atom#0;class#SyntaxAnalyzer#0" expanded="false" />
+                <element signature="e#1816#1843#0" expanded="false" />
+                <element signature="e#2090#2117#0" expanded="false" />
+                <element signature="e#2598#2625#0" expanded="false" />
+                <element signature="e#3104#3140#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexicalAnalyzer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="266" column="43" lean-forward="false" selection-start-line="266" selection-start-column="43" selection-end-line="266" selection-end-column="43" />
+              <folding>
+                <element signature="docComment;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#LexicalAnalyzer#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#getToken#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleNumbers#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleNames#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleNotTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleAtomicToken#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#isTokenSymbol#0;class#LexicalAnalyzer#0" expanded="false" />
+                <marker date="1509652899847" expanded="false" signature="369:871" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexicalAnalyzerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/expression_parsing/LexicalAnalyzerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Token.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="132" column="46" lean-forward="false" selection-start-line="132" selection-start-column="46" selection-end-line="132" selection-end-column="46" />
+              <folding>
+                <element signature="docComment;class#Token#0" expanded="false" />
+                <element signature="method#Token#2;class#Token#0" expanded="false" />
+                <element signature="method#isMultiplicationDivisionModulus#0;class#Token#0" expanded="false" />
+                <element signature="method#isOperator#0;class#Token#0" expanded="false" />
+                <element signature="e#2878#2879#0" expanded="true" />
+                <element signature="e#2958#2959#0" expanded="true" />
+                <element signature="e#2982#2983#0" expanded="true" />
+                <element signature="e#3035#3036#0" expanded="true" />
+                <marker date="1509651486912" expanded="false" signature="250:931" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="9" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="357">
+              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
               <folding>
                 <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-                <element signature="e#1056#1090#0" expanded="false" />
+                <element signature="e#1209#1243#0" expanded="false" />
                 <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
                 <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-                <element signature="e#2060#2137#0" expanded="false" />
+                <element signature="e#2213#2290#0" expanded="false" />
                 <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
                 <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
                 <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="408" column="97" lean-forward="false" selection-start-line="408" selection-start-column="97" selection-end-line="408" selection-end-column="97" />
-              <folding>
-                <element signature="docComment;class#GUIManager#0" expanded="false" />
-                <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#setupFrame#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#setupMenuBar#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#setupPanels#0;class#GUIManager#0" expanded="false" />
-                <element signature="e#6232#6348#0" expanded="false" />
-                <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#8925:9161" expanded="false" />
-                <element signature="method#actionPerformed#0;class#8925:9161" expanded="false" />
-                <element signature="class#9220:10319" expanded="false" />
-                <element signature="method#actionPerformed#0;class#9220:10319" expanded="false" />
-                <element signature="method#setupPerspective#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#renderFilesList#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#renderFilesList#1;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#validatePath#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#MergeListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#validateSelectedFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#validateResultingFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#SaveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#CreateListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#validatePath#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#RenameListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#RenameListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#CreateFolderListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#CreateFolderListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#validatePath#0;class#CreateFolderListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#DeleteListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#DeleteListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#CopyListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#CopyListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#MoveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#MoveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TXTFileOpener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimilarWordsFinder.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimilarWordsFinderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gutenberg.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_operations/gutenberg.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24582">
-              <caret line="1446" column="0" lean-forward="true" selection-start-line="1446" selection-start-column="0" selection-end-line="1446" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -149,8 +133,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -168,7 +152,28 @@
       <find>equals</find>
       <find>removeNode</find>
       <find>remove</find>
+      <find>Lexem *</find>
+      <find>.</find>
+      <find>getget</find>
+      <find>invalid_argument</find>
+      <find>char(0)</find>
+      <find>get_token</find>
+      <find>-&gt;</find>
+      <find>tree</find>
+      <find>throw invalid_argument</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Token</replace>
+      <replace>get</replace>
+      <replace>setToken</replace>
+      <replace>IllegalArgumentException</replace>
+      <replace>(char) 0</replace>
+      <replace>null</replace>
+      <replace>getToken</replace>
+      <replace>.</replace>
+      <replace>this.tree</replace>
+      <replace>throw new IllegalArgumentException</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,17 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileRenamer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileOpener.java" />
-        <option value="$PROJECT_DIR$/first.html" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/MessageRenderer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/utils/JTextAreaCleaner.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/TXTFileOpener.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLFileOpener.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GBC.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/file_openers/TXTFileOpener.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/operations/FileMergerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FilesCreator.java" />
         <option value="$PROJECT_DIR$/downloaded_site.txt" />
@@ -230,8 +224,19 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/operations/FileMerger.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/SimilarWordsFinder.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalizator.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Node.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/TokenType.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/expression_parsing/ExpresssionTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Expression.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/expression_parsing/ExpressionTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Token.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/expression_parsing/LexicalAnalyzerTest.java" />
       </list>
     </option>
   </component>
@@ -255,6 +260,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,6 +278,45 @@
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
+              <item name="expression_parsing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="expression_parsing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="test_operations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -277,9 +324,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,20 +355,70 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="FileCopyTest.copyFromDirToDirTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LexicalAnalyzerTest.getTokenTest">
+    <configuration name="ExpressionTest.givebackCharacterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.operations.*" />
+          <option name="PATTERN" value="com.sschudakov.expression_parsing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="FirstLab" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.operations" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.operations.FileCopyTest" />
-      <option name="METHOD_NAME" value="copyFromDirToDirTest" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.expression_parsing" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.expression_parsing.ExpressionTest" />
+      <option name="METHOD_NAME" value="givebackCharacterTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ExpressionTest.readCharacterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.expression_parsing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FirstLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.expression_parsing" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.expression_parsing.ExpressionTest" />
+      <option name="METHOD_NAME" value="readCharacterTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="LexicalAnalyzerTest.getTokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.expression_parsing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FirstLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.expression_parsing" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.expression_parsing.LexicalAnalyzerTest" />
+      <option name="METHOD_NAME" value="getTokenTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -356,31 +450,6 @@
       <module name="FirstLab" />
       <envs />
     </configuration>
-    <configuration name="SimilarWordsFinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sschudakov.untils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FirstLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.untils" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.untils.SimilarWordsFinderTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="SimilarWordsFinderTest.findSimilarWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -394,31 +463,6 @@
       <option name="PACKAGE_NAME" value="com.sschudakov.untils" />
       <option name="MAIN_CLASS_NAME" value="com.sschudakov.untils.SimilarWordsFinderTest" />
       <option name="METHOD_NAME" value="findSimilarWords" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sschudakov.untils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FirstLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.untils" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.untils.SimilarWordsFinderTest" />
-      <option name="METHOD_NAME" value="matchingSubstringLengthTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -448,18 +492,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FileCopyTest.copyFromDirToDirTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.findSimilarWords" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.matchingSubstringLengthTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.findSimilarWords" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ExpressionTest.readCharacterTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ExpressionTest.givebackCharacterTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.getTokenTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.findSimilarWords" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.matchingSubstringLengthTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FileCopyTest.copyFromDirToDirTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.getTokenTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ExpressionTest.givebackCharacterTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ExpressionTest.readCharacterTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SimilarWordsFinderTest.findSimilarWords" />
       </list>
     </recent_temporary>
   </component>
@@ -559,39 +603,46 @@
       <option name="project" value="LOCAL" />
       <updated>1507969701846</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="final">
+      <created>1507972581153</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1507972581153</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 37m 20s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 45m 51s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 38m 23s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 46m 23s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 38m 36s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 47m 52s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 38m 57s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 51m 47s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 39m 11s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 54m 46s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 39m 28s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 57m 01s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 40m 42s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 57m 35s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_findSimilarWords - 2017.10.14 at 11h 43m 31s.xml">
-      <configuration name="SimilarWordsFinderTest.findSimilarWords" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 58m 15s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 33m 37s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 21h 58m 22s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimilarWordsFinderTest_matchingSubstringLengthTest - 2017.10.10 at 12h 36m 05s.xml">
-      <configuration name="SimilarWordsFinderTest.matchingSubstringLengthTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_getTokenTest - 2017.11.02 at 22h 01m 51s.xml">
+      <configuration name="LexicalAnalyzerTest.getTokenTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -605,10 +656,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -619,7 +671,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2322239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25113463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -631,7 +684,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -677,7 +729,8 @@
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="final commit_1" />
     <MESSAGE value="everything except for the finding similar words in test" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything except for the finding similar words in test" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -690,78 +743,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/GridBagLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5763">
-          <caret line="363" column="13" lean-forward="false" selection-start-line="363" selection-start-column="13" selection-end-line="363" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/HTMLParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/operations/FileMergerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="1005" column="19" lean-forward="false" selection-start-line="1005" selection-start-column="19" selection-end-line="1005" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/text/Highlighter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/text/DefaultHighlighter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/downloaded_site.txt" />
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/ToUpperCaseFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="76" lean-forward="false" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/products/HTMLFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="835" column="20" lean-forward="false" selection-start-line="835" selection-start-column="11" selection-end-line="835" selection-end-column="20" />
-          <folding>
-            <element signature="e#29578#29579#0" expanded="false" />
-            <element signature="e#29610#29611#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -938,37 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/JTreeBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
           <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-          <folding>
-            <element signature="docComment;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#JTreeBuilder#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#setupTree#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#reload#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addNode#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#insertNodeInto#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#removeNodeFromParent#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#changeName#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#findNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#findNode#1;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#addFiles#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#isFileNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#isDirectoryNode#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#setAllowsChildren#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#hasChild#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
-            <element signature="method#valueChanged#0;class#SelectionListener#0;class#JTreeBuilder#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,16 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#FileMerger#0" expanded="false" />
-            <element signature="method#mergeFiles#0;class#FileMerger#0" expanded="false" />
-            <element signature="method#mergeFiles#1;class#FileMerger#0" expanded="false" />
-            <element signature="method#mergeFiles#2;class#FileMerger#0" expanded="false" />
-            <element signature="method#validateParameters#0;class#FileMerger#0" expanded="false" />
-            <element signature="e#2528#2564#0" expanded="false" />
-            <element signature="method#close#0;class#FileMerger#0" expanded="false" />
-            <element signature="method#close#1;class#FileMerger#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,38 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
-          <folding>
-            <element signature="docComment;class#Path#0" expanded="false" />
-            <element signature="docComment;method#getFileSystem#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#isAbsolute#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#getRoot#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#getFileName#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#getParent#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#getNameCount#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#getName#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#subpath#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#startsWith#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#startsWith#1;class#Path#0" expanded="false" />
-            <element signature="docComment;method#endsWith#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#endsWith#1;class#Path#0" expanded="false" />
-            <element signature="docComment;method#normalize#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#resolve#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#resolve#1;class#Path#0" expanded="false" />
-            <element signature="docComment;method#resolveSibling#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#resolveSibling#1;class#Path#0" expanded="false" />
-            <element signature="docComment;method#relativize#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#toUri#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#toAbsolutePath#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#toRealPath#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#toFile#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#register#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#register#1;class#Path#0" expanded="false" />
-            <element signature="docComment;method#iterator#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#compareTo#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#hashCode#0;class#Path#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Path#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,102 +948,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/sschudakov/untils/SimilarWordsFinderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
+        <state relative-caret-position="323">
           <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_operations/gutenberg.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24582">
-          <caret line="1446" column="0" lean-forward="true" selection-start-line="1446" selection-start-column="0" selection-end-line="1446" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="9" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
-            <element signature="e#1056#1090#0" expanded="false" />
-            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
-            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
-            <element signature="e#2060#2137#0" expanded="false" />
-            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
-            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
-            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="408" column="97" lean-forward="false" selection-start-line="408" selection-start-column="97" selection-end-line="408" selection-end-column="97" />
-          <folding>
-            <element signature="docComment;class#GUIManager#0" expanded="false" />
-            <element signature="method#buildGUI#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#setupFrame#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#setupMenuBar#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#setupPanels#0;class#GUIManager#0" expanded="false" />
-            <element signature="e#6232#6348#0" expanded="false" />
-            <element signature="method#setupScrollPanes#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#setupJTrees#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#addListeners#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#8925:9161" expanded="false" />
-            <element signature="method#actionPerformed#0;class#8925:9161" expanded="false" />
-            <element signature="class#9220:10319" expanded="false" />
-            <element signature="method#actionPerformed#0;class#9220:10319" expanded="false" />
-            <element signature="method#setupPerspective#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#renderFilesList#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#renderFilesList#1;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#validatePath#0;class#ShowFilesListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#MergeListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#validateSelectedFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#validateResultingFile#0;class#MergeListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ToUpperCaseListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#CloseListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#SaveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#SaveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#CreateListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#validatePath#0;class#CreateListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#RenameListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#RenameListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#CreateFolderListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#CreateFolderListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#validatePath#0;class#CreateFolderListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#DeleteListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#DeleteListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#CopyListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#CopyListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#MoveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#MoveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#FileManagerPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#FileRedactorPerspectiveListener#0;class#GUIManager#0" expanded="false" />
-          </folding>
+          <caret line="1446" column="0" lean-forward="false" selection-start-line="1446" selection-start-column="0" selection-end-line="1446" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1135,7 +969,181 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/operations/FileCloser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/TXTFileOpener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="408" column="97" lean-forward="false" selection-start-line="408" selection-start-column="97" selection-end-line="408" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="docComment;class#Node#0" expanded="false" />
+            <element signature="method#Node#0;class#Node#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="docComment;class#TokenType#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="268" column="76" lean-forward="false" selection-start-line="268" selection-start-column="76" selection-end-line="268" selection-end-column="76" />
+          <folding>
+            <element signature="docComment;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#ExpressionTree#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#findName#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#makeTree#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#makeTree#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#outputTree#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#normalize#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#evaluate#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#evaluate#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#handle_operations#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#handle_equations#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#handle_names#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#make_initializations#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="e#6590#6643#0" expanded="false" />
+            <element signature="method#hasTheSame#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#fixGetValue#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#outputVariables#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#initializeVariable#0;class#ExpressionTree#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="method#testScannerFileReading#0;class#Main#0" expanded="false" />
+            <element signature="e#1209#1243#0" expanded="false" />
+            <element signature="method#testSubstringsFinding#0;class#Main#0" expanded="false" />
+            <element signature="method#testJTreeBuilderFormPath#0;class#Main#0" expanded="false" />
+            <element signature="e#2213#2290#0" expanded="false" />
+            <element signature="method#testHTMLParser#0;class#Main#0" expanded="false" />
+            <element signature="method#testFileManagerFilesCompounding#0;class#Main#0" expanded="false" />
+            <element signature="method#checkRegularExpression#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/expression_parsing/ExpressionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#Expression#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="132" column="46" lean-forward="false" selection-start-line="132" selection-start-column="46" selection-end-line="132" selection-end-column="46" />
+          <folding>
+            <element signature="docComment;class#Token#0" expanded="false" />
+            <element signature="method#Token#2;class#Token#0" expanded="false" />
+            <element signature="method#isMultiplicationDivisionModulus#0;class#Token#0" expanded="false" />
+            <element signature="method#isOperator#0;class#Token#0" expanded="false" />
+            <element signature="e#2878#2879#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
+            <element signature="e#2982#2983#0" expanded="true" />
+            <element signature="e#3035#3036#0" expanded="true" />
+            <marker date="1509651486912" expanded="false" signature="250:931" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="266" column="43" lean-forward="false" selection-start-line="266" selection-start-column="43" selection-end-line="266" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#LexicalAnalyzer#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#getToken#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleNumbers#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleNames#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleNotTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleAtomicToken#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#isTokenSymbol#0;class#LexicalAnalyzer#0" expanded="false" />
+            <marker date="1509652899847" expanded="false" signature="369:871" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/expression_parsing/LexicalAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#SyntaxAnalyzer#0" expanded="false" />
+            <element signature="method#factor#0;class#SyntaxAnalyzer#0" expanded="false" />
+            <element signature="method#atom#0;class#SyntaxAnalyzer#0" expanded="false" />
+            <element signature="e#1816#1843#0" expanded="false" />
+            <element signature="e#2090#2117#0" expanded="false" />
+            <element signature="e#2598#2625#0" expanded="false" />
+            <element signature="e#3104#3140#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
