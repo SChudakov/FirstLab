@@ -11,13 +11,13 @@ public class ExpressionTest {
 
     @Test
     public void readCharacterTest() {
-        String string = "abcdefghijklmnoprstuxyz><+-=!";
+        String string = "1+1";
         Expression expression = new Expression(string);
         StringBuffer readCharacters = new StringBuffer("");
 
         char character = expression.readCharacter();
-
         while (character != Expression.EXPRESSION_END) {
+            System.out.println("read character: " + character);
             readCharacters.append(character);
             character = expression.readCharacter();
         }
@@ -26,29 +26,34 @@ public class ExpressionTest {
     }
 
     @Test
-    public void givebackCharacterTest() {
-        String string = "abc";
+    public void giveBackCharacterTest() {
+        String string = "1+1";
         Expression expression = new Expression(string);
         StringBuffer readCharacters = new StringBuffer("");
         StringBuffer stringBuffer = new StringBuffer(string);
 
         for (int i = 0; i < string.length(); i++) {
-            expression.readCharacter();
+            System.out.println(expression.readCharacter());
         }
         char character = expression.readCharacter();
-        System.out.println(character);
+        System.out.println("character:" + character);
 
         expression.giveBackCharacter();
-        expression.giveBackCharacter();
-        character = expression.readCharacter();
+        System.out.println("after giving back: " + expression.readCharacter());
 
-//        while (character != string.charAt(0)) {
-//            System.out.println(character);
-//            expression.giveBackCharacter();
-//        }
         System.out.println(character);
 
 //        Assert.assertEquals(stringBuffer.reverse().toString(), readCharacters.toString());
+    }
+
+    @Test
+    public void isEmptyTest() {
+        String string = "1+1";
+        Expression expression = new Expression(string);
+        for (int i = 0; i < 4; i++) {
+            expression.readCharacter();
+        }
+        Assert.assertEquals(true, expression.isEmpty());
     }
 
 }

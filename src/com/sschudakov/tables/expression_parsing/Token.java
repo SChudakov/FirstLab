@@ -5,6 +5,8 @@ package com.sschudakov.tables.expression_parsing;
  */
 public class Token {
 
+    private static Token finalToken;
+
     private Object token;
     private TokenType tokenType;
 
@@ -44,8 +46,20 @@ public class Token {
         this.tokenType = tokenType;
     }
 
+    public static Token getFinalToken() {
+        return finalToken;
+    }
+
     public Token() {
         this.token = new char[10];
+    }
+
+    static {
+        finalToken = new Token();
+        finalToken.setToken("L");
+        finalToken.setTokenType(TokenType.FINAL_TOKEN);
+        finalToken.setLeftToken(finalToken);
+        finalToken.setRightToken(finalToken);
     }
 
     public Token(TokenType tokenType) {
@@ -59,78 +73,99 @@ public class Token {
         this.rightToken = rightToken;
     }
 
-    boolean isPlus() {
+    public boolean isPlus() {
         return this.tokenType.equals(TokenType.PLUS);
     }
 
-    boolean isMinus() {
+    public boolean isMinus() {
         return this.tokenType.equals(TokenType.MINUS);
     }
 
-    boolean isPlusOrMinus() {
+    public boolean isPlusOrMinus() {
         return this.tokenType.equals(TokenType.PLUS) || this.tokenType.equals(TokenType.MINUS);
     }
 
-    boolean isMultiplication() {
+    public boolean isMultiplication() {
         return this.tokenType.equals(TokenType.MULTIPLICATION);
     }
 
-    boolean isDivision() {
+    public boolean isDivision() {
         return this.tokenType.equals(TokenType.DIVISION);
     }
 
-    boolean isModulus() {
+    public boolean isModulus() {
         return this.tokenType.equals(TokenType.MODULUS);
     }
 
 
-    boolean isMultiplicationDivisionModulus() {
+    public boolean isMultiplicationDivisionModulus() {
         return isMultiplication()
                 || isDivision()
                 || isModulus();
     }
 
-    boolean isLRB() {
+    public boolean isLRB() {
         return this.tokenType.equals(TokenType.LEFT_PARENTHESIS);
     }
 
-    boolean isRRB() {
+    public boolean isRRB() {
         return this.tokenType.equals(TokenType.RIGHT_PARENTHESIS);
     }
 
-    boolean isMeshName() {
+    public boolean isMeshName() {
         return this.tokenType.equals(TokenType.MESH_NAME);
     }
 
-    boolean isExponent() {
+    public boolean isExponent() {
         return this.tokenType.equals(TokenType.EXPONENT);
     }
 
-    boolean isNumber() {
+    public boolean isNumber() {
         return this.tokenType.equals(TokenType.NUMBER);
     }
 
-    boolean isEquationSign() {
+    public boolean isEquationSign() {
         return this.tokenType.equals(TokenType.EQUATION_SIGN);
     }
 
-    boolean isFinalToken() {
+    public boolean isFinalToken() {
         return this.tokenType.equals(TokenType.FINAL_TOKEN);
     }
 
-    boolean isOperator() {
+    public boolean isOperator() {
         return isPlusOrMinus()
                 || isMultiplicationDivisionModulus()
                 || this.tokenType.equals(TokenType.EXPONENT);
     }
+
+    public boolean isLogicalOperator() {
+        return this.tokenType.equals(TokenType.GREATER_THAN)
+                || this.tokenType.equals(TokenType.GREATER_THAN_OR_EQUAL_TO)
+                || this.tokenType.equals(TokenType.LESS_THAN)
+                || this.tokenType.equals(TokenType.LESS_THAN_OR_EQUAL_TO)
+                || this.tokenType.equals(TokenType.NOT_EQUAL)
+                || this.tokenType.equals(TokenType.EQUATION_SIGN);
+    }
+
+
+    public int size() {
+        return this.token.toString().length();
+    }
+
 
     @Override
     public String toString() {
         return "token: " + this.token + " token type: " + this.tokenType;
     }
 
-    public int size(){
-        return this.token.toString().length();
-    }
+    @Override
+    public boolean equals(Object obj) {
 
+        if (obj instanceof Token) {
+            Token otherToken = (Token) obj;
+
+            return this.token.equals(otherToken.getToken()) && this.tokenType.equals(otherToken.getTokenType());
+        }
+        return false;
+    }
 }

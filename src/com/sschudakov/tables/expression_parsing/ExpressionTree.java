@@ -8,22 +8,16 @@ import java.util.List;
  */
 public class ExpressionTree {
 
-    Token finalToken;
-    Token head;
-    double previousgetValue;
+    private Token head;
     private List<Node> variables;
 
     ExpressionTree() {
-        variables = new LinkedList<>();
-        char[] p = new char[1];
-        p[0] = (char) 0;
-        finalToken = new Token();
-        finalToken.setTokenType(TokenType.FINAL_TOKEN);
-        finalToken.setLeftToken(finalToken);
-        finalToken.setRightToken(finalToken);
-        previousgetValue = 0;
+        this.variables = new LinkedList<>();
     }
 
+    public ExpressionTree(Token head) {
+        this.head = head;
+    }
 
     Node findName(String name) {
 
@@ -35,7 +29,7 @@ public class ExpressionTree {
         return null;
     }
 
-    Token makeTree(Token father, Token left, Token right) {
+    public static Token makeTree(Token father, Token left, Token right) {
 
         father.setLeftToken(left);
         father.setRightToken(right);
@@ -43,10 +37,10 @@ public class ExpressionTree {
         return father;
     }
 
-    Token makeTree(Token slip) {
+    public static Token makeTree(Token slip) {
 
-        slip.setLeftToken(finalToken);
-        slip.setRightToken(finalToken);
+        slip.setLeftToken(Token.getFinalToken());
+        slip.setRightToken(Token.getFinalToken());
 
         return slip;
     }
@@ -55,7 +49,7 @@ public class ExpressionTree {
         outputTree(head);
     }
 
-    private void outputTree(Token token) {
+    public static void outputTree(Token token) {
 
         if (token == null) {
             System.out.println("outputTree: token is null");
@@ -71,9 +65,17 @@ public class ExpressionTree {
         if (currentLeft.isFinalToken() && currentRight.isFinalToken()) {
             System.out.println(token.getToken());
         } else {
-            outputTree(token.getLeftToken());
-            System.out.println(token.getToken());
-            outputTree(token.getRightToken());
+
+            if (token.getTokenType().equals(TokenType.LEFT_PARENTHESIS)) {
+                System.out.println(token.getToken());
+                outputTree(token.getLeftToken());
+                outputTree(token.getRightToken());
+            } else {
+                outputTree(token.getLeftToken());
+                System.out.println(token.getToken());
+                outputTree(token.getRightToken());
+            }
+
         }
 
     }
@@ -82,28 +84,27 @@ public class ExpressionTree {
         normalize(head);
     }
 
-    private void normalize(Token lex) {
+    public static void normalize(Token token) {
 
-        if (lex == null) {
-            lex = finalToken;
+        if (token == null) {
             return;
         }
 
-        Token cl = lex.getLeftToken();
-        Token cr = lex.getRightToken();
+        Token currentLeft = token.getLeftToken();
+        Token currentRight = token.getRightToken();
 
-        if (cl == null) {
-            lex.setLeftToken(finalToken);
+        if (currentLeft == null) {
+            token.setLeftToken(Token.getFinalToken());
         } else {
-            if (!cl.isFinalToken()) {
-                normalize(cl);
+            if (!currentLeft.isFinalToken()) {
+                normalize(currentLeft);
             }
         }
-        if (cr == null) {
-            lex.setRightToken(finalToken);
+        if (currentRight == null) {
+            token.setRightToken(Token.getFinalToken());
         } else {
-            if (!cr.isFinalToken()) {
-                normalize(cr);
+            if (!currentRight.isFinalToken()) {
+                normalize(currentRight);
             }
         }
     }
@@ -243,7 +244,7 @@ public class ExpressionTree {
 //            }
 
             if (findName((String) token.getToken()) != null) {
-                variables.add(new Node((String) token.getToken(), finalToken));
+                variables.add(new Node((String) token.getToken(), Token.getFinalToken()));
                 System.out.println("variable " + token.getToken() + " has been initialized");
             }
         }

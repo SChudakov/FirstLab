@@ -15,8 +15,6 @@ public class LexicalAnalyzer {
 
     private List<Character> tokenSymbols;
 
-    private boolean tokenGivenBack;
-
     public Expression getExpression() {
         return expression;
     }
@@ -63,13 +61,14 @@ public class LexicalAnalyzer {
 
     public Token getToken() {
 
-        if (this.expression.isEmpty()) {
-            return this.currentToken;
-        }
-
         Token result;
-
         char currentCharacter = this.expression.readCharacter();
+
+        if (isExpressionEndSymbol(currentCharacter)) {
+            this.lastToken = this.currentToken;
+            this.currentToken = Token.getFinalToken();
+            return Token.getFinalToken();
+        }
 
         if (isDigit(currentCharacter)) {
             System.out.println("is digit");
@@ -258,16 +257,14 @@ public class LexicalAnalyzer {
     public void giveBackToken() {
 
         if (this.currentToken != null) {
-            if (!this.tokenGivenBack) {
                 for (int i = 0; i < this.currentToken.size(); i++) {
                     this.expression.giveBackCharacter();
                 }
                 this.currentToken = this.lastToken;
                 this.lastToken = null;
-                this.tokenGivenBack = true;
-            }else {
-                throw new RuntimeException("token can not be given back twice");
-            }
+
+        } else {
+            throw new RuntimeException("there is no token to be give back");
         }
     }
 
@@ -280,15 +277,15 @@ public class LexicalAnalyzer {
     }
 
 
-    public boolean isDigit(char s) {
+    private boolean isDigit(char s) {
         return (int) s >= 48 && (int) s <= 57;
     }
 
-    public boolean isLetter(char s) {
+    private boolean isLetter(char s) {
         return (int) s >= 65 && (int) s <= 90 || (int) s >= 97 && (int) s <= 122;
     }
 
-    public boolean isTokenSymbol(char character) {
+    private boolean isTokenSymbol(char character) {
         boolean result = false;
         for (Character tokenSymbol : this.tokenSymbols) {
             if (tokenSymbol.equals(character)) {
@@ -297,6 +294,12 @@ public class LexicalAnalyzer {
         }
         return result || isLetter(character) || isDigit(character);
     }
+
+    private boolean isExpressionEndSymbol(char s){
+        return s == Expression.EXPRESSION_END;
+    }
+
+
 
 
 }

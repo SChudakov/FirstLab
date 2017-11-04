@@ -15,7 +15,12 @@ public class Expression {
     }
 
     public char readCharacter() {
+        // to let give back character work correctly (EXPRESSION_END is an expression element too)
+        if(index > this.expression.length()){
+            return EXPRESSION_END;
+        }
         if (index == this.expression.length()) {
+            this.index++;
             return EXPRESSION_END;
         }
         return this.expression.charAt(index++);

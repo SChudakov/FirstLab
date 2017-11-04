@@ -3,6 +3,10 @@ package com.sschudakov;
 import com.sschudakov.gui.GUIManager;
 import com.sschudakov.operations.FileMerger;
 import com.sschudakov.operations.HTMLParser;
+import com.sschudakov.tables.expression_parsing.Expression;
+import com.sschudakov.tables.expression_parsing.ExpressionTree;
+import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
+import com.sschudakov.tables.expression_parsing.Token;
 import com.sschudakov.utils.SiteDownloader;
 import com.sschudakov.utils.SimilarWordsFinder;
 
@@ -23,11 +27,11 @@ public class Main {
 
 //        GUIManager manager = new GUIManager();
 //        manager.buildGUI();
-
-//        for (int i = 0; i < 256; i++) {
-//            System.out.println(i + " " + (char) i);
-//        }
-        System.out.println("\0" + '-');
+        Expression expression = new Expression("1+1");
+        SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(expression);
+        Token token = syntaxAnalyzer.expression();
+        ExpressionTree.normalize(token);
+        ExpressionTree.outputTree(token);
     }
 
     private static void testScannerFileReading(){
