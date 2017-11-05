@@ -124,9 +124,6 @@ public class Token {
         return this.tokenType.equals(TokenType.NUMBER);
     }
 
-    public boolean isEquationSign() {
-        return this.tokenType.equals(TokenType.EQUATION_SIGN);
-    }
 
     public boolean isFinalToken() {
         return this.tokenType.equals(TokenType.FINAL_TOKEN);
@@ -137,6 +134,32 @@ public class Token {
                 || isMultiplicationDivisionModulus()
                 || this.tokenType.equals(TokenType.EXPONENT);
     }
+
+
+    public boolean isEquationSign() {
+        return this.tokenType.equals(TokenType.EQUATION_SIGN);
+    }
+
+    public boolean isGreaterThanOrEqualTo() {
+        return this.tokenType.equals(TokenType.GREATER_THAN_OR_EQUAL_TO);
+    }
+
+    public boolean isGreaterThan() {
+        return this.tokenType.equals(TokenType.GREATER_THAN);
+    }
+
+    public boolean isLessThanOrEqualTo() {
+        return this.tokenType.equals(TokenType.LESS_THAN_OR_EQUAL_TO);
+    }
+
+    public boolean isLessThan() {
+        return this.tokenType.equals(TokenType.LESS_THAN);
+    }
+
+    public boolean isNotEqual() {
+        return this.tokenType.equals(TokenType.NOT_EQUAL);
+    }
+
 
     public boolean isLogicalOperator() {
         return this.tokenType.equals(TokenType.GREATER_THAN)

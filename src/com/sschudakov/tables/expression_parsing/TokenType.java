@@ -25,6 +25,5 @@ public enum TokenType {
     LESS_THAN_OR_EQUAL_TO(),
     NOT_EQUAL(),
 
-    FINAL_TOKEN(),
-
+    FINAL_TOKEN()
 }

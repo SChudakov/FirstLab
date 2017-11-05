@@ -1,6 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Semen Chudakov on31.10.2017.
@@ -9,13 +10,17 @@ import java.util.HashSet;
 public class SyntaxAnalyzer {
 
     LexicalAnalyzer lexicalAnalyzer;
-    HashSet<Expression> setOfExpressions;
+    Set<Expression> setOfExpressions;
 
     public SyntaxAnalyzer(Expression expression) {
         this.lexicalAnalyzer = new LexicalAnalyzer(expression);
         this.setOfExpressions = new HashSet<>();
     }
 
+    public SyntaxAnalyzer(LexicalAnalyzer lexicalAnalyzer) {
+        this.lexicalAnalyzer = lexicalAnalyzer;
+        this.setOfExpressions = new HashSet<>();
+    }
 
     public Token expression() {
 
@@ -129,15 +134,13 @@ public class SyntaxAnalyzer {
         }
 
         if (token.isMeshName()) {
-
-            nextToken = this.lexicalAnalyzer.getToken();
-            if (nextToken.isEquationSign()) {
-                return ExpressionTree.makeTree(nextToken, ExpressionTree.makeTree(token), expression());
-            } else {
-                this.lexicalAnalyzer.giveBackToken();
-                return ExpressionTree.makeTree(token);
-            }
-
+//            nextToken = this.lexicalAnalyzer.getToken();
+//            if (nextToken.isEquationSign()) {
+//                return ExpressionTree.makeTree(nextToken, ExpressionTree.makeTree(token), expression());
+//            } else {
+//                this.lexicalAnalyzer.giveBackToken();
+            return ExpressionTree.makeTree(token);
+//            }
         }
         if (token.isLRB()) {
 
@@ -154,6 +157,6 @@ public class SyntaxAnalyzer {
                 throw new IllegalArgumentException("exception in atom: no RRB found");
             }
         }
-        throw new IllegalArgumentException("exception in atom: no matches for the tokens - cannot build a tree");
+        throw new IllegalArgumentException("exception in atom: no matches for the token:" + token + " cannot build a tree");
     }
 }

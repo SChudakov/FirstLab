@@ -11,23 +11,16 @@ public class ExpressionTree {
     private Token head;
     private List<Node> variables;
 
-    ExpressionTree() {
+    //constructors
+    public ExpressionTree() {
         this.variables = new LinkedList<>();
     }
 
     public ExpressionTree(Token head) {
         this.head = head;
+        this.variables = new LinkedList<>();
     }
 
-    Node findName(String name) {
-
-        for (Node variable : this.variables) {
-            if (variable.getName().equals(name)) {
-                return variable;
-            }
-        }
-        return null;
-    }
 
     public static Token makeTree(Token father, Token left, Token right) {
 
@@ -44,6 +37,7 @@ public class ExpressionTree {
 
         return slip;
     }
+
 
     public void outputTree() {
         outputTree(head);
@@ -109,96 +103,37 @@ public class ExpressionTree {
         }
     }
 
-    public double evaluate() {
+    public Object evaluate() {
         normalize();
-        make_initializations();//obligatory
+//        make_initializations();//obligatory
         return evaluate(head);
     }
 
-    private double evaluate(Token lex) {
+    private Object evaluate(Token token) {
 
-        if (lex.isFinalToken()) {
+        if (token.isFinalToken()) {
             throw new IllegalArgumentException("cannot evaluate finalToken");
         }
 
-        Token currentLeft = lex.getLeftToken();
-        Token currentRight = lex.getRightToken();
-
-        if (lex.isOperator()) {
-            return handle_operations(lex);
+        if (token.isOperator()) {
+            return evaluateOperations(token);
         }
-        if (lex.isLRB()) {
-            return handle_braces(lex);
+        if (token.isLRB()) {
+            return evaluateBraces(token);
         }
-        if (lex.isNumber()) {
-            return handle_numbers(lex);
+        if (token.isNumber()) {
+            return evaluateNumbers(token);
         }
-        if (lex.isEquationSign()) {
-            return handle_equations(lex);
+        if (token.isLogicalOperator()) {
+            return evaluateLogicalOperator(token);
         }
-        if (lex.isMeshName()) {
-            return handle_names(lex);
+        if (token.isMeshName()) {
+            return evaluateNames(token);
         }
 
 
         throw new IllegalArgumentException("Lexem has no matches");
     }
-
-
-    private double handle_operations(Token token) {
-
-        Token leftToken = token.getLeftToken();
-        Token rightToken = token.getRightToken();
-
-        double leftTokenValue = evaluate(leftToken);
-        double rightTokenValue = evaluate(rightToken);
-
-        if (token.isPlus()) {
-            return leftTokenValue + rightTokenValue;
-        }
-        if (token.isMinus()) {
-            return leftTokenValue - rightTokenValue;
-        }
-        if (token.isMultiplication()) {
-            return leftTokenValue * rightTokenValue;
-        }
-        if (token.isDivision()) {
-            return leftTokenValue / rightTokenValue;
-        }
-        if (token.isModulus()) {
-            return (int) leftTokenValue % (int) rightTokenValue;
-        }
-        if (token.isExponent()) {
-            return Math.pow(leftTokenValue, rightTokenValue);
-        }
-        throw new IllegalArgumentException("token " + token.toString() + " is not an operations token");
-    }
-
-    private double handle_braces(Token lex) {
-        return evaluate(lex.getLeftToken());
-    }
-
-    private double handle_numbers(Token lex) {
-        return (Double) lex.getToken();
-    }
-
-    private double handle_equations(Token token) {
-
-        String nameOfVariable = (String) token.getLeftToken().getToken();
-        initializeVariable(nameOfVariable, token.getRightToken());
-        return evaluate(token.getRightToken());
-    }
-
-
-    private double handle_names(Token token) {
-        String name = (String) token.getToken();
-        outputTree(findName(name).getValue());
-        if (findName(name).getValue().isFinalToken()) {
-            throw new IllegalArgumentException("A variable " + name + " has no getValue");
-        }
-        return evaluate(findName(name).getValue());
-    }
-
 
     private void make_initializations() {
         make_initializations(head);
@@ -228,7 +163,6 @@ public class ExpressionTree {
                             "recursively without having a getValue");
                 } else {
                     fixGetValue(token.getRightToken(), name, findName(name).getValue());
-                    // lex.getRightToken() has been fixed
                     findName(name).setValue(token.getRightToken());
                 }
             } else {
@@ -237,12 +171,6 @@ public class ExpressionTree {
         }
 
         if (token.isMeshName()) {
-
-//            if (token.getToken() == (String) "v") {
-//                outputVariables();
-//                throw new IllegalArgumentException("token v cannot be used as a variable name");
-//            }
-
             if (findName((String) token.getToken()) != null) {
                 variables.add(new Node((String) token.getToken(), Token.getFinalToken()));
                 System.out.println("variable " + token.getToken() + " has been initialized");
@@ -251,6 +179,87 @@ public class ExpressionTree {
         make_initializations(token.getLeftToken());
         make_initializations(token.getRightToken());
     }
+
+
+    private Double evaluateOperations(Token token) {
+
+        Token leftToken = token.getLeftToken();
+        Token rightToken = token.getRightToken();
+
+        double leftTokenValue = (double) evaluate(leftToken);
+        double rightTokenValue = (double) evaluate(rightToken);
+
+        if (token.isPlus()) {
+            return leftTokenValue + rightTokenValue;
+        }
+        if (token.isMinus()) {
+            return leftTokenValue - rightTokenValue;
+        }
+        if (token.isMultiplication()) {
+            return leftTokenValue * rightTokenValue;
+        }
+        if (token.isDivision()) {
+            return leftTokenValue / rightTokenValue;
+        }
+        if (token.isModulus()) {
+            return (double) ((int) leftTokenValue % (int) rightTokenValue);
+        }
+        if (token.isExponent()) {
+            return Math.pow(leftTokenValue, rightTokenValue);
+        }
+        throw new IllegalArgumentException("token " + token + " is not an operations token");
+    }
+
+    private Object evaluateBraces(Token token) {
+        return evaluate(token.getLeftToken());
+    }
+
+    private Double evaluateNumbers(Token token) {
+        return (double) (int) (token.getToken());
+    }
+
+    private Boolean evaluateLogicalOperator(Token token) {
+
+        Token leftToken = token.getLeftToken();
+        Token rightToken = token.getRightToken();
+
+        double leftTokenValue = (double) evaluate(leftToken);
+        double rightTokenValue = (double) evaluate(rightToken);
+
+        if (token.isEquationSign()) {
+            return leftTokenValue == rightTokenValue;
+        }
+        if (token.isGreaterThanOrEqualTo()) {
+            return leftTokenValue >= rightTokenValue;
+        }
+        if (token.isGreaterThan()) {
+            return leftTokenValue > rightTokenValue;
+        }
+        if (token.isLessThanOrEqualTo()) {
+            return leftTokenValue <= rightTokenValue;
+        }
+        if (token.isLessThan()) {
+            return leftTokenValue < rightTokenValue;
+        }
+        if (token.isNotEqual()) {
+            return leftTokenValue != rightTokenValue;
+        }
+
+
+        throw new IllegalArgumentException("token: " + token + " is not a logical operator");
+    }
+
+    private double evaluateNames(Token token) {
+//        String name = (String) token.getToken();
+//        outputTree(findName(name).getValue());
+//        if (findName(name).getValue().isFinalToken()) {
+//            throw new IllegalArgumentException("A variable " + name + " has no getValue");
+//        }
+//        return evaluate(findName(name).getValue());
+        throw new UnsupportedOperationException();
+    }
+
+
 
     private boolean hasTheSame(Token token, String name) {
         if (token.isFinalToken()) {
@@ -296,6 +305,7 @@ public class ExpressionTree {
         fixGetValue(token.getRightToken(), name, previousValue);
     }
 
+
     private void outputVariables() {
 
         System.out.println(this.variables.toString());
@@ -308,5 +318,16 @@ public class ExpressionTree {
             findName(name).setValue(value);
         }
     }
+
+    private Node findName(String name) {
+
+        for (Node variable : this.variables) {
+            if (variable.getName().equals(name)) {
+                return variable;
+            }
+        }
+        return null;
+    }
+
 
 }

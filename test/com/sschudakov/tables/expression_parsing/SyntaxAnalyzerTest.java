@@ -1,9 +1,5 @@
-package com.sschudakov.expression_parsing;
+package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.Expression;
-import com.sschudakov.tables.expression_parsing.ExpressionTree;
-import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
-import com.sschudakov.tables.expression_parsing.Token;
 import org.junit.Test;
 
 /**

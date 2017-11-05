@@ -1,6 +1,5 @@
-package com.sschudakov.expression_parsing;
+package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.Expression;
 import org.junit.Assert;
 import org.junit.Test;
 

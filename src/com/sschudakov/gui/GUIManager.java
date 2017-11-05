@@ -110,7 +110,6 @@ public class GUIManager {
         this.frame.setSize(screenWidth * 8 / 10, screenHeight * 8 / 10);
 
         this.frame.add(this.panel, new GBC(0, 0, 1, 2, 1, 1, GridBagConstraints.BOTH));
-//        this.frame.add(this.rightPanel, new GBC(1, 0, 1, 2, 0.5, 0.5, GridBagConstraints.BOTH));
     }
 
     private void setupMenuBar() {
