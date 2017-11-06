@@ -39,6 +39,10 @@ public class LexicalAnalyzer {
         this.currentToken = currentToken;
     }
 
+    public LexicalAnalyzer(){
+
+    }
+
     public LexicalAnalyzer(Expression expression) {
 
         this.expression = expression;
@@ -58,6 +62,8 @@ public class LexicalAnalyzer {
         this.tokenSymbols.add('!');
 
     }
+
+
 
     public Token getToken() {
 

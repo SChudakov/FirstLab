@@ -21,7 +21,7 @@ public class TableViewManagerTest {
 
         JTable table = new JTable(cells, columnsNames);
         TableViewManager tableViewManager = new TableViewManager(table);
-        tableViewManager.builTableView();
+        tableViewManager.buildTableView();
     }
 
 }

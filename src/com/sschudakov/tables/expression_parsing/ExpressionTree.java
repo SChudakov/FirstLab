@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import javax.swing.table.DefaultTableModel;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,10 +11,24 @@ public class ExpressionTree {
 
     private Token head;
     private List<Node> variables;
+    private DefaultTableModel model;
+
+    //getters and setters
+    public Token getHead() {
+        return head;
+    }
+
+    public void setHead(Token head) {
+        this.head = head;
+    }
 
     //constructors
     public ExpressionTree() {
         this.variables = new LinkedList<>();
+    }
+
+    public ExpressionTree(DefaultTableModel model) {
+        this.model = model;
     }
 
     public ExpressionTree(Token head) {
@@ -21,6 +36,10 @@ public class ExpressionTree {
         this.variables = new LinkedList<>();
     }
 
+    public ExpressionTree(Token head, List<Node> variables) {
+        this.head = head;
+        this.variables = variables;
+    }
 
     public static Token makeTree(Token father, Token left, Token right) {
 
