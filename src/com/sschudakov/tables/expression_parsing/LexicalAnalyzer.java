@@ -40,7 +40,7 @@ public class LexicalAnalyzer {
     }
 
     public LexicalAnalyzer(){
-
+        this(null);
     }
 
     public LexicalAnalyzer(Expression expression) {

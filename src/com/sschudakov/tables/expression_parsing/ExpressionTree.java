@@ -1,5 +1,8 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.table_view.TableCell;
+import com.sschudakov.utils.MeshNameParser;
+
 import javax.swing.table.DefaultTableModel;
 import java.util.LinkedList;
 import java.util.List;
@@ -93,7 +96,7 @@ public class ExpressionTree {
 
     }
 
-    public void normalize() {
+    private void normalize() {
         normalize(head);
     }
 
@@ -269,15 +272,40 @@ public class ExpressionTree {
     }
 
     private double evaluateNames(Token token) {
-//        String name = (String) token.getToken();
-//        outputTree(findName(name).getValue());
-//        if (findName(name).getValue().isFinalToken()) {
-//            throw new IllegalArgumentException("A variable " + name + " has no getValue");
-//        }
-//        return evaluate(findName(name).getValue());
-        throw new UnsupportedOperationException();
+
+        double result;
+
+        if (token.isMeshName()) {
+            String meshName = (String) token.getToken();
+
+            result = readValue(meshName);
+
+        } else {
+            throw new IllegalArgumentException("token " + token + " is not a mesh name token");
+        }
+        return result;
     }
 
+    private double readValue(String meshName) {
+
+        int row = MeshNameParser.parseRow(meshName);
+        int column = MeshNameParser.parseColumn(meshName);
+
+        Double result = 0.0;
+
+        Object meshContent = this.model.getValueAt(row, column);
+
+        if (meshContent != null) {
+
+            if (meshContent instanceof TableCell) {
+                TableCell mesh = (TableCell) meshContent;
+                result = Double.valueOf(mesh.getValue());
+            }
+        } else {
+            throw new RuntimeException("mesh " + meshName + " has no value");
+        }
+        return result;
+    }
 
 
     private boolean hasTheSame(Token token, String name) {

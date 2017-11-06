@@ -1,10 +1,7 @@
 package com.sschudakov.tables.table_view;
 
 import com.sschudakov.gui.GBC;
-import com.sschudakov.tables.expression_parsing.Expression;
-import com.sschudakov.tables.expression_parsing.ExpressionTree;
-import com.sschudakov.tables.expression_parsing.LexicalAnalyzer;
-import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
+import com.sschudakov.tables.expression_parsing.*;
 import com.sschudakov.utils.ExceptionRenderer;
 
 import javax.swing.*;
@@ -13,6 +10,7 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.util.Arrays;
 
 /**
  * Created by Semen Chudakov on 05.11.2017.
@@ -29,17 +27,18 @@ public class TableViewManager {
     private JTextField columnTextField = new JTextField();
 
     private JTable table;
-    private DefaultTableModel tableModel;
+    private TableModel tableModel;
     private JScrollPane tableScrollPane;
 
     private LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer();
     private SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
-    private ExpressionTree expressionTree = new ExpressionTree();
+    private ExpressionTree expressionTree;
 
     public TableViewManager(JTable table) {
         this.table = table;
-        this.tableModel = (DefaultTableModel) table.getModel();
+        this.tableModel = (TableModel) table.getModel();
         this.tableScrollPane = new JScrollPane(table);
+        this.expressionTree = new ExpressionTree(this.tableModel);
     }
 
     public void buildTableView() {
@@ -113,6 +112,7 @@ public class TableViewManager {
         this.table.setAutoCreateRowSorter(true);
         this.table.setCellSelectionEnabled(true);
         this.tableModel.addTableModelListener(new TableListener());
+        System.out.println(Arrays.toString(this.tableModel.getListeners(TableModelListener.class)));
     }
 
 
@@ -121,29 +121,31 @@ public class TableViewManager {
         @Override
         public void tableChanged(TableModelEvent e) {
 
-            System.out.println("Event: " + e.toString());
-
             int row = e.getFirstRow();
             int column = e.getColumn();
 
-            String expression = (String) tableModel.getValueAt(row, column);
-            TableCell cell = new TableCell();
+            Object renewedValue = tableModel.getValueAt(row, column);
 
-            lexicalAnalyzer.setExpression(new Expression(expression));
-            expressionTree.setHead(syntaxAnalyzer.expression());
+            if (renewedValue instanceof String) {
+                String expression = (String) tableModel.getValueAt(row, column);
+                System.out.println("\nexpression: " + expression + "\n");
+                TableCell cell = new TableCell();
 
-            Object value = null;
-            try {
-                value = expressionTree.evaluate();
-            } catch (Exception e1) {
-                ExceptionRenderer.renderException(frame, e1);
+                lexicalAnalyzer.setExpression(new Expression(expression));
+                Token parsedExpression = syntaxAnalyzer.expression();
+                expressionTree.setHead(parsedExpression);
+
+                try {
+
+                    Object value = expressionTree.evaluate();
+                    cell.setValue(value.toString());
+                    cell.setExpression(parsedExpression);
+                    table.setValueAt(cell, row, column);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                    ExceptionRenderer.renderException(frame, e1);
+                }
             }
-            cell.setValue(value.toString());
-            cell.setExpression(expression);
-
-            table.setValueAt(cell, row, column);
-
-
         }
     }
 }
