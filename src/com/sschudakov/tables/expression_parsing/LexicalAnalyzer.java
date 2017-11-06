@@ -1,5 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,10 +10,16 @@ import java.util.List;
  */
 public class LexicalAnalyzer {
 
+
+    private static final String DIV = "div";
+    private static final String MOD = "mod";
+    private static final String MMAX = "mmax";
+    private static final String MMIN = "mmin";
+
     private Expression expression;
 
-    private Token lastToken;
-    private Token currentToken;
+    private DefaultToken lastToken;
+    private DefaultToken currentToken;
 
     private List<Character> tokenSymbols;
 
@@ -23,19 +31,19 @@ public class LexicalAnalyzer {
         this.expression = expression;
     }
 
-    public Token getLastToken() {
+    public DefaultToken getLastToken() {
         return lastToken;
     }
 
-    public void setLastToken(Token lastToken) {
+    public void setLastToken(DefaultToken lastToken) {
         this.lastToken = lastToken;
     }
 
-    public Token getCurrentToken() {
+    public DefaultToken getCurrentToken() {
         return currentToken;
     }
 
-    public void setCurrentToken(Token currentToken) {
+    public void setCurrentToken(DefaultToken currentToken) {
         this.currentToken = currentToken;
     }
 
@@ -52,7 +60,6 @@ public class LexicalAnalyzer {
         this.tokenSymbols.add('-');
         this.tokenSymbols.add('*');
         this.tokenSymbols.add('/');
-        this.tokenSymbols.add('%');
         this.tokenSymbols.add('^');
         this.tokenSymbols.add('(');
         this.tokenSymbols.add(')');
@@ -60,20 +67,20 @@ public class LexicalAnalyzer {
         this.tokenSymbols.add('>');
         this.tokenSymbols.add('<');
         this.tokenSymbols.add('!');
+        this.tokenSymbols.add(',');
 
     }
 
 
+    public DefaultToken getToken() {
 
-    public Token getToken() {
-
-        Token result;
+        DefaultToken result;
         char currentCharacter = this.expression.readCharacter();
 
         if (isExpressionEndSymbol(currentCharacter)) {
             this.lastToken = this.currentToken;
-            this.currentToken = Token.getFinalToken();
-            return Token.getFinalToken();
+            this.currentToken = DefaultToken.getFinalToken();
+            return DefaultToken.getFinalToken();
         }
 
         if (isDigit(currentCharacter)) {
@@ -88,7 +95,7 @@ public class LexicalAnalyzer {
         if (isLetter(currentCharacter)) {
             System.out.println("is letter");
             this.expression.giveBackCharacter();
-            result = handleNames();
+            result = handleLetters();
             currentToken = result;
             this.lastToken = this.currentToken;
             return result;
@@ -100,7 +107,7 @@ public class LexicalAnalyzer {
             handleNotTokenSymbols();
             return getToken();
         }
-        //when coming here it can be only atomic Token
+        //when coming here it can be only atomic DefaultToken
         this.expression.giveBackCharacter();
         result = handleAtomicToken();
         this.lastToken = this.currentToken;
@@ -108,9 +115,9 @@ public class LexicalAnalyzer {
         return result;
     }
 
-    private Token handleNumbers() {
+    private DefaultToken handleNumbers() {
         System.out.println("handle numbers");
-        Token result = new Token();
+        DefaultToken result = new DefaultToken();
         StringBuilder number = new StringBuilder("");
 
         char character = this.expression.readCharacter();
@@ -126,10 +133,65 @@ public class LexicalAnalyzer {
         return result;
     }
 
-    private Token handleNames() {
+    private DefaultToken handleLetters() {
+
+        char currentCharacter = this.expression.readCharacter();
+
+        if (isUppercaseLetter(currentCharacter)) {
+            this.expression.giveBackCharacter();
+            return handleNames();
+        }
+
+        if (isLowercaseLetter(currentCharacter)) {
+            this.expression.giveBackCharacter();
+            return handleLiteralOperation();
+        }
+        throw new IllegalArgumentException("character " + currentCharacter + " is not a letter");
+    }
+
+    private DefaultToken handleLiteralOperation() {
+
+        StringBuffer operation = new StringBuffer("");
+        DefaultToken result = new DefaultToken();
+
+
+        // first case - mod or div
+        for (int i = 0; i < 3; i++) {
+            operation.append(this.expression.readCharacter());
+        }
+
+        if (operation.toString().equals(DIV)) {
+            result.setTokenType(TokenType.INTEGER_DIVISION);
+            result.setToken(DIV);
+            return result;
+        }
+
+        if (operation.toString().equals(MOD)) {
+            result.setTokenType(TokenType.MODULUS);
+            result.setToken(MOD);
+            return result;
+        }
+        // second case - mmax or mmin
+        operation.append(this.expression.readCharacter());
+
+        if (operation.toString().equals(MMAX)) {
+            result.setTokenType(TokenType.MMAX);
+            result.setToken(MMAX);
+            return result;
+        }
+
+        if (operation.toString().equals(MMIN)) {
+            result.setTokenType(TokenType.MMIN);
+            result.setToken(MMIN);
+            return result;
+        }
+        throw new IllegalArgumentException("operation " + operation.toString() + " is not supported");
+    }
+
+    private DefaultToken handleNames() {
 
         System.out.println("handle names");
-        Token result = new Token();
+        DefaultToken result = new DefaultToken();
         char character = this.expression.readCharacter();
 
         if (!isLetter(character)) {
@@ -172,10 +234,10 @@ public class LexicalAnalyzer {
         System.out.println(mistake.toString() + " is a mistake");
     }
 
-    private Token handleAtomicToken() {
+    private DefaultToken handleAtomicToken() {
         System.out.println("handleAtomicToken");
         char character = this.expression.readCharacter();
-        Token result = new Token();
+        DefaultToken result = new DefaultToken();
         if (character == '+') {
             result.setTokenType(TokenType.PLUS);
             result.setToken('+');
@@ -196,11 +258,6 @@ public class LexicalAnalyzer {
             result.setToken('/');
             return result;
         }
-        if (character == '%') {
-            result.setTokenType(TokenType.MODULUS);
-            result.setToken('%');
-            return result;
-        }
         if (character == '^') {
             result.setTokenType(TokenType.EXPONENT);
             result.setToken('^');
@@ -219,6 +276,11 @@ public class LexicalAnalyzer {
         if (character == '=') {
             result.setTokenType(TokenType.EQUATION_SIGN);
             result.setToken('=');
+            return result;
+        }
+        if (character == ',') {
+            result.setTokenType(TokenType.COMMA);
+            result.setToken(',');
             return result;
         }
         if (character == '>') {
@@ -274,11 +336,11 @@ public class LexicalAnalyzer {
         }
     }
 
-    public Token lastToken() {
+    public DefaultToken lastToken() {
         return lastToken;
     }
 
-    public Token currentToken() {
+    public DefaultToken currentToken() {
         return this.lastToken;
     }
 
@@ -288,8 +350,17 @@ public class LexicalAnalyzer {
     }
 
     private boolean isLetter(char s) {
-        return (int) s >= 65 && (int) s <= 90 || (int) s >= 97 && (int) s <= 122;
+        return isUppercaseLetter(s) || isLowercaseLetter(s);
     }
+
+    private boolean isUppercaseLetter(char s) {
+        return (int) s >= 65 && (int) s <= 90;
+    }
+
+    private boolean isLowercaseLetter(char s) {
+        return (int) s >= 97 && (int) s <= 122;
+    }
+
 
     private boolean isTokenSymbol(char character) {
         boolean result = false;
@@ -304,8 +375,5 @@ public class LexicalAnalyzer {
     private boolean isExpressionEndSymbol(char s){
         return s == Expression.EXPRESSION_END;
     }
-
-
-
 
 }

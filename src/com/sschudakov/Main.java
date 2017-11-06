@@ -18,7 +18,6 @@ public class Main {
         JTable table = new JTable(model);
         TableViewManager tableViewManager = new TableViewManager(table);
         tableViewManager.buildTableView();
-
     }
 
     private static void printCharacters() {

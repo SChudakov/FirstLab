@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
 import com.sschudakov.tables.table_view.TableCell;
 import com.sschudakov.utils.MeshNameParser;
 
@@ -12,16 +13,16 @@ import java.util.List;
  */
 public class ExpressionTree {
 
-    private Token head;
+    private DefaultToken head;
     private List<Node> variables;
     private DefaultTableModel model;
 
     //getters and setters
-    public Token getHead() {
+    public DefaultToken getHead() {
         return head;
     }
 
-    public void setHead(Token head) {
+    public void setHead(DefaultToken head) {
         this.head = head;
     }
 
@@ -34,17 +35,17 @@ public class ExpressionTree {
         this.model = model;
     }
 
-    public ExpressionTree(Token head) {
+    public ExpressionTree(DefaultToken head) {
         this.head = head;
         this.variables = new LinkedList<>();
     }
 
-    public ExpressionTree(Token head, List<Node> variables) {
+    public ExpressionTree(DefaultToken head, List<Node> variables) {
         this.head = head;
         this.variables = variables;
     }
 
-    public static Token makeTree(Token father, Token left, Token right) {
+    public static DefaultToken makeTree(DefaultToken father, DefaultToken left, DefaultToken right) {
 
         father.setLeftToken(left);
         father.setRightToken(right);
@@ -52,10 +53,10 @@ public class ExpressionTree {
         return father;
     }
 
-    public static Token makeTree(Token slip) {
+    public static DefaultToken makeTree(DefaultToken slip) {
 
-        slip.setLeftToken(Token.getFinalToken());
-        slip.setRightToken(Token.getFinalToken());
+        slip.setLeftToken(DefaultToken.getFinalToken());
+        slip.setRightToken(DefaultToken.getFinalToken());
 
         return slip;
     }
@@ -65,7 +66,7 @@ public class ExpressionTree {
         outputTree(head);
     }
 
-    public static void outputTree(Token token) {
+    public static void outputTree(DefaultToken token) {
 
         if (token == null) {
             System.out.println("outputTree: token is null");
@@ -76,8 +77,8 @@ public class ExpressionTree {
             return;
         }
 
-        Token currentLeft = token.getLeftToken();
-        Token currentRight = token.getRightToken();
+        DefaultToken currentLeft = token.getLeftToken();
+        DefaultToken currentRight = token.getRightToken();
         if (currentLeft.isFinalToken() && currentRight.isFinalToken()) {
             System.out.println(token.getToken());
         } else {
@@ -100,24 +101,24 @@ public class ExpressionTree {
         normalize(head);
     }
 
-    public static void normalize(Token token) {
+    public static void normalize(DefaultToken token) {
 
         if (token == null) {
             return;
         }
 
-        Token currentLeft = token.getLeftToken();
-        Token currentRight = token.getRightToken();
+        DefaultToken currentLeft = token.getLeftToken();
+        DefaultToken currentRight = token.getRightToken();
 
         if (currentLeft == null) {
-            token.setLeftToken(Token.getFinalToken());
+            token.setLeftToken(DefaultToken.getFinalToken());
         } else {
             if (!currentLeft.isFinalToken()) {
                 normalize(currentLeft);
             }
         }
         if (currentRight == null) {
-            token.setRightToken(Token.getFinalToken());
+            token.setRightToken(DefaultToken.getFinalToken());
         } else {
             if (!currentRight.isFinalToken()) {
                 normalize(currentRight);
@@ -131,7 +132,7 @@ public class ExpressionTree {
         return evaluate(head);
     }
 
-    private Object evaluate(Token token) {
+    private Object evaluate(DefaultToken token) {
 
         if (token.isFinalToken()) {
             throw new IllegalArgumentException("cannot evaluate finalToken");
@@ -161,7 +162,7 @@ public class ExpressionTree {
         make_initializations(head);
     }
 
-    private void make_initializations(Token token) {
+    private void make_initializations(DefaultToken token) {
 
         if (token.isFinalToken()) {
             return;
@@ -194,7 +195,7 @@ public class ExpressionTree {
 
         if (token.isMeshName()) {
             if (findName((String) token.getToken()) != null) {
-                variables.add(new Node((String) token.getToken(), Token.getFinalToken()));
+                variables.add(new Node((String) token.getToken(), DefaultToken.getFinalToken()));
                 System.out.println("variable " + token.getToken() + " has been initialized");
             }
         }
@@ -203,10 +204,10 @@ public class ExpressionTree {
     }
 
 
-    private Double evaluateOperations(Token token) {
+    private Double evaluateOperations(DefaultToken token) {
 
-        Token leftToken = token.getLeftToken();
-        Token rightToken = token.getRightToken();
+        DefaultToken leftToken = token.getLeftToken();
+        DefaultToken rightToken = token.getRightToken();
 
         double leftTokenValue = (double) evaluate(leftToken);
         double rightTokenValue = (double) evaluate(rightToken);
@@ -232,18 +233,18 @@ public class ExpressionTree {
         throw new IllegalArgumentException("token " + token + " is not an operations token");
     }
 
-    private Object evaluateBraces(Token token) {
+    private Object evaluateBraces(DefaultToken token) {
         return evaluate(token.getLeftToken());
     }
 
-    private Double evaluateNumbers(Token token) {
+    private Double evaluateNumbers(DefaultToken token) {
         return (double) (int) (token.getToken());
     }
 
-    private Boolean evaluateLogicalOperator(Token token) {
+    private Boolean evaluateLogicalOperator(DefaultToken token) {
 
-        Token leftToken = token.getLeftToken();
-        Token rightToken = token.getRightToken();
+        DefaultToken leftToken = token.getLeftToken();
+        DefaultToken rightToken = token.getRightToken();
 
         double leftTokenValue = (double) evaluate(leftToken);
         double rightTokenValue = (double) evaluate(rightToken);
@@ -271,7 +272,7 @@ public class ExpressionTree {
         throw new IllegalArgumentException("token: " + token + " is not a logical operator");
     }
 
-    private double evaluateNames(Token token) {
+    private double evaluateNames(DefaultToken token) {
 
         double result;
 
@@ -308,7 +309,7 @@ public class ExpressionTree {
     }
 
 
-    private boolean hasTheSame(Token token, String name) {
+    private boolean hasTheSame(DefaultToken token, String name) {
         if (token.isFinalToken()) {
             return false;
         }
@@ -323,13 +324,13 @@ public class ExpressionTree {
         return hasTheSame(token.getLeftToken(), name) || hasTheSame(token.getRightToken(), name);
     }
 
-    private void fixGetValue(Token token, String name, Token previousValue) {
+    private void fixGetValue(DefaultToken token, String name, DefaultToken previousValue) {
         if (token.isFinalToken()) {
             return;
         }
 
-        Token currentLeft = token.getLeftToken();
-        Token currentRight = token.getRightToken();
+        DefaultToken currentLeft = token.getLeftToken();
+        DefaultToken currentRight = token.getRightToken();
 
         if (currentLeft.isMeshName()) {
             String currentName = (String) currentLeft.getToken();
@@ -358,7 +359,7 @@ public class ExpressionTree {
         System.out.println(this.variables.toString());
     }
 
-    private void initializeVariable(String name, Token value) {
+    private void initializeVariable(String name, DefaultToken value) {
         if (findName(name) != null) {
             variables.add(new Node(name, value));
         } else {

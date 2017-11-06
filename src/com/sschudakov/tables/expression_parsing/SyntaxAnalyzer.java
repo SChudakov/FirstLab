@@ -1,5 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,10 +24,10 @@ public class SyntaxAnalyzer {
         this.setOfExpressions = new HashSet<>();
     }
 
-    public Token expression() {
+    public DefaultToken expression() {
 
-        Token firstArgument;
-        Token operation;
+        DefaultToken firstArgument;
+        DefaultToken operation;
 
         firstArgument = inequationOperand();
         System.out.println("expression inequation: ");
@@ -46,10 +48,10 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private Token inequationOperand() {
+    private DefaultToken inequationOperand() {
 
-        Token firstArgument;
-        Token operation;
+        DefaultToken firstArgument;
+        DefaultToken operation;
 
         firstArgument = addendum();
         System.out.println("expression addendum:");
@@ -70,10 +72,10 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private Token addendum() {
+    private DefaultToken addendum() {
 
-        Token firstArgument;
-        Token operation;
+        DefaultToken firstArgument;
+        DefaultToken operation;
 
         firstArgument = factor();
         System.out.println("addendum factor:");
@@ -95,10 +97,10 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private Token factor() {
+    private DefaultToken factor() {
 
-        Token firstArgument;
-        Token operation;
+        DefaultToken firstArgument;
+        DefaultToken operation;
 
         firstArgument = atom();
         System.out.println("factor atom:");
@@ -120,10 +122,10 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private Token atom() {
+    private DefaultToken atom() {
 
-        Token token;
-        Token nextToken;
+        DefaultToken token;
+        DefaultToken nextToken;
 
         token = this.lexicalAnalyzer.getToken();
         System.out.println("atomic token:");
@@ -144,7 +146,7 @@ public class SyntaxAnalyzer {
         }
         if (token.isLRB()) {
 
-            Token expression = expression();
+            DefaultToken expression = expression();
             System.out.println("atom expression: ");
             System.out.println(expression);
             nextToken = this.lexicalAnalyzer.getToken();

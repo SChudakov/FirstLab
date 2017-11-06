@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
 import org.junit.Test;
 
 /**
@@ -11,7 +12,7 @@ public class SyntaxAnalyzerTest {
     public void expressionTest(){
         Expression expression = new Expression("1>1!=2>=3=4>(1+1)");
         SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(expression);
-        Token token = syntaxAnalyzer.expression();
+        DefaultToken token = syntaxAnalyzer.expression();
         ExpressionTree.normalize(token);
         ExpressionTree.outputTree(token);
     }

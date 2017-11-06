@@ -13,7 +13,11 @@ public enum TokenType {
     MULTIPLICATION(),
     DIVISION(),
     MODULUS(),
+    INTEGER_DIVISION(),
     EXPONENT(),
+
+    MMAX(),
+    MMIN(),
 
     LEFT_PARENTHESIS(),
     RIGHT_PARENTHESIS(),
@@ -24,6 +28,8 @@ public enum TokenType {
     GREATER_THAN_OR_EQUAL_TO(),
     LESS_THAN_OR_EQUAL_TO(),
     NOT_EQUAL(),
+
+    COMMA(),
 
     FINAL_TOKEN()
 }

@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
 import org.junit.Test;
 
 /**
@@ -9,9 +10,9 @@ public class LexicalAnalyzerTest {
     @Test
     public void getTokenLastCurrentTokenTest() {
 
-        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("1+1<>!=<+>+>=<=="));
+        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("1+1<>moddiv<+>+>,,,,"));
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 20; i++) {
             System.out.println("\n");
             System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
             System.out.println("last token: " + lexicalAnalyzer.getLastToken());
@@ -71,9 +72,9 @@ public class LexicalAnalyzerTest {
         System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
         System.out.println("\n");
 
-        Token finalToken = lexicalAnalyzer.getToken();
+        DefaultToken finalToken = lexicalAnalyzer.getToken();
         System.out.println("final token: " + finalToken);
-//        Assert.assertEquals(Token.getFinalToken(), finalToken);
+//        Assert.assertEquals(DefaultToken.getFinalToken(), finalToken);
     }
 
 

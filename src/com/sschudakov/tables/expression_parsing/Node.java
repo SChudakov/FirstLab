@@ -1,13 +1,15 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+
 /**
  * Created by Semen Chudakov on 01.11.2017.
  */
 public class Node {
     private String name;
-    private Token value;
+    private DefaultToken value;
 
-    public Node(String name, Token value) {
+    public Node(String name, DefaultToken value) {
         this.name = name;
         this.value = value;
     }
@@ -20,11 +22,11 @@ public class Node {
         this.name = name;
     }
 
-    public Token getValue() {
+    public DefaultToken getValue() {
         return value;
     }
 
-    public void setValue(Token value) {
+    public void setValue(DefaultToken value) {
         this.value = value;
     }
 }

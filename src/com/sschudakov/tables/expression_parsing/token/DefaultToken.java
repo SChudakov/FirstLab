@@ -1,19 +1,22 @@
-package com.sschudakov.tables.expression_parsing;
+package com.sschudakov.tables.expression_parsing.token;
+
+import com.sschudakov.tables.expression_parsing.TokenType;
 
 /**
  * Created by Semen Chudakov on 31.10.2017.
  */
-public class Token {
 
-    private static Token finalToken;
+public class DefaultToken implements Token {
+
+    private static DefaultToken finalToken;
 
     private Object token;
     private TokenType tokenType;
 
-    private Token leftToken;
-    private Token rightToken;
+    private DefaultToken leftToken;
+    private DefaultToken rightToken;
 
-
+    //getters and setters
     public Object getToken() {
         return token;
     }
@@ -22,19 +25,19 @@ public class Token {
         this.token = token;
     }
 
-    public Token getLeftToken() {
+    public DefaultToken getLeftToken() {
         return leftToken;
     }
 
-    public void setLeftToken(Token leftToken) {
+    public void setLeftToken(DefaultToken leftToken) {
         this.leftToken = leftToken;
     }
 
-    public Token getRightToken() {
+    public DefaultToken getRightToken() {
         return rightToken;
     }
 
-    public void setRightToken(Token rightToken) {
+    public void setRightToken(DefaultToken rightToken) {
         this.rightToken = rightToken;
     }
 
@@ -46,121 +49,138 @@ public class Token {
         this.tokenType = tokenType;
     }
 
-    public static Token getFinalToken() {
+    public static DefaultToken getFinalToken() {
         return finalToken;
     }
 
-    public Token() {
-        this.token = new char[10];
+    public DefaultToken() {
+
     }
 
     static {
-        finalToken = new Token();
+        finalToken = new DefaultToken();
         finalToken.setToken("L");
         finalToken.setTokenType(TokenType.FINAL_TOKEN);
         finalToken.setLeftToken(finalToken);
         finalToken.setRightToken(finalToken);
     }
 
-    public Token(TokenType tokenType) {
+    public DefaultToken(TokenType tokenType) {
         this.tokenType = tokenType;
     }
 
-    public Token(Object token, TokenType tokenType, Token leftToken, Token rightToken) {
+    public DefaultToken(Object token, TokenType tokenType, DefaultToken leftToken, DefaultToken rightToken) {
         this.token = token;
         this.tokenType = tokenType;
         this.leftToken = leftToken;
         this.rightToken = rightToken;
     }
 
+    @Override
     public boolean isPlus() {
         return this.tokenType.equals(TokenType.PLUS);
     }
 
+    @Override
     public boolean isMinus() {
         return this.tokenType.equals(TokenType.MINUS);
     }
 
+    @Override
     public boolean isPlusOrMinus() {
         return this.tokenType.equals(TokenType.PLUS) || this.tokenType.equals(TokenType.MINUS);
     }
 
+    @Override
     public boolean isMultiplication() {
         return this.tokenType.equals(TokenType.MULTIPLICATION);
     }
 
+    @Override
     public boolean isDivision() {
         return this.tokenType.equals(TokenType.DIVISION);
     }
 
+    @Override
     public boolean isModulus() {
         return this.tokenType.equals(TokenType.MODULUS);
     }
 
-
+    @Override
     public boolean isMultiplicationDivisionModulus() {
         return isMultiplication()
                 || isDivision()
                 || isModulus();
     }
 
+    @Override
     public boolean isLRB() {
         return this.tokenType.equals(TokenType.LEFT_PARENTHESIS);
     }
 
+    @Override
     public boolean isRRB() {
         return this.tokenType.equals(TokenType.RIGHT_PARENTHESIS);
     }
 
+    @Override
     public boolean isMeshName() {
         return this.tokenType.equals(TokenType.MESH_NAME);
     }
 
+    @Override
     public boolean isExponent() {
         return this.tokenType.equals(TokenType.EXPONENT);
     }
 
+    @Override
     public boolean isNumber() {
         return this.tokenType.equals(TokenType.NUMBER);
     }
 
-
+    @Override
     public boolean isFinalToken() {
         return this.tokenType.equals(TokenType.FINAL_TOKEN);
     }
 
+    @Override
     public boolean isOperator() {
         return isPlusOrMinus()
                 || isMultiplicationDivisionModulus()
                 || this.tokenType.equals(TokenType.EXPONENT);
     }
 
-
+    @Override
     public boolean isEquationSign() {
         return this.tokenType.equals(TokenType.EQUATION_SIGN);
     }
 
+    @Override
     public boolean isGreaterThanOrEqualTo() {
         return this.tokenType.equals(TokenType.GREATER_THAN_OR_EQUAL_TO);
     }
 
+    @Override
     public boolean isGreaterThan() {
         return this.tokenType.equals(TokenType.GREATER_THAN);
     }
 
+    @Override
     public boolean isLessThanOrEqualTo() {
         return this.tokenType.equals(TokenType.LESS_THAN_OR_EQUAL_TO);
     }
 
+    @Override
     public boolean isLessThan() {
         return this.tokenType.equals(TokenType.LESS_THAN);
     }
 
+    @Override
     public boolean isNotEqual() {
         return this.tokenType.equals(TokenType.NOT_EQUAL);
     }
 
-
+    @Override
     public boolean isLogicalOperator() {
         return this.tokenType.equals(TokenType.GREATER_THAN)
                 || this.tokenType.equals(TokenType.GREATER_THAN_OR_EQUAL_TO)
@@ -171,6 +191,7 @@ public class Token {
     }
 
 
+    @Override
     public int size() {
         return this.token.toString().length();
     }
@@ -184,8 +205,8 @@ public class Token {
     @Override
     public boolean equals(Object obj) {
 
-        if (obj instanceof Token) {
-            Token otherToken = (Token) obj;
+        if (obj instanceof DefaultToken) {
+            DefaultToken otherToken = (DefaultToken) obj;
 
             return this.token.equals(otherToken.getToken()) && this.tokenType.equals(otherToken.getTokenType());
         }

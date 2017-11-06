@@ -2,13 +2,13 @@ package com.sschudakov.tables.table_view;
 
 import com.sschudakov.gui.GBC;
 import com.sschudakov.tables.expression_parsing.*;
+import com.sschudakov.tables.expression_parsing.token.DefaultToken;
 import com.sschudakov.utils.ExceptionRenderer;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.Arrays;
 
@@ -130,12 +130,12 @@ public class TableViewManager {
                 String expression = (String) tableModel.getValueAt(row, column);
                 System.out.println("\nexpression: " + expression + "\n");
                 TableCell cell = new TableCell();
-
-                lexicalAnalyzer.setExpression(new Expression(expression));
-                Token parsedExpression = syntaxAnalyzer.expression();
-                expressionTree.setHead(parsedExpression);
-
                 try {
+
+                    lexicalAnalyzer.setExpression(new Expression(expression));
+                    DefaultToken parsedExpression = syntaxAnalyzer.expression();
+                    expressionTree.setHead(parsedExpression);
+
 
                     Object value = expressionTree.evaluate();
                     cell.setValue(value.toString());
