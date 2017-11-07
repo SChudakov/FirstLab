@@ -1,6 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 
 /**
  * Created by Semen Chudakov on 01.11.2017.

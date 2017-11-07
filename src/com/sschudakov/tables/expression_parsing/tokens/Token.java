@@ -1,11 +1,9 @@
-package com.sschudakov.tables.expression_parsing.token;
-
-import com.sschudakov.tables.expression_parsing.TokenType;
+package com.sschudakov.tables.expression_parsing.tokens;
 
 /**
  * Created by Semen Chudakov on 06.11.2017.
  */
-interface Token {
+public interface Token {
     boolean isPlus();
 
     boolean isMinus();
@@ -21,9 +19,9 @@ interface Token {
 
     boolean isMultiplicationDivisionModulus();
 
-    boolean isLRB();
+    boolean isLeftParenthesis();
 
-    boolean isRRB();
+    boolean isRightParenthesis();
 
     boolean isMeshName();
 
@@ -51,6 +49,12 @@ interface Token {
 
 
     boolean isLogicalOperator();
+
+    boolean isMMax();
+
+    boolean isMMin();
+
+    boolean isMultipleOperandsToken();
 
 
     int size();

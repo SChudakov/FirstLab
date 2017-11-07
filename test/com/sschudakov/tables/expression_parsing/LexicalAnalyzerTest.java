@@ -1,6 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 import org.junit.Test;
 
 /**
@@ -14,7 +14,7 @@ public class LexicalAnalyzerTest {
 
         for (int i = 0; i < 20; i++) {
             System.out.println("\n");
-            System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+            System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
             System.out.println("last token: " + lexicalAnalyzer.getLastToken());
             System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
             System.out.println("\n");
@@ -33,7 +33,7 @@ public class LexicalAnalyzerTest {
                 continue;
             }
             System.out.println("\n");
-            System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+            System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
             System.out.println("last token: " + lexicalAnalyzer.getLastToken());
             System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
             System.out.println("\n");
@@ -46,33 +46,33 @@ public class LexicalAnalyzerTest {
         LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("1+1"));
 //        for (int i = 0; i < 3; i++) {
 //            System.out.println("\n");
-//            System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+//            System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
 //            System.out.println("last token: " + lexicalAnalyzer.getLastToken());
 //            System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
 //            System.out.println("\n");
 //        }
         System.out.println("\n");
-        System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+        System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
         System.out.println("last token: " + lexicalAnalyzer.getLastToken());
         System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
         System.out.println("\n");
         System.out.println("\n");
-        System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+        System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
         System.out.println("last token: " + lexicalAnalyzer.getLastToken());
         System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
         System.out.println("\n");
         System.out.println("\n");
-        System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+        System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
         System.out.println("last token: " + lexicalAnalyzer.getLastToken());
         System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
         System.out.println("\n");
         System.out.println("\n");
-        System.out.println("read token: " + lexicalAnalyzer.getToken().toString());
+        System.out.println("read token: " + lexicalAnalyzer.readToken().toString());
         System.out.println("last token: " + lexicalAnalyzer.getLastToken());
         System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
         System.out.println("\n");
 
-        DefaultToken finalToken = lexicalAnalyzer.getToken();
+        DefaultToken finalToken = lexicalAnalyzer.readToken();
         System.out.println("final token: " + finalToken);
 //        Assert.assertEquals(DefaultToken.getFinalToken(), finalToken);
     }

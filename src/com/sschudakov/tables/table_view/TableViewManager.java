@@ -2,7 +2,7 @@ package com.sschudakov.tables.table_view;
 
 import com.sschudakov.gui.GBC;
 import com.sschudakov.tables.expression_parsing.*;
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 import com.sschudakov.utils.ExceptionRenderer;
 
 import javax.swing.*;
@@ -133,7 +133,7 @@ public class TableViewManager {
                 try {
 
                     lexicalAnalyzer.setExpression(new Expression(expression));
-                    DefaultToken parsedExpression = syntaxAnalyzer.expression();
+                    DefaultToken parsedExpression = (DefaultToken) syntaxAnalyzer.expression();
                     expressionTree.setHead(parsedExpression);
 
 

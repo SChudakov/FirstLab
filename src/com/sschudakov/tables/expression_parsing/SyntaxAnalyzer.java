@@ -1,6 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.Token;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -24,15 +25,15 @@ public class SyntaxAnalyzer {
         this.setOfExpressions = new HashSet<>();
     }
 
-    public DefaultToken expression() {
+    public Token expression() {
 
-        DefaultToken firstArgument;
+        Token firstArgument;
         DefaultToken operation;
 
         firstArgument = inequationOperand();
         System.out.println("expression inequation: ");
         System.out.println(firstArgument);
-        operation = this.lexicalAnalyzer.getToken();
+        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
         System.out.println("expression operation:");
         System.out.println(operation);
 
@@ -40,23 +41,24 @@ public class SyntaxAnalyzer {
             firstArgument = ExpressionTree.makeTree(operation, firstArgument, inequationOperand());
             System.out.println("expression addendum:");
             System.out.println(firstArgument);
-            operation = this.lexicalAnalyzer.getToken();
+            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
             System.out.println("expression operation:");
             System.out.println(operation);
         }
+
         this.lexicalAnalyzer.giveBackToken();
         return firstArgument;
     }
 
-    private DefaultToken inequationOperand() {
+    private Token inequationOperand() {
 
-        DefaultToken firstArgument;
+        Token firstArgument;
         DefaultToken operation;
 
         firstArgument = addendum();
         System.out.println("expression addendum:");
         System.out.println(firstArgument);
-        operation = this.lexicalAnalyzer.getToken();
+        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
         System.out.println("expression operation:");
         System.out.println(operation);
 
@@ -64,7 +66,7 @@ public class SyntaxAnalyzer {
             firstArgument = ExpressionTree.makeTree(operation, firstArgument, addendum());
             System.out.println("expression addendum:");
             System.out.println(firstArgument);
-            operation = this.lexicalAnalyzer.getToken();
+            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
             System.out.println("expression operation:");
             System.out.println(operation);
         }
@@ -72,15 +74,15 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private DefaultToken addendum() {
+    private Token addendum() {
 
-        DefaultToken firstArgument;
+        Token firstArgument;
         DefaultToken operation;
 
         firstArgument = factor();
         System.out.println("addendum factor:");
         System.out.println(firstArgument);
-        operation = this.lexicalAnalyzer.getToken();
+        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
         System.out.println("addendum operation:");
         System.out.println(operation);
 
@@ -88,7 +90,7 @@ public class SyntaxAnalyzer {
             firstArgument = ExpressionTree.makeTree(operation, firstArgument, factor());
             System.out.println("adendum factor:");
             System.out.println(firstArgument);
-            operation = this.lexicalAnalyzer.getToken();
+            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
             System.out.println("addendum operation:");
             System.out.println(operation);
         }
@@ -97,15 +99,15 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private DefaultToken factor() {
+    private Token factor() {
 
-        DefaultToken firstArgument;
+        Token firstArgument;
         DefaultToken operation;
 
         firstArgument = atom();
         System.out.println("factor atom:");
         System.out.println(firstArgument);
-        operation = this.lexicalAnalyzer.getToken();
+        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
         System.out.println("factor operation:");
         System.out.println(operation);
 
@@ -113,7 +115,7 @@ public class SyntaxAnalyzer {
             firstArgument = ExpressionTree.makeTree(operation, firstArgument, factor());
             System.out.println("factor atom:");
             System.out.println(firstArgument);
-            operation = this.lexicalAnalyzer.getToken();
+            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
             System.out.println("factor operation:");
             System.out.println(operation);
         }
@@ -122,43 +124,49 @@ public class SyntaxAnalyzer {
         return firstArgument;
     }
 
-    private DefaultToken atom() {
+    private Token atom() {
 
-        DefaultToken token;
-        DefaultToken nextToken;
+        Token token;
+        Token nextToken;
 
-        token = this.lexicalAnalyzer.getToken();
+        token = this.lexicalAnalyzer.readToken();
         System.out.println("atomic token:");
         System.out.println(token);
 
         if (token.isNumber()) {
-            return ExpressionTree.makeTree(token);
+            return ExpressionTree.makeTree((DefaultToken) token);
         }
 
         if (token.isMeshName()) {
-//            nextToken = this.lexicalAnalyzer.getToken();
+//            nextToken = this.lexicalAnalyzer.readToken();
 //            if (nextToken.isEquationSign()) {
 //                return ExpressionTree.makeTree(nextToken, ExpressionTree.makeTree(token), expression());
 //            } else {
 //                this.lexicalAnalyzer.giveBackToken();
-            return ExpressionTree.makeTree(token);
+            return ExpressionTree.makeTree((DefaultToken) token);
 //            }
         }
-        if (token.isLRB()) {
+        if (token.isLeftParenthesis()) {
 
-            DefaultToken expression = expression();
+            Token expression = expression();
             System.out.println("atom expression: ");
             System.out.println(expression);
-            nextToken = this.lexicalAnalyzer.getToken();
+            nextToken = this.lexicalAnalyzer.readToken();
             System.out.println("atomic next token:");
             System.out.println(nextToken);
 
-            if (nextToken.isRRB()) {
-                return ExpressionTree.makeTree(token, expression, nextToken);
+            if (nextToken.isRightParenthesis()) {
+                return ExpressionTree.makeTree((DefaultToken) token, expression, nextToken);
             } else {
                 throw new IllegalArgumentException("exception in atom: no RRB found");
             }
         }
+
+        if(token.isMultipleOperandsToken()){
+
+        }
+
+
         throw new IllegalArgumentException("exception in atom: no matches for the token:" + token + " cannot build a tree");
     }
 }

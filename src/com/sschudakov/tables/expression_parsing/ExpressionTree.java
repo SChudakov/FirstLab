@@ -1,6 +1,8 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
+import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.tables.table_view.TableCell;
 import com.sschudakov.utils.MeshNameParser;
 
@@ -45,7 +47,7 @@ public class ExpressionTree {
         this.variables = variables;
     }
 
-    public static DefaultToken makeTree(DefaultToken father, DefaultToken left, DefaultToken right) {
+    public static DefaultToken makeTree(DefaultToken father, Token left, Token right) {
 
         father.setLeftToken(left);
         father.setRightToken(right);
@@ -66,8 +68,18 @@ public class ExpressionTree {
         outputTree(head);
     }
 
-    public static void outputTree(DefaultToken token) {
+    public static void outputTree(Token token) {
 
+        if (token instanceof DefaultToken) {
+            outputDefaultToken((DefaultToken) token);
+        }
+        if (token instanceof MultipleOperandsToken) {
+            outputMultipleOperandsToken((MultipleOperandsToken) token);
+        }
+
+    }
+
+    private static void outputDefaultToken(DefaultToken token) {
         if (token == null) {
             System.out.println("outputTree: token is null");
             return;
@@ -77,8 +89,8 @@ public class ExpressionTree {
             return;
         }
 
-        DefaultToken currentLeft = token.getLeftToken();
-        DefaultToken currentRight = token.getRightToken();
+        Token currentLeft = token.getLeftToken();
+        Token currentRight = token.getRightToken();
         if (currentLeft.isFinalToken() && currentRight.isFinalToken()) {
             System.out.println(token.getToken());
         } else {
@@ -94,45 +106,61 @@ public class ExpressionTree {
             }
 
         }
-
     }
 
-    private void normalize() {
-        normalize(head);
-    }
-
-    public static void normalize(DefaultToken token) {
-
+    private static void outputMultipleOperandsToken(MultipleOperandsToken token) {
         if (token == null) {
+            System.out.println("outputTree: token is null");
+            return;
+        }
+        if (token.isFinalToken()) {
+            System.out.println("final token");
             return;
         }
 
-        DefaultToken currentLeft = token.getLeftToken();
-        DefaultToken currentRight = token.getRightToken();
-
-        if (currentLeft == null) {
-            token.setLeftToken(DefaultToken.getFinalToken());
-        } else {
-            if (!currentLeft.isFinalToken()) {
-                normalize(currentLeft);
-            }
-        }
-        if (currentRight == null) {
-            token.setRightToken(DefaultToken.getFinalToken());
-        } else {
-            if (!currentRight.isFinalToken()) {
-                normalize(currentRight);
-            }
+        System.out.println(token.getToken());
+        for (Token operands : token.getOperands()) {
+            outputTree(operands);
         }
     }
 
+
+    private void normalize(DefaultToken head) {
+        normalize(this.head);
+    }
+
+//    public static void normalize(DefaultToken token) {
+//
+//        if (token == null) {
+//            return;
+//        }
+//
+//        DefaultToken currentLeft = token.getLeftToken();
+//        DefaultToken currentRight = token.getRightToken();
+//
+//        if (currentLeft == null) {
+//            token.setLeftToken(DefaultToken.getFinalToken());
+//        } else {
+//            if (!currentLeft.isFinalToken()) {
+//                normalize(currentLeft);
+//            }
+//        }
+//        if (currentRight == null) {
+//            token.setRightToken(DefaultToken.getFinalToken());
+//        } else {
+//            if (!currentRight.isFinalToken()) {
+//                normalize(currentRight);
+//            }
+//        }
+//    }
+
     public Object evaluate() {
-        normalize();
+//        normalize();
 //        make_initializations();//obligatory
         return evaluate(head);
     }
 
-    private Object evaluate(DefaultToken token) {
+    private Object evaluate(Token token) {
 
         if (token.isFinalToken()) {
             throw new IllegalArgumentException("cannot evaluate finalToken");
@@ -141,7 +169,7 @@ public class ExpressionTree {
         if (token.isOperator()) {
             return evaluateOperations(token);
         }
-        if (token.isLRB()) {
+        if (token.isLeftParenthesis()) {
             return evaluateBraces(token);
         }
         if (token.isNumber()) {
@@ -158,50 +186,50 @@ public class ExpressionTree {
         throw new IllegalArgumentException("Lexem has no matches");
     }
 
-    private void make_initializations() {
-        make_initializations(head);
-    }
-
-    private void make_initializations(DefaultToken token) {
-
-        if (token.isFinalToken()) {
-            return;
-        }
-        if (token.isEquationSign()) {
-
-            if (!token.getLeftToken().isMeshName()) {
-                throw new IllegalArgumentException("making initializations: illegal usage of = operation: there is no variable name");
-            }
-
-
-            // variables should be anyway initialized
-            make_initializations(token.getLeftToken());
-            make_initializations(token.getRightToken());
-
-            String name = (String) token.getLeftToken().getToken();
-
-            if (hasTheSame(token.getRightToken(), name)) {
-                if (findName(name).getValue().isFinalToken()) {
-                    throw new IllegalArgumentException("illegal initialization: a variable cannot be initialized " +
-                            "recursively without having a getValue");
-                } else {
-                    fixGetValue(token.getRightToken(), name, findName(name).getValue());
-                    findName(name).setValue(token.getRightToken());
-                }
-            } else {
-                findName(name).setValue(token.getRightToken());
-            }
-        }
-
-        if (token.isMeshName()) {
-            if (findName((String) token.getToken()) != null) {
-                variables.add(new Node((String) token.getToken(), DefaultToken.getFinalToken()));
-                System.out.println("variable " + token.getToken() + " has been initialized");
-            }
-        }
-        make_initializations(token.getLeftToken());
-        make_initializations(token.getRightToken());
-    }
+//    private void make_initializations() {
+//        make_initializations(head);
+//    }
+//
+//    private void make_initializations(DefaultToken token) {
+//
+//        if (token.isFinalToken()) {
+//            return;
+//        }
+//        if (token.isEquationSign()) {
+//
+//            if (!token.getLeftToken().isMeshName()) {
+//                throw new IllegalArgumentException("making initializations: illegal usage of = operation: there is no variable name");
+//            }
+//
+//
+//            // variables should be anyway initialized
+//            make_initializations(token.getLeftToken());
+//            make_initializations(token.getRightToken());
+//
+//            String name = (String) token.getLeftToken().getToken();
+//
+//            if (hasTheSame(token.getRightToken(), name)) {
+//                if (findName(name).getValue().isFinalToken()) {
+//                    throw new IllegalArgumentException("illegal initialization: a variable cannot be initialized " +
+//                            "recursively without having a getValue");
+//                } else {
+//                    fixGetValue(token.getRightToken(), name, findName(name).getValue());
+//                    findName(name).setValue(token.getRightToken());
+//                }
+//            } else {
+//                findName(name).setValue(token.getRightToken());
+//            }
+//        }
+//
+//        if (token.isMeshName()) {
+//            if (findName((String) token.getToken()) != null) {
+//                variables.add(new Node((String) token.getToken(), DefaultToken.getFinalToken()));
+//                System.out.println("variable " + token.getToken() + " has been initialized");
+//            }
+//        }
+//        make_initializations(token.getLeftToken());
+//        make_initializations(token.getRightToken());
+//    }
 
 
     private Double evaluateOperations(DefaultToken token) {

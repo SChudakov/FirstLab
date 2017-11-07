@@ -1,28 +1,44 @@
-package com.sschudakov.tables.expression_parsing.token;
+package com.sschudakov.tables.expression_parsing.tokens;
 
 import com.sschudakov.tables.expression_parsing.TokenType;
 
-import java.util.List;
-
 /**
- * Created by Semen Chudakov on 06.11.2017.
+ * Created by Semen Chudakov on 31.10.2017.
  */
-public class MultipleOperandsToken implements Token {
 
+public class DefaultToken implements Token {
+
+    private static DefaultToken finalToken;
 
     private Object token;
     private TokenType tokenType;
 
-    private List<Token> operands;
+    private Token leftToken;
+    private Token rightToken;
 
-
-   //get operands
+    //getters and setters
     public Object getToken() {
         return token;
     }
 
     public void setToken(Object token) {
         this.token = token;
+    }
+
+    public Token getLeftToken() {
+        return leftToken;
+    }
+
+    public void setLeftToken(Token leftToken) {
+        this.leftToken = leftToken;
+    }
+
+    public Token getRightToken() {
+        return rightToken;
+    }
+
+    public void setRightToken(Token rightToken) {
+        this.rightToken = rightToken;
     }
 
     public TokenType getTokenType() {
@@ -33,15 +49,31 @@ public class MultipleOperandsToken implements Token {
         this.tokenType = tokenType;
     }
 
-    public List<Token> getOperands() {
-        return operands;
+    public static DefaultToken getFinalToken() {
+        return finalToken;
     }
 
+    public DefaultToken() {
 
+    }
 
+    static {
+        finalToken = new DefaultToken();
+        finalToken.setToken("L");
+        finalToken.setTokenType(TokenType.FINAL_TOKEN);
+        finalToken.setLeftToken(finalToken);
+        finalToken.setRightToken(finalToken);
+    }
 
-    public void addOperand(Token operand){
-        this.operands.add(operand);
+    public DefaultToken(TokenType tokenType) {
+        this.tokenType = tokenType;
+    }
+
+    public DefaultToken(Object token, TokenType tokenType, DefaultToken leftToken, DefaultToken rightToken) {
+        this.token = token;
+        this.tokenType = tokenType;
+        this.leftToken = leftToken;
+        this.rightToken = rightToken;
     }
 
     @Override
@@ -82,12 +114,12 @@ public class MultipleOperandsToken implements Token {
     }
 
     @Override
-    public boolean isLRB() {
+    public boolean isLeftParenthesis() {
         return this.tokenType.equals(TokenType.LEFT_PARENTHESIS);
     }
 
     @Override
-    public boolean isRRB() {
+    public boolean isRightParenthesis() {
         return this.tokenType.equals(TokenType.RIGHT_PARENTHESIS);
     }
 
@@ -156,6 +188,21 @@ public class MultipleOperandsToken implements Token {
                 || this.tokenType.equals(TokenType.LESS_THAN_OR_EQUAL_TO)
                 || this.tokenType.equals(TokenType.NOT_EQUAL)
                 || this.tokenType.equals(TokenType.EQUATION_SIGN);
+    }
+
+    @Override
+    public boolean isMMax() {
+        return false;
+    }
+
+    @Override
+    public boolean isMMin() {
+        return false;
+    }
+
+    @Override
+    public boolean isMultipleOperandsToken() {
+        return false;
     }
 
 

@@ -1,6 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +18,13 @@ public class LexicalAnalyzer {
 
     private Expression expression;
 
-    private DefaultToken lastToken;
-    private DefaultToken currentToken;
+    private Token lastToken;
+    private Token currentToken;
 
     private List<Character> tokenSymbols;
 
+
+    //getters and setters
     public Expression getExpression() {
         return expression;
     }
@@ -31,21 +33,15 @@ public class LexicalAnalyzer {
         this.expression = expression;
     }
 
-    public DefaultToken getLastToken() {
+    public Token getLastToken() {
         return lastToken;
     }
 
-    public void setLastToken(DefaultToken lastToken) {
-        this.lastToken = lastToken;
-    }
-
-    public DefaultToken getCurrentToken() {
+    public Token getCurrentToken() {
         return currentToken;
     }
 
-    public void setCurrentToken(DefaultToken currentToken) {
-        this.currentToken = currentToken;
-    }
+
 
     public LexicalAnalyzer(){
         this(null);
@@ -72,9 +68,9 @@ public class LexicalAnalyzer {
     }
 
 
-    public DefaultToken getToken() {
+    public Token readToken() {
 
-        DefaultToken result;
+        Token result;
         char currentCharacter = this.expression.readCharacter();
 
         if (isExpressionEndSymbol(currentCharacter)) {
@@ -105,7 +101,7 @@ public class LexicalAnalyzer {
             System.out.println("is not a token symbol");
             this.expression.giveBackCharacter();
             handleNotTokenSymbols();
-            return getToken();
+            return readToken();
         }
         //when coming here it can be only atomic DefaultToken
         this.expression.giveBackCharacter();
@@ -133,7 +129,7 @@ public class LexicalAnalyzer {
         return result;
     }
 
-    private DefaultToken handleLetters() {
+    private Token handleLetters() {
 
         char currentCharacter = this.expression.readCharacter();
 
@@ -149,10 +145,10 @@ public class LexicalAnalyzer {
         throw new IllegalArgumentException("character " + currentCharacter + " is not a letter");
     }
 
-    private DefaultToken handleLiteralOperation() {
+    private Token handleLiteralOperation() {
 
-        StringBuffer operation = new StringBuffer("");
-        DefaultToken result = new DefaultToken();
+        StringBuilder operation = new StringBuilder("");
+        MultipleOperandsToken result = new MultipleOperandsToken();
 
 
         // first case - mod or div
@@ -219,19 +215,6 @@ public class LexicalAnalyzer {
         result.setTokenType(TokenType.MESH_NAME);
         result.setToken(cellName.toString());
         return result;
-    }
-
-    private void handleNotTokenSymbols() {
-        System.out.println("handleNotTokenSymbols");
-        StringBuilder mistake = new StringBuilder("");
-        char character = this.expression.readCharacter();
-        while (!isTokenSymbol(character)) {
-            mistake.append(character);
-            character = this.expression.readCharacter();
-        }
-        this.expression.giveBackCharacter();
-
-        System.out.println(mistake.toString() + " is a mistake");
     }
 
     private DefaultToken handleAtomicToken() {
@@ -321,6 +304,19 @@ public class LexicalAnalyzer {
         throw new IllegalArgumentException("character " + character + " fits no token");
     }
 
+    private void handleNotTokenSymbols() {
+        System.out.println("handleNotTokenSymbols");
+        StringBuilder mistake = new StringBuilder("");
+        char character = this.expression.readCharacter();
+        while (!isTokenSymbol(character)) {
+            mistake.append(character);
+            character = this.expression.readCharacter();
+        }
+        this.expression.giveBackCharacter();
+
+        System.out.println(mistake.toString() + " is a mistake");
+    }
+
 
     public void giveBackToken() {
 
@@ -334,14 +330,6 @@ public class LexicalAnalyzer {
         } else {
             throw new RuntimeException("there is no token to be give back");
         }
-    }
-
-    public DefaultToken lastToken() {
-        return lastToken;
-    }
-
-    public DefaultToken currentToken() {
-        return this.lastToken;
     }
 
 

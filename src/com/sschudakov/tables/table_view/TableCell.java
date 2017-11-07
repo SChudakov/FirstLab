@@ -1,6 +1,6 @@
 package com.sschudakov.tables.table_view;
 
-import com.sschudakov.tables.expression_parsing.token.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 
 import java.io.Serializable;
 

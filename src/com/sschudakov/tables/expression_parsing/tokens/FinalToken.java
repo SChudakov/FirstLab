@@ -1,11 +1,10 @@
-package com.sschudakov.tables.expression_parsing.token;
-
-import com.sschudakov.tables.expression_parsing.TokenType;
+package com.sschudakov.tables.expression_parsing.tokens;
 
 /**
  * Created by Semen Chudakov on 06.11.2017.
  */
 public class FinalToken implements Token {
+
     private static FinalToken ourInstance = new FinalToken();
 
     public static FinalToken getInstance() {
@@ -52,12 +51,12 @@ public class FinalToken implements Token {
     }
 
     @Override
-    public boolean isLRB() {
+    public boolean isLeftParenthesis() {
         return false;
     }
 
     @Override
-    public boolean isRRB() {
+    public boolean isRightParenthesis() {
         return false;
     }
 
@@ -118,6 +117,21 @@ public class FinalToken implements Token {
 
     @Override
     public boolean isLogicalOperator() {
+        return false;
+    }
+
+    @Override
+    public boolean isMMax() {
+        return false;
+    }
+
+    @Override
+    public boolean isMMin() {
+        return false;
+    }
+
+    @Override
+    public boolean isMultipleOperandsToken() {
         return false;
     }
 
