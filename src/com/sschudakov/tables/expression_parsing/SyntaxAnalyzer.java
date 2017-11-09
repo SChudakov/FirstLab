@@ -1,6 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 
 import java.util.HashSet;
@@ -28,17 +29,17 @@ public class SyntaxAnalyzer {
     public Token expression() {
 
         Token firstArgument;
-        DefaultToken operation;
+        Token operation;
 
         firstArgument = inequationOperand();
         System.out.println("expression inequation: ");
         System.out.println(firstArgument);
-        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+        operation = this.lexicalAnalyzer.readToken();
         System.out.println("expression operation:");
         System.out.println(operation);
 
         while (operation.isLogicalOperator()) {
-            firstArgument = ExpressionTree.makeTree(operation, firstArgument, inequationOperand());
+            firstArgument = ExpressionTree.makeTree((DefaultToken) operation, firstArgument, inequationOperand());
             System.out.println("expression addendum:");
             System.out.println(firstArgument);
             operation = (DefaultToken) this.lexicalAnalyzer.readToken();
@@ -53,20 +54,20 @@ public class SyntaxAnalyzer {
     private Token inequationOperand() {
 
         Token firstArgument;
-        DefaultToken operation;
+        Token operation;
 
         firstArgument = addendum();
-        System.out.println("expression addendum:");
+        System.out.println("inequation addendum:");
         System.out.println(firstArgument);
-        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+        operation = this.lexicalAnalyzer.readToken();
         System.out.println("expression operation:");
         System.out.println(operation);
 
         while (operation.isPlusOrMinus()) {
-            firstArgument = ExpressionTree.makeTree(operation, firstArgument, addendum());
+            firstArgument = ExpressionTree.makeTree((DefaultToken) operation, firstArgument, addendum());
             System.out.println("expression addendum:");
             System.out.println(firstArgument);
-            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+            operation = this.lexicalAnalyzer.readToken();
             System.out.println("expression operation:");
             System.out.println(operation);
         }
@@ -77,20 +78,20 @@ public class SyntaxAnalyzer {
     private Token addendum() {
 
         Token firstArgument;
-        DefaultToken operation;
+        Token operation;
 
         firstArgument = factor();
         System.out.println("addendum factor:");
         System.out.println(firstArgument);
-        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+        operation = this.lexicalAnalyzer.readToken();
         System.out.println("addendum operation:");
         System.out.println(operation);
 
-        while (operation.isMultiplicationDivisionModulus()) {
-            firstArgument = ExpressionTree.makeTree(operation, firstArgument, factor());
+        while (operation.isMultiplicationDivisionModulusIntegerDivision()) {
+            firstArgument = ExpressionTree.makeTree((DefaultToken) operation, firstArgument, factor());
             System.out.println("adendum factor:");
             System.out.println(firstArgument);
-            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+            operation = this.lexicalAnalyzer.readToken();
             System.out.println("addendum operation:");
             System.out.println(operation);
         }
@@ -102,20 +103,20 @@ public class SyntaxAnalyzer {
     private Token factor() {
 
         Token firstArgument;
-        DefaultToken operation;
+        Token operation;
 
         firstArgument = atom();
         System.out.println("factor atom:");
         System.out.println(firstArgument);
-        operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+        operation = this.lexicalAnalyzer.readToken();
         System.out.println("factor operation:");
         System.out.println(operation);
 
         while (operation.isExponent()) {
-            firstArgument = ExpressionTree.makeTree(operation, firstArgument, factor());
+            firstArgument = ExpressionTree.makeTree((DefaultToken) operation, firstArgument, factor());
             System.out.println("factor atom:");
             System.out.println(firstArgument);
-            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+            operation = this.lexicalAnalyzer.readToken();
             System.out.println("factor operation:");
             System.out.println(operation);
         }
@@ -138,17 +139,12 @@ public class SyntaxAnalyzer {
         }
 
         if (token.isMeshName()) {
-//            nextToken = this.lexicalAnalyzer.readToken();
-//            if (nextToken.isEquationSign()) {
-//                return ExpressionTree.makeTree(nextToken, ExpressionTree.makeTree(token), expression());
-//            } else {
-//                this.lexicalAnalyzer.giveBackToken();
             return ExpressionTree.makeTree((DefaultToken) token);
-//            }
         }
+
         if (token.isLeftParenthesis()) {
 
-            Token expression = expression();
+            DefaultToken expression = (DefaultToken) expression();
             System.out.println("atom expression: ");
             System.out.println(expression);
             nextToken = this.lexicalAnalyzer.readToken();
@@ -158,12 +154,29 @@ public class SyntaxAnalyzer {
             if (nextToken.isRightParenthesis()) {
                 return ExpressionTree.makeTree((DefaultToken) token, expression, nextToken);
             } else {
-                throw new IllegalArgumentException("exception in atom: no RRB found");
+
+                System.out.println("\nnext token: " + nextToken + "\n");
+                throw new IllegalArgumentException("exception in atom: no right parenthesis found");
             }
         }
 
         if(token.isMultipleOperandsToken()){
+            System.out.println("\nis multiple operands token\n");
+            MultipleOperandsToken castedToken = (MultipleOperandsToken) token;
+            nextToken = this.lexicalAnalyzer.readToken();
 
+            if (nextToken.isLeftParenthesis()) {
+
+                while (!nextToken.isRightParenthesis()) {
+                    castedToken.addOperand(expression());
+                    nextToken = this.lexicalAnalyzer.readToken();
+                }
+                //there is anyway one extra token
+                return castedToken;
+
+            } else {
+                throw new IllegalArgumentException("illegal syntax: mmax and mmin operations should be followed by a left parenthesis");
+            }
         }
 
 

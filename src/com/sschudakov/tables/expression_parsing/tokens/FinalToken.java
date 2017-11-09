@@ -46,7 +46,12 @@ public class FinalToken implements Token {
     }
 
     @Override
-    public boolean isMultiplicationDivisionModulus() {
+    public boolean isIntegerDivision() {
+        return false;
+    }
+
+    @Override
+    public boolean isMultiplicationDivisionModulusIntegerDivision() {
         return false;
     }
 
@@ -132,6 +137,11 @@ public class FinalToken implements Token {
 
     @Override
     public boolean isMultipleOperandsToken() {
+        return false;
+    }
+
+    @Override
+    public boolean isComma() {
         return false;
     }
 

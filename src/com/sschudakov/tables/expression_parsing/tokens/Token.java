@@ -4,11 +4,13 @@ package com.sschudakov.tables.expression_parsing.tokens;
  * Created by Semen Chudakov on 06.11.2017.
  */
 public interface Token {
+
     boolean isPlus();
 
     boolean isMinus();
 
     boolean isPlusOrMinus();
+
 
     boolean isMultiplication();
 
@@ -16,8 +18,10 @@ public interface Token {
 
     boolean isModulus();
 
+    boolean isIntegerDivision();
 
-    boolean isMultiplicationDivisionModulus();
+
+    boolean isMultiplicationDivisionModulusIntegerDivision();
 
     boolean isLeftParenthesis();
 
@@ -55,6 +59,9 @@ public interface Token {
     boolean isMMin();
 
     boolean isMultipleOperandsToken();
+
+
+    boolean isComma();
 
 
     int size();

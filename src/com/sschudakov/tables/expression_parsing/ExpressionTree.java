@@ -7,24 +7,23 @@ import com.sschudakov.tables.table_view.TableCell;
 import com.sschudakov.utils.MeshNameParser;
 
 import javax.swing.table.DefaultTableModel;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Semen Chudakov on 31.10.2017.
  */
 public class ExpressionTree {
 
-    private DefaultToken head;
+    private Token head;
     private List<Node> variables;
     private DefaultTableModel model;
 
     //getters and setters
-    public DefaultToken getHead() {
+    public Token getHead() {
         return head;
     }
 
-    public void setHead(DefaultToken head) {
+    public void setHead(Token head) {
         this.head = head;
     }
 
@@ -37,7 +36,7 @@ public class ExpressionTree {
         this.model = model;
     }
 
-    public ExpressionTree(DefaultToken head) {
+    public ExpressionTree(Token head) {
         this.head = head;
         this.variables = new LinkedList<>();
     }
@@ -121,6 +120,7 @@ public class ExpressionTree {
         System.out.println(token.getToken());
         for (Token operands : token.getOperands()) {
             outputTree(operands);
+            System.out.println(",");
         }
     }
 
@@ -129,64 +129,47 @@ public class ExpressionTree {
         normalize(this.head);
     }
 
-//    public static void normalize(DefaultToken token) {
-//
-//        if (token == null) {
-//            return;
-//        }
-//
-//        DefaultToken currentLeft = token.getLeftToken();
-//        DefaultToken currentRight = token.getRightToken();
-//
-//        if (currentLeft == null) {
-//            token.setLeftToken(DefaultToken.getFinalToken());
-//        } else {
-//            if (!currentLeft.isFinalToken()) {
-//                normalize(currentLeft);
-//            }
-//        }
-//        if (currentRight == null) {
-//            token.setRightToken(DefaultToken.getFinalToken());
-//        } else {
-//            if (!currentRight.isFinalToken()) {
-//                normalize(currentRight);
-//            }
-//        }
-//    }
+    public static void normalize(Token token) {
 
-    public Object evaluate() {
-//        normalize();
-//        make_initializations();//obligatory
-        return evaluate(head);
+        if (token == null) {
+            return;
+        }
+        if (token instanceof DefaultToken) {
+            normalizeDefaultToken((DefaultToken) token);
+        }
+        if (token instanceof MultipleOperandsToken) {
+            normalizeMultipleOperandsToken((MultipleOperandsToken) token);
+        }
     }
 
-    private Object evaluate(Token token) {
+    private static void normalizeDefaultToken(DefaultToken token) {
 
-        if (token.isFinalToken()) {
-            throw new IllegalArgumentException("cannot evaluate finalToken");
-        }
+        Token currentLeft = token.getLeftToken();
+        Token currentRight = token.getRightToken();
 
-        if (token.isOperator()) {
-            return evaluateOperations(token);
+        if (currentLeft == null) {
+            token.setLeftToken(DefaultToken.getFinalToken());
+        } else {
+            if (!currentLeft.isFinalToken()) {
+                normalize(currentLeft);
+            }
         }
-        if (token.isLeftParenthesis()) {
-            return evaluateBraces(token);
+        if (currentRight == null) {
+            token.setRightToken(DefaultToken.getFinalToken());
+        } else {
+            if (!currentRight.isFinalToken()) {
+                normalize(currentRight);
+            }
         }
-        if (token.isNumber()) {
-            return evaluateNumbers(token);
-        }
-        if (token.isLogicalOperator()) {
-            return evaluateLogicalOperator(token);
-        }
-        if (token.isMeshName()) {
-            return evaluateNames(token);
-        }
-
-
-        throw new IllegalArgumentException("Lexem has no matches");
     }
 
-//    private void make_initializations() {
+    private static void normalizeMultipleOperandsToken(MultipleOperandsToken multipleOperandsToken) {
+        for (Token token : multipleOperandsToken.getOperands()) {
+            normalize(token);
+        }
+    }
+
+    //    private void make_initializations() {
 //        make_initializations(head);
 //    }
 //
@@ -232,10 +215,78 @@ public class ExpressionTree {
 //    }
 
 
+    public Object evaluate() {
+//        normalize();
+//        make_initializations();//obligatory
+        return evaluate(head);
+    }
+
+    private Object evaluate(Token token) {
+
+        if (token.isFinalToken()) {
+            throw new IllegalArgumentException("cannot evaluate finalToken");
+        }
+
+        if (token instanceof DefaultToken) {
+            return evaluateDefaultToken((DefaultToken) token);
+        }
+
+        if (token instanceof MultipleOperandsToken) {
+            return evaluateMultipleOperandsToken((MultipleOperandsToken) token);
+        }
+        throw new IllegalArgumentException("token of type " + token.getClass() + " is not acceptable");
+    }
+
+    private Object evaluateDefaultToken(DefaultToken token) {
+        if (token.isOperator()) {
+            return evaluateOperations(token);
+        }
+        if (token.isLeftParenthesis()) {
+            return evaluateBraces(token);
+        }
+        if (token.isNumber()) {
+            return evaluateNumbers(token);
+        }
+        if (token.isLogicalOperator()) {
+            return evaluateLogicalOperator(token);
+        }
+        if (token.isMeshName()) {
+            return evaluateNames(token);
+        }
+
+        throw new IllegalArgumentException("Token:" + token + " has no matches");
+    }
+
+    private Double evaluateMultipleOperandsToken(MultipleOperandsToken token) {
+        List<Double> operandsValues = buildOperandValueList(token);
+
+        if (token.isMMax()) {
+            return Collections.max(operandsValues);
+        }
+        if (token.isMMin()) {
+            return Collections.min(operandsValues);
+        }
+        throw new IllegalArgumentException("multiple operation " + token + " is not supported");
+    }
+
+    private List<Double> buildOperandValueList(MultipleOperandsToken multipleOperandsToken) {
+        List<Double> result = new ArrayList<>();
+        for (Token token : multipleOperandsToken.getOperands()) {
+            Object value = evaluate(token);
+            if (value instanceof Double) {
+                result.add((Double) value);
+            }
+            if (value instanceof Boolean) {
+                throw new IllegalArgumentException("expressions with boolean value cannot be used in MMAX or MMIN operation");
+            }
+        }
+        return result;
+    }
+
     private Double evaluateOperations(DefaultToken token) {
 
-        DefaultToken leftToken = token.getLeftToken();
-        DefaultToken rightToken = token.getRightToken();
+        Token leftToken = token.getLeftToken();
+        Token rightToken = token.getRightToken();
 
         double leftTokenValue = (double) evaluate(leftToken);
         double rightTokenValue = (double) evaluate(rightToken);
@@ -253,7 +304,10 @@ public class ExpressionTree {
             return leftTokenValue / rightTokenValue;
         }
         if (token.isModulus()) {
-            return (double) ((int) leftTokenValue % (int) rightTokenValue);
+            return leftTokenValue % rightTokenValue;
+        }
+        if (token.isIntegerDivision()) {
+            return (double) ((int) leftTokenValue / (int) rightTokenValue);
         }
         if (token.isExponent()) {
             return Math.pow(leftTokenValue, rightTokenValue);
@@ -271,8 +325,8 @@ public class ExpressionTree {
 
     private Boolean evaluateLogicalOperator(DefaultToken token) {
 
-        DefaultToken leftToken = token.getLeftToken();
-        DefaultToken rightToken = token.getRightToken();
+        Token leftToken = token.getLeftToken();
+        Token rightToken = token.getRightToken();
 
         double leftTokenValue = (double) evaluate(leftToken);
         double rightTokenValue = (double) evaluate(rightToken);
@@ -338,47 +392,49 @@ public class ExpressionTree {
 
 
     private boolean hasTheSame(DefaultToken token, String name) {
-        if (token.isFinalToken()) {
-            return false;
-        }
-        if (token.isMeshName()) {
-            String currentName = (String) token.getToken();
-            if (name == currentName) {
-                return true;
-            } else {
-                return hasTheSame(findName(currentName).getValue(), name);
-            }
-        }
-        return hasTheSame(token.getLeftToken(), name) || hasTheSame(token.getRightToken(), name);
+//        if (token.isFinalToken()) {
+//            return false;
+//        }
+//        if (token.isMeshName()) {
+//            String currentName = (String) token.getToken();
+//            if (name == currentName) {
+//                return true;
+//            } else {
+//                return hasTheSame(findName(currentName).getValue(), name);
+//            }
+//        }
+//        return hasTheSame(token.getLeftToken(), name) || hasTheSame(token.getRightToken(), name);
+        throw new UnsupportedOperationException();
     }
 
     private void fixGetValue(DefaultToken token, String name, DefaultToken previousValue) {
-        if (token.isFinalToken()) {
-            return;
-        }
-
-        DefaultToken currentLeft = token.getLeftToken();
-        DefaultToken currentRight = token.getRightToken();
-
-        if (currentLeft.isMeshName()) {
-            String currentName = (String) currentLeft.getToken();
-            if (name.equals(currentName)) {
-                token.setLeftToken(previousValue);
-            } else {
-                fixGetValue(findName(currentName).getValue(), name, previousValue);
-            }
-
-        }
-        if (currentRight.isMeshName()) {
-            String currentName = (String) currentRight.getToken();
-            if (name.equals(currentName)) {
-                token.setRightToken(previousValue);
-            } else {
-                fixGetValue(findName(currentName).getValue(), name, previousValue);
-            }
-        }
-        fixGetValue(token.getLeftToken(), name, previousValue);
-        fixGetValue(token.getRightToken(), name, previousValue);
+//        if (token.isFinalToken()) {
+//            return;
+//        }
+//
+//        DefaultToken currentLeft = token.getLeftToken();
+//        DefaultToken currentRight = token.getRightToken();
+//
+//        if (currentLeft.isMeshName()) {
+//            String currentName = (String) currentLeft.getToken();
+//            if (name.equals(currentName)) {
+//                token.setLeftToken(previousValue);
+//            } else {
+//                fixGetValue(findName(currentName).getValue(), name, previousValue);
+//            }
+//
+//        }
+//        if (currentRight.isMeshName()) {
+//            String currentName = (String) currentRight.getToken();
+//            if (name.equals(currentName)) {
+//                token.setRightToken(previousValue);
+//            } else {
+//                fixGetValue(findName(currentName).getValue(), name, previousValue);
+//            }
+//        }
+//        fixGetValue(token.getLeftToken(), name, previousValue);
+//        fixGetValue(token.getRightToken(), name, previousValue);
+        throw new UnsupportedOperationException();
     }
 
 
@@ -404,6 +460,4 @@ public class ExpressionTree {
         }
         return null;
     }
-
-
 }

@@ -148,7 +148,8 @@ public class LexicalAnalyzer {
     private Token handleLiteralOperation() {
 
         StringBuilder operation = new StringBuilder("");
-        MultipleOperandsToken result = new MultipleOperandsToken();
+        DefaultToken defaultToken = new DefaultToken();
+        MultipleOperandsToken multipleOperandsTokenResult = new MultipleOperandsToken();
 
 
         // first case - mod or div
@@ -157,29 +158,29 @@ public class LexicalAnalyzer {
         }
 
         if (operation.toString().equals(DIV)) {
-            result.setTokenType(TokenType.INTEGER_DIVISION);
-            result.setToken(DIV);
-            return result;
+            defaultToken.setTokenType(TokenType.INTEGER_DIVISION);
+            defaultToken.setToken(DIV);
+            return defaultToken;
         }
 
         if (operation.toString().equals(MOD)) {
-            result.setTokenType(TokenType.MODULUS);
-            result.setToken(MOD);
-            return result;
+            defaultToken.setTokenType(TokenType.MODULUS);
+            defaultToken.setToken(MOD);
+            return defaultToken;
         }
         // second case - mmax or mmin
         operation.append(this.expression.readCharacter());
 
         if (operation.toString().equals(MMAX)) {
-            result.setTokenType(TokenType.MMAX);
-            result.setToken(MMAX);
-            return result;
+            multipleOperandsTokenResult.setTokenType(TokenType.MMAX);
+            multipleOperandsTokenResult.setToken(MMAX);
+            return multipleOperandsTokenResult;
         }
 
         if (operation.toString().equals(MMIN)) {
-            result.setTokenType(TokenType.MMIN);
-            result.setToken(MMIN);
-            return result;
+            multipleOperandsTokenResult.setTokenType(TokenType.MMIN);
+            multipleOperandsTokenResult.setToken(MMIN);
+            return multipleOperandsTokenResult;
         }
         throw new IllegalArgumentException("operation " + operation.toString() + " is not supported");
     }

@@ -2,6 +2,7 @@ package com.sschudakov.tables.expression_parsing.tokens;
 
 import com.sschudakov.tables.expression_parsing.TokenType;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -16,7 +17,18 @@ public class MultipleOperandsToken implements Token {
     private List<Token> operands;
 
 
-   //get operands
+    //constructors
+    public MultipleOperandsToken() {
+        this(null, null);
+    }
+
+    public MultipleOperandsToken(Object token, TokenType tokenType) {
+        this.token = token;
+        this.tokenType = tokenType;
+        this.operands = new LinkedList<>();
+    }
+
+    //get operands
     public Object getToken() {
         return token;
     }
@@ -75,10 +87,16 @@ public class MultipleOperandsToken implements Token {
     }
 
     @Override
-    public boolean isMultiplicationDivisionModulus() {
+    public boolean isIntegerDivision() {
+        return this.tokenType.equals(TokenType.INTEGER_DIVISION);
+    }
+
+    @Override
+    public boolean isMultiplicationDivisionModulusIntegerDivision() {
         return isMultiplication()
                 || isDivision()
-                || isModulus();
+                || isModulus()
+                || isIntegerDivision();
     }
 
     @Override
@@ -114,7 +132,7 @@ public class MultipleOperandsToken implements Token {
     @Override
     public boolean isOperator() {
         return isPlusOrMinus()
-                || isMultiplicationDivisionModulus()
+                || isMultiplicationDivisionModulusIntegerDivision()
                 || this.tokenType.equals(TokenType.EXPONENT);
     }
 
@@ -171,6 +189,11 @@ public class MultipleOperandsToken implements Token {
     @Override
     public boolean isMultipleOperandsToken() {
         return isMMax() || isMMin();
+    }
+
+    @Override
+    public boolean isComma() {
+        return false;
     }
 
 

@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.tables.expression_parsing.tokens.Token;
 import org.junit.Test;
 
 /**
@@ -10,13 +11,14 @@ public class ExpressionTreeTest {
     @Test
     public void evaluateTest() {
 
-        String string = "(1+1)/21";
-        Expression exception = new Expression(string);
-        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(exception);
+        String string = "mmax(1,2^10,3,4,5)";
+        Expression expression = new Expression(string);
+        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(expression);
         SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
-        ExpressionTree expressionTree = new ExpressionTree(syntaxAnalyzer.expression());
-
-//        expressionTree.outputTree();
+        Token tree = syntaxAnalyzer.expression();
+        ExpressionTree expressionTree = new ExpressionTree(tree);
+        ExpressionTree.normalize(tree);
+        expressionTree.outputTree();
         System.out.println(expressionTree.evaluate());
     }
 

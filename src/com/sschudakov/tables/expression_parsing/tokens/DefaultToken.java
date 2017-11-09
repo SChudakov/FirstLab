@@ -59,7 +59,7 @@ public class DefaultToken implements Token {
 
     static {
         finalToken = new DefaultToken();
-        finalToken.setToken("L");
+        finalToken.setToken("F");
         finalToken.setTokenType(TokenType.FINAL_TOKEN);
         finalToken.setLeftToken(finalToken);
         finalToken.setRightToken(finalToken);
@@ -107,10 +107,16 @@ public class DefaultToken implements Token {
     }
 
     @Override
-    public boolean isMultiplicationDivisionModulus() {
-        return isMultiplication()
-                || isDivision()
-                || isModulus();
+    public boolean isIntegerDivision() {
+        return this.tokenType.equals(TokenType.INTEGER_DIVISION);
+    }
+
+    @Override
+    public boolean isMultiplicationDivisionModulusIntegerDivision() {
+        return isMultiplication() ||
+                isDivision() ||
+                isModulus() ||
+                isIntegerDivision();
     }
 
     @Override
@@ -146,7 +152,7 @@ public class DefaultToken implements Token {
     @Override
     public boolean isOperator() {
         return isPlusOrMinus()
-                || isMultiplicationDivisionModulus()
+                || isMultiplicationDivisionModulusIntegerDivision()
                 || this.tokenType.equals(TokenType.EXPONENT);
     }
 
@@ -203,6 +209,11 @@ public class DefaultToken implements Token {
     @Override
     public boolean isMultipleOperandsToken() {
         return false;
+    }
+
+    @Override
+    public boolean isComma() {
+        return this.tokenType.equals(TokenType.COMMA);
     }
 
 

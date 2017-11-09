@@ -10,7 +10,7 @@ public class LexicalAnalyzerTest {
     @Test
     public void getTokenLastCurrentTokenTest() {
 
-        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("1+1<>moddiv<+>+>,,,,"));
+        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("mmax(1,2)"));
 
         for (int i = 0; i < 20; i++) {
             System.out.println("\n");
@@ -72,7 +72,7 @@ public class LexicalAnalyzerTest {
         System.out.println("current token: " + lexicalAnalyzer.getCurrentToken());
         System.out.println("\n");
 
-        DefaultToken finalToken = lexicalAnalyzer.readToken();
+        DefaultToken finalToken = (DefaultToken) lexicalAnalyzer.readToken();
         System.out.println("final token: " + finalToken);
 //        Assert.assertEquals(DefaultToken.getFinalToken(), finalToken);
     }
