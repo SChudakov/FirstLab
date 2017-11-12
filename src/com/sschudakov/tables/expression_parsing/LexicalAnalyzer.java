@@ -13,6 +13,8 @@ public class LexicalAnalyzer {
 
     private static final String DIV = "div";
     private static final String MOD = "mod";
+    private static final String MAX = "max";
+    private static final String MIN = "min";
     private static final String MMAX = "mmax";
     private static final String MMIN = "mmin";
 
@@ -168,6 +170,18 @@ public class LexicalAnalyzer {
             defaultToken.setToken(MOD);
             return defaultToken;
         }
+        if (operation.toString().equals(MAX)) {
+            multipleOperandsTokenResult.setTokenType(TokenType.MAX);
+            multipleOperandsTokenResult.setToken(MAX);
+            return multipleOperandsTokenResult;
+        }
+        if (operation.toString().equals(MIN)) {
+            multipleOperandsTokenResult.setTokenType(TokenType.MIN);
+            multipleOperandsTokenResult.setToken(MIN);
+            return multipleOperandsTokenResult;
+        }
+
+
         // second case - mmax or mmin
         operation.append(this.expression.readCharacter());
 

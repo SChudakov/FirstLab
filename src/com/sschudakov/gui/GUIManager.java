@@ -3,6 +3,8 @@ package com.sschudakov.gui;
 import com.sschudakov.abstract_factory.factory_producer.FileOpenerProducer;
 import com.sschudakov.operations.*;
 import com.sschudakov.abstract_factory.factories.FileOpener;
+import com.sschudakov.tables.table_view.TableModel;
+import com.sschudakov.tables.table_view.TableViewManager;
 import com.sschudakov.utils.*;
 
 import javax.swing.*;
@@ -40,6 +42,7 @@ public class GUIManager {
     private JMenuItem mergeItem = new JMenuItem("merge");
     private JMenuItem toUpperCaseItem = new JMenuItem("to uppercase");
     private JMenuItem findMatchesInText = new JMenuItem("find matches in text");
+    private JMenuItem createTable = new JMenuItem("create table");
 
     private JMenuItem openItem = new JMenuItem("open");
     private JMenuItem closeItem = new JMenuItem("close");
@@ -110,6 +113,8 @@ public class GUIManager {
         this.frame.setSize(screenWidth * 8 / 10, screenHeight * 8 / 10);
 
         this.frame.add(this.panel, new GBC(0, 0, 1, 2, 1, 1, GridBagConstraints.BOTH));
+
+        this.frame.setJMenuBar(this.menuBar);
     }
 
     private void setupMenuBar() {
@@ -130,6 +135,7 @@ public class GUIManager {
         this.operationsMenu.add(this.mergeItem);
         this.operationsMenu.add(this.toUpperCaseItem);
         this.operationsMenu.add(this.findMatchesInText);
+        this.operationsMenu.add(this.createTable);
 
         this.helpMenu.add(this.showAuthorInformationItem);
         this.helpMenu.add(this.showInstructionsItem);
@@ -145,14 +151,11 @@ public class GUIManager {
         this.menuBar.add(this.operationsMenu);
         this.menuBar.add(this.helpMenu);
         this.menuBar.add(this.perspectiveMenu);
-
-        this.frame.setJMenuBar(this.menuBar);
     }
 
     private void setupPanels() {
 
         GridBagLayout leftPanelLayout = new GridBagLayout();
-//        GridBagLayout rightPanelLayout = new GridBagLayout();
 
         this.panel.setBorder(BorderFactory.createTitledBorder(new LineBorder(Color.GRAY, 1, true), "Panel"));
         this.panel.setLayout(leftPanelLayout);
@@ -195,12 +198,12 @@ public class GUIManager {
         this.mergeItem.addActionListener(new MergeListener());
         this.toUpperCaseItem.addActionListener(new ToUpperCaseListener());
         this.findMatchesInText.addActionListener(new FindMatchesInTextListener());
+        this.createTable.addActionListener(new CreateTableListener());
 
         this.openItem.addActionListener(new OpenFileListener());
         this.closeItem.addActionListener(new CloseListener());
         this.saveItem.addActionListener(new SaveListener());
         this.createItem.addActionListener(new CreateListener());
-
 
         this.createFolderItem.addActionListener(new CreateFolderListener());
 
@@ -453,7 +456,7 @@ public class GUIManager {
                             FileOpener opener = FileOpenerProducer.produceFactory(path);
 
                             try {
-                                opener.openFile(mainJTextArea);
+                                opener.openFile();
                             } catch (Exception e1) {
                                 e1.printStackTrace();
                             }
@@ -769,4 +772,15 @@ public class GUIManager {
         }
     }
 
+
+    class CreateTableListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            TableModel model = new TableModel();
+            JTable table = new JTable(model);
+            TableViewManager tableViewManager = new TableViewManager(table);
+            tableViewManager.buildTableView();
+        }
+    }
 }

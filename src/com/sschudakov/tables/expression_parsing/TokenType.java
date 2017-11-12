@@ -16,6 +16,8 @@ public enum TokenType {
     INTEGER_DIVISION(),
     EXPONENT(),
 
+    MAX(),
+    MIN(),
     MMAX(),
     MMIN(),
 

@@ -1,9 +1,11 @@
 package com.sschudakov.tables.expression_parsing.tokens;
 
+import java.io.Serializable;
+
 /**
  * Created by Semen Chudakov on 06.11.2017.
  */
-public interface Token {
+public interface Token extends Serializable {
 
     boolean isPlus();
 
@@ -51,8 +53,14 @@ public interface Token {
 
     boolean isNotEqual();
 
-
     boolean isLogicalOperator();
+
+
+    boolean isMax();
+
+    boolean isMin();
+
+    boolean isMaxMin();
 
     boolean isMMax();
 

@@ -1,6 +1,7 @@
 package com.sschudakov.tables.table_view;
 
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.Token;
 
 import java.io.Serializable;
 
@@ -10,7 +11,7 @@ import java.io.Serializable;
 public class TableCell implements Serializable {
 
     private String value;
-    private DefaultToken expression;
+    private Token expression;
 
     public TableCell() {
         this.value = "";
@@ -33,11 +34,11 @@ public class TableCell implements Serializable {
         this.value = value;
     }
 
-    public DefaultToken getExpression() {
+    public Token getExpression() {
         return expression;
     }
 
-    public void setExpression(DefaultToken expression) {
+    public void setExpression(Token expression) {
         this.expression = expression;
     }
 

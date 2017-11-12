@@ -13,7 +13,7 @@ public class SyntaxAnalyzerTest {
 
     @Test(timeout = 200)
     public void expressionTest(){
-        Expression expression = new Expression("mmin(1,2^3+1,3,4,5)");
+        Expression expression = new Expression("min(1,2^3)");
         SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(expression);
         Token token = syntaxAnalyzer.expression();
         ExpressionTree.normalize(token);

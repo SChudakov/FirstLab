@@ -177,6 +177,21 @@ public class MultipleOperandsToken implements Token {
     }
 
     @Override
+    public boolean isMax() {
+        return this.tokenType.equals(TokenType.MAX);
+    }
+
+    @Override
+    public boolean isMin() {
+        return this.tokenType.equals(TokenType.MIN);
+    }
+
+    @Override
+    public boolean isMaxMin() {
+        return isMax() || isMin();
+    }
+
+    @Override
     public boolean isMMax() {
         return this.tokenType.equals(TokenType.MMAX);
     }

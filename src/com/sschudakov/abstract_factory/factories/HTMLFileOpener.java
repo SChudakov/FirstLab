@@ -2,6 +2,7 @@ package com.sschudakov.abstract_factory.factories;
 
 import com.sschudakov.utils.FileExtensionDeterminer;
 import com.sschudakov.utils.JTextAreaCleaner;
+import com.sschudakov.utils.JTextAreaTextRenderer;
 
 import javax.swing.*;
 import java.io.*;
@@ -31,15 +32,13 @@ public class HTMLFileOpener implements FileOpener {
     }
 
     @Override
-    public void openFile(JTextArea area) throws FileNotFoundException {
+    public void openFile() throws FileNotFoundException {
 
         File pathFile = new File(file.getPath());
 
-        JTextAreaCleaner.cleanJTextArea(area);
-
         this.scanner = new Scanner(pathFile);
 
-        area.setText(scanner.useDelimiter("\\Z").next());
+        JTextAreaTextRenderer.renderText(scanner.useDelimiter("\\Z").next());
     }
 
     private void validateFile(com.sschudakov.abstract_factory.products.File file){
@@ -59,19 +58,3 @@ public class HTMLFileOpener implements FileOpener {
         }
     }
 }
-
-
-//        try (BufferedReader reader = new BufferedReader(
-//                new InputStreamReader(new FileInputStream(pathFile), StandardCharsets.UTF_8))) {
-//
-//            String line;
-//
-//            while((line = reader.readLine()) != null){
-//                area.append(line + END_OF_LINE);
-//            }
-//
-//        }catch (FileNotFoundException e) {
-//            ExceptionRenderer.renderException(area.getRootPane(), e);
-//        } catch (IOException e) {
-//            ExceptionRenderer.renderException(area.getRootPane(), e);
-//        }

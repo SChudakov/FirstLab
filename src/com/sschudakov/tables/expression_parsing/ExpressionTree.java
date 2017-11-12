@@ -46,6 +46,7 @@ public class ExpressionTree {
         this.variables = variables;
     }
 
+
     public static DefaultToken makeTree(DefaultToken father, Token left, Token right) {
 
         father.setLeftToken(left);
@@ -118,9 +119,11 @@ public class ExpressionTree {
         }
 
         System.out.println(token.getToken());
-        for (Token operands : token.getOperands()) {
-            outputTree(operands);
-            System.out.println(",");
+        for (int i = 0; i < token.getOperands().size(); i++) {
+            outputTree(token.getOperands().get(i));
+            if (i != token.getOperands().size() - 1) {
+                System.out.println(",");
+            }
         }
     }
 
@@ -263,9 +266,19 @@ public class ExpressionTree {
         if (token.isMMax()) {
             return Collections.max(operandsValues);
         }
+
         if (token.isMMin()) {
             return Collections.min(operandsValues);
         }
+
+        if (token.isMax()) {
+            return Collections.max(operandsValues);
+        }
+
+        if (token.isMin()) {
+            return Collections.min(operandsValues);
+        }
+
         throw new IllegalArgumentException("multiple operation " + token + " is not supported");
     }
 

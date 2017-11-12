@@ -10,7 +10,7 @@ public class LexicalAnalyzerTest {
     @Test
     public void getTokenLastCurrentTokenTest() {
 
-        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("mmax(1,2)"));
+        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression("max(1,2)"));
 
         for (int i = 0; i < 20; i++) {
             System.out.println("\n");

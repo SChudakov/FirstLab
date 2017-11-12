@@ -2,6 +2,7 @@ package com.sschudakov.abstract_factory.factories;
 
 import com.sschudakov.utils.FileExtensionDeterminer;
 import com.sschudakov.utils.JTextAreaCleaner;
+import com.sschudakov.utils.JTextAreaTextRenderer;
 
 import javax.swing.*;
 import java.io.*;
@@ -20,10 +21,6 @@ public class TXTFileOpener implements FileOpener{
         return file;
     }
 
-    public void setFile(com.sschudakov.abstract_factory.products.File file) {
-        this.file = file;
-    }
-
     public TXTFileOpener(com.sschudakov.abstract_factory.products.File file) {
 
         validateFile(file);
@@ -31,15 +28,13 @@ public class TXTFileOpener implements FileOpener{
     }
 
     @Override
-    public void openFile(JTextArea area) throws FileNotFoundException {
+    public void openFile() throws FileNotFoundException {
 
         File pathFile = new File(file.getPath());
 
-        JTextAreaCleaner.cleanJTextArea(area);
-
         this.scanner = new Scanner(pathFile);
 
-        area.setText(scanner.useDelimiter("\\Z").next());
+        JTextAreaTextRenderer.renderText(scanner.useDelimiter("\\Z").next());
     }
 
     private void validateFile(com.sschudakov.abstract_factory.products.File file){
@@ -58,5 +53,4 @@ public class TXTFileOpener implements FileOpener{
             throw new IllegalArgumentException("File: " + file.getPath() + " is not txt file");
         }
     }
-
 }

@@ -11,5 +11,7 @@ public class FileExtensionDeterminer {
     public static boolean isTXTFile(String path){
         return path.substring(path.length() - 4, path.length()).equals(".txt");
     }
-
+    public static boolean isExcelTableFile(String path){
+        return path.substring(path.length() - 4, path.length()).equals(".ser");
+    }
 }

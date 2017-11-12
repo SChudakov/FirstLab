@@ -1,10 +1,12 @@
 package com.sschudakov;
 
+import com.sschudakov.gui.GUIManager;
 import com.sschudakov.tables.table_view.TableModel;
 import com.sschudakov.tables.table_view.TableViewManager;
 
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 
 public class Main {
@@ -18,8 +20,6 @@ public class Main {
         JTable table = new JTable(model);
         TableViewManager tableViewManager = new TableViewManager(table);
         tableViewManager.buildTableView();
-
-//        System.out.println(22.8 % 11.2);
     }
 
     private static void printCharacters() {

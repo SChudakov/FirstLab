@@ -11,7 +11,7 @@ public class ExpressionTreeTest {
     @Test
     public void evaluateTest() {
 
-        String string = "mmax(1,2^10,3,4,5)";
+        String string = "min(1,2^10)";
         Expression expression = new Expression(string);
         LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(expression);
         SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
@@ -19,7 +19,7 @@ public class ExpressionTreeTest {
         ExpressionTree expressionTree = new ExpressionTree(tree);
         ExpressionTree.normalize(tree);
         expressionTree.outputTree();
-        System.out.println(expressionTree.evaluate());
+        System.out.println("value: " + expressionTree.evaluate());
     }
 
 }

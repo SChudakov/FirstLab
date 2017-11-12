@@ -40,18 +40,18 @@ public class FileCloser {
                 System.out.println("has changes");
                 int confirmed = OptionConfirmer.confirmOption(this.area.getParent(), "Do you wat to save changes?");
 
-                if(confirmed == 0){
+                if (confirmed == JOptionPane.YES_OPTION) {
                     FileSaver.saveFile(this.area, this.openedFile);
                     JTextAreaCleaner.cleanJTextArea(area);
                     this.openedFile = null;
                     return true;
                 }
-                if(confirmed == 1){
+                if (confirmed == JOptionPane.NO_OPTION) {
                     JTextAreaCleaner.cleanJTextArea(area);
                     this.openedFile = null;
                     return true;
                 }
-                if(confirmed == 2 || confirmed == -1){
+                if (confirmed == JOptionPane.CANCEL_OPTION || confirmed == JOptionPane.CLOSED_OPTION) {
                     return false;
                 }
             }else{

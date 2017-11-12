@@ -179,7 +179,33 @@ public class SyntaxAnalyzer {
             }
         }
 
+        if (token.isMaxMin()) {
+            System.out.println("\nis min max\n");
 
-        throw new IllegalArgumentException("exception in atom: no matches for the token:" + token + " cannot build a tree");
+            MultipleOperandsToken castedToken = (MultipleOperandsToken) token;
+            nextToken = this.lexicalAnalyzer.readToken();
+
+            if (nextToken.isLeftParenthesis()) {
+                int numOfArguments = 0;
+                while (!nextToken.isRightParenthesis()) {
+                    castedToken.addOperand(expression());
+                    nextToken = this.lexicalAnalyzer.readToken();
+                    numOfArguments++;
+                }
+
+                if(numOfArguments != 2){
+                    throw new IllegalArgumentException("operations min and max can only have 2 parameters");
+                }
+
+                //there is anyway one extra token
+                return castedToken;
+
+            } else {
+                throw new IllegalArgumentException("illegal syntax: max and min operations should be followed by a left parenthesis");
+            }
+        }
+
+
+        throw new IllegalArgumentException("exception in atom: no matches for the token: " + token + " cannot build a tree");
     }
 }

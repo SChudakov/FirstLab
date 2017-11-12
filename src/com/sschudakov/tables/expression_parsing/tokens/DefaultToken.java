@@ -197,6 +197,21 @@ public class DefaultToken implements Token {
     }
 
     @Override
+    public boolean isMax() {
+        return false;
+    }
+
+    @Override
+    public boolean isMin() {
+        return false;
+    }
+
+    @Override
+    public boolean isMaxMin() {
+        return false;
+    }
+
+    @Override
     public boolean isMMax() {
         return false;
     }
