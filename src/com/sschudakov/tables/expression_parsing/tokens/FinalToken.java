@@ -1,9 +1,13 @@
 package com.sschudakov.tables.expression_parsing.tokens;
 
+import java.io.Serializable;
+
 /**
  * Created by Semen Chudakov on 06.11.2017.
  */
-public class FinalToken implements Token {
+public class FinalToken implements Token, Serializable{
+
+    private static final long serialVersionUID = 8712090044297283834L;
 
     private static FinalToken ourInstance = new FinalToken();
 

@@ -13,13 +13,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        GUIManager manager = new GUIManager();
-//        manager.buildGUI();
+        GUIManager manager = new GUIManager();
+        manager.buildGUI();
 
-        TableModel model = new TableModel();
-        JTable table = new JTable(model);
-        TableViewManager tableViewManager = new TableViewManager(table);
-        tableViewManager.buildTableView();
+//        TableModel model = new TableModel();
+//        JTable table = new JTable(model);
+//        TableViewManager tableViewManager = new TableViewManager(table);
+//        tableViewManager.buildTableView();
     }
 
     private static void printCharacters() {

@@ -1,20 +1,23 @@
 package com.sschudakov.gui;
 
-import com.sschudakov.abstract_factory.factory_producer.FileOpenerProducer;
+import com.sschudakov.abstract_factory.factories.closers.TableFileCloser;
+import com.sschudakov.abstract_factory.factories.openers.TableFileOpener;
+import com.sschudakov.abstract_factory.factories.savers.TableSaver;
+import com.sschudakov.abstract_factory.factories.views.FileView;
+import com.sschudakov.abstract_factory.factories.views.TableFileView;
+import com.sschudakov.abstract_factory.factories.views.TextFileView;
+import com.sschudakov.abstract_factory.producer.FileViewProducer;
 import com.sschudakov.operations.*;
-import com.sschudakov.abstract_factory.factories.FileOpener;
-import com.sschudakov.tables.table_view.TableModel;
-import com.sschudakov.tables.table_view.TableViewManager;
 import com.sschudakov.utils.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import javax.swing.tree.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -79,8 +82,12 @@ public class GUIManager {
 
     private Perspective perspective;
 
-    private FileCloser fileCloser = new FileCloser(this.mainJTextArea);
+    private FileView fileView;
 
+
+    public GUIManager() {
+        FileViewProducer.setArea(this.mainJTextArea);
+    }
 
     public void buildGUI() {
 
@@ -250,6 +257,14 @@ public class GUIManager {
     }
 
 
+    private boolean closeCurrentView() {
+        if (this.fileView == null) {
+            return true;
+        }
+        return this.fileView.close();
+    }
+
+
     class ShowFilesListener implements ActionListener {
 
         private static final String NEW_LINE_SYMBOL = "\n";
@@ -257,9 +272,8 @@ public class GUIManager {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-
-            if (fileCloser.closeFile()) {
-                if (perspective.equals(Perspective.FileRedactor)) {
+            if (perspective.equals(Perspective.FileRedactor)) {
+                if (closeCurrentView()) {
                     DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
                     if (selectedNode != null) {
@@ -267,10 +281,9 @@ public class GUIManager {
                     } else {
                         MessageRenderer.renderMessage(frame, "No one file has been selected");
                     }
-
-                } else {
-                    MessageRenderer.renderMessage(frame, "You cannot see files in File Manager perspective");
                 }
+            } else {
+                MessageRenderer.renderMessage(frame, "You cannot see files in File Manager perspective");
             }
         }
 
@@ -442,7 +455,7 @@ public class GUIManager {
             if (perspective.equals(Perspective.FileManager)) {
                 MessageRenderer.renderMessage(frame, "You cannot open files in File Manager perspective");
             } else {
-                if (fileCloser.closeFile()) {
+                if (closeCurrentView()) {
 
                     DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) leftJTree.getLastSelectedPathComponent();
 
@@ -451,23 +464,17 @@ public class GUIManager {
                         try {
                             String path = PathFormer.formPath(selectedNode);
                             File pathFile = new File(path);
-                            System.out.println("path: " + path);
 
-                            FileOpener opener = FileOpenerProducer.produceFactory(path);
-
-                            try {
-                                opener.openFile();
-                            } catch (Exception e1) {
-                                e1.printStackTrace();
+                            FileView view = FileViewProducer.produceView(pathFile);
+                            view.open();
+                            if (view instanceof TextFileView) {
+                                fileView = view;
                             }
 
-                            fileCloser.setOpenedFile(pathFile);
-                            System.out.println("set opened file:" + pathFile.getPath());
-                            System.out.println("closer has opened file: " + fileCloser.hasOpenedFile());
                         } catch (Exception e1) {
+                            ExceptionRenderer.renderException(frame, e1);
                             e1.printStackTrace();
                         }
-
                     } else {
                         MessageRenderer.renderMessage(frame, "No one file has been selected");
                     }
@@ -482,7 +489,13 @@ public class GUIManager {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            fileCloser.closeFile();
+            if (fileView != null) {
+                if (fileView.close()) {
+                    fileView = null;
+                }
+            } else {
+                MessageRenderer.renderMessage(frame, "NO one file is opened");
+            }
         }
     }
 
@@ -494,19 +507,13 @@ public class GUIManager {
             if (perspective.equals(Perspective.FileManager)) {
                 MessageRenderer.renderMessage(frame, "You cannot save files in File Manager perspective");
             } else {
-                if (fileCloser.hasOpenedFile()) {
-
-                    try {
-                        FileSaver.saveFile(mainJTextArea, fileCloser.getOpenedFile());
-                    } catch (Exception e1) {
-                        ExceptionRenderer.renderException(frame, e1);
-                    }
-                }else {
-                    MessageRenderer.renderMessage(frame, "No one file is opened");
+                if (fileView != null) {
+                    fileView.save();
+                } else {
+                    MessageRenderer.renderMessage(frame, "NO one file is opened");
                 }
             }
         }
-
     }
 
     class CreateListener implements ActionListener {
@@ -777,10 +784,12 @@ public class GUIManager {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            TableModel model = new TableModel();
-            JTable table = new JTable(model);
-            TableViewManager tableViewManager = new TableViewManager(table);
-            tableViewManager.buildTableView();
+            try {
+                new TableFileView(new TableFileOpener(null), new TableFileCloser(new TableSaver(null))).open();
+            } catch (Exception e1) {
+                e1.printStackTrace();
+                ExceptionRenderer.renderException(frame, e1);
+            }
         }
     }
 }

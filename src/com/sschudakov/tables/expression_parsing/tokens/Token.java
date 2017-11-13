@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Semen Chudakov on 06.11.2017.
  */
-public interface Token extends Serializable {
+public interface Token{
 
     boolean isPlus();
 

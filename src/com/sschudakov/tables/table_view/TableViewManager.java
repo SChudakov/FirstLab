@@ -1,10 +1,12 @@
 package com.sschudakov.tables.table_view;
 
+import com.sschudakov.abstract_factory.factories.views.TableFileView;
 import com.sschudakov.gui.GBC;
-import com.sschudakov.tables.expression_parsing.*;
+import com.sschudakov.tables.expression_parsing.Expression;
+import com.sschudakov.tables.expression_parsing.ExpressionTree;
+import com.sschudakov.tables.expression_parsing.LexicalAnalyzer;
+import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
-import com.sschudakov.tables.utils.TableSaver;
-import com.sschudakov.tables.utils.TableViewCloser;
 import com.sschudakov.utils.ExceptionRenderer;
 
 import javax.swing.*;
@@ -16,8 +18,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.File;
-import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -52,12 +52,19 @@ public class TableViewManager {
     private SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
     private ExpressionTree expressionTree;
 
+    private TableFileView view;
+
     public TableViewManager(JTable table) {
         this.table = table;
         this.tableModel = (TableModel) table.getModel();
         this.tableScrollPane = new JScrollPane(table);
         this.expressionTree = new ExpressionTree(this.tableModel);
     }
+
+    public void setView(TableFileView view) {
+        this.view = view;
+    }
+
 
     public void buildTableView() {
 
@@ -202,12 +209,11 @@ public class TableViewManager {
         }
     }
 
-
     class SaveListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            TableSaver.saveTable(table);
+            view.save();
         }
     }
 
@@ -215,9 +221,9 @@ public class TableViewManager {
         @Override
         public void windowClosing(WindowEvent e) {
 
-            System.out.println("Close operation");
+            System.out.println("Closer operation");
 
-            if (TableViewCloser.closeTableView(table)) {
+            if (view.close()) {
                 System.out.println("table closed");
 //                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
                 frame.setVisible(false);

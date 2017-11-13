@@ -1,12 +1,10 @@
-package com.sschudakov.abstract_factory.factories;
+package com.sschudakov.abstract_factory.factories.openers;
 
-import javax.swing.*;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
  * Created by Semen Chudakov on 20.09.2017.
  */
-public interface FileOpener {
+public interface Opener {
     void openFile() throws IOException, ClassNotFoundException;
 }

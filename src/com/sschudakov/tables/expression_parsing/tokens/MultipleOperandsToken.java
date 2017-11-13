@@ -2,14 +2,17 @@ package com.sschudakov.tables.expression_parsing.tokens;
 
 import com.sschudakov.tables.expression_parsing.TokenType;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by Semen Chudakov on 06.11.2017.
  */
-public class MultipleOperandsToken implements Token {
+public class MultipleOperandsToken implements Token, Serializable {
 
+
+    private static final long serialVersionUID = 7582823550892615775L;
 
     private Object token;
     private TokenType tokenType;

@@ -2,11 +2,15 @@ package com.sschudakov.tables.expression_parsing.tokens;
 
 import com.sschudakov.tables.expression_parsing.TokenType;
 
+import java.io.Serializable;
+
 /**
  * Created by Semen Chudakov on 31.10.2017.
  */
 
-public class DefaultToken implements Token {
+public class DefaultToken implements Token,Serializable {
+
+    private static final long serialVersionUID = 4831726121771899244L;
 
     private static DefaultToken finalToken;
 
