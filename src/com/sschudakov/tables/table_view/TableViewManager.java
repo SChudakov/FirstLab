@@ -8,6 +8,7 @@ import com.sschudakov.tables.expression_parsing.LexicalAnalyzer;
 import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.utils.ExceptionRenderer;
+import com.sschudakov.utils.MessageRenderer;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -48,9 +49,6 @@ public class TableViewManager {
     private TableModel tableModel;
     private JScrollPane tableScrollPane;
 
-    private LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer();
-    private SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
-    private ExpressionTree expressionTree;
 
     private TableFileView view;
 
@@ -58,7 +56,6 @@ public class TableViewManager {
         this.table = table;
         this.tableModel = (TableModel) table.getModel();
         this.tableScrollPane = new JScrollPane(table);
-        this.expressionTree = new ExpressionTree(this.tableModel);
     }
 
     public void setView(TableFileView view) {
@@ -174,6 +171,14 @@ public class TableViewManager {
 
     public class TableListener implements TableModelListener {
 
+        private LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer();
+        private SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
+        private ExpressionTree expressionTree;
+
+        public TableListener() {
+            this.expressionTree = new ExpressionTree(tableModel);
+        }
+
         @Override
         public void tableChanged(TableModelEvent e) {
             int row = e.getFirstRow();
@@ -192,17 +197,42 @@ public class TableViewManager {
                     TableCell cell = new TableCell();
                     try {
 
-                        lexicalAnalyzer.setExpression(new Expression(expression));
-                        Token parsedExpression = syntaxAnalyzer.expression();
-                        expressionTree.setHead(parsedExpression);
+                        this.lexicalAnalyzer.setExpression(new Expression(expression));
+                        Token parsedExpression = this.syntaxAnalyzer.expression();
 
-                        Object value = expressionTree.evaluate();
-                        cell.setValue(value.toString());
-                        cell.setExpression(parsedExpression);
-                        table.setValueAt(cell, row, column);
+                        if (!this.expressionTree.wouldCreateCycle(
+                                table.getColumnName(column) + String.valueOf(row),
+                                parsedExpression)) {
+                            this.expressionTree.setHead(parsedExpression);
+
+                            Object value = this.expressionTree.evaluate();
+                            cell.setValue(value.toString());
+                            cell.setExpression(parsedExpression);
+                            table.setValueAt(cell, row, column);
+                            renewValue();
+                        } else {
+                            MessageRenderer.renderMessage(frame, "This expression creates a cycle in table cells expressions");
+                        }
+
+
+
                     } catch (IllegalArgumentException e1) {
                         e1.printStackTrace();
                         ExceptionRenderer.renderException(frame, e1);
+                    }
+                }
+            }
+        }
+
+        private void renewValue() {
+            TableCell currentCell;
+            for (int i = 0; i < tableModel.getRowCount(); i++) {
+                for (int j = 0; j < tableModel.getColumnCount(); j++) {
+                    if (tableModel.getValueAt(i, j) instanceof TableCell) {
+                        currentCell = (TableCell) tableModel.getValueAt(i, j);
+                        this.expressionTree.setHead(currentCell.getExpression());
+                        currentCell.setValue(String.valueOf(this.expressionTree.evaluate()));
+                        tableModel.setValueAt(currentCell, i, j);
                     }
                 }
             }

@@ -27,12 +27,14 @@ public class TextFileSaver implements Saver {
         this.file = file;
     }
 
-    public void save() {
+    @Override
+    public boolean save() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.file))) {
             writer.write(this.area.getText());
             writer.close();
         } catch (IOException e) {
             throw new RuntimeException("File failed to be saved correctly because of: " + e.getMessage());
         }
+        return true;
     }
 }

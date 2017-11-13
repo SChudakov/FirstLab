@@ -34,7 +34,6 @@ public class MeshNameParser {
 
         if (matcher.find()) {
             column = matcher.group();
-            System.out.println("parsed column: " + column);
             return convertToInt(column);
         } else {
             throw new IllegalArgumentException("mesh name " + meshName + " contains no row");

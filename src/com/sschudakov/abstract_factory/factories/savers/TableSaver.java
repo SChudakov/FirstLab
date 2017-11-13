@@ -26,11 +26,12 @@ public class TableSaver implements Saver {
     }
 
     @Override
-    public void save() {
+    public boolean save() {
         if (this.table != null) {
             if (ensureFileIsNotNull()) {
                 try {
                     saveTable(this.table, this.file);
+                    return true;
                 } catch (IOException e1) {
                     e1.printStackTrace();
                     ExceptionRenderer.renderException(this.table.getParent(), e1);
@@ -39,6 +40,7 @@ public class TableSaver implements Saver {
         } else {
             throw new RuntimeException("table is not opened");
         }
+        return false;
     }
 
     private boolean ensureFileIsNotNull() {

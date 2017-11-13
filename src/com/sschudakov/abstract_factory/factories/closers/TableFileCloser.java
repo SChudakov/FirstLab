@@ -25,8 +25,7 @@ public class TableFileCloser implements Closer {
         int option = OptionConfirmer.confirmOption(this.saver.getTable().getParent(), "Do you want to save changes");
 
         if (option == JOptionPane.YES_OPTION) {
-            this.saver.save();
-            return true;
+            return this.saver.save();
         }
 
         if (option == JOptionPane.NO_OPTION) {

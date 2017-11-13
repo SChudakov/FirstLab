@@ -7,7 +7,10 @@ import com.sschudakov.tables.table_view.TableCell;
 import com.sschudakov.utils.MeshNameParser;
 
 import javax.swing.table.DefaultTableModel;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by Semen Chudakov on 31.10.2017.
@@ -15,7 +18,7 @@ import java.util.*;
 public class ExpressionTree {
 
     private Token head;
-    private List<Node> variables;
+    private HashSet<Node> variables;
     private DefaultTableModel model;
 
     //getters and setters
@@ -28,22 +31,15 @@ public class ExpressionTree {
     }
 
     //constructors
-    public ExpressionTree() {
-        this.variables = new LinkedList<>();
-    }
 
     public ExpressionTree(DefaultTableModel model) {
+        this.variables = new HashSet<>();
         this.model = model;
     }
 
     public ExpressionTree(Token head) {
         this.head = head;
-        this.variables = new LinkedList<>();
-    }
-
-    public ExpressionTree(DefaultToken head, List<Node> variables) {
-        this.head = head;
-        this.variables = variables;
+        this.variables = new HashSet<>();
     }
 
 
@@ -404,73 +400,49 @@ public class ExpressionTree {
     }
 
 
-    private boolean hasTheSame(DefaultToken token, String name) {
-//        if (token.isFinalToken()) {
-//            return false;
-//        }
-//        if (token.isMeshName()) {
-//            String currentName = (String) token.getToken();
-//            if (name == currentName) {
-//                return true;
-//            } else {
-//                return hasTheSame(findName(currentName).getValue(), name);
-//            }
-//        }
-//        return hasTheSame(token.getLeftToken(), name) || hasTheSame(token.getRightToken(), name);
-        throw new UnsupportedOperationException();
-    }
+    public boolean wouldCreateCycle(String meshName, Token value) {
 
-    private void fixGetValue(DefaultToken token, String name, DefaultToken previousValue) {
-//        if (token.isFinalToken()) {
-//            return;
-//        }
-//
-//        DefaultToken currentLeft = token.getLeftToken();
-//        DefaultToken currentRight = token.getRightToken();
-//
-//        if (currentLeft.isMeshName()) {
-//            String currentName = (String) currentLeft.getToken();
-//            if (name.equals(currentName)) {
-//                token.setLeftToken(previousValue);
-//            } else {
-//                fixGetValue(findName(currentName).getValue(), name, previousValue);
-//            }
-//
-//        }
-//        if (currentRight.isMeshName()) {
-//            String currentName = (String) currentRight.getToken();
-//            if (name.equals(currentName)) {
-//                token.setRightToken(previousValue);
-//            } else {
-//                fixGetValue(findName(currentName).getValue(), name, previousValue);
-//            }
-//        }
-//        fixGetValue(token.getLeftToken(), name, previousValue);
-//        fixGetValue(token.getRightToken(), name, previousValue);
-        throw new UnsupportedOperationException();
-    }
+        System.out.println("\ntoken: " + value.toString() + "\n");
 
-
-    private void outputVariables() {
-
-        System.out.println(this.variables.toString());
-    }
-
-    private void initializeVariable(String name, DefaultToken value) {
-        if (findName(name) != null) {
-            variables.add(new Node(name, value));
-        } else {
-            findName(name).setValue(value);
+        if (value == null) {
+            System.out.println("return false");
+            return false;
         }
-    }
+        if (value.isFinalToken()) {
+            System.out.println("return false");
+            return false;
+        }
+        if (value instanceof DefaultToken) {
+            DefaultToken token = (DefaultToken) value;
+            if (token.isMeshName()) {
+                int row = MeshNameParser.parseRow((String) token.getToken());
+                int column = MeshNameParser.parseColumn((String) token.getToken());
 
-    private Node findName(String name) {
-
-        for (Node variable : this.variables) {
-            if (variable.getName().equals(name)) {
-                return variable;
+                boolean result = token.getToken().equals(meshName) || wouldCreateCycle(meshName,
+                        ((TableCell) this.model.getValueAt(row, column)).getExpression());
+                System.out.println("return: " + result);
+                return result;
             }
+            boolean result = wouldCreateCycle(meshName, token.getLeftToken())
+                    || wouldCreateCycle(meshName, token.getRightToken());
+
+            System.out.println("return: " + result);
+            return result;
         }
-        return null;
+
+        if (value instanceof MultipleOperandsToken) {
+            MultipleOperandsToken token = (MultipleOperandsToken) value;
+
+            for (Token operand : token.getOperands()) {
+                if (wouldCreateCycle(meshName, operand)) {
+                    System.out.println("return: true");
+                    return true;
+                }
+
+            }
+            System.out.println("return: false");
+            return false;
+        }
+        throw new RuntimeException("token " + value.toString() + " has illegal type");
     }
 }
