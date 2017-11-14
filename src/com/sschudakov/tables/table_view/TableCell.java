@@ -11,7 +11,8 @@ import java.io.Serializable;
 public class TableCell implements Serializable {
 
     private String value;
-    private Token expression;
+    private String expression;
+    private Token parsedExpression;
 
     public TableCell() {
         this.value = "";
@@ -23,9 +24,10 @@ public class TableCell implements Serializable {
 
     public TableCell(String value, DefaultToken expression) {
         this.value = value;
-        this.expression = expression;
+        this.parsedExpression = expression;
     }
 
+    // getters and setters
     public String getValue() {
         return value;
     }
@@ -34,12 +36,20 @@ public class TableCell implements Serializable {
         this.value = value;
     }
 
-    public Token getExpression() {
+    public String getExpression() {
         return expression;
     }
 
-    public void setExpression(Token expression) {
+    public void setExpression(String expression) {
         this.expression = expression;
+    }
+
+    public Token getParsedExpression() {
+        return parsedExpression;
+    }
+
+    public void setParsedExpression(Token parsedExpression) {
+        this.parsedExpression = parsedExpression;
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.sschudakov.tables.table_view;
 
 import com.sschudakov.tables.utils.ToDimensionalArrayOutputer;
 
+import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
@@ -44,6 +45,7 @@ public class TableModel extends DefaultTableModel {
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         this.tableCells[rowIndex][columnIndex] =  aValue;
+        super.fireTableCellUpdated(rowIndex, columnIndex);
         super.fireTableCellUpdated(rowIndex, columnIndex);
     }
 

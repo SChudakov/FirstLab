@@ -1,6 +1,7 @@
 package com.sschudakov.tables.table_view;
 
 import com.sschudakov.abstract_factory.factories.views.TableFileView;
+import com.sschudakov.exceptions.MeshHasNoValueException;
 import com.sschudakov.gui.GBC;
 import com.sschudakov.tables.expression_parsing.Expression;
 import com.sschudakov.tables.expression_parsing.ExpressionTree;
@@ -15,10 +16,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.util.Arrays;
 
 /**
@@ -41,7 +39,7 @@ public class TableViewManager {
     private JMenuItem removeColumnItem = new JMenuItem("remove column");
 
 
-    private JTextField expressionLabel = new JTextField();
+    private JTextField expressionTextFiled = new JTextField();
     private JTextField rowTextFiled = new JTextField();
     private JTextField columnTextField = new JTextField();
 
@@ -118,7 +116,7 @@ public class TableViewManager {
                 new GBC(0, 0, 1, 1, 0.2, 0.2, GridBagConstraints.BOTH));
         this.labelsPanel.add(this.columnTextField,
                 new GBC(1, 0, 1, 1, 0.2, 0.2, GridBagConstraints.BOTH));
-        this.labelsPanel.add(this.expressionLabel,
+        this.labelsPanel.add(this.expressionTextFiled,
                 new GBC(2, 0, 1, 1, 0.8, 0.8, GridBagConstraints.BOTH));
     }
 
@@ -145,6 +143,8 @@ public class TableViewManager {
         this.addColumnItem.addActionListener(new AddColumnListener());
         this.removeRowItem.addActionListener(new RemoveRowListener());
         this.removeColumnItem.addActionListener(new RemoveColumnListener());
+
+        this.table.addMouseListener(new MouseClickListener());
     }
 
     private void setupScrollPane() {
@@ -153,7 +153,7 @@ public class TableViewManager {
     }
 
     private void setupTextFields() {
-        this.expressionLabel.setBorder(BorderFactory.createTitledBorder(
+        this.expressionTextFiled.setBorder(BorderFactory.createTitledBorder(
                 new LineBorder(Color.BLACK, 1, true), "Expression"));
         this.rowTextFiled.setBorder(BorderFactory.createTitledBorder(
                 new LineBorder(Color.BLACK, 1, true), "Row"));
@@ -205,17 +205,21 @@ public class TableViewManager {
                                 parsedExpression)) {
                             this.expressionTree.setHead(parsedExpression);
 
-                            Object value = this.expressionTree.evaluate();
+                            Object value = null;
+                            try {
+                                value = this.expressionTree.evaluate();
+                            } catch (MeshHasNoValueException e1) {
+                                value = "";
+                            }
                             cell.setValue(value.toString());
-                            cell.setExpression(parsedExpression);
+                            cell.setParsedExpression(parsedExpression);
+                            cell.setExpression(expression);
                             table.setValueAt(cell, row, column);
                             renewValue();
                         } else {
-                            MessageRenderer.renderMessage(frame, "This expression creates a cycle in table cells expressions");
+                            MessageRenderer.renderMessage(frame, "This expression creates a cycle in table " +
+                                    "cells expressions");
                         }
-
-
-
                     } catch (IllegalArgumentException e1) {
                         e1.printStackTrace();
                         ExceptionRenderer.renderException(frame, e1);
@@ -230,14 +234,19 @@ public class TableViewManager {
                 for (int j = 0; j < tableModel.getColumnCount(); j++) {
                     if (tableModel.getValueAt(i, j) instanceof TableCell) {
                         currentCell = (TableCell) tableModel.getValueAt(i, j);
-                        this.expressionTree.setHead(currentCell.getExpression());
-                        currentCell.setValue(String.valueOf(this.expressionTree.evaluate()));
+                        this.expressionTree.setHead(currentCell.getParsedExpression());
+                        try {
+                            currentCell.setValue(this.expressionTree.evaluate().toString());
+                        } catch (Exception e) {
+                            currentCell.setValue("");
+                        }
                         tableModel.setValueAt(currentCell, i, j);
                     }
                 }
             }
         }
     }
+
 
     class SaveListener implements ActionListener {
 
@@ -311,4 +320,46 @@ public class TableViewManager {
     }
 
 
+    class MouseClickListener implements MouseListener {
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+
+            int row = table.rowAtPoint(e.getPoint());
+            int column = table.columnAtPoint(e.getPoint());
+
+            rowTextFiled.setText(String.valueOf(row));
+            columnTextField.setText(tableModel.getColumnName(column));
+            if (tableModel.getValueAt(row, column) != null) {
+                if (tableModel.getValueAt(row, column) instanceof TableCell) {
+                    expressionTextFiled.setText(((TableCell) tableModel.getValueAt(row, column)).getExpression());
+                }
+                if (tableModel.getValueAt(row, column) instanceof String) {
+                    expressionTextFiled.setText((tableModel.getValueAt(row, column)).toString());
+                }
+            } else {
+                expressionTextFiled.setText("");
+            }
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.exceptions.MeshHasNoValueException;
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
@@ -168,51 +169,6 @@ public class ExpressionTree {
         }
     }
 
-    //    private void make_initializations() {
-//        make_initializations(head);
-//    }
-//
-//    private void make_initializations(DefaultToken token) {
-//
-//        if (token.isFinalToken()) {
-//            return;
-//        }
-//        if (token.isEquationSign()) {
-//
-//            if (!token.getLeftToken().isMeshName()) {
-//                throw new IllegalArgumentException("making initializations: illegal usage of = operation: there is no variable name");
-//            }
-//
-//
-//            // variables should be anyway initialized
-//            make_initializations(token.getLeftToken());
-//            make_initializations(token.getRightToken());
-//
-//            String name = (String) token.getLeftToken().getToken();
-//
-//            if (hasTheSame(token.getRightToken(), name)) {
-//                if (findName(name).getValue().isFinalToken()) {
-//                    throw new IllegalArgumentException("illegal initialization: a variable cannot be initialized " +
-//                            "recursively without having a getValue");
-//                } else {
-//                    fixGetValue(token.getRightToken(), name, findName(name).getValue());
-//                    findName(name).setValue(token.getRightToken());
-//                }
-//            } else {
-//                findName(name).setValue(token.getRightToken());
-//            }
-//        }
-//
-//        if (token.isMeshName()) {
-//            if (findName((String) token.getToken()) != null) {
-//                variables.add(new Node((String) token.getToken(), DefaultToken.getFinalToken()));
-//                System.out.println("variable " + token.getToken() + " has been initialized");
-//            }
-//        }
-//        make_initializations(token.getLeftToken());
-//        make_initializations(token.getRightToken());
-//    }
-
 
     public Object evaluate() {
 //        normalize();
@@ -363,9 +319,9 @@ public class ExpressionTree {
         throw new IllegalArgumentException("token: " + token + " is not a logical operator");
     }
 
-    private double evaluateNames(DefaultToken token) {
+    private Object evaluateNames(DefaultToken token) {
 
-        double result;
+        Object result;
 
         if (token.isMeshName()) {
             String meshName = (String) token.getToken();
@@ -378,25 +334,23 @@ public class ExpressionTree {
         return result;
     }
 
-    private double readValue(String meshName) {
+    private Object readValue(String meshName) {
 
         int row = MeshNameParser.parseRow(meshName);
         int column = MeshNameParser.parseColumn(meshName);
 
-        Double result = 0.0;
-
+        Token result = null;
         Object meshContent = this.model.getValueAt(row, column);
 
         if (meshContent != null) {
-
             if (meshContent instanceof TableCell) {
                 TableCell mesh = (TableCell) meshContent;
-                result = Double.valueOf(mesh.getValue());
+                result = mesh.getParsedExpression();
             }
         } else {
-            throw new RuntimeException("mesh " + meshName + " has no value");
+            throw new MeshHasNoValueException("mesh " + meshName + " has no value");
         }
-        return result;
+        return evaluate(result);
     }
 
 
@@ -418,8 +372,19 @@ public class ExpressionTree {
                 int row = MeshNameParser.parseRow((String) token.getToken());
                 int column = MeshNameParser.parseColumn((String) token.getToken());
 
-                boolean result = token.getToken().equals(meshName) || wouldCreateCycle(meshName,
-                        ((TableCell) this.model.getValueAt(row, column)).getExpression());
+
+                boolean meshNameEquals = token.getToken().equals(meshName);
+                boolean meshNameIsEmpty = (this.model.getValueAt(row, column) == null);
+                boolean result = false;
+
+
+                if (meshNameIsEmpty) {
+                    result = meshNameEquals;
+                } else {
+                    result = token.getToken().equals(meshName) || wouldCreateCycle(meshName,
+                            ((TableCell) this.model.getValueAt(row, column)).getParsedExpression());
+                }
+
                 System.out.println("return: " + result);
                 return result;
             }
