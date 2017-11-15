@@ -5,7 +5,7 @@ import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.tables.table_view.TableCell;
-import com.sschudakov.utils.MeshNameParser;
+import com.sschudakov.tables.utils.MeshNameParser;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
@@ -356,6 +356,7 @@ public class ExpressionTree {
 
     public boolean wouldCreateCycle(String meshName, Token value) {
 
+        System.out.println("\nmesh name: " + meshName + "\n");
         System.out.println("\ntoken: " + value.toString() + "\n");
 
         if (value == null) {
@@ -375,14 +376,14 @@ public class ExpressionTree {
 
                 boolean meshNameEquals = token.getToken().equals(meshName);
                 boolean meshNameIsEmpty = (this.model.getValueAt(row, column) == null);
-                boolean result = false;
+                boolean result;
 
 
                 if (meshNameIsEmpty) {
                     result = meshNameEquals;
                 } else {
                     result = token.getToken().equals(meshName) || wouldCreateCycle(meshName,
-                            ((TableCell) this.model.getValueAt(row, column)).getParsedExpression());
+                            (((TableCell) this.model.getValueAt(row, column))).getParsedExpression());
                 }
 
                 System.out.println("return: " + result);

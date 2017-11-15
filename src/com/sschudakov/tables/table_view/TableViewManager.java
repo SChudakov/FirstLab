@@ -193,36 +193,39 @@ public class TableViewManager {
 
                 if (renewedValue instanceof String) {
                     String expression = (String) tableModel.getValueAt(row, column);
-                    System.out.println("\nexpression: " + expression + "\n");
-                    TableCell cell = new TableCell();
-                    try {
+                    if (!expression.equals("")) {
+                        System.out.println("\nexpression: " + expression + "\n");
+                        TableCell cell = new TableCell();
+                        try {
 
-                        this.lexicalAnalyzer.setExpression(new Expression(expression));
-                        Token parsedExpression = this.syntaxAnalyzer.expression();
+                            this.lexicalAnalyzer.setExpression(new Expression(expression));
+                            Token parsedExpression = this.syntaxAnalyzer.expression();
 
-                        if (!this.expressionTree.wouldCreateCycle(
-                                table.getColumnName(column) + String.valueOf(row),
-                                parsedExpression)) {
-                            this.expressionTree.setHead(parsedExpression);
+                            if (!this.expressionTree.wouldCreateCycle(
+                                    table.getColumnName(column) + String.valueOf(row),
+                                    parsedExpression)) {
+                                this.expressionTree.setHead(parsedExpression);
 
-                            Object value = null;
-                            try {
-                                value = this.expressionTree.evaluate();
-                            } catch (MeshHasNoValueException e1) {
-                                value = "";
+                                Object value;
+                                try {
+                                    value = this.expressionTree.evaluate();
+                                } catch (MeshHasNoValueException e1) {
+                                    value = "";
+                                }
+                                cell.setValue(value.toString());
+                                cell.setParsedExpression(parsedExpression);
+                                cell.setExpression(expression);
+                                table.setValueAt(cell, row, column);
+                                renewValue();
+                            } else {
+                                MessageRenderer.renderMessage(frame, "This expression creates a cycle in table " +
+                                        "cells expressions");
                             }
-                            cell.setValue(value.toString());
-                            cell.setParsedExpression(parsedExpression);
-                            cell.setExpression(expression);
-                            table.setValueAt(cell, row, column);
-                            renewValue();
-                        } else {
-                            MessageRenderer.renderMessage(frame, "This expression creates a cycle in table " +
-                                    "cells expressions");
+
+                        } catch (IllegalArgumentException e1) {
+                            e1.printStackTrace();
+                            ExceptionRenderer.renderException(frame, e1);
                         }
-                    } catch (IllegalArgumentException e1) {
-                        e1.printStackTrace();
-                        ExceptionRenderer.renderException(frame, e1);
                     }
                 }
             }

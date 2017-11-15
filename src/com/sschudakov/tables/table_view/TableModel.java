@@ -2,29 +2,25 @@ package com.sschudakov.tables.table_view;
 
 import com.sschudakov.tables.utils.ToDimensionalArrayOutputer;
 
-import javax.swing.*;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
-import java.util.Arrays;
 
 /**
  * Created by Semen Chudakov on 05.11.2017.
  */
 public class TableModel extends DefaultTableModel {
 
-    private static final int NUM_OF_ROWS = 10;
-    private static final int NUM_OF_COLUMNS = 10;
+    private static final int NUM_OF_ROWS = 50;
+    private static final int NUM_OF_COLUMNS = 50;
 
     private int numOfRows = NUM_OF_ROWS;
-    private int numOfColumns = NUM_OF_COLUMNS;
+    private int numOfColumns = NUM_OF_COLUMNS + 1;
 
     private Object[][] tableCells;
 
     public TableModel() {
-        super(NUM_OF_ROWS, NUM_OF_COLUMNS);
-        this.tableCells = new Object[NUM_OF_ROWS][NUM_OF_COLUMNS];
+        super(NUM_OF_ROWS, NUM_OF_COLUMNS + 1);
+        this.tableCells = new Object[numOfRows][numOfColumns];
     }
 
     @Override
@@ -39,12 +35,15 @@ public class TableModel extends DefaultTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
+        if (columnIndex == 0) {
+            return rowIndex;
+        }
         return this.tableCells[rowIndex][columnIndex];
     }
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-        this.tableCells[rowIndex][columnIndex] =  aValue;
+        this.tableCells[rowIndex][columnIndex] = aValue;
         super.fireTableCellUpdated(rowIndex, columnIndex);
         super.fireTableCellUpdated(rowIndex, columnIndex);
     }
@@ -153,4 +152,19 @@ public class TableModel extends DefaultTableModel {
         System.out.println("columns count: " + getColumnCount());
         fireTableStructureChanged();
     }
+
+
+    @Override
+    public boolean isCellEditable(int row, int column) {
+        return column != 0;
+    }
+
+    @Override
+    public String getColumnName(int column) {
+        if (column == 0) {
+            return "№";
+        }
+        return super.getColumnName(column - 1);
+    }
+
 }

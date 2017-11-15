@@ -1,6 +1,6 @@
 package com.sschudakov.untils;
 
-import com.sschudakov.utils.MeshNameParser;
+import com.sschudakov.tables.utils.MeshNameParser;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.sschudakov.utils;
+package com.sschudakov.tables.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,7 +34,7 @@ public class MeshNameParser {
 
         if (matcher.find()) {
             column = matcher.group();
-            return convertToInt(column);
+            return convertToInt(column) + 1;
         } else {
             throw new IllegalArgumentException("mesh name " + meshName + " contains no row");
         }
