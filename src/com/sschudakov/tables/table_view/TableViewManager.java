@@ -7,6 +7,7 @@ import com.sschudakov.tables.expression_parsing.Expression;
 import com.sschudakov.tables.expression_parsing.ExpressionTree;
 import com.sschudakov.tables.expression_parsing.LexicalAnalyzer;
 import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
+import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.utils.ExceptionRenderer;
 import com.sschudakov.utils.MessageRenderer;
@@ -31,12 +32,16 @@ public class TableViewManager {
 
     private JMenu fileMenu = new JMenu("File");
     private JMenu operationsMenu = new JMenu("Operation");
+    private JMenu modeMenu = new JMenu("Mode");
+
 
     private JMenuItem saveItem = new JMenuItem("save");
     private JMenuItem addRowItem = new JMenuItem("add row");
     private JMenuItem addColumnItem = new JMenuItem("add column");
     private JMenuItem removeRowItem = new JMenuItem("remove row");
     private JMenuItem removeColumnItem = new JMenuItem("remove column");
+    private JMenuItem restrictedOperationsSetItem = new JMenuItem("restricted operations set");
+    private JMenuItem fullOperationsSetItem = new JMenuItem("full operations set");
 
 
     private JTextField expressionTextFiled = new JTextField();
@@ -129,11 +134,17 @@ public class TableViewManager {
         this.operationsMenu.add(this.removeRowItem);
         this.operationsMenu.add(this.removeColumnItem);
 
+        this.modeMenu.add(this.restrictedOperationsSetItem);
+        this.modeMenu.add(this.fullOperationsSetItem);
+
         this.menuBar.add(this.fileMenu);
         this.menuBar.add(this.operationsMenu);
+        this.menuBar.add(this.modeMenu);
     }
 
     private void addListeners() {
+        TableListener tableListener = new TableListener();
+        this.tableModel.addTableModelListener(tableListener);
 
         this.frame.addWindowListener(new CloseOperationListener());
 
@@ -143,6 +154,9 @@ public class TableViewManager {
         this.addColumnItem.addActionListener(new AddColumnListener());
         this.removeRowItem.addActionListener(new RemoveRowListener());
         this.removeColumnItem.addActionListener(new RemoveColumnListener());
+
+        this.restrictedOperationsSetItem.addActionListener(tableListener.new RestrictedOperationSetListener());
+        this.fullOperationsSetItem.addActionListener(tableListener.new FullOperationSetListener());
 
         this.table.addMouseListener(new MouseClickListener());
     }
@@ -164,14 +178,13 @@ public class TableViewManager {
     private void setupTable() {
         this.table.setAutoCreateRowSorter(true);
         this.table.setCellSelectionEnabled(true);
-        this.tableModel.addTableModelListener(new TableListener());
         System.out.println(Arrays.toString(this.tableModel.getListeners(TableModelListener.class)));
     }
 
 
     public class TableListener implements TableModelListener {
 
-        private LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer();
+        private LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(LexicalAnalyzerMode.FULL_OPERATIONS_SET);
         private SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
         private ExpressionTree expressionTree;
 
@@ -184,11 +197,9 @@ public class TableViewManager {
             int row = e.getFirstRow();
             int column = e.getColumn();
             if (e.getType() == TableModelEvent.UPDATE && row >= 0 && column >= 0) {
-
                 System.out.println("row: " + row);
                 System.out.println("column: " + column);
                 System.out.println("type: " + e.getType());
-
                 Object renewedValue = tableModel.getValueAt(row, column);
 
                 if (renewedValue instanceof String) {
@@ -246,6 +257,20 @@ public class TableViewManager {
                         tableModel.setValueAt(currentCell, i, j);
                     }
                 }
+            }
+        }
+
+        class FullOperationSetListener implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TableListener.this.lexicalAnalyzer.setMode(LexicalAnalyzerMode.FULL_OPERATIONS_SET);
+            }
+        }
+
+        class RestrictedOperationSetListener implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TableListener.this.lexicalAnalyzer.setMode(LexicalAnalyzerMode.RESTRICTION_OPERATIONS_SET);
             }
         }
     }

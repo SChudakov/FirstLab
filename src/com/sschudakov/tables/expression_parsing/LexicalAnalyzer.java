@@ -1,6 +1,11 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.tokens.*;
+import com.sschudakov.exceptions.IllegalSyntaxException;
+import com.sschudakov.exceptions.IllegalTokenException;
+import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
+import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
+import com.sschudakov.tables.expression_parsing.tokens.Token;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +14,6 @@ import java.util.List;
  * Created by Semen Chudakov on 31.10.2017.
  */
 public class LexicalAnalyzer {
-
 
     private static final String DIV = "div";
     private static final String MOD = "mod";
@@ -25,6 +29,8 @@ public class LexicalAnalyzer {
 
     private List<Character> tokenSymbols;
 
+    private LexicalAnalyzerMode mode;
+
 
     //getters and setters
     public Expression getExpression() {
@@ -33,6 +39,14 @@ public class LexicalAnalyzer {
 
     public void setExpression(Expression expression) {
         this.expression = expression;
+    }
+
+    public LexicalAnalyzerMode getMode() {
+        return mode;
+    }
+
+    public void setMode(LexicalAnalyzerMode mode) {
+        this.mode = mode;
     }
 
     public Token getLastToken() {
@@ -44,21 +58,24 @@ public class LexicalAnalyzer {
     }
 
 
-
-    public LexicalAnalyzer(){
-        this(null);
+    public LexicalAnalyzer(LexicalAnalyzerMode mode) {
+        this(null, mode);
     }
 
-    public LexicalAnalyzer(Expression expression) {
+    public LexicalAnalyzer(Expression expression, LexicalAnalyzerMode mode) {
 
         this.expression = expression;
-
+        this.mode = mode;
         this.tokenSymbols = new ArrayList<>();
+        initializeTokenSymbols(mode);
+
+    }
+
+    private void initializeTokenSymbols(LexicalAnalyzerMode mode) {
         this.tokenSymbols.add('+');
         this.tokenSymbols.add('-');
         this.tokenSymbols.add('*');
         this.tokenSymbols.add('/');
-        this.tokenSymbols.add('^');
         this.tokenSymbols.add('(');
         this.tokenSymbols.add(')');
         this.tokenSymbols.add('=');
@@ -67,6 +84,9 @@ public class LexicalAnalyzer {
         this.tokenSymbols.add('!');
         this.tokenSymbols.add(',');
 
+        if (mode.equals(LexicalAnalyzerMode.FULL_OPERATIONS_SET)) {
+            this.tokenSymbols.add('^');
+        }
     }
 
 
@@ -171,16 +191,23 @@ public class LexicalAnalyzer {
             return defaultToken;
         }
         if (operation.toString().equals(MAX)) {
-            multipleOperandsTokenResult.setTokenType(TokenType.MAX);
-            multipleOperandsTokenResult.setToken(MAX);
-            return multipleOperandsTokenResult;
+            if (this.mode.equals(LexicalAnalyzerMode.FULL_OPERATIONS_SET)) {
+                multipleOperandsTokenResult.setTokenType(TokenType.MAX);
+                multipleOperandsTokenResult.setToken(MAX);
+                return multipleOperandsTokenResult;
+            } else {
+                throw new IllegalTokenException("operation max is not supported in restricted operations set mode");
+            }
         }
         if (operation.toString().equals(MIN)) {
-            multipleOperandsTokenResult.setTokenType(TokenType.MIN);
-            multipleOperandsTokenResult.setToken(MIN);
-            return multipleOperandsTokenResult;
+            if (this.mode.equals(LexicalAnalyzerMode.FULL_OPERATIONS_SET)) {
+                multipleOperandsTokenResult.setTokenType(TokenType.MIN);
+                multipleOperandsTokenResult.setToken(MIN);
+                return multipleOperandsTokenResult;
+            } else {
+                throw new IllegalTokenException("operation min is not supported in restricted operations set mode");
+            }
         }
-
 
         // second case - mmax or mmin
         operation.append(this.expression.readCharacter());
@@ -189,12 +216,14 @@ public class LexicalAnalyzer {
             multipleOperandsTokenResult.setTokenType(TokenType.MMAX);
             multipleOperandsTokenResult.setToken(MMAX);
             return multipleOperandsTokenResult;
+
         }
 
         if (operation.toString().equals(MMIN)) {
             multipleOperandsTokenResult.setTokenType(TokenType.MMIN);
             multipleOperandsTokenResult.setToken(MMIN);
             return multipleOperandsTokenResult;
+
         }
         throw new IllegalArgumentException("operation " + operation.toString() + " is not supported");
     }
@@ -257,9 +286,13 @@ public class LexicalAnalyzer {
             return result;
         }
         if (character == '^') {
-            result.setTokenType(TokenType.EXPONENT);
-            result.setToken('^');
-            return result;
+            if (this.mode.equals(LexicalAnalyzerMode.FULL_OPERATIONS_SET)) {
+                result.setTokenType(TokenType.EXPONENT);
+                result.setToken('^');
+                return result;
+            } else {
+                throw new IllegalTokenException("token ^ is not supported in restricted operations set mode");
+            }
         }
         if (character == '(') {
             result.setTokenType(TokenType.LEFT_PARENTHESIS);
@@ -316,7 +349,7 @@ public class LexicalAnalyzer {
             }
         }
 
-        throw new IllegalArgumentException("character " + character + " fits no token");
+        throw new IllegalTokenException("character " + character + " fits no token");
     }
 
     private void handleNotTokenSymbols() {
@@ -329,7 +362,7 @@ public class LexicalAnalyzer {
         }
         this.expression.giveBackCharacter();
 
-        System.out.println(mistake.toString() + " is a mistake");
+        throw new IllegalSyntaxException(mistake.toString() + " - is a mistake");
     }
 
 
@@ -378,5 +411,4 @@ public class LexicalAnalyzer {
     private boolean isExpressionEndSymbol(char s){
         return s == Expression.EXPRESSION_END;
     }
-
 }

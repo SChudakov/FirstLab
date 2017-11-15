@@ -1,6 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
 import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 
@@ -16,8 +17,8 @@ public class SyntaxAnalyzer {
     LexicalAnalyzer lexicalAnalyzer;
     Set<Expression> setOfExpressions;
 
-    public SyntaxAnalyzer(Expression expression) {
-        this.lexicalAnalyzer = new LexicalAnalyzer(expression);
+    public SyntaxAnalyzer(Expression expression, LexicalAnalyzerMode mode) {
+        this.lexicalAnalyzer = new LexicalAnalyzer(expression, mode);
         this.setOfExpressions = new HashSet<>();
     }
 

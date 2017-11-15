@@ -1,7 +1,5 @@
 package com.sschudakov.tables.expression_parsing;
 
-import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
-import com.sschudakov.tables.expression_parsing.tokens.Token;
 import org.junit.Test;
 
 /**
@@ -13,11 +11,11 @@ public class SyntaxAnalyzerTest {
 
     @Test(timeout = 200)
     public void expressionTest(){
-        Expression expression = new Expression("min(1,2^3)");
-        SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(expression);
-        Token token = syntaxAnalyzer.expression();
-        ExpressionTree.normalize(token);
-        ExpressionTree.outputTree(token);
+//        Expression expression = new Expression("min(1,2^3)");
+//        SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(expression);
+//        Token token = syntaxAnalyzer.expression();
+//        ExpressionTree.normalize(token);
+//        ExpressionTree.outputTree(token);
     }
 
 }

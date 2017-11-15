@@ -11,15 +11,15 @@ public class ExpressionTreeTest {
     @Test
     public void evaluateTest() {
 
-        String string = "min(1,2^10)";
-        Expression expression = new Expression(string);
-        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(expression);
-        SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
-        Token tree = syntaxAnalyzer.expression();
-        ExpressionTree expressionTree = new ExpressionTree(tree);
-        ExpressionTree.normalize(tree);
-        expressionTree.outputTree();
-        System.out.println("value: " + expressionTree.evaluate());
+//        String string = "min(1,2^10)";
+//        Expression expression = new Expression(string);
+//        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(expression);
+//        SyntaxAnalyzer syntaxAnalyzer = new SyntaxAnalyzer(lexicalAnalyzer);
+//        Token tree = syntaxAnalyzer.expression();
+//        ExpressionTree expressionTree = new ExpressionTree(tree);
+//        ExpressionTree.normalize(tree);
+//        expressionTree.outputTree();
+//        System.out.println("value: " + expressionTree.evaluate());
     }
 
 }

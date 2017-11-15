@@ -2,7 +2,6 @@ package com.sschudakov.tables.table_view;
 
 import com.sschudakov.tables.utils.ToDimensionalArrayOutputer;
 
-import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -11,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 public class TableModel extends DefaultTableModel {
 
     private static final int NUM_OF_ROWS = 50;
-    private static final int NUM_OF_COLUMNS = 50;
+    private static final int NUM_OF_COLUMNS = 10;
 
     private int numOfRows = NUM_OF_ROWS;
     private int numOfColumns = NUM_OF_COLUMNS + 1;
