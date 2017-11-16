@@ -2,10 +2,7 @@ package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.exceptions.IllegalSyntaxException;
 import com.sschudakov.exceptions.IllegalTokenException;
-import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
-import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
-import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
-import com.sschudakov.tables.expression_parsing.tokens.Token;
+import com.sschudakov.tables.expression_parsing.tokens.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,11 +64,11 @@ public class LexicalAnalyzer {
         this.expression = expression;
         this.mode = mode;
         this.tokenSymbols = new ArrayList<>();
-        initializeTokenSymbols(mode);
+        initializeTokenSymbols();
 
     }
 
-    private void initializeTokenSymbols(LexicalAnalyzerMode mode) {
+    private void initializeTokenSymbols() {
         this.tokenSymbols.add('+');
         this.tokenSymbols.add('-');
         this.tokenSymbols.add('*');
@@ -83,10 +80,7 @@ public class LexicalAnalyzer {
         this.tokenSymbols.add('<');
         this.tokenSymbols.add('!');
         this.tokenSymbols.add(',');
-
-        if (mode.equals(LexicalAnalyzerMode.FULL_OPERATIONS_SET)) {
-            this.tokenSymbols.add('^');
-        }
+        this.tokenSymbols.add('^');
     }
 
 
@@ -97,8 +91,8 @@ public class LexicalAnalyzer {
 
         if (isExpressionEndSymbol(currentCharacter)) {
             this.lastToken = this.currentToken;
-            this.currentToken = DefaultToken.getFinalToken();
-            return DefaultToken.getFinalToken();
+            this.currentToken = FinalToken.getInstance();
+            return FinalToken.getInstance();
         }
 
         if (isDigit(currentCharacter)) {
@@ -356,7 +350,7 @@ public class LexicalAnalyzer {
         System.out.println("handleNotTokenSymbols");
         StringBuilder mistake = new StringBuilder("");
         char character = this.expression.readCharacter();
-        while (!isTokenSymbol(character)) {
+        while (!isTokenSymbol(character) && character != Expression.EXPRESSION_END) {
             mistake.append(character);
             character = this.expression.readCharacter();
         }

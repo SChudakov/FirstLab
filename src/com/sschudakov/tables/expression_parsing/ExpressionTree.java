@@ -2,6 +2,7 @@ package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.exceptions.MeshHasNoValueException;
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
+import com.sschudakov.tables.expression_parsing.tokens.FinalToken;
 import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.tables.table_view.TableCell;
@@ -54,8 +55,8 @@ public class ExpressionTree {
 
     public static DefaultToken makeTree(DefaultToken slip) {
 
-        slip.setLeftToken(DefaultToken.getFinalToken());
-        slip.setRightToken(DefaultToken.getFinalToken());
+        slip.setLeftToken(FinalToken.getInstance());
+        slip.setRightToken(FinalToken.getInstance());
 
         return slip;
     }
@@ -148,14 +149,14 @@ public class ExpressionTree {
         Token currentRight = token.getRightToken();
 
         if (currentLeft == null) {
-            token.setLeftToken(DefaultToken.getFinalToken());
+            token.setLeftToken(FinalToken.getInstance());
         } else {
             if (!currentLeft.isFinalToken()) {
                 normalize(currentLeft);
             }
         }
         if (currentRight == null) {
-            token.setRightToken(DefaultToken.getFinalToken());
+            token.setRightToken(FinalToken.getInstance());
         } else {
             if (!currentRight.isFinalToken()) {
                 normalize(currentRight);

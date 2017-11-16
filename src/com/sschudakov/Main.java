@@ -1,13 +1,7 @@
 package com.sschudakov;
 
 import com.sschudakov.gui.GUIManager;
-import com.sschudakov.tables.table_view.TableModel;
-import com.sschudakov.tables.table_view.TableViewManager;
-
-
-import javax.swing.*;
-import javax.swing.table.DefaultTableColumnModel;
-import javax.swing.table.DefaultTableModel;
+import com.sschudakov.tables.expression_parsing.tokens.FinalToken;
 
 public class Main {
 

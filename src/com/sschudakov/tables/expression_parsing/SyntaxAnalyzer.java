@@ -1,5 +1,6 @@
 package com.sschudakov.tables.expression_parsing;
 
+import com.sschudakov.exceptions.IllegalSyntaxException;
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
 import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
 import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
@@ -176,7 +177,7 @@ public class SyntaxAnalyzer {
                 return castedToken;
 
             } else {
-                throw new IllegalArgumentException("illegal syntax: mmax and mmin operations should be followed by a left parenthesis");
+                throw new IllegalSyntaxException("illegal syntax: mmax and mmin operations should be followed by a left parenthesis");
             }
         }
 
@@ -195,18 +196,18 @@ public class SyntaxAnalyzer {
                 }
 
                 if(numOfArguments != 2){
-                    throw new IllegalArgumentException("operations min and max can only have 2 parameters");
+                    throw new IllegalSyntaxException("operations min and max can only have 2 parameters");
                 }
 
                 //there is anyway one extra token
                 return castedToken;
 
             } else {
-                throw new IllegalArgumentException("illegal syntax: max and min operations should be followed by a left parenthesis");
+                throw new IllegalSyntaxException("illegal syntax: max and min operations should be followed by a left parenthesis");
             }
         }
 
 
-        throw new IllegalArgumentException("exception in atom: no matches for the token: " + token + " cannot build a tree");
+        throw new IllegalSyntaxException("token: " + token + " is used wrongly");
     }
 }

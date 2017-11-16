@@ -12,8 +12,6 @@ public class DefaultToken implements Token,Serializable {
 
     private static final long serialVersionUID = 4831726121771899244L;
 
-    private static DefaultToken finalToken;
-
     private Object token;
     private TokenType tokenType;
 
@@ -53,20 +51,9 @@ public class DefaultToken implements Token,Serializable {
         this.tokenType = tokenType;
     }
 
-    public static DefaultToken getFinalToken() {
-        return finalToken;
-    }
 
     public DefaultToken() {
 
-    }
-
-    static {
-        finalToken = new DefaultToken();
-        finalToken.setToken("F");
-        finalToken.setTokenType(TokenType.FINAL_TOKEN);
-        finalToken.setLeftToken(finalToken);
-        finalToken.setRightToken(finalToken);
     }
 
     public DefaultToken(TokenType tokenType) {
