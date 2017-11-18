@@ -1,7 +1,5 @@
 package com.sschudakov.tables.expression_parsing.tokens;
 
-import com.sschudakov.tables.expression_parsing.TokenType;
-
 import java.io.Serializable;
 
 /**

@@ -7,7 +7,7 @@ import com.sschudakov.tables.expression_parsing.Expression;
 import com.sschudakov.tables.expression_parsing.ExpressionTree;
 import com.sschudakov.tables.expression_parsing.LexicalAnalyzer;
 import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
-import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
+import com.sschudakov.tables.expression_parsing.LexicalAnalyzerMode;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.utils.ExceptionRenderer;
 import com.sschudakov.utils.MessageRenderer;

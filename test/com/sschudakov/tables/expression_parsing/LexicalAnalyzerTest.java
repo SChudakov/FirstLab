@@ -2,7 +2,6 @@ package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.exceptions.IllegalTokenException;
 import com.sschudakov.tables.expression_parsing.tokens.FinalToken;
-import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import org.junit.Assert;
 import org.junit.Test;

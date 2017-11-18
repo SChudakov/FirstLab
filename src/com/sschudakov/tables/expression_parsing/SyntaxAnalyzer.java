@@ -2,7 +2,6 @@ package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.exceptions.IllegalSyntaxException;
 import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
-import com.sschudakov.tables.expression_parsing.tokens.LexicalAnalyzerMode;
 import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 

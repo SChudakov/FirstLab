@@ -1,4 +1,4 @@
-package com.sschudakov.tables.expression_parsing.tokens;
+package com.sschudakov.tables.expression_parsing;
 
 /**
  * Created by Semen Chudakov on 15.11.2017.

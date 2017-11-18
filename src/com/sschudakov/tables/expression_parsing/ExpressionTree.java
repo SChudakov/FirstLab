@@ -1,10 +1,7 @@
 package com.sschudakov.tables.expression_parsing;
 
 import com.sschudakov.exceptions.MeshHasNoValueException;
-import com.sschudakov.tables.expression_parsing.tokens.DefaultToken;
-import com.sschudakov.tables.expression_parsing.tokens.FinalToken;
-import com.sschudakov.tables.expression_parsing.tokens.MultipleOperandsToken;
-import com.sschudakov.tables.expression_parsing.tokens.Token;
+import com.sschudakov.tables.expression_parsing.tokens.*;
 import com.sschudakov.tables.table_view.TableCell;
 import com.sschudakov.tables.utils.MeshNameParser;
 
