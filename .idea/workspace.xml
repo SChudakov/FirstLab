@@ -5,6 +5,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/Closer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/TextFileCloser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/openers/Opener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/openers/TableFileOpener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/openers/TextFileOpener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/Saver.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/TableSaver.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/TextFileSaver.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/views/FileView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/views/TableFileView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/views/TextFileView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/producer/FileViewProducer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/exceptions/IllegalSyntaxException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/exceptions/IllegalTokenException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/exceptions/MeshHasNoValueException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GBC.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CopyListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CreateFolderListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CreateListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CreateTableListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$DeleteListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MoveListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCopy.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCreator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileDeleter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMove.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileRenamer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FolderCreator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/ToUpperCaseFormatter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/Expression.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/ExpressionTree.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/LexicalAnalyzerMode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/Node.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/FinalToken.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/MultipleOperandsToken.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/Token.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/TokenType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableCell.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$AddColumnListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$AddRowListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$CloseOperationListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$MouseClickListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$RemoveColumnListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$RemoveRowListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$SaveListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$TableListener$FullOperationSetListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$TableListener$RestrictedOperationSetListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$TableListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/utils/MeshNameParser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/utils/ToDimensionalArrayOutputer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/FileExtensionDeterminer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/JTextAreaTextRenderer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/NodeFormer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/SimilarWordsFinder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/TreeNodeChildDelete.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/operations/FileCopyTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/operations/FileMoveTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/ExpressionTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/ExpressionTreeTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/SyntaxAnalyzerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/table_view/TableViewManagerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/untils/MashNameParserTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/untils/SimilarWordsFinderTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serialized_tables/second_table.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serialized_tables/third_table.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.java.vbak" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serialized_tables/first.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/TokenType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/TestXmlParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomCreater.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLSAXParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXCreater.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -830,7 +915,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511019821076</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="[18.11.17] - xml start">
+      <created>1511079310964</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1511079310964</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -876,7 +968,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -890,7 +981,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -946,7 +1037,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After fixing bugs 3.10.2017" />
     <MESSAGE value="After fixing bugs 4.10.2017" />
     <MESSAGE value="Before rewriting move and copy" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;7. remove NullPointeException while removing files&#10;13. fix Abstrat Fzctory #2&#10;15. fix desplaying files after move: (the way for the file to be reloaded is changed thile operation)" />
@@ -971,7 +1061,8 @@
     <MESSAGE value="[15.11.17] - added lexical analyzer modes" />
     <MESSAGE value="[16.11.17] - final commit" />
     <MESSAGE value="[17.11.17] - final commit_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="[17.11.17] - final commit_2" />
+    <MESSAGE value="[18.11.17] - xml start" />
+    <option name="LAST_COMMIT_MESSAGE" value="[18.11.17] - xml start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
