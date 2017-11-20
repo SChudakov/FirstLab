@@ -21,6 +21,10 @@ public class TableSaver implements Saver {
         this.table = table;
     }
 
+    public File getFile() {
+        return file;
+    }
+
     public TableSaver(File file) {
         this.file = file;
     }
@@ -60,6 +64,7 @@ public class TableSaver implements Saver {
     private static void saveTable(JTable table, File file) throws IOException {
         ObjectOutputStream outputStream = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)));
         outputStream.writeObject(table);
+        outputStream.flush();
         outputStream.close();
     }
 }

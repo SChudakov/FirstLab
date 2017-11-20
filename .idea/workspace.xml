@@ -1,96 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" line="26" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" line="30" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/Closer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/TextFileCloser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/openers/Opener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/openers/TableFileOpener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/openers/TextFileOpener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/Saver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/TableSaver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/TextFileSaver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/views/FileView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/views/TableFileView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/views/TextFileView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/producer/FileViewProducer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/exceptions/IllegalSyntaxException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/exceptions/IllegalTokenException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/exceptions/MeshHasNoValueException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GBC.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CopyListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CreateFolderListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CreateListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$CreateTableListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$DeleteListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/gui/GUIManager$MoveListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCopy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileCreator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileDeleter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileMove.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FileRenamer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/FolderCreator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/operations/ToUpperCaseFormatter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/Expression.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/ExpressionTree.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/LexicalAnalyzerMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/FinalToken.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/MultipleOperandsToken.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/Token.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/tokens/TokenType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableCell.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableModel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$AddColumnListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$AddRowListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$CloseOperationListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$MouseClickListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$RemoveColumnListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$RemoveRowListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$SaveListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$TableListener$FullOperationSetListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$TableListener$RestrictedOperationSetListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager$TableListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/table_view/TableViewManager.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/utils/MeshNameParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/utils/ToDimensionalArrayOutputer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/FileExtensionDeterminer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/JTextAreaTextRenderer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/NodeFormer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/SimilarWordsFinder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/TreeNodeChildDelete.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/operations/FileCopyTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/operations/FileMoveTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/ExpressionTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/ExpressionTreeTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/expression_parsing/SyntaxAnalyzerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/tables/table_view/TableViewManagerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/untils/MashNameParserTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/test/FirstLab/com/sschudakov/untils/SimilarWordsFinderTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serialized_tables/second_table.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serialized_tables/third_table.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.java.vbak" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serialized_tables/first.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/TokenType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/TestXmlParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomCreater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLSAXParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXCreater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/utils/FileContentReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/student_government_events.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/student_government_events.xsd" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/Main.java.vbak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/serialized_tables/first.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/serialized_tables/second_table.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/serialized_tables/third_table.ser" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/TableSaver.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/abstract_factory/factories/savers/TableSaver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableViewManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableViewManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,134 +35,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestXmlParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/TestXmlParser.java">
+      <file leaf-file-name="LexicalAnalyzerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+            <state relative-caret-position="493">
+              <caret line="228" column="24" lean-forward="false" selection-start-line="228" selection-start-column="24" selection-end-line="228" selection-end-column="24" />
               <folding>
-                <element signature="docComment;method#Mail#0;class#Mail#0" expanded="false" />
-                <element signature="method#Mail#0;class#Mail#0" expanded="false" />
-                <element signature="docComment;method#Mail#1;class#Mail#0" expanded="false" />
-                <element signature="e#1777#1778#0" expanded="true" />
-                <element signature="e#1802#1803#0" expanded="true" />
-                <element signature="e#1883#1884#0" expanded="true" />
-                <element signature="e#1911#1912#0" expanded="true" />
-                <element signature="e#1987#1988#0" expanded="true" />
-                <element signature="e#2018#2019#0" expanded="true" />
-                <element signature="e#2122#2123#0" expanded="true" />
-                <element signature="e#2162#2163#0" expanded="true" />
-                <element signature="e#2235#2236#0" expanded="true" />
-                <element signature="e#2265#2266#0" expanded="true" />
-                <element signature="e#2362#2363#0" expanded="true" />
-                <element signature="e#2394#2395#0" expanded="true" />
-                <element signature="e#2473#2474#0" expanded="true" />
-                <element signature="e#2504#2505#0" expanded="true" />
-                <element signature="e#2611#2612#0" expanded="true" />
-                <element signature="e#2651#2652#0" expanded="true" />
-                <element signature="e#2726#2727#0" expanded="true" />
-                <element signature="e#2755#2756#0" expanded="true" />
-                <element signature="e#2854#2855#0" expanded="true" />
-                <element signature="e#2890#2891#0" expanded="true" />
-                <element signature="e#2965#2966#0" expanded="true" />
-                <element signature="e#2994#2995#0" expanded="true" />
-                <element signature="e#3093#3094#0" expanded="true" />
-                <element signature="e#3129#3130#0" expanded="true" />
-                <element signature="e#3206#3207#0" expanded="true" />
-                <element signature="e#3236#3237#0" expanded="true" />
-                <element signature="e#3339#3340#0" expanded="true" />
-                <element signature="e#3377#3378#0" expanded="true" />
-                <element signature="e#3462#3463#0" expanded="true" />
-                <element signature="e#3496#3497#0" expanded="true" />
-                <element signature="e#3615#3616#0" expanded="true" />
-                <element signature="e#3661#3662#0" expanded="true" />
-                <element signature="e#3740#3741#0" expanded="true" />
-                <element signature="e#3771#3772#0" expanded="true" />
-                <element signature="e#3878#3879#0" expanded="true" />
-                <element signature="e#3918#3919#0" expanded="true" />
-                <element signature="e#4022#4023#0" expanded="true" />
-                <element signature="e#4060#4061#0" expanded="true" />
-                <element signature="e#4200#4201#0" expanded="true" />
-                <element signature="e#4256#4257#0" expanded="true" />
-                <element signature="e#4372#4373#0" expanded="true" />
-                <element signature="e#4419#4420#0" expanded="true" />
-                <element signature="e#4565#4566#0" expanded="true" />
-                <element signature="e#4619#4620#0" expanded="true" />
-                <element signature="e#4702#4703#0" expanded="true" />
-                <element signature="e#4736#4737#0" expanded="true" />
-                <element signature="e#4854#4855#0" expanded="true" />
-                <element signature="e#4900#4901#0" expanded="true" />
-                <element signature="e#4989#4990#0" expanded="true" />
-                <element signature="e#5026#5027#0" expanded="true" />
-                <element signature="e#5156#5157#0" expanded="true" />
-                <element signature="e#5208#5209#0" expanded="true" />
-                <element signature="e#5293#5294#0" expanded="true" />
-                <element signature="e#5328#5329#0" expanded="true" />
-                <element signature="method#toString#0;class#Mail#0" expanded="false" />
-                <marker date="1511079276799" expanded="false" signature="1719:5686" ph="..." />
+                <element signature="docComment;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#allTokensAreReadCorrectTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#numOfTokensTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#tokensSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#fullOperationsSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#restrictedOperationsSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#exponentIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#manIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#minIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#tokensAreGivenBackCorrectlyTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#giveBackThreeTokensTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#currentTokenWhileReadingTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#lastTokenWhileReadingTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#currentTokenWhileGivingBackTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+                <element signature="method#lastTokenWhileGivingBackTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XMLDomCreater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomCreater.java">
+      <file leaf-file-name="LexicalAnalyzer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XMLDomParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XMLSAXParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLSAXParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2516">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyErrorHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="443">
+              <caret line="362" column="16" lean-forward="false" selection-start-line="362" selection-start-column="16" selection-end-line="362" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#LexicalAnalyzer#1;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#initializeTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#readToken#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleNumbers#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleLetters#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleLiteralOperation#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleNames#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleAtomicToken#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#handleNotTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#giveBackToken#0;class#LexicalAnalyzer#0" expanded="false" />
+                <element signature="method#isTokenSymbol#0;class#LexicalAnalyzer#0" expanded="false" />
+                <marker date="1511197780675" expanded="false" signature="845:1310" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinalToken.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/FinalToken.java">
+      <file leaf-file-name="DefaultToken.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="-1360">
+              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#DefaultToken#0" expanded="false" />
+                <element signature="method#DefaultToken#0;class#DefaultToken#0" expanded="false" />
+                <element signature="method#DefaultToken#2;class#DefaultToken#0" expanded="false" />
+                <element signature="method#DefaultToken#3;class#DefaultToken#0" expanded="false" />
+                <element signature="method#isPlusOrMinus#0;class#DefaultToken#0" expanded="false" />
+                <element signature="method#isMultiplicationDivisionModulusIntegerDivision#0;class#DefaultToken#0" expanded="false" />
+                <element signature="method#isOperator#0;class#DefaultToken#0" expanded="false" />
+                <element signature="method#isLogicalOperator#0;class#DefaultToken#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -248,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>equals</find>
       <find>removeNode</find>
       <find>Lexem *</find>
       <find>.</find>
@@ -278,6 +147,7 @@
       <find>getColumnName</find>
       <find>set</find>
       <find>Size</find>
+      <find>tokensAreGivenBackCorrectly</find>
     </findStrings>
     <replaceStrings>
       <replace>Token</replace>
@@ -306,10 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/producer/FileView.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/openers/TextFileOpener.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TextFileCloser.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/openers/SerializedTableFileOpener.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/openers/TableOpener.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/views/FileView.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/views/TextFileView.java" />
@@ -321,8 +187,6 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/Saver.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TextFileSaver.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Node.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/CyclesFinder.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/CyclesFinder.java" />
@@ -340,14 +204,9 @@
         <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/ExpressionTreeTest.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/SyntaxAnalyzerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableModel.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/FinalToken.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java" />
-        <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableViewManager.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/TokenType.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomCreater.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomParser.java" />
@@ -357,6 +216,17 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/TestXmlParser.java" />
+        <option value="$PROJECT_DIR$/xml/student_government_events.xsd" />
+        <option value="$PROJECT_DIR$/xml/student_government_events.xml" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/utils/FileReader.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/utils/FileContentReader.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableViewManager.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java" />
       </list>
     </option>
   </component>
@@ -408,7 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -447,6 +316,24 @@
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+              <item name="closers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
+              <item name="abstract_factory" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+              <item name="savers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="tables" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -471,7 +358,8 @@
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
@@ -506,13 +394,19 @@
               <item name="tables" type="462c0819:PsiDirectoryNode" />
               <item name="expression_parsing" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,32 +442,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="ExpressionTreeTest.evaluateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.tokens.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FirstLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.ExpressionTreeTest" />
-      <option name="METHOD_NAME" value="evaluateTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
+  <component name="RunManager" selected="JUnit.LexicalAnalyzerTest">
     <configuration name="LexicalAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -599,10 +468,10 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LexicalAnalyzerTest.exponentIsNotSupportedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.tokens.*" />
+          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -611,7 +480,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
       <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
-      <option name="METHOD_NAME" value="exponentIsNotSupportedTest" />
+      <option name="METHOD_NAME" value="currentTokenWhileGivingBackTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -624,10 +493,10 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LexicalAnalyzerTest.numOfTokensTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexicalAnalyzerTest.currentTokenWhileReadingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.tokens.*" />
+          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -636,7 +505,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
       <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
-      <option name="METHOD_NAME" value="numOfTokensTest" />
+      <option name="METHOD_NAME" value="currentTokenWhileReadingTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -649,24 +518,55 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="LexicalAnalyzerTest.lastTokenWhileGivingBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.exceptions.*" />
+          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <module name="FirstLab" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
+      <option name="METHOD_NAME" value="lastTokenWhileGivingBackTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="FirstLab" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
+    </configuration>
+    <configuration name="LexicalAnalyzerTest.lastTokenWhileReadingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FirstLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
+      <option name="METHOD_NAME" value="lastTokenWhileReadingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -684,19 +584,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ExpressionTreeTest.evaluateTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.numOfTokensTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.exponentIsNotSupportedTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.currentTokenWhileReadingTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileReadingTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.currentTokenWhileGivingBackTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.exponentIsNotSupportedTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.numOfTokensTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ExpressionTreeTest.evaluateTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.currentTokenWhileGivingBackTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileReadingTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.currentTokenWhileReadingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -922,39 +822,46 @@
       <option name="project" value="LOCAL" />
       <updated>1511079310964</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="[18.11.17] - xml start all files">
+      <created>1511079453074</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1511079453074</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LexicalAnalyzerTest - 2017.11.15 at 20h 48m 51s.xml">
+    <history-entry file="LexicalAnalyzerTest - 2017.11.20 at 19h 43m 45s.xml">
       <configuration name="LexicalAnalyzerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest - 2017.11.16 at 10h 41m 15s.xml">
+    <history-entry file="LexicalAnalyzerTest - 2017.11.20 at 19h 57m 52s.xml">
       <configuration name="LexicalAnalyzerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_exponentIsNotSupportedTest - 2017.11.15 at 20h 46m 49s.xml">
-      <configuration name="LexicalAnalyzerTest.exponentIsNotSupportedTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_currentTokenWhileGivingBackTest - 2017.11.20 at 19h 47m 58s.xml">
+      <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_exponentIsNotSupportedTest - 2017.11.15 at 20h 48m 38s.xml">
-      <configuration name="LexicalAnalyzerTest.exponentIsNotSupportedTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_currentTokenWhileGivingBackTest - 2017.11.20 at 19h 48m 33s.xml">
+      <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_numOfTokensTest - 2017.11.15 at 20h 12m 17s.xml">
-      <configuration name="LexicalAnalyzerTest.numOfTokensTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_currentTokenWhileGivingBackTest - 2017.11.20 at 19h 48m 50s.xml">
+      <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_numOfTokensTest - 2017.11.15 at 20h 13m 39s.xml">
-      <configuration name="LexicalAnalyzerTest.numOfTokensTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_currentTokenWhileGivingBackTest - 2017.11.20 at 19h 49m 15s.xml">
+      <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_numOfTokensTest - 2017.11.15 at 20h 14m 06s.xml">
-      <configuration name="LexicalAnalyzerTest.numOfTokensTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_currentTokenWhileGivingBackTest - 2017.11.20 at 19h 49m 53s.xml">
+      <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_numOfTokensTest - 2017.11.15 at 20h 15m 25s.xml">
-      <configuration name="LexicalAnalyzerTest.numOfTokensTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_lastTokenWhileGivingBackTest - 2017.11.20 at 19h 57m 45s.xml">
+      <configuration name="LexicalAnalyzerTest.lastTokenWhileGivingBackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_numOfTokensTest - 2017.11.15 at 20h 20m 40s.xml">
-      <configuration name="LexicalAnalyzerTest.numOfTokensTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_lastTokenWhileReadingTest - 2017.11.20 at 19h 42m 21s.xml">
+      <configuration name="LexicalAnalyzerTest.lastTokenWhileReadingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_numOfTokensTest - 2017.11.15 at 20h 25m 02s.xml">
-      <configuration name="LexicalAnalyzerTest.numOfTokensTest" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_lastTokenWhileReadingTest - 2017.11.20 at 19h 42m 30s.xml">
+      <configuration name="LexicalAnalyzerTest.lastTokenWhileReadingTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -968,20 +875,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5691643" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7997118" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22012103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -992,9 +902,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3314121" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -1037,7 +945,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After fixing bugs 4.10.2017" />
     <MESSAGE value="Before rewriting move and copy" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;7. remove NullPointeException while removing files&#10;13. fix Abstrat Fzctory #2&#10;15. fix desplaying files after move: (the way for the file to be reloaded is changed thile operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
@@ -1062,11 +969,12 @@
     <MESSAGE value="[16.11.17] - final commit" />
     <MESSAGE value="[17.11.17] - final commit_2" />
     <MESSAGE value="[18.11.17] - xml start" />
-    <option name="LAST_COMMIT_MESSAGE" value="[18.11.17] - xml start" />
+    <MESSAGE value="[18.11.17] - xml start all files" />
+    <option name="LAST_COMMIT_MESSAGE" value="[18.11.17] - xml start all files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="43" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1075,90 +983,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TextFileCloser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/views/TextFileView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/MultipleOperandsToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="468" column="40" lean-forward="false" selection-start-line="468" selection-start-column="40" selection-end-line="468" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/producer/FileViewProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/openers/TableFileOpener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="48" column="90" lean-forward="false" selection-start-line="48" selection-start-column="90" selection-end-line="48" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TextFileSaver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/Saver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/views/TableFileView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/ExpressionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Expression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1231,14 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzerMode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1282,107 +1098,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="179" column="48" lean-forward="false" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#printCharacters#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="383" column="0" lean-forward="false" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#ExpressionTree#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#ExpressionTree#1;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#makeTree#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#outputTree#1;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#outputDefaultToken#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#outputMultipleOperandsToken#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#normalize#1;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#normalizeMultipleOperandsToken#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#evaluate#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="e#4691#4713#0" expanded="false" />
-            <element signature="method#evaluateDefaultToken#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#evaluateMultipleOperandsToken#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#buildOperandValueList#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#evaluateOperations#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#evaluateLogicalOperator#0;class#ExpressionTree#0" expanded="false" />
-            <element signature="method#evaluateNames#0;class#ExpressionTree#0" expanded="false" />
-            <marker date="1510934048504" expanded="false" signature="634:756" ph="..." />
-            <marker date="1510934048504" expanded="false" signature="777:1022" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableViewManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
-          <folding>
-            <element signature="docComment;class#TableViewManager#0" expanded="false" />
-            <element signature="method#TableViewManager#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#buildTableView#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#setupFrame#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#setupPanels#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#setupMenuBar#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#addListeners#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#setupScrollPane#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#setupTextFields#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#setupTable#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#tableChanged#0;class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#renewValue#0;class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#FullOperationSetListener#0;class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#FullOperationSetListener#0;class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#RestrictedOperationSetListener#0;class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#RestrictedOperationSetListener#0;class#TableListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#SaveListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#CloseOperationListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#windowClosing#0;class#CloseOperationListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#AddRowListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#AddRowListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#formEmptyRowData#0;class#AddRowListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#AddColumnListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#AddColumnListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#RemoveRowListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#RemoveRowListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="class#MouseClickListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#mouseClicked#0;class#MouseClickListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#MouseClickListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#mouseReleased#0;class#MouseClickListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#mouseEntered#0;class#MouseClickListener#0;class#TableViewManager#0" expanded="false" />
-            <element signature="method#mouseExited#0;class#MouseClickListener#0;class#TableViewManager#0" expanded="false" />
-            <marker date="1510933703188" expanded="false" signature="7472:7623" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1391,42 +1111,6 @@
         <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="101" column="47" lean-forward="false" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
-          <folding>
-            <element signature="docComment;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#LexicalAnalyzer#1;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#initializeTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#handleNumbers#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#handleLetters#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#handleLiteralOperation#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#handleNames#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#handleAtomicToken#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#handleNotTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
-            <element signature="method#isTokenSymbol#0;class#LexicalAnalyzer#0" expanded="false" />
-            <marker date="1510821894153" expanded="false" signature="845:1310" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#LexicalAnalyzerTest#0" expanded="false" />
-            <element signature="method#allTokensAreReadCorrectTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
-            <element signature="method#numOfTokensTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
-            <element signature="method#fullOperationsSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
-            <element signature="method#restrictedOperationsSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
-            <element signature="method#manIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
-            <element signature="method#minIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1443,7 +1127,7 @@
         <state relative-caret-position="510">
           <caret line="157" column="50" lean-forward="false" selection-start-line="157" selection-start-column="50" selection-end-line="157" selection-end-column="50" />
           <folding>
-            <marker date="1511079037819" expanded="false" signature="1026:1034" ph="&lt;~&gt;" />
+            <marker date="1511192575898" expanded="false" signature="1033:1041" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -1452,27 +1136,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <marker date="1511079090370" expanded="false" signature="600:616" ph="&lt;~&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="170">
           <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
+        <state relative-caret-position="0">
           <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1480,91 +1157,318 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLSAXParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2516">
+        <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-          <folding>
-            <element signature="docComment;method#Mail#0;class#Mail#0" expanded="false" />
-            <element signature="method#Mail#0;class#Mail#0" expanded="false" />
-            <element signature="docComment;method#Mail#1;class#Mail#0" expanded="false" />
-            <element signature="e#1777#1778#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1883#1884#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2122#2123#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-            <element signature="e#2235#2236#0" expanded="true" />
-            <element signature="e#2265#2266#0" expanded="true" />
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
-            <element signature="e#2473#2474#0" expanded="true" />
-            <element signature="e#2504#2505#0" expanded="true" />
-            <element signature="e#2611#2612#0" expanded="true" />
-            <element signature="e#2651#2652#0" expanded="true" />
-            <element signature="e#2726#2727#0" expanded="true" />
-            <element signature="e#2755#2756#0" expanded="true" />
-            <element signature="e#2854#2855#0" expanded="true" />
-            <element signature="e#2890#2891#0" expanded="true" />
-            <element signature="e#2965#2966#0" expanded="true" />
-            <element signature="e#2994#2995#0" expanded="true" />
-            <element signature="e#3093#3094#0" expanded="true" />
-            <element signature="e#3129#3130#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3236#3237#0" expanded="true" />
-            <element signature="e#3339#3340#0" expanded="true" />
-            <element signature="e#3377#3378#0" expanded="true" />
-            <element signature="e#3462#3463#0" expanded="true" />
-            <element signature="e#3496#3497#0" expanded="true" />
-            <element signature="e#3615#3616#0" expanded="true" />
-            <element signature="e#3661#3662#0" expanded="true" />
-            <element signature="e#3740#3741#0" expanded="true" />
-            <element signature="e#3771#3772#0" expanded="true" />
-            <element signature="e#3878#3879#0" expanded="true" />
-            <element signature="e#3918#3919#0" expanded="true" />
-            <element signature="e#4022#4023#0" expanded="true" />
-            <element signature="e#4060#4061#0" expanded="true" />
-            <element signature="e#4200#4201#0" expanded="true" />
-            <element signature="e#4256#4257#0" expanded="true" />
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4419#4420#0" expanded="true" />
-            <element signature="e#4565#4566#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-            <element signature="e#4702#4703#0" expanded="true" />
-            <element signature="e#4736#4737#0" expanded="true" />
-            <element signature="e#4854#4855#0" expanded="true" />
-            <element signature="e#4900#4901#0" expanded="true" />
-            <element signature="e#4989#4990#0" expanded="true" />
-            <element signature="e#5026#5027#0" expanded="true" />
-            <element signature="e#5156#5157#0" expanded="true" />
-            <element signature="e#5208#5209#0" expanded="true" />
-            <element signature="e#5293#5294#0" expanded="true" />
-            <element signature="e#5328#5329#0" expanded="true" />
-            <element signature="method#toString#0;class#Mail#0" expanded="false" />
-            <marker date="1511079276799" expanded="false" signature="1719:5686" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/TestXmlParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;method#Mail#0;class#Mail#0" expanded="false" />
+            <element signature="method#Mail#0;class#Mail#0" expanded="false" />
+            <element signature="docComment;method#Mail#1;class#Mail#0" expanded="false" />
+            <element signature="method#toString#0;class#Mail#0" expanded="false" />
+            <marker date="1511079276799" expanded="false" signature="1719:5686" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="n#complexType#0;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#sequence#0;n#complexType#0;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#complexType#1;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#sequence#0;n#complexType#1;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#complexType#2;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#sequence#0;n#complexType#2;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#complexType#3;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#sequence#0;n#complexType#3;n#schema#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/InputStreamReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <folding>
+            <element signature="docComment;class#FileReader#0" expanded="false" />
+            <element signature="docComment;method#FileReader#0;class#FileReader#0" expanded="false" />
+            <element signature="method#FileReader#0;class#FileReader#0" expanded="false" />
+            <element signature="docComment;method#FileReader#1;class#FileReader#0" expanded="false" />
+            <element signature="method#FileReader#1;class#FileReader#0" expanded="false" />
+            <element signature="docComment;method#FileReader#2;class#FileReader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;field#skipLF#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;field#markedSkipLF#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#BufferedReader#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#BufferedReader#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#BufferedReader#1;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#ensureOpen#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#ensureOpen#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#fill#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#fill#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#read#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#read#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#read1#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#read1#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#read#1;class#BufferedReader#0" expanded="false" />
+            <element signature="method#read#1;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#readLine#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#readLine#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#readLine#1;class#BufferedReader#0" expanded="false" />
+            <element signature="method#readLine#1;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#skip#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#skip#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#ready#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#ready#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#markSupported#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#mark#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#mark#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#reset#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#reset#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#close#0;class#BufferedReader#0" expanded="false" />
+            <element signature="docComment;method#lines#0;class#BufferedReader#0" expanded="false" />
+            <element signature="method#lines#0;class#BufferedReader#0" expanded="false" />
+            <element signature="class#18896:19743" expanded="false" />
+            <element signature="method#hasNext#0;class#18896:19743" expanded="false" />
+            <element signature="method#next#0;class#18896:19743" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TextFileCloser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="64" column="61" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/ObjectOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="1177" column="0" lean-forward="false" selection-start-line="1177" selection-start-column="0" selection-end-line="1177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="false" />
+            <element signature="e#5784#5785#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/SyntaxAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="212" column="111" lean-forward="true" selection-start-line="212" selection-start-column="111" selection-end-line="212" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#ExpressionTree#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#ExpressionTree#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#makeTree#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#outputTree#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#outputDefaultToken#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#outputMultipleOperandsToken#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#normalize#1;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#normalizeMultipleOperandsToken#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#evaluate#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="e#4691#4713#0" expanded="false" />
+            <element signature="method#evaluateDefaultToken#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#evaluateMultipleOperandsToken#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#buildOperandValueList#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#evaluateLogicalOperator#0;class#ExpressionTree#0" expanded="false" />
+            <element signature="method#evaluateNames#0;class#ExpressionTree#0" expanded="false" />
+            <marker date="1510934048504" expanded="false" signature="634:756" ph="..." />
+            <marker date="1510934048504" expanded="false" signature="777:1022" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/views/TableFileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#1097#1098#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableViewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="236" column="25" lean-forward="false" selection-start-line="236" selection-start-column="25" selection-end-line="236" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;class#TableSaver#0" expanded="false" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="method#ensureFileIsNotNull#0;class#TableSaver#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/utils/FileContentReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#FileContentReader#0" expanded="false" />
+            <element signature="method#readFile#0;class#FileContentReader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TableFileCloser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="43" column="11" lean-forward="true" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+          <folding>
+            <element signature="docComment;class#TableFileCloser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/DefaultToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1360">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#DefaultToken#0" expanded="false" />
+            <element signature="method#DefaultToken#0;class#DefaultToken#0" expanded="false" />
+            <element signature="method#DefaultToken#2;class#DefaultToken#0" expanded="false" />
+            <element signature="method#DefaultToken#3;class#DefaultToken#0" expanded="false" />
+            <element signature="method#isPlusOrMinus#0;class#DefaultToken#0" expanded="false" />
+            <element signature="method#isMultiplicationDivisionModulusIntegerDivision#0;class#DefaultToken#0" expanded="false" />
+            <element signature="method#isOperator#0;class#DefaultToken#0" expanded="false" />
+            <element signature="method#isLogicalOperator#0;class#DefaultToken#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="362" column="16" lean-forward="false" selection-start-line="362" selection-start-column="16" selection-end-line="362" selection-end-column="16" />
+          <folding>
+            <element signature="docComment;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#LexicalAnalyzer#1;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#initializeTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#readToken#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleNumbers#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleLetters#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleLiteralOperation#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleNames#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleAtomicToken#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#handleNotTokenSymbols#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#giveBackToken#0;class#LexicalAnalyzer#0" expanded="false" />
+            <element signature="method#isTokenSymbol#0;class#LexicalAnalyzer#0" expanded="false" />
+            <marker date="1511197780675" expanded="false" signature="845:1310" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="228" column="24" lean-forward="false" selection-start-line="228" selection-start-column="24" selection-end-line="228" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#allTokensAreReadCorrectTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#numOfTokensTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#tokensSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#fullOperationsSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#restrictedOperationsSetTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#exponentIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#manIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#minIsNotSupportedTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#tokensAreGivenBackCorrectlyTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#giveBackThreeTokensTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#currentTokenWhileReadingTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#lastTokenWhileReadingTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#currentTokenWhileGivingBackTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+            <element signature="method#lastTokenWhileGivingBackTest#0;class#LexicalAnalyzerTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

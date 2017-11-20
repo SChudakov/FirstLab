@@ -261,28 +261,28 @@ public class LexicalAnalyzer {
         DefaultToken result = new DefaultToken();
         if (character == '+') {
             result.setTokenType(TokenType.PLUS);
-            result.setToken('+');
+            result.setToken("+");
             return result;
         }
         if (character == '-') {
             result.setTokenType(TokenType.MINUS);
-            result.setToken('-');
+            result.setToken("-");
             return result;
         }
         if (character == '*') {
             result.setTokenType(TokenType.MULTIPLICATION);
-            result.setToken('*');
+            result.setToken("*");
             return result;
         }
         if (character == '/') {
             result.setTokenType(TokenType.DIVISION);
-            result.setToken('/');
+            result.setToken("/");
             return result;
         }
         if (character == '^') {
             if (this.mode.equals(LexicalAnalyzerMode.FULL_OPERATIONS_SET)) {
                 result.setTokenType(TokenType.EXPONENT);
-                result.setToken('^');
+                result.setToken("^");
                 return result;
             } else {
                 throw new IllegalTokenException("token ^ is not supported in restricted operations set mode");
@@ -290,22 +290,22 @@ public class LexicalAnalyzer {
         }
         if (character == '(') {
             result.setTokenType(TokenType.LEFT_PARENTHESIS);
-            result.setToken('(');
+            result.setToken("(");
             return result;
         }
         if (character == ')') {
             result.setTokenType(TokenType.RIGHT_PARENTHESIS);
-            result.setToken(')');
+            result.setToken(")");
             return result;
         }
         if (character == '=') {
             result.setTokenType(TokenType.EQUATION_SIGN);
-            result.setToken('=');
+            result.setToken("=");
             return result;
         }
         if (character == ',') {
             result.setTokenType(TokenType.COMMA);
-            result.setToken(',');
+            result.setToken(",");
             return result;
         }
         if (character == '>') {

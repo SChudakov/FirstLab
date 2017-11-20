@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="sschudakov" targetNamespace="sschudakov">
+    <element name="events" type="tns:events"/>
+
+    <complexType name="events">
+        <sequence>
+            <element name="event" type="tns:event" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="event">
+        <sequence>
+            <element name="last_firs_middle_names" type="tns:last_firs_middle_names"/>
+            <element name="faculty" type="string"/>
+            <element name="sub-faculty" type="string"/>
+            <element name="branch-of-study" type="string"/>
+            <element name="time" type="tns:time"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="last_firs_middle_names">
+        <sequence>
+            <element name="first_name" type="string"/>
+            <element name="last_name" type="string"/>
+            <element name="middle_name" type="string"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="time">
+        <sequence>
+            <element name="begin" type="dateTime"/>
+            <element name="end" type="dateTime"/>
+        </sequence>
+    </complexType>
+</schema>

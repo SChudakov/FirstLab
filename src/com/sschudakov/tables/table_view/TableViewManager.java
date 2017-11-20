@@ -3,11 +3,7 @@ package com.sschudakov.tables.table_view;
 import com.sschudakov.abstract_factory.factories.views.TableFileView;
 import com.sschudakov.exceptions.MeshHasNoValueException;
 import com.sschudakov.gui.GBC;
-import com.sschudakov.tables.expression_parsing.Expression;
-import com.sschudakov.tables.expression_parsing.ExpressionTree;
-import com.sschudakov.tables.expression_parsing.LexicalAnalyzer;
-import com.sschudakov.tables.expression_parsing.SyntaxAnalyzer;
-import com.sschudakov.tables.expression_parsing.LexicalAnalyzerMode;
+import com.sschudakov.tables.expression_parsing.*;
 import com.sschudakov.tables.expression_parsing.tokens.Token;
 import com.sschudakov.utils.ExceptionRenderer;
 import com.sschudakov.utils.MessageRenderer;
@@ -236,6 +232,8 @@ public class TableViewManager {
                         } catch (IllegalArgumentException e1) {
                             e1.printStackTrace();
                             ExceptionRenderer.renderException(frame, e1);
+                        }catch (ClassCastException e1) {
+                            MessageRenderer.renderMessage(frame, "wrong expression: cannot combine numeric value with boolean");
                         }
                     }
                 }

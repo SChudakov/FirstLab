@@ -39,11 +39,14 @@ public class SyntaxAnalyzer {
         System.out.println("expression operation:");
         System.out.println(operation);
 
-        while (operation.isLogicalOperator()) {
+        if (operation.isLogicalOperator()) {
             firstArgument = ExpressionTree.makeTree((DefaultToken) operation, firstArgument, inequationOperand());
             System.out.println("expression addendum:");
             System.out.println(firstArgument);
-            operation = (DefaultToken) this.lexicalAnalyzer.readToken();
+            operation = this.lexicalAnalyzer.readToken();
+            if (operation.isLogicalOperator()) {
+                throw new IllegalArgumentException("expression can not contain more than 1 logical operator");
+            }
             System.out.println("expression operation:");
             System.out.println(operation);
         }
@@ -207,6 +210,6 @@ public class SyntaxAnalyzer {
         }
 
 
-        throw new IllegalSyntaxException("token: " + token + " is used wrongly");
+        throw new IllegalSyntaxException("token: " + this.lexicalAnalyzer.getLastToken() + " is used wrongly");
     }
 }

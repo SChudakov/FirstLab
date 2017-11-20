@@ -58,6 +58,11 @@ public class DefaultToken implements Token,Serializable {
         this.tokenType = tokenType;
     }
 
+    public DefaultToken(Object token, TokenType tokenType) {
+        this.token = token;
+        this.tokenType = tokenType;
+    }
+
     public DefaultToken(Object token, TokenType tokenType, DefaultToken leftToken, DefaultToken rightToken) {
         this.token = token;
         this.tokenType = tokenType;

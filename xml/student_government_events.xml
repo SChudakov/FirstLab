@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<tns:events xmlns:tns="sschudakov"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="sschudakov student_government_events.xsd">
+
+    <event>
+        <last_firs_middle_names>
+            <first_name></first_name>
+            <last_name></last_name>
+            <middle_name></middle_name>
+        </last_firs_middle_names>
+        <faculty></faculty>
+        <sub-faculty></sub-faculty>
+        <branch-of-study></branch-of-study>
+        <time>
+            <begin></begin>
+            <end></end>
+        </time>
+    </event>
+
+    <event>
+        <last_firs_middle_names>
+            <first_name></first_name>
+            <last_name></last_name>
+            <middle_name></middle_name>
+        </last_firs_middle_names>
+        <faculty></faculty>
+        <sub-faculty></sub-faculty>
+        <branch-of-study></branch-of-study>
+        <time>
+            <begin></begin>
+            <end></end>
+        </time>
+    </event>
+
+    <event>
+        <last_firs_middle_names>
+            <first_name></first_name>
+            <last_name></last_name>
+            <middle_name></middle_name>
+        </last_firs_middle_names>
+        <faculty></faculty>
+        <sub-faculty></sub-faculty>
+        <branch-of-study></branch-of-study>
+        <time>
+            <begin></begin>
+            <end></end>
+        </time>
+    </event>
+
+</tns:events>

@@ -19,7 +19,7 @@ public class XMLStAXParser {
 //            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
 //            factory.setNamespaceAware(true);
 //            xmlParser = factory.newPullParser();
-//            xmlParser.setInput(new FileReader(fileName));
+//            xmlParser.setInput(new FileContentReader(fileName));
 //        } catch (XmlPullParserException | FileNotFoundException e) {
 //            e.printStackTrace();
 //        }
