@@ -1,4 +1,9 @@
-package com.sschudakov.xml;
+package com.sschudakov.xml.parsers;
+
+import com.sschudakov.xml.Mail;
+import com.sschudakov.xml.XMLDomCreater;
+import com.sschudakov.xml.XMLSAXParser;
+import com.sschudakov.xml.XMLStAXCreater;
 
 import java.util.List;
 

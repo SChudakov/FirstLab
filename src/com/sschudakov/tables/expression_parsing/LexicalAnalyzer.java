@@ -256,6 +256,8 @@ public class LexicalAnalyzer {
     }
 
     private DefaultToken handleAtomicToken() {
+
+
         System.out.println("handleAtomicToken");
         char character = this.expression.readCharacter();
         DefaultToken result = new DefaultToken();

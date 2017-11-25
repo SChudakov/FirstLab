@@ -4,11 +4,11 @@
             xsi:schemaLocation="sschudakov student_government_events.xsd">
 
     <event>
-        <last_firs_middle_names>
+        <last_firs_middle_name>
             <first_name></first_name>
             <last_name></last_name>
             <middle_name></middle_name>
-        </last_firs_middle_names>
+        </last_firs_middle_name>
         <faculty></faculty>
         <sub-faculty></sub-faculty>
         <branch-of-study></branch-of-study>
@@ -19,11 +19,11 @@
     </event>
 
     <event>
-        <last_firs_middle_names>
+        <last_firs_middle_name>
             <first_name></first_name>
             <last_name></last_name>
             <middle_name></middle_name>
-        </last_firs_middle_names>
+        </last_firs_middle_name>
         <faculty></faculty>
         <sub-faculty></sub-faculty>
         <branch-of-study></branch-of-study>
@@ -34,11 +34,11 @@
     </event>
 
     <event>
-        <last_firs_middle_names>
+        <last_firs_middle_name>
             <first_name></first_name>
             <last_name></last_name>
             <middle_name></middle_name>
-        </last_firs_middle_names>
+        </last_firs_middle_name>
         <faculty></faculty>
         <sub-faculty></sub-faculty>
         <branch-of-study></branch-of-study>

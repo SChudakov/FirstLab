@@ -1,5 +1,6 @@
-package com.sschudakov.xml;
+package com.sschudakov.xml.parsers;
 
+import com.sschudakov.xml.MyErrorHandler;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

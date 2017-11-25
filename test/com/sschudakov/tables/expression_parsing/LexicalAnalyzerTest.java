@@ -228,7 +228,7 @@ public class LexicalAnalyzerTest {
 
     @Test(timeout = 100)
     public void lastTokenWhileGivingBackTest() {
-        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression(CURRENT_TOKEN_WHILE_GIVING_BACK),
+        LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(new Expression(LAST_TOKEN_WHILE_GIVING_BACK),
                 LexicalAnalyzerMode.FULL_OPERATIONS_SET);
 
         Token currentToken = lexicalAnalyzer.readToken();

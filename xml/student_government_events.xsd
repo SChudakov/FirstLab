@@ -1,16 +1,16 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="sschudakov" targetNamespace="sschudakov">
-    <element name="events" type="tns:events"/>
-
-    <complexType name="events">
+    <element name="events">
+        <complexType>
         <sequence>
             <element name="event" type="tns:event" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
     </complexType>
+    </element>
 
     <complexType name="event">
         <sequence>
-            <element name="last_firs_middle_names" type="tns:last_firs_middle_names"/>
+            <element name="last_firs_middle_name" type="tns:last_firs_middle_name"/>
             <element name="faculty" type="string"/>
             <element name="sub-faculty" type="string"/>
             <element name="branch-of-study" type="string"/>
@@ -18,7 +18,7 @@
         </sequence>
     </complexType>
 
-    <complexType name="last_firs_middle_names">
+    <complexType name="last_firs_middle_name">
         <sequence>
             <element name="first_name" type="string"/>
             <element name="last_name" type="string"/>

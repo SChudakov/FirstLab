@@ -1,4 +1,4 @@
-package com.sschudakov.xml;
+package com.sschudakov.xml.parsers;
 
 import java.util.List;
 
