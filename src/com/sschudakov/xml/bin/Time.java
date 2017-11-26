@@ -8,11 +8,7 @@
 
 package com.sschudakov.xml.bin;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
@@ -49,6 +45,14 @@ public class Time {
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar end;
+
+    public Time() {
+    }
+
+    public Time(XMLGregorianCalendar begin, XMLGregorianCalendar end) {
+        this.begin = begin;
+        this.end = end;
+    }
 
     /**
      * Gets the value of the begin property.
@@ -98,4 +102,11 @@ public class Time {
         this.end = value;
     }
 
+    @Override
+    public String toString() {
+        return "{\n" +
+                "begin: " + this.begin + ",\n" +
+                "end: " + this.end + "\n" +
+                "}";
+    }
 }

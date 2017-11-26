@@ -1,6 +1,5 @@
 package com.sschudakov.xml.parsers;
 
-import com.sschudakov.xml.MyErrorHandler;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -31,21 +30,18 @@ public class DocumentReader {
         Document result = null;
 
 		try {
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
 
-			factory.setNamespaceAware(true);
+			builderFactory.setNamespaceAware(true);
 
 			// set validation
-			factory.setValidating(true);
-			factory.setAttribute(JAXP_SCHEMA_LANGUAGE, W3C_XML_SCHEMA);
+			builderFactory.setValidating(true);
+			builderFactory.setAttribute(JAXP_SCHEMA_LANGUAGE, W3C_XML_SCHEMA);
 
-			DocumentBuilder dBuilder = factory.newDocumentBuilder();
-
-			// error handler
-			dBuilder.setErrorHandler(new MyErrorHandler("dom_parsing.log"));
+			DocumentBuilder documentBuilder = builderFactory.newDocumentBuilder();
 
 			// Obtain the document
-            result = dBuilder.parse(new File(filename));
+            result = documentBuilder.parse(new File(filename));
 
 		} catch (SAXException | IOException e) {
 			e.printStackTrace();

@@ -8,12 +8,12 @@
 
 package com.sschudakov.xml.bin;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -44,6 +44,13 @@ public class Events {
 
     protected List<Event> event;
 
+    public Events() {
+    }
+
+    public Events(List<Event> event) {
+        this.event = event;
+    }
+
     /**
      * Gets the value of the event property.
      * 
@@ -73,4 +80,8 @@ public class Events {
         return this.event;
     }
 
+    @Override
+    public String toString() {
+        return this.event.toString();
+    }
 }

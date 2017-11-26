@@ -146,7 +146,7 @@ public class XMLSAXParser extends DefaultHandler {
     public void characters(char ch[], int start, int length) throws SAXException {
         // depending on flags read tags values and put them into Mail object
         if (isMailId) {
-            theMail.mail_internal_number = Integer.parseInt(new String(ch, start, length));
+//            theMail.mail_internal_number = Integer.parseInt(new String(ch, start, length));
             isMailId = false;
         } else {
             if (isMailFrom) {

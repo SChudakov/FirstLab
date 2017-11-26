@@ -50,6 +50,15 @@ public class LastFirstMiddleName {
     @XmlElement(name = "middle_name", required = true)
     protected String middleName;
 
+    public LastFirstMiddleName() {
+    }
+
+    public LastFirstMiddleName(String firstName, String lastName, String middleName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+    }
+
     /**
      * Gets the value of the firstName property.
      * 
@@ -122,4 +131,12 @@ public class LastFirstMiddleName {
         this.middleName = value;
     }
 
+    @Override
+    public String toString() {
+        return "{\n" +
+                "first name: " + this.firstName + ",\n" +
+                "middle name: " + this.middleName + ",\n" +
+                "last name: " + this.lastName + "\n" +
+                "}";
+    }
 }

@@ -21,8 +21,8 @@
     <complexType name="last_first_middle_name">
         <sequence>
             <element name="first_name" type="string"/>
-            <element name="last_name" type="string"/>
             <element name="middle_name" type="string"/>
+            <element name="last_name" type="string"/>
         </sequence>
     </complexType>
 

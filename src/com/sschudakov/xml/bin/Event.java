@@ -58,6 +58,17 @@ public class Event {
     @XmlElement(required = true)
     protected Time time;
 
+    public Event() {
+    }
+
+    public Event(LastFirstMiddleName lastFirstMiddleName, String faculty, String subFaculty, String branchOfStudy, Time time) {
+        this.lastFirstMiddleName = lastFirstMiddleName;
+        this.faculty = faculty;
+        this.subFaculty = subFaculty;
+        this.branchOfStudy = branchOfStudy;
+        this.time = time;
+    }
+
     /**
      * Gets the value of the lastFirstMiddleName property.
      * 
@@ -178,4 +189,14 @@ public class Event {
         this.time = value;
     }
 
+    @Override
+    public String toString() {
+        return "{\n" +
+                "last_first_middle_name: " + this.lastFirstMiddleName + ",\n" +
+                "faculty: " + this.faculty + ",\n" +
+                "sub-faculty: " + this.subFaculty + ",\n" +
+                "branchOfStudy: " + this.branchOfStudy + ",\n" +
+                "time: " + this.time + "\n" +
+                "}";
+    }
 }

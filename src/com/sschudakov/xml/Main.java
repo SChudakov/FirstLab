@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        Document document = XMLDOMParser.parse(PATH_TO_FILE);
-//        for (Tariff tariff : EventsDocumnetDOMParser.parse(document)) {
+//        for (Tariff tariff : EventsDocumentDOMParser.parse(document)) {
 //            System.out.println(tariff);
 //        }
     }
