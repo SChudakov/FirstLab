@@ -1,8 +1,10 @@
-package com.sschudakov.lesson_9;
+package com.sschudakov.xml.parsers;
 
 import com.sschudakov.lesson_9.bin.CallPrices;
 import com.sschudakov.lesson_9.bin.Parameters;
 import com.sschudakov.lesson_9.bin.Tariff;
+import com.sschudakov.xml.bin.Event;
+import com.sschudakov.xml.bin.Events;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -13,10 +15,10 @@ import java.util.List;
 /**
  * Created by Semen Chudakov on 18.11.2017.
  */
-public class TariffsDocumentParser {
+public class EventsDocumnetDOMParser {
 
-    public static List<Tariff> parse(Document document) {
-        List<Tariff> result = new ArrayList<>();
+    public static List<Events> parse(Document document) {
+        List<Events> result = new ArrayList<>();
 
         Node tariffsNode = document.getChildNodes().item(0);
         System.out.println("\n\n");
@@ -36,7 +38,7 @@ public class TariffsDocumentParser {
         return result;
     }
 
-    private static Tariff parseTariff(Node tariff) {
+    private static Event parseTariff(Node tariff) {
 //        if (tariff.getNodeType() == Node.ELEMENT_NODE) {
         if (!tariff.getNodeName().equals("tariff")) {
             System.out.println("node name: " + tariff.getNodeName());
@@ -49,7 +51,7 @@ public class TariffsDocumentParser {
         }
 
 
-        Tariff result = new Tariff(
+        Event result = new Event(
                 parseTariffName(tariffNodes.item(1)),
                 parseOperatorName(tariffNodes.item(3)),
                 parsePayroll(tariffNodes.item(5)),
@@ -62,7 +64,7 @@ public class TariffsDocumentParser {
         return result;
     }
 
-    private static String parseTariffName(Node tariffName) {
+    private static LastFirsMiddleName parseTariffName(Node tariffName) {
         if (!tariffName.getNodeName().equals("name")) {
             throw new IllegalArgumentException("node " + tariffName + " is not a tariff name node");
         }

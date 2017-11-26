@@ -1,4 +1,4 @@
-package com.sschudakov.lesson_9;
+package com.sschudakov.xml;
 
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;

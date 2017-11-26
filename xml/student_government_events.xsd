@@ -10,7 +10,7 @@
 
     <complexType name="event">
         <sequence>
-            <element name="last_firs_middle_name" type="tns:last_firs_middle_name"/>
+            <element name="last_first_middle_name" type="tns:last_first_middle_name"/>
             <element name="faculty" type="string"/>
             <element name="sub-faculty" type="string"/>
             <element name="branch-of-study" type="string"/>
@@ -18,7 +18,7 @@
         </sequence>
     </complexType>
 
-    <complexType name="last_firs_middle_name">
+    <complexType name="last_first_middle_name">
         <sequence>
             <element name="first_name" type="string"/>
             <element name="last_name" type="string"/>

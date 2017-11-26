@@ -5,7 +5,6 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.sschudakov.xml.parsers.TestXmlParser;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 

@@ -1,5 +1,6 @@
-package com.sschudakov.xml;
+package com.sschudakov.xml.parsers;
 
+import com.sschudakov.xml.Mail;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
