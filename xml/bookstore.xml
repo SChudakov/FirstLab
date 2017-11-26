@@ -1,0 +1,6 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<tns:bookstore xmlns:tns="sschudakov"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="sschudakov bookstore.xsd">
+    <book Category="ads"></book>
+</tns:bookstore>

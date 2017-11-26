@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/LastFirsMiddleName.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TestXmlParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLStAXParser.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/bookstore.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/bookstore.xsd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/DocumentPrinter.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/DocumentPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Event.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/package-info.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xml" afterPath="$PROJECT_DIR$/xml/student_government_events.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xsd" afterPath="$PROJECT_DIR$/xml/student_government_events.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/TariffsDocumentParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumnetDOMParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/XMLSAXParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDomParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/DocumentReader.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,31 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student_government_events.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student_government_events.xsd" pinned="false" current-in-tab="true">
+      <file leaf-file-name="student_government_events.xsd" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding>
                 <element signature="n#sequence#0;n#complexType#0;n#element#0;n#schema#0;n#!!top" expanded="false" />
                 <element signature="n#complexType#2;n#schema#0;n#!!top" expanded="false" />
@@ -67,54 +33,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/DocumentReader.java">
+      <file leaf-file-name="student_government_events.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookstore.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/bookstore.xsd">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="28" column="15" lean-forward="false" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-              <folding>
-                <element signature="docComment;class#DocumentReader#0" expanded="false" />
-                <element signature="docComment;method#readDocument#0;class#DocumentReader#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsDocumnetDOMParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumnetDOMParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="66" column="37" lean-forward="false" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+              <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Main.java">
+      <file leaf-file-name="bookstore.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/bookstore.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XMLSAXParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="docComment;class#XMLSAXParser#0" expanded="false" />
-                <element signature="docComment;method#XMLSAXParser#0;class#XMLSAXParser#0" expanded="false" />
-                <element signature="method#XMLSAXParser#0;class#XMLSAXParser#0" expanded="false" />
-                <element signature="docComment;method#getSaxTariffs#0;class#XMLSAXParser#0" expanded="false" />
-                <element signature="method#getSaxTariffs#0;class#XMLSAXParser#0" expanded="false" />
-                <element signature="method#startElement#0;class#XMLSAXParser#0" expanded="false" />
-                <element signature="method#endElement#0;class#XMLSAXParser#0" expanded="false" />
-                <element signature="method#characters#0;class#XMLSAXParser#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/Saver.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TextFileSaver.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/Node.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/CyclesFinder.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/CyclesFinder.java" />
@@ -242,6 +184,8 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TariffsDocumentParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumnetDOMParser.java" />
         <option value="$PROJECT_DIR$/xml/student_government_events.xsd" />
+        <option value="$PROJECT_DIR$/xml/bookstore.xml" />
+        <option value="$PROJECT_DIR$/xml/bookstore.xsd" />
       </list>
     </option>
   </component>
@@ -770,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511200753651</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[26.11.17]">
+      <created>1511724503541</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1511724503542</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -886,7 +837,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;7. remove NullPointeException while removing files&#10;13. fix Abstrat Fzctory #2&#10;15. fix desplaying files after move: (the way for the file to be reloaded is changed thile operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="final commit_1" />
@@ -911,7 +861,8 @@
     <MESSAGE value="[18.11.17] - xml start" />
     <MESSAGE value="[18.11.17] - xml start all files" />
     <MESSAGE value="[20.11.17] - unit tests + try to check uf there is aby changes in JTable" />
-    <option name="LAST_COMMIT_MESSAGE" value="[20.11.17] - unit tests + try to check uf there is aby changes in JTable" />
+    <MESSAGE value="[26.11.17]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[26.11.17]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,14 +875,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/exceptions/SyntaxException.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/exceptions/IllegalTokenException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/exceptions/IllegalSyntaxException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1282,23 +1225,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+    <entry file="file://$PROJECT_DIR$/xml/bookstore.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        <state relative-caret-position="68">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/bookstore.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           <folding>
             <element signature="n#sequence#0;n#complexType#0;n#element#0;n#schema#0;n#!!top" expanded="false" />
             <element signature="n#complexType#2;n#schema#0;n#!!top" expanded="false" />
             <element signature="n#sequence#0;n#complexType#2;n#schema#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
