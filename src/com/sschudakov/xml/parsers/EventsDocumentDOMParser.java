@@ -8,6 +8,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,26 +18,8 @@ import java.util.List;
  */
 public class EventsDocumentDOMParser {
 
-    private static final String EVENTS = "tns:events";
-    private static final String EVENT = "event";
 
-    private static final String LAST_FIRST_MIDDLE_NAME = "last_first_middle_name";
-
-    private static final String FIRST_NAME = "first_name";
-    private static final String MIDDLE_NAME = "middle_name";
-    private static final String LAST_NAME = "last_name";
-
-    private static final String FACULTY = "faculty";
-    private static final String SUB_FACULTY = "sub-faculty";
-    private static final String BRANCH_OF_STUDY = "branch-of-study";
-
-    private static final String TIME = "time";
-
-    private static final String BEGIN = "begin";
-    private static final String END = "end";
-
-
-    public static Events parse(Document document) {
+    public static Events parse(Document document) throws DatatypeConfigurationException {
 
         NodeList nodeList = document.getChildNodes();
         Node events = nodeList.item(0);
@@ -44,9 +27,9 @@ public class EventsDocumentDOMParser {
         return parseEvents(events);
     }
 
-    private static Events parseEvents(Node events) {
-        if (!events.getNodeName().equals(EVENTS)) {
-            throw new IllegalArgumentException("node " + events + " is not a " + EVENTS + " node");
+    private static Events parseEvents(Node events) throws DatatypeConfigurationException {
+        if (!events.getNodeName().equals(TagNames.EVENTS)) {
+            throw new IllegalArgumentException("node " + events + " is not a " + TagNames.EVENTS + " node");
         }
 
         List<Event> list = new ArrayList<>();
@@ -54,7 +37,7 @@ public class EventsDocumentDOMParser {
 
         for (int i = 0; i < eventsNodes.getLength(); i++) {
             if (i % 2 == 1) {
-                if (eventsNodes.item(i).getNodeName().equals(EVENT)) {
+                if (eventsNodes.item(i).getNodeName().equals(TagNames.EVENT)) {
                     list.add(parseEvent(eventsNodes.item(i)));
                 }
             }
@@ -62,9 +45,9 @@ public class EventsDocumentDOMParser {
         return new Events(list);
     }
 
-    private static Event parseEvent(Node event) {
-        if (!event.getNodeName().equals(EVENT)) {
-            throw new IllegalArgumentException("node " + event + " is not a" + EVENT + " node");
+    private static Event parseEvent(Node event) throws DatatypeConfigurationException {
+        if (!event.getNodeName().equals(TagNames.EVENT)) {
+            throw new IllegalArgumentException("node " + event + " is not a" + TagNames.EVENT + " node");
         }
         NodeList tariffNodes = event.getChildNodes();
 
@@ -81,8 +64,8 @@ public class EventsDocumentDOMParser {
     }
 
     private static LastFirstMiddleName parseLastFirstMiddleName(Node lastFirstMiddleName) {
-        if (!lastFirstMiddleName.getNodeName().equals(LAST_FIRST_MIDDLE_NAME)) {
-            throw new IllegalArgumentException("node " + lastFirstMiddleName + " is not a " + LAST_FIRST_MIDDLE_NAME + " node");
+        if (!lastFirstMiddleName.getNodeName().equals(TagNames.LAST_FIRST_MIDDLE_NAME)) {
+            throw new IllegalArgumentException("node " + lastFirstMiddleName + " is not a " + TagNames.LAST_FIRST_MIDDLE_NAME + " node");
         }
 
         NodeList list = lastFirstMiddleName.getChildNodes();
@@ -94,52 +77,52 @@ public class EventsDocumentDOMParser {
     }
 
     private static String parseFirstName(Node firstName) {
-        if (!firstName.getNodeName().equals(FIRST_NAME)) {
-            throw new IllegalArgumentException("node " + firstName + " is not a" + FIRST_NAME + " node");
+        if (!firstName.getNodeName().equals(TagNames.FIRST_NAME)) {
+            throw new IllegalArgumentException("node " + firstName + " is not a" + TagNames.FIRST_NAME + " node");
         }
         return firstName.getTextContent();
     }
 
     private static String parseMiddleName(Node middleName) {
-        if (!middleName.getNodeName().equals(MIDDLE_NAME)) {
-            throw new IllegalArgumentException("node " + middleName + " is not a" + MIDDLE_NAME + " node");
+        if (!middleName.getNodeName().equals(TagNames.MIDDLE_NAME)) {
+            throw new IllegalArgumentException("node " + middleName + " is not a" + TagNames.MIDDLE_NAME + " node");
         }
         return middleName.getTextContent();
     }
 
     private static String parseLastName(Node lastName) {
-        if (!lastName.getNodeName().equals(LAST_NAME)) {
-            throw new IllegalArgumentException("node " + lastName + " is not a" + LAST_NAME + " node");
+        if (!lastName.getNodeName().equals(TagNames.LAST_NAME)) {
+            throw new IllegalArgumentException("node " + lastName + " is not a" + TagNames.LAST_NAME + " node");
         }
         return lastName.getTextContent();
     }
 
 
     private static String parseFaculty(Node faculty) {
-        if (!faculty.getNodeName().equals(FACULTY)) {
-            throw new IllegalArgumentException("node " + faculty + " is not a" + FACULTY + " node");
+        if (!faculty.getNodeName().equals(TagNames.FACULTY)) {
+            throw new IllegalArgumentException("node " + faculty + " is not a" + TagNames.FACULTY + " node");
         }
         return faculty.getTextContent();
     }
 
     private static String parseSubFaculty(Node subFaculty) {
-        if (!subFaculty.getNodeName().equals(SUB_FACULTY)) {
-            throw new IllegalArgumentException("node " + subFaculty + " is not a" + SUB_FACULTY + " node");
+        if (!subFaculty.getNodeName().equals(TagNames.SUB_FACULTY)) {
+            throw new IllegalArgumentException("node " + subFaculty + " is not a" + TagNames.SUB_FACULTY + " node");
         }
         return subFaculty.getTextContent();
     }
 
     private static String parseBranchOfStudy(Node branchOfStudy) {
-        if (!branchOfStudy.getNodeName().equals(BRANCH_OF_STUDY)) {
-            throw new IllegalArgumentException("node " + branchOfStudy + " is not a " + BRANCH_OF_STUDY + " node");
+        if (!branchOfStudy.getNodeName().equals(TagNames.BRANCH_OF_STUDY)) {
+            throw new IllegalArgumentException("node " + branchOfStudy + " is not a " + TagNames.BRANCH_OF_STUDY + " node");
         }
         return branchOfStudy.getTextContent();
     }
 
 
-    private static Time parseTime(Node time) {
-        if (!time.getNodeName().equals(TIME)) {
-            throw new IllegalArgumentException("node " + time + " is not a " + TIME + " node");
+    private static Time parseTime(Node time) throws DatatypeConfigurationException {
+        if (!time.getNodeName().equals(TagNames.TIME)) {
+            throw new IllegalArgumentException("node " + time + " is not a " + TagNames.TIME + " node");
         }
         NodeList list = time.getChildNodes();
         return new Time(
@@ -148,20 +131,18 @@ public class EventsDocumentDOMParser {
         );
     }
 
-    private static XMLGregorianCalendar parseBegin(Node begin) {
-//        NodeList prices = begin.getChildNodes();
-//        Parameters result = new Parameters(
-//                parseEnds(prices.item(0)),
-//                parseBilling(prices.item(1)),
-//                parseInvolvementPrice(prices.item(2))
-//        );
-
-
-        return null;
+    private static XMLGregorianCalendar parseBegin(Node begin) throws DatatypeConfigurationException {
+        if (!begin.getNodeName().equals(TagNames.BEGIN)) {
+            throw new IllegalArgumentException("node " + begin + " is not a " + TagNames.BEGIN + " node");
+        }
+        return XMLDateParser.parse(begin.getTextContent());
     }
 
-    private static XMLGregorianCalendar parseEnds(Node end) {
+    private static XMLGregorianCalendar parseEnds(Node end) throws DatatypeConfigurationException {
 
-        return null;
+        if (!end.getNodeName().equals(TagNames.END)) {
+            throw new IllegalArgumentException("node " + end + " is not a " + TagNames.END + " node");
+        }
+        return XMLDateParser.parse(end.getTextContent());
     }
 }

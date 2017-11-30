@@ -5,23 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/MyErrorHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/TestXmlParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/XMLDomParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/XMLSAXParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/XMLStAXParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumnetDOMParser.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TagNames.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDateParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParserTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/bookstore.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/bookstore.xsd" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Event.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Event.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/LastFirstMiddleName.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/LastFirstMiddleName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/DocumentReader.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/DocumentReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xml" afterPath="$PROJECT_DIR$/xml/student_government_events.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xsd" afterPath="$PROJECT_DIR$/xml/student_government_events.xsd" />
     </list>
@@ -35,35 +29,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="student_government_events.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+      <file leaf-file-name="EventsDocumentSAXParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding>
-                <element signature="n#event#0;n#tns:events#0;n#!!top" expanded="false" />
-                <element signature="n#last_first_middle_name#0;n#event#0;n#tns:events#0;n#!!top" expanded="false" />
-                <element signature="n#time#0;n#event#0;n#tns:events#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="-1615">
+              <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventsDocumentDOMParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java">
+      <file leaf-file-name="student_government_events.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+            <state relative-caret-position="272">
+              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student_government_events.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding>
-                <element signature="docComment;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="method#parse#0;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="method#parseEvents#0;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="method#parseEvent#0;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="method#parseLastFirstMiddleName#0;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="method#parseTime#0;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="method#parseBegin#0;class#EventsDocumentDOMParser#0" expanded="false" />
-                <element signature="e#5341#5391#0" expanded="false" />
-                <element signature="method#parseEnds#0;class#EventsDocumentDOMParser#0" expanded="false" />
+                <element signature="n#complexType#2;n#schema#0;n#!!top" expanded="false" />
+                <element signature="n#sequence#0;n#complexType#2;n#schema#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,25 +66,9 @@
         <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Events.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-              <folding>
-                <element signature="docComment;class#Events#0" expanded="false" />
-                <element signature="e#1143#1180#0" expanded="false" />
-                <element signature="method#Events#0;class#Events#0" expanded="false" />
-                <element signature="docComment;method#getEvent#0;class#Events#0" expanded="false" />
-                <element signature="method#getEvent#0;class#Events#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -111,7 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.</find>
       <find>getget</find>
       <find>invalid_argument</find>
       <find>char(0)</find>
@@ -141,6 +117,7 @@
       <find>tokensAreGivenBackCorrectly</find>
       <find>Date</find>
       <find>System</find>
+      <find>private</find>
     </findStrings>
     <replaceStrings>
       <replace>Token</replace>
@@ -156,6 +133,7 @@
       <replace>System.out.println</replace>
       <replace>DefaultToken</replace>
       <replace>TokenType</replace>
+      <replace>public</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -169,12 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/exceptions/SyntaxException.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableCell.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/NumberedTableModel.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/utils/MeshNameParser.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/LexicalAnalyzerMode.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/exceptions/IllegalTokenException.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/exceptions/IllegalSyntaxException.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/ExpressionTreeTest.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/SyntaxAnalyzerTest.java" />
@@ -205,21 +177,27 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDomParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/DocumentPrinter.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TariffsDocumentParser.java" />
-        <option value="$PROJECT_DIR$/xml/bookstore.xml" />
         <option value="$PROJECT_DIR$/xml/bookstore.xsd" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/DocumentReader.java" />
-        <option value="$PROJECT_DIR$/xml/student_government_events.xsd" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Event.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/LastFirstMiddleName.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumnetDOMParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumetDOMParser.java" />
+        <option value="$PROJECT_DIR$/xml/libarary.xml" />
+        <option value="$PROJECT_DIR$/xml/bookstore.xml" />
+        <option value="$PROJECT_DIR$/xml/student_government_events.xsd" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TagNames.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" />
-        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParserTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java" />
         <option value="$PROJECT_DIR$/xml/student_government_events.xml" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDateParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" />
       </list>
     </option>
   </component>
@@ -271,6 +249,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,9 +321,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,6 +382,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="EventsDocumentSAXParserTest.parseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sschudakov.xml.parsers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FirstLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.xml.parsers" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.xml.parsers.EventsDocumentSAXParserTest" />
+      <option name="METHOD_NAME" value="parseTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="LexicalAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -418,31 +421,6 @@
       <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="LexicalAnalyzerTest.currentTokenWhileGivingBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="FirstLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
-      <option name="METHOD_NAME" value="currentTokenWhileGivingBackTest" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -515,18 +493,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.currentTokenWhileGivingBackTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EventsDocumentSAXParserTest.parseTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.currentTokenWhileGivingBackTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EventsDocumentSAXParserTest.parseTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
       </list>
     </recent_temporary>
   </component>
@@ -773,36 +751,43 @@
       <option name="project" value="LOCAL" />
       <updated>1511724503542</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="[26.11.17] 3">
+      <created>1511731934213</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1511731934214</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 08m 41s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 09m 59s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 10m 10s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 12m 09s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 12m 37s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 14m 14s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 15m 06s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 15m 54s.xml">
       <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 16m 39s.xml">
       <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.30 at 20h 13m 07s.xml">
+      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 19h 53m 11s.xml">
+      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 19h 53m 54s.xml">
+      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 19h 54m 55s.xml">
+      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 20h 00m 31s.xml">
+      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 20h 02m 28s.xml">
+      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 20h 03m 40s.xml">
+      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LexicalAnalyzerTest_lastTokenWhileReadingTest - 2017.11.20 at 19h 42m 30s.xml">
       <configuration name="LexicalAnalyzerTest.lastTokenWhileReadingTest" configurationId="JUnit" />
@@ -834,7 +819,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -889,7 +874,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="final commit_1" />
     <MESSAGE value="everything except for the finding similar words in test" />
@@ -914,7 +898,8 @@
     <MESSAGE value="[18.11.17] - xml start all files" />
     <MESSAGE value="[20.11.17] - unit tests + try to check uf there is aby changes in JTable" />
     <MESSAGE value="[26.11.17]" />
-    <option name="LAST_COMMIT_MESSAGE" value="[26.11.17]" />
+    <MESSAGE value="[26.11.17] 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="[26.11.17] 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -922,53 +907,15 @@
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/FinalToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/TokenType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXCreater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomCreater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/InputStreamReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1001,10 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="false" />
-            <element signature="e#5784#5785#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1033,12 +976,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-          <folding>
-            <element signature="docComment;class#TableSaver#0" expanded="false" />
-            <element signature="e#456#457#0" expanded="false" />
-            <element signature="e#483#484#0" expanded="false" />
-            <element signature="method#ensureFileIsNotNull#0;class#TableSaver#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,7 +1057,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#442#0" expanded="true" />
+            <element signature="e#0#442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1130,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,111 +1084,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/bookstore.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml/bookstore.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="149" column="14" lean-forward="false" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
-          <folding>
-            <element signature="docComment;class#XMLSAXParser#0" expanded="false" />
-            <element signature="docComment;method#XMLSAXParser#0;class#XMLSAXParser#0" expanded="false" />
-            <element signature="method#XMLSAXParser#0;class#XMLSAXParser#0" expanded="false" />
-            <element signature="docComment;method#getSaxTariffs#0;class#XMLSAXParser#0" expanded="false" />
-            <element signature="method#getSaxTariffs#0;class#XMLSAXParser#0" expanded="false" />
-            <element signature="method#startElement#0;class#XMLSAXParser#0" expanded="false" />
-            <element signature="method#endElement#0;class#XMLSAXParser#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/bookstore.xsd" />
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/MyErrorHandler.java" />
-    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding>
-            <element signature="n#sequence#0;n#complexType#0;n#element#0;n#schema#0;n#!!top" expanded="false" />
-            <element signature="n#complexType#2;n#schema#0;n#!!top" expanded="false" />
-            <element signature="n#sequence#0;n#complexType#2;n#schema#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/xml/datatype/XMLGregorianCalendar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="182" column="22" lean-forward="false" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#XMLGregorianCalendar#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#XMLGregorianCalendar#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#clear#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#reset#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setYear#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setYear#1;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setMonth#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setDay#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setTimezone#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setTime#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#setTime#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setHour#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setMinute#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setSecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setMillisecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setFractionalSecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setTime#1;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#setTime#1;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#setTime#2;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#setTime#2;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getEon#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getYear#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getEonAndYear#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getMonth#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getDay#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getTimezone#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getHour#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getMinute#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getSecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getMillisecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#getMillisecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getFractionalSecond#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#compare#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#normalize#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#equals#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#hashCode#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#hashCode#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="e#29304#29374#0" expanded="false" />
-            <element signature="docComment;method#toXMLFormat#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getXMLSchemaType#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="method#toString#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#isValid#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#add#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#toGregorianCalendar#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#toGregorianCalendar#1;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#getTimeZone#0;class#XMLGregorianCalendar#0" expanded="false" />
-            <element signature="docComment;method#clone#0;class#XMLGregorianCalendar#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1260,145 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="518" column="40" lean-forward="false" selection-start-line="518" selection-start-column="36" selection-end-line="518" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;field#MIN#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;field#MAX#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;field#serialVersionUID#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;field#date#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;field#time#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#now#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#now#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#now#2;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#now#2;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#2;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#2;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#3;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#3;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#4;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#4;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#5;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#5;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#of#6;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#of#6;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#ofInstant#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#ofInstant#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#ofEpochSecond#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#ofEpochSecond#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#from#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#from#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#parse#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#parse#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#parse#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#LocalDateTime#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#LocalDateTime#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#with#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#isSupported#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#isSupported#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#isSupported#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#range#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#range#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#get#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#get#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getLong#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#getLong#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#toLocalDate#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getYear#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getMonthValue#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getMonth#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getDayOfMonth#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getDayOfYear#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getDayOfWeek#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#toLocalTime#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getHour#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getMinute#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getSecond#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#getNano#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#with#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#with#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#with#2;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#with#2;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withYear#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withMonth#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withDayOfMonth#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withDayOfYear#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withHour#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#withHour#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withMinute#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#withMinute#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withSecond#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#withSecond#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#withNano#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#withNano#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#truncatedTo#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plus#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plus#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plus#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plus#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusYears#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plusYears#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusMonths#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plusMonths#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusWeeks#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plusWeeks#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusDays#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plusDays#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusHours#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusMinutes#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusSeconds#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusNanos#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minus#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#minus#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minus#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#minus#1;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusYears#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#minusYears#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusMonths#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#minusMonths#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusWeeks#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#minusWeeks#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusDays#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#minusDays#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusHours#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusMinutes#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusSeconds#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#minusNanos#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#plusWithOverflow#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#plusWithOverflow#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#query#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="e#71710#71740#0" expanded="false" />
-            <element signature="e#71710#71740#0" expanded="false" />
-            <element signature="method#query#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#adjustInto#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#until#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#until#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#format#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#format#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#atOffset#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#atZone#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#compareTo#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#compareTo#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#compareTo0#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#isAfter#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#isAfter#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#isBefore#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#isBefore#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#isEqual#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#isEqual#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#equals#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#hashCode#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#writeReplace#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="docComment;method#readObject#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#readObject#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#writeExternal#0;class#LocalDateTime#0" expanded="false" />
-            <element signature="method#readExternal#0;class#LocalDateTime#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1406,19 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding>
-            <element signature="docComment;class#Time#0" expanded="false" />
-            <element signature="e#1069#1106#0" expanded="false" />
-            <element signature="e#1196#1224#0" expanded="false" />
-            <element signature="e#1309#1337#0" expanded="false" />
-            <element signature="method#Time#0;class#Time#0" expanded="false" />
-            <element signature="method#Time#1;class#Time#0" expanded="false" />
-            <element signature="docComment;method#getBegin#0;class#Time#0" expanded="false" />
-            <element signature="docComment;method#setBegin#0;class#Time#0" expanded="false" />
-            <element signature="docComment;method#getEnd#0;class#Time#0" expanded="false" />
-            <element signature="docComment;method#setEnd#0;class#Time#0" expanded="false" />
-            <element signature="method#toString#0;class#Time#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1426,22 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="docComment;class#Event#0" expanded="false" />
-            <element signature="e#1432#1469#0" expanded="false" />
-            <element signature="method#Event#1;class#Event#0" expanded="false" />
-            <element signature="docComment;method#getLastFirstMiddleName#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#setLastFirstMiddleName#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#getFaculty#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#setFaculty#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#getSubFaculty#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#setSubFaculty#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#getBranchOfStudy#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#setBranchOfStudy#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#getTime#0;class#Event#0" expanded="false" />
-            <element signature="docComment;method#setTime#0;class#Event#0" expanded="false" />
-            <element signature="method#toString#0;class#Event#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1449,19 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-          <folding>
-            <element signature="docComment;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="e#1305#1342#0" expanded="false" />
-            <element signature="method#LastFirstMiddleName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="method#LastFirstMiddleName#1;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="docComment;method#getFirstName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="docComment;method#setFirstName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="docComment;method#getLastName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="docComment;method#setLastName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="docComment;method#getMiddleName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="docComment;method#setMiddleName#0;class#LastFirstMiddleName#0" expanded="false" />
-            <element signature="method#toString#0;class#LastFirstMiddleName#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,61 +1128,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;class#ObjectFactory#0" expanded="false" />
-            <element signature="docComment;method#ObjectFactory#0;class#ObjectFactory#0" expanded="false" />
-            <element signature="method#ObjectFactory#0;class#ObjectFactory#0" expanded="false" />
-            <element signature="docComment;method#createEvents#0;class#ObjectFactory#0" expanded="false" />
-            <element signature="docComment;method#createEvent#0;class#ObjectFactory#0" expanded="false" />
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-            <element signature="e#1652#1653#0" expanded="true" />
-            <element signature="e#1700#1701#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/libarary.xml" />
+    <entry file="file://$PROJECT_DIR$/xml/bookstore.xml" />
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TagNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/org/xml/sax/SAXException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/DocumentReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="363">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
-            <element signature="docComment;class#DocumentReader#0" expanded="false" />
-            <element signature="docComment;method#readDocument#0;class#DocumentReader#0" expanded="false" />
+            <element signature="n#complexType#2;n#schema#0;n#!!top" expanded="false" />
+            <element signature="n#sequence#0;n#complexType#2;n#schema#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1243">
+          <caret line="368" column="16" lean-forward="false" selection-start-line="368" selection-start-column="16" selection-end-line="368" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Events#0" expanded="false" />
             <element signature="e#1143#1180#0" expanded="false" />
             <element signature="method#Events#0;class#Events#0" expanded="false" />
             <element signature="docComment;method#getEvent#0;class#Events#0" expanded="false" />
             <element signature="method#getEvent#0;class#Events#0" expanded="false" />
+            <element signature="e#2364#2365#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="44">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="n#event#0;n#tns:events#0;n#!!top" expanded="false" />
-            <element signature="n#last_first_middle_name#0;n#event#0;n#tns:events#0;n#!!top" expanded="false" />
-            <element signature="n#time#0;n#event#0;n#tns:events#0;n#!!top" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDateParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        <state relative-caret-position="255">
+          <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1532,19 +1221,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+        <state relative-caret-position="221">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding>
             <element signature="docComment;class#EventsDocumentDOMParser#0" expanded="false" />
-            <element signature="method#parse#0;class#EventsDocumentDOMParser#0" expanded="false" />
-            <element signature="method#parseEvents#0;class#EventsDocumentDOMParser#0" expanded="false" />
-            <element signature="method#parseEvent#0;class#EventsDocumentDOMParser#0" expanded="false" />
             <element signature="method#parseLastFirstMiddleName#0;class#EventsDocumentDOMParser#0" expanded="false" />
-            <element signature="method#parseTime#0;class#EventsDocumentDOMParser#0" expanded="false" />
-            <element signature="method#parseBegin#0;class#EventsDocumentDOMParser#0" expanded="false" />
-            <element signature="e#5341#5391#0" expanded="false" />
-            <element signature="method#parseEnds#0;class#EventsDocumentDOMParser#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1615">
+          <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

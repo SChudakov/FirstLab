@@ -9,6 +9,7 @@
     </element>
 
     <complexType name="event">
+
         <sequence>
             <element name="last_first_middle_name" type="tns:last_first_middle_name"/>
             <element name="faculty" type="string"/>
@@ -16,6 +17,7 @@
             <element name="branch-of-study" type="string"/>
             <element name="time" type="tns:time"/>
         </sequence>
+        <attribute name="color" type="string"/>
     </complexType>
 
     <complexType name="last_first_middle_name">

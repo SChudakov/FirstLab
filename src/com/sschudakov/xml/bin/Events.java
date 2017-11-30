@@ -51,6 +51,7 @@ public class Events {
         this.event = event;
     }
 
+
     /**
      * Gets the value of the event property.
      * 
@@ -78,6 +79,10 @@ public class Events {
             event = new ArrayList<Event>();
         }
         return this.event;
+    }
+
+    public void setEvent(List<Event> event) {
+        this.event = event;
     }
 
     @Override

@@ -5,6 +5,8 @@ import com.sschudakov.xml.bin.Events;
 import org.junit.Test;
 import org.w3c.dom.Document;
 
+import javax.xml.datatype.DatatypeConfigurationException;
+
 /**
  * Created by Semen Chudakov on 26.11.2017.
  */
@@ -16,7 +18,12 @@ public class EventsDocumentDOMParserTest {
     public void parseTest() {
         Document document = DocumentReader.readDocument(EVENTS_FILE);
 //        DocumentPrinter.printNode(document, "");
-        Events events = EventsDocumentDOMParser.parse(document);
+        Events events = null;
+        try {
+            events = EventsDocumentDOMParser.parse(document);
+        } catch (DatatypeConfigurationException e) {
+            e.printStackTrace();
+        }
         System.out.println(events);
     }
 }
