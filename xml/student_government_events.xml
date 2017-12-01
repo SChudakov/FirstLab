@@ -16,5 +16,32 @@
             <begin>30-05-2002 19:00</begin>
             <end>30-06-2002 19:00</end>
         </time>
+    </event><event>
+        <last_first_middle_name>
+            <first_name>Semen</first_name>
+            <middle_name>GoodMen</middle_name>
+            <last_name>Chudakov</last_name>
+        </last_first_middle_name>
+        <faculty>Cybernetics</faculty>
+        <sub-faculty>Computer Sciences</sub-faculty>
+        <branch-of-study>Computer Sciences</branch-of-study>
+        <time>
+            <begin>30-05-2002 19:00</begin>
+            <end>30-06-2002 19:00</end>
+        </time>
+    </event>
+    <event>
+        <last_first_middle_name>
+            <first_name>Semen</first_name>
+            <middle_name>GoodMen</middle_name>
+            <last_name>Chudakov</last_name>
+        </last_first_middle_name>
+        <faculty>Cybernetics</faculty>
+        <sub-faculty>Computer Sciences</sub-faculty>
+        <branch-of-study>Computer Sciences</branch-of-study>
+        <time>
+            <begin>30-05-2002 19:00</begin>
+            <end>30-06-2002 19:00</end>
+        </time>
     </event>
 </tns:events>

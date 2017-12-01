@@ -25,14 +25,11 @@ public class EventsSAXParser extends DefaultHandler {
 
     private static final String PATH_TO_SCHEMA = "D:\\Workspace.java\\FirstLab\\xml\\student_government_events.xsd";
 
-    /* Auxiliary fields to construct events */
     private Events events;
     private List<Event> eventList;
     private Event event;
     private LastFirstMiddleName lastFirstMiddleName;
     private Time time;
-
-	/* flags to mark encountered tag */
 
     private boolean isEvents;
     private boolean isEvent;
