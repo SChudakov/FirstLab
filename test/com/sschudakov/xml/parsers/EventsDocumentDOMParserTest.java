@@ -1,6 +1,5 @@
 package com.sschudakov.xml.parsers;
 
-import com.sschudakov.xml.DocumentPrinter;
 import com.sschudakov.xml.bin.Events;
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -20,7 +19,7 @@ public class EventsDocumentDOMParserTest {
 //        DocumentPrinter.printNode(document, "");
         Events events = null;
         try {
-            events = EventsDocumentDOMParser.parse(document);
+            events = EventsDOMParser.parse(document);
         } catch (DatatypeConfigurationException e) {
             e.printStackTrace();
         }

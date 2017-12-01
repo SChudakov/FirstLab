@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by dbriskin on 25.04.2016.
  */
-public class EventsDocumentSAXParser extends DefaultHandler {
+public class EventsSAXParser extends DefaultHandler {
 
     private static final String PATH_TO_SCHEMA = "D:\\Workspace.java\\FirstLab\\xml\\student_government_events.xsd";
 
@@ -80,7 +80,7 @@ public class EventsDocumentSAXParser extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
-        if (qName.equals(TagNames.EVENTS)) {
+        if (qName.equals(TagNames.TNS_EVENTS)) {
             this.events = new Events();
             this.eventList = new ArrayList<>();
             this.isEvents = true;
@@ -125,7 +125,7 @@ public class EventsDocumentSAXParser extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        if (qName.equals(TagNames.EVENTS)) {
+        if (qName.equals(TagNames.TNS_EVENTS)) {
             this.events.setEvent(this.eventList);
             this.eventList = null;
             this.isEvents = false;

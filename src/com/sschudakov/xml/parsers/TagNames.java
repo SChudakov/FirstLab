@@ -4,7 +4,8 @@ package com.sschudakov.xml.parsers;
  * Created by Semen Chudakov on 30.11.2017.
  */
 public class TagNames {
-    public static final String EVENTS = "tns:events";
+    public static final String TNS_EVENTS = "tns:events";
+    public static final String EVENTS = "events";
     public static final String EVENT = "event";
 
     public static final String LAST_FIRST_MIDDLE_NAME = "last_first_middle_name";

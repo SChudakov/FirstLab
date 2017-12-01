@@ -14,7 +14,7 @@ public class EventsDocumentStAXParserTest {
 
     @Test(timeout = 1000)
     public void parseTest() {
-        EventsDocumentStAxParser parser = new EventsDocumentStAxParser(EVENTS_FILE);
+        EventsStAxParser parser = new EventsStAxParser(EVENTS_FILE);
         try {
             Events events = parser.parse();
             System.out.println(events);

@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by dbriskin on 24.04.2016.
  */
-public class EventsDocumentStAxParser {
+public class EventsStAxParser {
 
     private XmlPullParser xmlPullParser;
 
@@ -27,7 +27,7 @@ public class EventsDocumentStAxParser {
      *
      * @param fileName filename to parse
      */
-    public EventsDocumentStAxParser(String fileName) {
+    public EventsStAxParser(String fileName) {
         try {
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
@@ -57,8 +57,6 @@ public class EventsDocumentStAxParser {
         try {
             while (xmlPullParser.getEventType() != XmlPullParser.END_DOCUMENT) {
                 tagName = xmlPullParser.getName();
-                System.out.println(tagName);
-
                 if (this.xmlPullParser.getEventType() == XmlPullParser.START_TAG) {
                     if (tagName.equals(TagNames.EVENTS)) {
                         events = new Events();
@@ -123,12 +121,13 @@ public class EventsDocumentStAxParser {
                     }
                 }
 
-                if (this.xmlPullParser.getEventType() == XmlPullParser.START_TAG) {
+                if (this.xmlPullParser.getEventType() == XmlPullParser.END_TAG) {
                     if (tagName.equals(TagNames.EVENTS)) {
                         events.setEvent(eventList);
                         eventList = null;
                     }
                     if (tagName.equals(TagNames.EVENT)) {
+
                         eventList.add(event);
                         event = null;
                     }
@@ -165,7 +164,8 @@ public class EventsDocumentStAxParser {
 
                     }
                 }
-                xmlPullParser.next();
+
+                this.xmlPullParser.next();
             }
         } catch (XmlPullParserException e) {
             e.printStackTrace();

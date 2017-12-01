@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Semen Chudakov on 18.11.2017.
  */
-public class EventsDocumentDOMParser {
+public class EventsDOMParser {
 
 
     public static Events parse(Document document) throws DatatypeConfigurationException {
@@ -28,8 +28,8 @@ public class EventsDocumentDOMParser {
     }
 
     private static Events parseEvents(Node events) throws DatatypeConfigurationException {
-        if (!events.getNodeName().equals(TagNames.EVENTS)) {
-            throw new IllegalArgumentException("node " + events + " is not a " + TagNames.EVENTS + " node");
+        if (!events.getNodeName().equals(TagNames.TNS_EVENTS)) {
+            throw new IllegalArgumentException("node " + events + " is not a " + TagNames.TNS_EVENTS + " node");
         }
 
         List<Event> list = new ArrayList<>();
