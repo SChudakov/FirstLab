@@ -19,7 +19,6 @@ public class Mail {
     String mailSubject;
     Date mailReceived;
 
-    // TODO change it to Big text
     String mailBody;
 
     ArrayList<String> attachmentPaths;

@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TagNames.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDateParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParserTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLSAXParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/bookstore.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/bookstore.xsd" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/kxml2_2_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsMarshaller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentStAXParserTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsMarshallerTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/Mail.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/Mail.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Events.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" afterPath="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xml" afterPath="$PROJECT_DIR$/xml/student_government_events.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xsd" afterPath="$PROJECT_DIR$/xml/student_government_events.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FirstLab.iml" afterPath="$PROJECT_DIR$/FirstLab.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,12 +25,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventsDocumentSAXParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsDocumentSAXParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1615">
-              <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
+            <state relative-caret-position="1479">
+              <caret line="170" column="9" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="170" selection-end-column="9" />
+              <folding>
+                <element signature="docComment;class#EventsDocumentSAXParser#0" expanded="false" />
+                <element signature="docComment;method#parse#0;class#EventsDocumentSAXParser#0" expanded="false" />
+                <element signature="method#parse#0;class#EventsDocumentSAXParser#0" expanded="false" />
+                <element signature="method#startElement#0;class#EventsDocumentSAXParser#0" expanded="false" />
+                <element signature="method#characters#0;class#EventsDocumentSAXParser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsDocumentStAxParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentStAxParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#EventsDocumentStAxParser#0" expanded="false" />
+                <element signature="docComment;method#EventsDocumentStAxParser#0;class#EventsDocumentStAxParser#0" expanded="false" />
+                <element signature="method#EventsDocumentStAxParser#0;class#EventsDocumentStAxParser#0" expanded="false" />
+                <element signature="docComment;method#parse#0;class#EventsDocumentStAxParser#0" expanded="false" />
+                <marker date="1512075834966" expanded="false" signature="1889:2051" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="2072:2176" ph="..." />
+                <marker date="1512075834966" expanded="true" signature="2197:2346" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="2367:2687" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="2708:3025" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="3046:3359" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="3380:3676" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="3697:4000" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="4021:4331" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="4352:4453" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="4474:4786" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="4807:5115" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="5239:5393" ph="..." />
+                <marker date="1512075834966" expanded="true" signature="5414:5557" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="5578:5781" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="5802:5867" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="5888:5954" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="5975:6039" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="6060:6122" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="6143:6209" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="6230:6300" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="6321:6461" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="6482:6542" ph="..." />
+                <marker date="1512075834966" expanded="false" signature="6563:6621" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsDocumentStAXParserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentStAXParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsMarshallerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsMarshallerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="107" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="107" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsMarshaller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsMarshaller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="44" column="34" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,8 +117,8 @@
       <file leaf-file-name="student_government_events.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -65,8 +140,8 @@
       <file leaf-file-name="EventsDocumentDOMParserTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="153">
+              <caret line="14" column="107" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,19 +222,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/sschudakov/exceptions/IllegalSyntaxException.java" />
-        <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/ExpressionTreeTest.java" />
-        <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/SyntaxAnalyzerTest.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableModel.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/FinalToken.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/ExpressionTree.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/tokens/TokenType.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomCreater.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLDomParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLSAXParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXCreater.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/TestXmlParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/utils/FileReader.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/utils/FileContentReader.java" />
@@ -171,7 +239,6 @@
         <option value="$PROJECT_DIR$/test/com/sschudakov/tables/expression_parsing/LexicalAnalyzerTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/tables/expression_parsing/LexicalAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLStAXParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TestXmlParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDomParser.java" />
@@ -194,10 +261,18 @@
         <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentSAXParserTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java" />
-        <option value="$PROJECT_DIR$/xml/student_government_events.xml" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDateParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentDOMParser.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsMarshaller.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsMarshaller.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsMarshallerTest.java" />
+        <option value="$PROJECT_DIR$/xml/student_government_events.xml" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLStAXParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentStAXParser.java" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentStAxParser.java" />
+        <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentStAXParserTest.java" />
       </list>
     </option>
   </component>
@@ -249,15 +324,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
@@ -320,13 +398,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last.edited.regexp" value="href=/w/index.php?title=Regular_expression&amp;amp;oldid=798406284&gt;" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/hamcrest-all-1.3.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/kxml2-2.3.0.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Workspace.java/FirstLab/src/com/sschudakov/operations/FolderCreator.java" />
@@ -338,6 +418,9 @@
       <recent name="com.sschudakov.tables.table_view" />
       <recent name="com.sschudakov.tables" />
       <recent name="com.sschudakov.operations" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sschudakov.xml.parsers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Workspace.java\FirstLab\src\com\sschudakov\operations" />
@@ -356,7 +439,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EventsDocumentDOMParserTest.parseTest">
+  <component name="RunManager" selected="JUnit.EventsDocumentStAXParserTest">
     <configuration name="EventsDocumentDOMParserTest.parseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -407,18 +490,18 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LexicalAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsDocumentStAXParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.tokens.*" />
+          <option name="PATTERN" value="com.sschudakov.xml.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="FirstLab" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.xml.parsers" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.xml.parsers.EventsDocumentStAXParserTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -432,20 +515,20 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LexicalAnalyzerTest.lastTokenWhileGivingBackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EventsMarshallerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sschudakov.tables.expression_parsing.*" />
+          <option name="PATTERN" value="com.sschudakov.xml.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="FirstLab" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sschudakov.tables.expression_parsing" />
-      <option name="MAIN_CLASS_NAME" value="com.sschudakov.tables.expression_parsing.LexicalAnalyzerTest" />
-      <option name="METHOD_NAME" value="lastTokenWhileGivingBackTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.sschudakov.xml.parsers" />
+      <option name="MAIN_CLASS_NAME" value="com.sschudakov.xml.parsers.EventsMarshallerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -492,19 +575,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EventsDocumentSAXParserTest.parseTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EventsDocumentSAXParserTest.parseTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EventsMarshallerTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EventsDocumentStAXParserTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EventsDocumentSAXParserTest.parseTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.lastTokenWhileGivingBackTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.EventsDocumentStAXParserTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EventsMarshallerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EventsDocumentDOMParserTest.parseTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EventsDocumentSAXParserTest.parseTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -758,39 +841,46 @@
       <option name="project" value="LOCAL" />
       <updated>1511731934214</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="[30.11.17] - added SAX parser">
+      <created>1512068875653</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1512068875653</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 15m 54s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 22h 59m 10s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.26 at 23h 16m 39s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 00m 14s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentDOMParserTest_parseTest - 2017.11.30 at 20h 13m 07s.xml">
-      <configuration name="EventsDocumentDOMParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 01m 02s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 19h 53m 11s.xml">
-      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 01m 15s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 19h 53m 54s.xml">
-      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 01m 27s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 19h 54m 55s.xml">
-      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 01m 50s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 20h 00m 31s.xml">
-      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 01m 57s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 20h 02m 28s.xml">
-      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 03m 59s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EventsDocumentSAXParserTest_parseTest - 2017.11.30 at 20h 03m 40s.xml">
-      <configuration name="EventsDocumentSAXParserTest.parseTest" configurationId="JUnit" />
+    <history-entry file="EventsDocumentStAXParserTest - 2017.11.30 at 23h 04m 11s.xml">
+      <configuration name="EventsDocumentStAXParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexicalAnalyzerTest_lastTokenWhileReadingTest - 2017.11.20 at 19h 42m 30s.xml">
-      <configuration name="LexicalAnalyzerTest.lastTokenWhileReadingTest" configurationId="JUnit" />
+    <history-entry file="EventsMarshallerTest - 2017.11.30 at 21h 48m 01s.xml">
+      <configuration name="EventsMarshallerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -803,24 +893,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.004322767" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.592219" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.02017291" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -831,7 +918,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.004322767" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -874,7 +963,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="copy and move aren`t rewritten &#10;changed system of finding nodes in JTrees&#10;added NodeFormer&#10;changes system of displaying changes in file system (in ActionListeners)&#10;removed ComparableDefaultMutableTreeNode&#10;TODO:&#10;5. rewrite finding matches to selected pattern in JTextArea&#10;6. refactor FileCLoser (optional)&#10;13. fix Abstract Factory #2&#10;15. fix displaying files after move: (the way for the file to be reloaded is changed while operation)" />
     <MESSAGE value="final commit_1" />
     <MESSAGE value="everything except for the finding similar words in test" />
     <MESSAGE value="final" />
@@ -899,7 +987,8 @@
     <MESSAGE value="[20.11.17] - unit tests + try to check uf there is aby changes in JTable" />
     <MESSAGE value="[26.11.17]" />
     <MESSAGE value="[26.11.17] 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="[26.11.17] 3" />
+    <MESSAGE value="[30.11.17] - added SAX parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="[30.11.17] - added SAX parser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -916,48 +1005,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/closers/TextFileCloser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="64" column="61" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/ObjectOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="1177" column="0" lean-forward="false" selection-start-line="1177" selection-start-column="0" selection-end-line="1177" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/tables/table_view/TableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/views/TableFileView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1056,14 +1103,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#442#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/bin/LastFirsMiddleNames.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLStAXParser.java" />
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1073,13 +1116,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLDOMParser.java" />
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/TestXmlParser.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/DocumentPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1145,7 +1181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,15 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1243">
           <caret line="368" column="16" lean-forward="false" selection-start-line="368" selection-start-column="16" selection-end-line="368" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,14 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Events#0" expanded="false" />
-            <element signature="e#1143#1180#0" expanded="false" />
-            <element signature="method#Events#0;class#Events#0" expanded="false" />
-            <element signature="docComment;method#getEvent#0;class#Events#0" expanded="false" />
-            <element signature="method#getEvent#0;class#Events#0" expanded="false" />
-            <element signature="e#2364#2365#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1204,7 +1222,7 @@
         <state relative-caret-position="44">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1230,21 +1248,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Main.java" />
     <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentDOMParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="153">
+          <caret line="14" column="107" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsMarshaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="44" column="34" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/XMLStAXCreater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/kxml2-2.3.0.jar!/org/xmlpull/v1/XmlPullParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsMarshallerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="107" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentSAXParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1615">
-          <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="1479">
+          <caret line="170" column="9" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="170" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;class#EventsDocumentSAXParser#0" expanded="false" />
+            <element signature="docComment;method#parse#0;class#EventsDocumentSAXParser#0" expanded="false" />
+            <element signature="method#parse#0;class#EventsDocumentSAXParser#0" expanded="false" />
+            <element signature="method#startElement#0;class#EventsDocumentSAXParser#0" expanded="false" />
+            <element signature="method#characters#0;class#EventsDocumentSAXParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsDocumentStAXParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/parsers/EventsDocumentStAxParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#EventsDocumentStAxParser#0" expanded="false" />
+            <element signature="docComment;method#EventsDocumentStAxParser#0;class#EventsDocumentStAxParser#0" expanded="false" />
+            <element signature="method#EventsDocumentStAxParser#0;class#EventsDocumentStAxParser#0" expanded="false" />
+            <element signature="docComment;method#parse#0;class#EventsDocumentStAxParser#0" expanded="false" />
+            <marker date="1512075834966" expanded="false" signature="1889:2051" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="2072:2176" ph="..." />
+            <marker date="1512075834966" expanded="true" signature="2197:2346" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="2367:2687" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="2708:3025" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="3046:3359" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="3380:3676" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="3697:4000" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="4021:4331" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="4352:4453" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="4474:4786" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="4807:5115" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="5239:5393" ph="..." />
+            <marker date="1512075834966" expanded="true" signature="5414:5557" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="5578:5781" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="5802:5867" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="5888:5954" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="5975:6039" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="6060:6122" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="6143:6209" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="6230:6300" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="6321:6461" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="6482:6542" ph="..." />
+            <marker date="1512075834966" expanded="false" signature="6563:6621" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,7 +1424,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
