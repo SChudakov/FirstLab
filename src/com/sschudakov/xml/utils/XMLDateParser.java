@@ -1,11 +1,10 @@
-package com.sschudakov.xml.parsers;
+package com.sschudakov.xml.utils;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
 
 /**

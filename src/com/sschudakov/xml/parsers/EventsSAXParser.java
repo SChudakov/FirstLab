@@ -4,6 +4,8 @@ import com.sschudakov.xml.bin.Event;
 import com.sschudakov.xml.bin.Events;
 import com.sschudakov.xml.bin.LastFirstMiddleName;
 import com.sschudakov.xml.bin.Time;
+import com.sschudakov.xml.utils.TagNames;
+import com.sschudakov.xml.utils.XMLDateParser;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

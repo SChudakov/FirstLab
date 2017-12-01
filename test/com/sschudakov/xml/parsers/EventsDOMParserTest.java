@@ -1,6 +1,7 @@
 package com.sschudakov.xml.parsers;
 
 import com.sschudakov.xml.bin.Events;
+import com.sschudakov.xml.utils.DocumentReader;
 import org.junit.Test;
 import org.w3c.dom.Document;
 

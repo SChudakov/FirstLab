@@ -1,5 +1,6 @@
 package com.sschudakov.xml.parsers;
 
+import com.sschudakov.xml.utils.XMLDateParser;
 import org.junit.Test;
 
 import javax.xml.datatype.DatatypeConfigurationException;

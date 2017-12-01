@@ -1,4 +1,4 @@
-package com.sschudakov.xml.parsers;
+package com.sschudakov.xml.utils;
 
 /**
  * Created by Semen Chudakov on 30.11.2017.

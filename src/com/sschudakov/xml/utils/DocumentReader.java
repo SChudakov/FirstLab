@@ -1,4 +1,4 @@
-package com.sschudakov.xml.parsers;
+package com.sschudakov.xml.utils;
 
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
