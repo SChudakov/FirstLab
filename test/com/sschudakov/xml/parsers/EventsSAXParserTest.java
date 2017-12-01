@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by Semen Chudakov on 30.11.2017.
  */
-public class EventsDocumentSAXParserTest {
+public class EventsSAXParserTest {
 
     private static String EVENTS_FILE = "D:\\Workspace.java\\FirstLab\\xml\\student_government_events.xml";
 

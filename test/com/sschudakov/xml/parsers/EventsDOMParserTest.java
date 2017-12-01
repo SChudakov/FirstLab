@@ -9,7 +9,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 /**
  * Created by Semen Chudakov on 26.11.2017.
  */
-public class EventsDocumentDOMParserTest {
+public class EventsDOMParserTest {
 
     private static String EVENTS_FILE = "D:\\Workspace.java\\FirstLab\\xml\\student_government_events.xml";
 

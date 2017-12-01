@@ -13,7 +13,7 @@ import java.util.GregorianCalendar;
  */
 public class XMLDateParser {
 
-    private static final String DATE_PATTERN = "dd-MM-yyyy HH:mm";
+    private static final String DATE_PATTERN = "yyyy-MM-ddTHH:mm:ss";
 
     public static XMLGregorianCalendar parse(String date) throws DatatypeConfigurationException {
         LocalDateTime parseLocalDateTime = parseLocalDateTime(date);
@@ -22,6 +22,6 @@ public class XMLDateParser {
         return DatatypeFactory.newInstance().newXMLGregorianCalendar(gregorianCalendar);
     }
     private static LocalDateTime parseLocalDateTime(String date) {
-        return LocalDateTime.parse(date, DateTimeFormatter.ofPattern(DATE_PATTERN));
+        return LocalDateTime.parse(date);
     }
 }
