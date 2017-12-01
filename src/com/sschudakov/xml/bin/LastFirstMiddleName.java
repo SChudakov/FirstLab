@@ -133,10 +133,8 @@ public class LastFirstMiddleName {
 
     @Override
     public String toString() {
-        return "{\n" +
-                "first name: " + this.firstName + ",\n" +
-                "middle name: " + this.middleName + ",\n" +
-                "last name: " + this.lastName + "\n" +
-                "}";
+        return  "\t\tfirst name: " + this.firstName + "\n" +
+                "\t\tmiddle name: " + this.middleName + "\n" +
+                "\t\tlast name: " + this.lastName;
     }
 }

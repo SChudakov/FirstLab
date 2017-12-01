@@ -87,6 +87,11 @@ public class Events {
 
     @Override
     public String toString() {
-        return this.event.toString();
+
+        StringBuilder result = new StringBuilder("");
+        for (Event event1 : event) {
+            result.append("event:\n "+event1).append("\n");
+        }
+        return result.toString();
     }
 }

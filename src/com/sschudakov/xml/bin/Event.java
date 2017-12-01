@@ -191,12 +191,10 @@ public class Event {
 
     @Override
     public String toString() {
-        return "{\n" +
-                "last_first_middle_name: " + this.lastFirstMiddleName + ",\n" +
-                "faculty: " + this.faculty + ",\n" +
-                "sub-faculty: " + this.subFaculty + ",\n" +
-                "branchOfStudy: " + this.branchOfStudy + ",\n" +
-                "time: " + this.time + "\n" +
-                "}";
+        return  "\tlast_first_middle_name:\n " + this.lastFirstMiddleName + "\n" +
+                "\tfaculty: " + this.faculty + "\n" +
+                "\tsub-faculty: " + this.subFaculty + "\n" +
+                "\tbranchOfStudy: " + this.branchOfStudy + "\n" +
+                "\ttime:\n " + this.time + "\n";
     }
 }

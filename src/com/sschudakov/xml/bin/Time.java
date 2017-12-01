@@ -104,9 +104,7 @@ public class Time {
 
     @Override
     public String toString() {
-        return "{\n" +
-                "begin: " + this.begin + ",\n" +
-                "end: " + this.end + "\n" +
-                "}";
+        return "\t\tbegin: " + this.begin + "\n" +
+                "\t\tend: " + this.end + "\n";
     }
 }
