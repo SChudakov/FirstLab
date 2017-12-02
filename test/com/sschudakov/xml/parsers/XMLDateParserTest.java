@@ -1,6 +1,6 @@
 package com.sschudakov.xml.parsers;
 
-import com.sschudakov.xml.utils.XMLDateParser;
+import com.sschudakov.xml.utils.DateParser;
 import org.junit.Test;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -15,7 +15,7 @@ public class XMLDateParserTest {
     @Test
     public void parseTest(){
         try {
-            System.out.println(XMLDateParser.parse(TIME));
+            System.out.println(DateParser.parse(TIME));
         } catch (DatatypeConfigurationException e) {
             e.printStackTrace();
         }

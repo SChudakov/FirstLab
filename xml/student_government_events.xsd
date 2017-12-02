@@ -34,4 +34,5 @@
             <element name="end" type="dateTime"/>
         </sequence>
     </complexType>
+
 </schema>

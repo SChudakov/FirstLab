@@ -4,8 +4,8 @@ import com.sschudakov.xml.bin.Event;
 import com.sschudakov.xml.bin.Events;
 import com.sschudakov.xml.bin.LastFirstMiddleName;
 import com.sschudakov.xml.bin.Time;
+import com.sschudakov.xml.utils.DateParser;
 import com.sschudakov.xml.utils.TagNames;
-import com.sschudakov.xml.utils.XMLDateParser;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -20,24 +20,16 @@ import java.util.List;
 /**
  * Created by dbriskin on 24.04.2016.
  */
-public class EventsStAxParser {
+public class EventsStAXParser {
 
     private XmlPullParser xmlPullParser;
 
-    /**
-     * Constructs XML StAX Parser
-     *
-     * @param fileName filename to parse
-     */
-    public EventsStAxParser(String fileName) {
-        try {
-            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-            factory.setNamespaceAware(true);
-            this.xmlPullParser = factory.newPullParser();
-            this.xmlPullParser.setInput(new FileReader(fileName));
-        } catch (XmlPullParserException | FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    public Events parse(String fileName) throws XmlPullParserException, FileNotFoundException, DatatypeConfigurationException {
+        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+        factory.setNamespaceAware(true);
+        this.xmlPullParser = factory.newPullParser();
+        this.xmlPullParser.setInput(new FileReader(fileName));
+        return parse();
     }
 
     /**
@@ -45,10 +37,9 @@ public class EventsStAxParser {
      *
      * @return Mail collection
      */
-    public Events parse() throws DatatypeConfigurationException {
+    private Events parse() throws DatatypeConfigurationException {
 
         String tagName;
-        int tagDepth;
 
         Events events = null;
         List<Event> eventList = null;
@@ -112,13 +103,13 @@ public class EventsStAxParser {
                     if (tagName.equals(TagNames.BEGIN)) {
                         this.xmlPullParser.next();
                         if (xmlPullParser.getEventType() == XmlPullParser.TEXT) {
-                            time.setBegin(XMLDateParser.parse(this.xmlPullParser.getText()));
+                            time.setBegin(DateParser.parse(this.xmlPullParser.getText()));
                         }
                     }
                     if (tagName.equals(TagNames.END)) {
                         this.xmlPullParser.next();
                         if (xmlPullParser.getEventType() == XmlPullParser.TEXT) {
-                            time.setEnd(XMLDateParser.parse(this.xmlPullParser.getText()));
+                            time.setEnd(DateParser.parse(this.xmlPullParser.getText()));
                         }
                     }
                 }

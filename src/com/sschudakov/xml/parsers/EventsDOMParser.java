@@ -4,8 +4,9 @@ import com.sschudakov.xml.bin.Event;
 import com.sschudakov.xml.bin.Events;
 import com.sschudakov.xml.bin.LastFirstMiddleName;
 import com.sschudakov.xml.bin.Time;
+import com.sschudakov.xml.utils.DocumentReader;
 import com.sschudakov.xml.utils.TagNames;
-import com.sschudakov.xml.utils.XMLDateParser;
+import com.sschudakov.xml.utils.DateParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -19,6 +20,10 @@ import java.util.List;
  * Created by Semen Chudakov on 18.11.2017.
  */
 public class EventsDOMParser {
+
+    public static Events parse(String file) throws DatatypeConfigurationException {
+        return parse(DocumentReader.readDocument(file));
+    }
 
 
     public static Events parse(Document document) throws DatatypeConfigurationException {
@@ -137,7 +142,7 @@ public class EventsDOMParser {
         if (!begin.getNodeName().equals(TagNames.BEGIN)) {
             throw new IllegalArgumentException("node " + begin + " is not a " + TagNames.BEGIN + " node");
         }
-        return XMLDateParser.parse(begin.getTextContent());
+        return DateParser.parse(begin.getTextContent());
     }
 
     private static XMLGregorianCalendar parseEnds(Node end) throws DatatypeConfigurationException {
@@ -145,6 +150,6 @@ public class EventsDOMParser {
         if (!end.getNodeName().equals(TagNames.END)) {
             throw new IllegalArgumentException("node " + end + " is not a " + TagNames.END + " node");
         }
-        return XMLDateParser.parse(end.getTextContent());
+        return DateParser.parse(end.getTextContent());
     }
 }

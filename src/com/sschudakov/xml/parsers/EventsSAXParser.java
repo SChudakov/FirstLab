@@ -5,7 +5,7 @@ import com.sschudakov.xml.bin.Events;
 import com.sschudakov.xml.bin.LastFirstMiddleName;
 import com.sschudakov.xml.bin.Time;
 import com.sschudakov.xml.utils.TagNames;
-import com.sschudakov.xml.utils.XMLDateParser;
+import com.sschudakov.xml.utils.DateParser;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -193,7 +193,7 @@ public class EventsSAXParser extends DefaultHandler {
                             } else {
                                 if (this.isBegin) {
                                     try {
-                                        this.time.setBegin(XMLDateParser.parse(new String(ch, start, length)));
+                                        this.time.setBegin(DateParser.parse(new String(ch, start, length)));
                                     } catch (DatatypeConfigurationException e) {
                                         e.printStackTrace();
                                         throw new RuntimeException(e);
@@ -201,7 +201,7 @@ public class EventsSAXParser extends DefaultHandler {
                                 } else {
                                     if (this.isEnd) {
                                         try {
-                                            this.time.setEnd(XMLDateParser.parse(new String(ch, start, length)));
+                                            this.time.setEnd(DateParser.parse(new String(ch, start, length)));
                                         } catch (DatatypeConfigurationException e) {
                                             e.printStackTrace();
                                             throw new RuntimeException(e);

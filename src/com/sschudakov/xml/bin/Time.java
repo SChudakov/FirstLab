@@ -8,8 +8,11 @@
 
 package com.sschudakov.xml.bin;
 
+import com.sschudakov.xml.utils.DateParser;
+
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.time.LocalDateTime;
 
 
 /**
@@ -100,6 +103,17 @@ public class Time {
      */
     public void setEnd(XMLGregorianCalendar value) {
         this.end = value;
+    }
+
+    public boolean isBetween(LocalDateTime begin, LocalDateTime end) {
+        LocalDateTime eventBegin = DateParser.XMLGCToLocalDateTime(this.begin);
+        LocalDateTime eventEnd = DateParser.XMLGCToLocalDateTime(this.end);
+
+        return isBetween(eventBegin, begin, end) && isBetween(eventEnd, begin, end);
+    }
+
+    private static boolean isBetween(LocalDateTime time, LocalDateTime begin, LocalDateTime end) {
+        return time.isAfter(begin) && time.isBefore(end);
     }
 
     @Override
