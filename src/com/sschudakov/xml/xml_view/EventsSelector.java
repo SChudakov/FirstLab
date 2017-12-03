@@ -73,6 +73,7 @@ public class EventsSelector {
             result = selectByDate(result);
         }
         if (this.firstNameCheckBox.isSelected()) {
+            System.out.println("is selected");
             result = selectFirstName(result);
         }
         if (this.middleNameCheckBox.isSelected()) {
@@ -105,7 +106,7 @@ public class EventsSelector {
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
-            if (event.getFaculty().equals(selectedItem)) {
+            if (event.getSubFaculty().equals(selectedItem)) {
                 result.add(event);
             }
         }
@@ -119,7 +120,7 @@ public class EventsSelector {
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
-            if (event.getFaculty().equals(selectedItem)) {
+            if (event.getBranchOfStudy().equals(selectedItem)) {
                 result.add(event);
             }
         }
@@ -145,7 +146,7 @@ public class EventsSelector {
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
-            if (event.getFaculty().equals(firstName)) {
+            if (event.getLastFirstMiddleName().getFirstName().equals(firstName)) {
                 result.add(event);
             }
         }
@@ -159,7 +160,7 @@ public class EventsSelector {
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
-            if (event.getFaculty().equals(firstName)) {
+            if (event.getLastFirstMiddleName().getMiddleName().equals(firstName)) {
                 result.add(event);
             }
         }
@@ -173,7 +174,7 @@ public class EventsSelector {
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
-            if (event.getFaculty().equals(firstName)) {
+            if (event.getLastFirstMiddleName().getLastName().equals(firstName)) {
                 result.add(event);
             }
         }
