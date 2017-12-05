@@ -10,6 +10,7 @@ public class FileExtensionDeterminer {
     private static final String SERIALIZED_FILE_EXTENSION = ".ser";
     private static final String XSL_EXTENSION = ".xsl";
     private static final String XML_EXTENSION = ".xml";
+    private static final String JAVA_EXTENSION = ".java";
 
     public static boolean isTextFile(String path) {
         return isHTNLFile(path) || isTXTFile(path);
@@ -18,6 +19,7 @@ public class FileExtensionDeterminer {
     public static boolean isHTNLFile(String path){
         return path.endsWith(HTML_EXTENSION);
     }
+
     public static boolean isTXTFile(String path){
         return path.endsWith(TXT_EXTENSION);
     }
@@ -26,11 +28,15 @@ public class FileExtensionDeterminer {
         return path.endsWith(SERIALIZED_FILE_EXTENSION);
     }
 
-    public static boolean isXML(String path) {
+    public static boolean isXMLFile(String path) {
         return path.endsWith(XML_EXTENSION);
     }
 
-    public static boolean isXSL(String path) {
+    public static boolean isXSLFile(String path) {
         return path.endsWith(XSL_EXTENSION);
+    }
+
+    public static boolean isJavaFile(String path){
+        return path.endsWith(JAVA_EXTENSION);
     }
 }

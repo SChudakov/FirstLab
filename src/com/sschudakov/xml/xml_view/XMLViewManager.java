@@ -422,7 +422,7 @@ public class XMLViewManager extends javax.swing.JFrame {
                 String xslFilePath = jFileChooser.getSelectedFile().getPath();
 
 
-                if (FileExtensionDeterminer.isXSL(xslFilePath)) {
+                if (FileExtensionDeterminer.isXSLFile(xslFilePath)) {
                     this.jFileChooser.showDialog(this, "select html file");
                     File htmlFile = jFileChooser.getSelectedFile();
                     if (htmlFile != null) {
@@ -511,7 +511,7 @@ public class XMLViewManager extends javax.swing.JFrame {
         File xmlFile = this.jFileChooser.getSelectedFile();
 
         if (xmlFile != null) {
-            if (FileExtensionDeterminer.isXML(xmlFile.getPath())) {
+            if (FileExtensionDeterminer.isXMLFile(xmlFile.getPath())) {
                 this.currentFile = xmlFile.getPath();
                 this.openedFilePathLabel.setText(xmlFile.getPath());
                 cleanButtonActionPerformed(evt);
