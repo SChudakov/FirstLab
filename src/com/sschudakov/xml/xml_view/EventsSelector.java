@@ -37,7 +37,7 @@ public class EventsSelector {
                           JCheckBox branchOfStudyCheckBox, JCheckBox dateCheckBox,
                           JCheckBox firstNameCheckBox, JCheckBox middleNameCheckBox,
                           JCheckBox lastNameCheckBox, JComboBox<String> facultyComboBox,
-                          JComboBox<String> branchOfStudyComboBox, JComboBox<String> subFacultyComboBox,
+                          JComboBox<String> subFacultyComboBox, JComboBox<String> branchOfStudyComboBox,
                           JTextField fromTextField, JTextField toTextField,
                           JTextField firstNameTextField, JTextField middleNameTextFiled, JTextField lastNameTextField) {
         this.facultyCheckBox = facultyCheckBox;
@@ -59,6 +59,9 @@ public class EventsSelector {
 
     public List<Event> selectEvents(Events events) throws DatatypeConfigurationException {
         List<Event> result = events.getEvent();
+        System.out.println(events.toString());
+
+
 
         if (this.facultyCheckBox.isSelected()) {
             result = selectByFaculty(result);
@@ -86,7 +89,9 @@ public class EventsSelector {
     }
 
     private List<Event> selectByFaculty(List<Event> eventList) {
+        System.out.println("select by faculty");
         String selectedItem = (String) this.facultyComboBox.getSelectedItem();
+        System.out.println("selected item: " + selectedItem);
         if (selectedItem == null || "".equals(selectedItem)) {
             throw new IllegalArgumentException("no one faculty is selected");
         }
@@ -100,13 +105,17 @@ public class EventsSelector {
     }
 
     private List<Event> selectBySubFaculty(List<Event> eventList) {
+        System.out.println("select by sub-faculty");
         String selectedItem = (String) this.subFacultyComboBox.getSelectedItem();
+        System.out.println("selected item: " + selectedItem);
         if (selectedItem == null || "".equals(selectedItem)) {
             throw new IllegalArgumentException("no one sub-faculty is selected");
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
+            System.out.println(event.getSubFaculty());
             if (event.getSubFaculty().equals(selectedItem)) {
+                System.out.println("added");
                 result.add(event);
             }
         }
@@ -114,12 +123,15 @@ public class EventsSelector {
     }
 
     private List<Event> selectByBranchOfStudy(List<Event> eventList) {
+        System.out.println("select by branch of study");
         String selectedItem = (String) this.branchOfStudyComboBox.getSelectedItem();
+        System.out.println("selected item: " + selectedItem);
         if (selectedItem == null || "".equals(selectedItem)) {
             throw new IllegalArgumentException("no one branch of study is selected");
         }
         List<Event> result = new ArrayList<>();
         for (Event event : eventList) {
+            System.out.println(event.getBranchOfStudy());
             if (event.getBranchOfStudy().equals(selectedItem)) {
                 result.add(event);
             }

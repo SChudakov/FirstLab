@@ -13,6 +13,7 @@ import com.sschudakov.xml.utils.DateParser;
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 /**
@@ -116,9 +117,13 @@ public class Time {
         return time.isAfter(begin) && time.isBefore(end);
     }
 
+    private static String formatXMLDate(XMLGregorianCalendar calendar) {
+        return DateParser.XMLGCToLocalDateTime(calendar).format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+    }
+
     @Override
     public String toString() {
-        return "\t\tbegin: " + this.begin + "\n" +
-                "\t\tend: " + this.end + "\n";
+        return "\t\tbegin: " + formatXMLDate(this.begin) + "\n" +
+                "\t\tend: " + formatXMLDate(this.end) + "\n";
     }
 }

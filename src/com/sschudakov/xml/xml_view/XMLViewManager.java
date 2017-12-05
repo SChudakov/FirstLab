@@ -14,6 +14,7 @@ import com.sschudakov.xml.parsers.XMLToHTMLTransformer;
 
 import javax.swing.*;
 import javax.xml.transform.TransformerException;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
@@ -67,17 +68,17 @@ public class XMLViewManager extends javax.swing.JFrame {
         middleNameTextFiled = new javax.swing.JTextField();
         lastNameTextField = new javax.swing.JTextField();
         toHtmlButton = new javax.swing.JButton();
-        jMenuBar = new JMenuBar();
-        fileMenu = new JMenu();
-        editMenu = new JMenu();
-        openMenuItem = new JMenuItem();
-        closeMenuItem = new JMenuItem();
-
+        openedFilePathLabel = new javax.swing.JLabel();
+        openedFileLabel = new javax.swing.JLabel();
+        jMenuBar = new javax.swing.JMenuBar();
+        fileMenu = new javax.swing.JMenu();
+        openMenuItem = new javax.swing.JMenuItem();
+        closeMenuItem = new javax.swing.JMenuItem();
+        editMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         textAreaScrollPane.setViewportView(textPanel);
-
 
         javax.swing.GroupLayout textAreaPanelLayout = new javax.swing.GroupLayout(textAreaPanel);
         textAreaPanel.setLayout(textAreaPanelLayout);
@@ -104,37 +105,27 @@ public class XMLViewManager extends javax.swing.JFrame {
 
         saxRadioButton.setText("SAX");
 
-
         staxRadioButton.setText("StAX");
-
 
         marshallingRadioButton.setText("Marshalling");
 
-
         facultyCheckBox.setText("faculty");
-
 
         subFacultyCheckBox.setText("sub faculty");
 
-
         branchOfStudyCheckBox.setText("branch of study");
 
-
         dateCheckBox.setText("date");
-
 
         fromLabel.setText("from");
 
         toLabel.setText("to");
 
         searchButton.setText("search");
+        searchButton.setName(""); // NOI18N
 
 
         cleanButton.setText("clean");
-
-
-        toHtmlButton.setText("to html");
-
 
         firstNameCheckBox.setText("first name");
 
@@ -142,7 +133,11 @@ public class XMLViewManager extends javax.swing.JFrame {
 
         lastNameCheckBox.setText("last name");
 
+        toHtmlButton.setText("to html");
 
+        openedFileLabel.setText("opened file");
+
+        openedFilePathLabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout parametersPanelLayout = new javax.swing.GroupLayout(parametersPanel);
         parametersPanel.setLayout(parametersPanelLayout);
@@ -192,24 +187,28 @@ public class XMLViewManager extends javax.swing.JFrame {
                                                 .addGap(0, 0, Short.MAX_VALUE))
                                         .addGroup(parametersPanelLayout.createSequentialGroup()
                                                 .addGroup(parametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(parametersPanelLayout.createSequentialGroup()
-                                                                .addGap(0, 0, 0)
-                                                                .addGroup(parametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(saxRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(staxRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(marshallingRadioButton)
-                                                                        .addComponent(domRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(saxRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(staxRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(marshallingRadioButton)
+                                                        .addComponent(domRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(27, 27, 27)
                                                 .addComponent(cleanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(toHtmlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(toHtmlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(parametersPanelLayout.createSequentialGroup()
+                                                .addComponent(openedFileLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(openedFilePathLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addContainerGap())
         );
         parametersPanelLayout.setVerticalGroup(
                 parametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(parametersPanelLayout.createSequentialGroup()
-                                .addGap(27, 27, 27)
+                                .addGroup(parametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(openedFilePathLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(openedFileLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(parametersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(facultyCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(facultyComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -290,6 +289,7 @@ public class XMLViewManager extends javax.swing.JFrame {
                                 .addComponent(parametersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
         doAdditionalInitializations();
         pack();
     }
@@ -325,6 +325,8 @@ public class XMLViewManager extends javax.swing.JFrame {
         closeMenuItem.addActionListener(this::closeJMenuItemActionPerformed);
 
         domRadioButton.setSelected(true);
+
+        textPanel.setEditable(false);
     }
 
     private void fillComboBoxes() {
@@ -413,45 +415,49 @@ public class XMLViewManager extends javax.swing.JFrame {
     }
 
     private void toHtmlButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        if (this.currentFile != null) {
+            this.jFileChooser.showDialog(this, "select xsl file");
+            File xslFile = this.jFileChooser.getSelectedFile();
+            if (xslFile != null) {
+                String xslFilePath = jFileChooser.getSelectedFile().getPath();
 
 
-        this.jFileChooser.showDialog(this, "select xsl file");
-        File xslFile = this.jFileChooser.getSelectedFile();
-        if (xslFile != null) {
-            String xslFilePath = jFileChooser.getSelectedFile().getPath();
+                if (FileExtensionDeterminer.isXSL(xslFilePath)) {
+                    this.jFileChooser.showDialog(this, "select html file");
+                    File htmlFile = jFileChooser.getSelectedFile();
+                    if (htmlFile != null) {
+                        String htmlFilePath = htmlFile.getPath();
 
+                        if (FileExtensionDeterminer.isHTNLFile(htmlFilePath)) {
+                            if (!htmlFile.exists()) {
+                                try {
+                                    htmlFile.createNewFile();
+                                } catch (IOException e) {
+                                    ExceptionRenderer.renderException(this, e);
+                                    e.printStackTrace();
+                                }
+                            }
 
-            if (FileExtensionDeterminer.isXSL(xslFilePath)) {
-                this.jFileChooser.showDialog(this, "select html file");
-                File htmlFile = jFileChooser.getSelectedFile();
-                if (htmlFile != null) {
-                    String htmlFilePath = htmlFile.getPath();
-
-                    if (FileExtensionDeterminer.isHTNLFile(htmlFilePath)) {
-                        if (!htmlFile.exists()) {
                             try {
-                                htmlFile.createNewFile();
-                            } catch (IOException e) {
+                                XMLToHTMLTransformer.transform(this.currentFile, xslFilePath, htmlFilePath);
+                                Desktop.getDesktop().browse(htmlFile.toURI());
+                            } catch (TransformerException e) {
                                 ExceptionRenderer.renderException(this, e);
                                 e.printStackTrace();
+                            } catch (IOException e) {
+                                e.printStackTrace();
                             }
+                        } else {
+                            MessageRenderer.renderMessage(this, "selected file is not a html file");
                         }
-
-                        try {
-                            XMLToHTMLTransformer.transform(this.currentFile, xslFilePath, htmlFilePath);
-                        } catch (TransformerException e) {
-                            ExceptionRenderer.renderException(this, e);
-                            e.printStackTrace();
-                        }
-                    } else {
-                        MessageRenderer.renderMessage(this, "selected file is not a html file");
                     }
+                } else {
+                    MessageRenderer.renderMessage(this, "selected file is not xsl file");
                 }
-            } else {
-                MessageRenderer.renderMessage(this, "selected file is not xsl file");
             }
+        } else {
+            MessageRenderer.renderMessage(this, "no one file is opened");
         }
-
     }
 
 
@@ -507,6 +513,7 @@ public class XMLViewManager extends javax.swing.JFrame {
         if (xmlFile != null) {
             if (FileExtensionDeterminer.isXML(xmlFile.getPath())) {
                 this.currentFile = xmlFile.getPath();
+                this.openedFilePathLabel.setText(xmlFile.getPath());
                 cleanButtonActionPerformed(evt);
                 fillComboBoxes();
                 searchButtonActionPerformed(evt);
@@ -521,6 +528,7 @@ public class XMLViewManager extends javax.swing.JFrame {
         clearComboBoxes();
         this.textPanel.setText("");
         this.currentFile = null;
+        this.openedFilePathLabel.setText("");
     }
 
 
@@ -606,5 +614,8 @@ public class XMLViewManager extends javax.swing.JFrame {
 
     private javax.swing.JScrollPane textAreaScrollPane;
     private javax.swing.JTextPane textPanel;
+
+    private javax.swing.JLabel openedFileLabel;
+    private javax.swing.JLabel openedFilePathLabel;
     // End of variables declaration//GEN-END:variables
 }

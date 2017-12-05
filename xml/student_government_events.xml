@@ -17,4 +17,34 @@
             <end>2001-10-26T21:32:52</end>
         </time>
     </event>
+    
+    <event>
+        <last_first_middle_name>
+            <first_name>Andrey</first_name>
+            <middle_name>Borzyak</middle_name>
+            <last_name>Andryuha</last_name>
+        </last_first_middle_name>
+        <faculty>Cybernetics</faculty>
+        <sub-faculty>Computer Sciences</sub-faculty>
+        <branch-of-study>Informatic</branch-of-study>
+        <time>
+            <begin>2003-10-14T09:00:00</begin>
+            <end>2003-11-14T10:00:00</end>
+        </time>
+    </event>
+    
+    <event>
+        <last_first_middle_name>
+            <first_name>Andrey</first_name>
+            <middle_name>Miroshnichenko</middle_name>
+            <last_name>Mirosh</last_name>
+        </last_first_middle_name>
+        <faculty>Red bulk</faculty>
+        <sub-faculty>juriprudence</sub-faculty>
+        <branch-of-study>law</branch-of-study>
+        <time>
+            <begin>2003-10-14T14:00:00</begin>
+            <end>2010-10-14T09:00:00</end>
+        </time>
+    </event>
 </tns:events>

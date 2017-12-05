@@ -4,12 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/sschudakov/abstract_factory/factories/savers/TableSaver.java" line="30" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="[3.12.17] - added bar with open and close options">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/FileExtensionDeterminer.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/utils/FileExtensionDeterminer.class" />
+    <list default="true" id="7648249a-fc75-40d6-9481-45cd4d7a093b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/bin/Time.class" afterPath="$PROJECT_DIR$/out/production/FirstLab/com/sschudakov/xml/bin/Time.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/EventsSelector.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/EventsSelector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/XMLViewManager.java" afterPath="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/XMLViewManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.html" afterPath="$PROJECT_DIR$/xml/student_government_events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/student_government_events.xml" afterPath="$PROJECT_DIR$/xml/student_government_events.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,61 +26,33 @@
       <file leaf-file-name="XMLViewManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/XMLViewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="551" column="47" lean-forward="false" selection-start-line="551" selection-start-column="47" selection-end-line="551" selection-end-column="47" />
+            <state relative-caret-position="121">
+              <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="8" selection-end-line="333" selection-end-column="26" />
               <folding>
                 <element signature="docComment;class#XMLViewManager#0" expanded="false" />
                 <element signature="docComment;method#XMLViewManager#0;class#XMLViewManager#0" expanded="false" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
                 <element signature="docComment;method#initComponents#0;class#XMLViewManager#0" expanded="false" />
-                <element signature="method#fillComboBoxes#0;class#XMLViewManager#0" expanded="false" />
+                <element signature="method#initComponents#0;class#XMLViewManager#0" expanded="false" />
+                <element signature="method#doAdditionalInitializations#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#clearComboBoxes#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#searchButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
+                <element signature="method#formRenderingString#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#cleanButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#domRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#saxRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#staxRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
                 <element signature="method#marshallingRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
-                <element signature="e#30901#30988#0" expanded="true" />
-                <marker date="1512326629782" expanded="false" signature="1131:2849" ph="..." />
-                <marker date="1512326629782" expanded="false" signature="2995:3888" ph="..." />
-                <marker date="1512326629782" expanded="false" signature="3897:4492" ph="..." />
-                <marker date="1512326629782" expanded="false" signature="5227:13343" ph="..." />
-                <marker date="1512326629782" expanded="false" signature="13352:19254" ph="..." />
-                <marker date="1512326629782" expanded="false" signature="19908:20840" ph="..." />
-                <marker date="1512326629782" expanded="false" signature="20849:21511" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OptionConfirmer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileExtensionDeterminer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-              <folding>
-                <element signature="e#578#579#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="method#openJMenuItemActionPerformed#0;class#XMLViewManager#0" expanded="false" />
+                <element signature="method#closeJMenuItemActionPerformed#0;class#XMLViewManager#0" expanded="false" />
+                <element signature="method#main#0;class#XMLViewManager#0" expanded="false" />
+                <marker date="1512415677226" expanded="false" signature="1150:2697" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="1150:3036" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="3332:4073" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="4082:4677" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="5607:13810" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="13819:20205" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="20859:21791" ph="..." />
+                <marker date="1512415677226" expanded="false" signature="21800:22462" ph="..." />
               </folding>
             </state>
           </provider>
@@ -89,58 +63,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/utils/DocumentReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsSelector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/EventsSelector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
               <folding>
-                <element signature="docComment;class#EventsSelector#0" expanded="false" />
-                <element signature="method#EventsSelector#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectEvents#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectByFaculty#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectBySubFaculty#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectByBranchOfStudy#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectByDate#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectFirstName#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectMiddleName#0;class#EventsSelector#0" expanded="false" />
-                <element signature="method#selectLastName#0;class#EventsSelector#0" expanded="false" />
+                <marker date="1512464084577" expanded="true" signature="862:866" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Time.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java">
+      <file leaf-file-name="student_government_events.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-              <folding>
-                <element signature="docComment;class#Time#0" expanded="false" />
-                <element signature="e#1146#1183#0" expanded="false" />
-                <element signature="e#1273#1301#0" expanded="false" />
-                <element signature="e#1386#1414#0" expanded="false" />
-                <element signature="method#Time#0;class#Time#0" expanded="false" />
-                <element signature="method#Time#1;class#Time#0" expanded="false" />
-                <element signature="docComment;method#getBegin#0;class#Time#0" expanded="false" />
-                <element signature="docComment;method#setBegin#0;class#Time#0" expanded="false" />
-                <element signature="docComment;method#setEnd#0;class#Time#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student_government_events.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>char(0)</find>
       <find>get_token</find>
       <find>-&gt;</find>
       <find>tree</find>
@@ -189,6 +133,7 @@
       <find>private</find>
       <find>dateChe</find>
       <find>fromText</find>
+      <find>tns:</find>
     </findStrings>
     <replaceStrings>
       <replace>Token</replace>
@@ -252,7 +197,6 @@
         <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/XMLToHTMLTransformerTest.java" />
         <option value="$PROJECT_DIR$/xml/student_events.xsl" />
         <option value="$PROJECT_DIR$/xml/student_events.html" />
-        <option value="$PROJECT_DIR$/xml/student_government_events.xml" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/XMLDateParserTest.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/parsers/XMLDateParser.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/LastFirstMiddleName.java" />
@@ -264,10 +208,11 @@
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/XMLDocumentReader.java" />
         <option value="$PROJECT_DIR$/test/com/sschudakov/xml/parsers/EventsStAXParserTest.java" />
         <option value="$PROJECT_DIR$/xml/student_government_events.xsd" />
-        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java" />
         <option value="$PROJECT_DIR$/xml/student_government_events.html" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/EventsSelector.java" />
+        <option value="$PROJECT_DIR$/xml/student_government_events.xml" />
+        <option value="$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java" />
         <option value="$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/XMLViewManager.java" />
       </list>
     </option>
@@ -320,9 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -363,14 +305,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
               <item name="xml" type="462c0819:PsiDirectoryNode" />
-              <item name="parsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FirstLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FirstLab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sschudakov" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
               <item name="xml_view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -382,6 +316,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -865,7 +802,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512248104004</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="[3.12.17] - added bar with open and close options">
+      <created>1512326644201</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1512326644201</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -915,24 +859,24 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.592219" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29971182" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.037463978" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2602118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6469741" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1251,19 +1195,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/gui/GUIManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2329">
           <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,14 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1305,40 +1232,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-          <folding>
-            <element signature="docComment;class#Time#0" expanded="false" />
-            <element signature="e#1146#1183#0" expanded="false" />
-            <element signature="e#1273#1301#0" expanded="false" />
-            <element signature="e#1386#1414#0" expanded="false" />
-            <element signature="method#Time#0;class#Time#0" expanded="false" />
-            <element signature="method#Time#1;class#Time#0" expanded="false" />
-            <element signature="docComment;method#getBegin#0;class#Time#0" expanded="false" />
-            <element signature="docComment;method#setBegin#0;class#Time#0" expanded="false" />
-            <element signature="docComment;method#setEnd#0;class#Time#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/FileExtensionDeterminer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="false" />
+            <element signature="e#630#631#0" expanded="false" />
+            <element signature="e#680#681#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#784#785#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#895#896#0" expanded="false" />
+            <element signature="e#946#947#0" expanded="false" />
+            <element signature="e#994#995#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/test.html" />
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/utils/DocumentReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1346,45 +1270,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/utils/OptionConfirmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/utils/DocumentReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1512464084577" expanded="true" signature="862:866" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/EventsSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="493">
+          <caret line="39" column="62" lean-forward="false" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
           <folding>
             <element signature="docComment;class#EventsSelector#0" expanded="false" />
-            <element signature="method#EventsSelector#0;class#EventsSelector#0" expanded="false" />
-            <element signature="method#selectEvents#0;class#EventsSelector#0" expanded="false" />
-            <element signature="method#selectByFaculty#0;class#EventsSelector#0" expanded="false" />
-            <element signature="method#selectBySubFaculty#0;class#EventsSelector#0" expanded="false" />
-            <element signature="method#selectByBranchOfStudy#0;class#EventsSelector#0" expanded="false" />
             <element signature="method#selectByDate#0;class#EventsSelector#0" expanded="false" />
             <element signature="method#selectFirstName#0;class#EventsSelector#0" expanded="false" />
             <element signature="method#selectMiddleName#0;class#EventsSelector#0" expanded="false" />
@@ -1393,32 +1290,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/bin/Time.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Time#0" expanded="false" />
+            <element signature="e#1189#1226#0" expanded="false" />
+            <element signature="e#1316#1344#0" expanded="false" />
+            <element signature="e#1429#1457#0" expanded="false" />
+            <element signature="method#Time#0;class#Time#0" expanded="false" />
+            <element signature="method#Time#1;class#Time#0" expanded="false" />
+            <element signature="docComment;method#getBegin#0;class#Time#0" expanded="false" />
+            <element signature="docComment;method#setBegin#0;class#Time#0" expanded="false" />
+            <element signature="docComment;method#getEnd#0;class#Time#0" expanded="false" />
+            <element signature="docComment;method#setEnd#0;class#Time#0" expanded="false" />
+            <element signature="method#isBetween#0;class#Time#0" expanded="false" />
+            <element signature="method#isBetween#1;class#Time#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/student_government_events.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sschudakov/xml/xml_view/XMLViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="551" column="47" lean-forward="false" selection-start-line="551" selection-start-column="47" selection-end-line="551" selection-end-column="47" />
+        <state relative-caret-position="121">
+          <caret line="333" column="26" lean-forward="false" selection-start-line="333" selection-start-column="8" selection-end-line="333" selection-end-column="26" />
           <folding>
             <element signature="docComment;class#XMLViewManager#0" expanded="false" />
             <element signature="docComment;method#XMLViewManager#0;class#XMLViewManager#0" expanded="false" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
             <element signature="docComment;method#initComponents#0;class#XMLViewManager#0" expanded="false" />
-            <element signature="method#fillComboBoxes#0;class#XMLViewManager#0" expanded="false" />
+            <element signature="method#initComponents#0;class#XMLViewManager#0" expanded="false" />
+            <element signature="method#doAdditionalInitializations#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#clearComboBoxes#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#searchButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
+            <element signature="method#formRenderingString#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#cleanButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#domRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#saxRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#staxRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
             <element signature="method#marshallingRadioButtonActionPerformed#0;class#XMLViewManager#0" expanded="false" />
-            <element signature="e#30901#30988#0" expanded="true" />
-            <marker date="1512326629782" expanded="false" signature="1131:2849" ph="..." />
-            <marker date="1512326629782" expanded="false" signature="2995:3888" ph="..." />
-            <marker date="1512326629782" expanded="false" signature="3897:4492" ph="..." />
-            <marker date="1512326629782" expanded="false" signature="5227:13343" ph="..." />
-            <marker date="1512326629782" expanded="false" signature="13352:19254" ph="..." />
-            <marker date="1512326629782" expanded="false" signature="19908:20840" ph="..." />
-            <marker date="1512326629782" expanded="false" signature="20849:21511" ph="..." />
+            <element signature="method#openJMenuItemActionPerformed#0;class#XMLViewManager#0" expanded="false" />
+            <element signature="method#closeJMenuItemActionPerformed#0;class#XMLViewManager#0" expanded="false" />
+            <element signature="method#main#0;class#XMLViewManager#0" expanded="false" />
+            <marker date="1512415677226" expanded="false" signature="1150:2697" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="1150:3036" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="3332:4073" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="4082:4677" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="5607:13810" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="13819:20205" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="20859:21791" ph="..." />
+            <marker date="1512415677226" expanded="false" signature="21800:22462" ph="..." />
           </folding>
         </state>
       </provider>
